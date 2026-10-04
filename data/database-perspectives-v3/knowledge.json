@@ -1,0 +1,4303 @@
+{
+  "schemaVersion": 1,
+  "generatedFor": "2026-10-04",
+  "views": [
+    {
+      "id": "01-workloads",
+      "title": "01 · 工作负载：数据库在忙什么？",
+      "subtitle": "15 个 OLTP 代表 · 14 个专用 OLAP 代表，另展示 3 个 HTAP 产品的双重能力；不是互斥分类",
+      "takeaway": "OLTP 管好每一笔业务，OLAP 看清大量业务的规律；能否兼顾取决于执行、存储和资源隔离，不是名字里有没有 SQL。",
+      "panels": [
+        {
+          "title": "OLTP ①：通用关系库、嵌入式与文档库",
+          "kind": "graph",
+          "nodes": [
+            {
+              "id": "oltp",
+              "label": "OLTP\n短事务 · 在线读写",
+              "kind": "concept"
+            },
+            {
+              "id": "mysql",
+              "label": "MySQL",
+              "kind": "product",
+              "sourceUrl": "https://dev.mysql.com/doc/refman/8.4/en/innodb-introduction.html",
+              "role": "database"
+            },
+            {
+              "id": "postgresql",
+              "label": "PostgreSQL",
+              "kind": "product",
+              "sourceUrl": "https://www.postgresql.org/docs/current/tutorial-transactions.html",
+              "role": "database"
+            },
+            {
+              "id": "oracle",
+              "label": "Oracle Database",
+              "kind": "product",
+              "sourceUrl": "https://docs.oracle.com/en/database/oracle/oracle-database/26/cncpt/introduction-to-oracle-database.html",
+              "role": "database"
+            },
+            {
+              "id": "sqlserver",
+              "label": "SQL Server",
+              "kind": "product",
+              "sourceUrl": "https://learn.microsoft.com/en-us/sql/relational-databases/in-memory-oltp/overview-and-usage-scenarios?view=sql-server-ver17",
+              "role": "database"
+            },
+            {
+              "id": "mariadb",
+              "label": "MariaDB",
+              "kind": "product",
+              "sourceUrl": "https://mariadb.com/docs/server/server-usage/storage-engines/innodb",
+              "role": "database"
+            },
+            {
+              "id": "db2",
+              "label": "IBM Db2",
+              "kind": "product",
+              "sourceUrl": "https://www.ibm.com/products/db2",
+              "role": "database"
+            },
+            {
+              "id": "sqlite",
+              "label": "SQLite",
+              "kind": "product",
+              "sourceUrl": "https://sqlite.org/whentouse.html",
+              "role": "database"
+            },
+            {
+              "id": "mongodb",
+              "label": "MongoDB",
+              "kind": "product",
+              "sourceUrl": "https://www.mongodb.com/docs/manual/core/transactions/",
+              "role": "database"
+            }
+          ],
+          "edges": [
+            {
+              "source": "mysql",
+              "target": "oltp",
+              "label": "事务读写（InnoDB）",
+              "sourceUrl": "https://dev.mysql.com/doc/refman/8.4/en/innodb-introduction.html",
+              "note": "本图不把所有 MySQL 存储引擎都视为支持事务。"
+            },
+            {
+              "source": "postgresql",
+              "target": "oltp",
+              "label": "多语句事务",
+              "sourceUrl": "https://www.postgresql.org/docs/current/tutorial-transactions.html"
+            },
+            {
+              "source": "oracle",
+              "target": "oltp",
+              "label": "并发事务 / 原子更新",
+              "sourceUrl": "https://docs.oracle.com/en/database/oracle/oracle-database/26/cncpt/introduction-to-oracle-database.html"
+            },
+            {
+              "source": "sqlserver",
+              "target": "oltp",
+              "label": "在线事务；可用内存优化",
+              "sourceUrl": "https://learn.microsoft.com/en-us/sql/relational-databases/in-memory-oltp/overview-and-usage-scenarios?view=sql-server-ver17",
+              "note": "In-Memory OLTP 是可选特性，不表示 SQL Server 的事务处理只能在内存表上完成。"
+            },
+            {
+              "source": "mariadb",
+              "target": "oltp",
+              "label": "事务读写（InnoDB）",
+              "sourceUrl": "https://mariadb.com/docs/server/server-usage/storage-engines/innodb"
+            },
+            {
+              "source": "db2",
+              "target": "oltp",
+              "label": "业务事务处理",
+              "sourceUrl": "https://www.ibm.com/products/db2"
+            },
+            {
+              "source": "sqlite",
+              "target": "oltp",
+              "label": "本地 / 轻量在线更新",
+              "sourceUrl": "https://sqlite.org/whentouse.html",
+              "note": "单个数据库同一时刻只有一个写入者；不把它推荐给多服务器高并发写业务。"
+            },
+            {
+              "source": "mongodb",
+              "target": "oltp",
+              "label": "文档业务 / 多文档事务",
+              "sourceUrl": "https://www.mongodb.com/docs/manual/core/transactions/",
+              "note": "多文档事务要求副本集或分片集群，不能泛化到 standalone 部署。"
+            }
+          ],
+          "direction": "LR"
+        },
+        {
+          "title": "OLTP ②：分布式事务路线",
+          "kind": "graph",
+          "nodes": [
+            {
+              "id": "oltp",
+              "label": "OLTP\n事务扩展与高可用",
+              "kind": "concept"
+            },
+            {
+              "id": "cockroachdb",
+              "label": "CockroachDB",
+              "kind": "product",
+              "sourceUrl": "https://www.cockroachlabs.com/glossary/distributed-db/oltp-online-transaction-processing/",
+              "role": "database"
+            },
+            {
+              "id": "spanner",
+              "label": "Spanner",
+              "kind": "product",
+              "sourceUrl": "https://cloud.google.com/spanner",
+              "role": "database"
+            },
+            {
+              "id": "yugabytedb",
+              "label": "YugabyteDB",
+              "kind": "product",
+              "sourceUrl": "https://docs.yugabyte.com/stable/explore/transactions/",
+              "role": "database"
+            },
+            {
+              "id": "tidb",
+              "label": "TiDB",
+              "kind": "product",
+              "sourceUrl": "https://docs.pingcap.com/tidb/stable/tidb-faq/",
+              "role": "database"
+            },
+            {
+              "id": "oceanbase",
+              "label": "OceanBase",
+              "kind": "product",
+              "sourceUrl": "https://en.oceanbase.com/docs/common-oceanbase-database-10000000003678937",
+              "role": "database"
+            },
+            {
+              "id": "singlestore",
+              "label": "SingleStore",
+              "kind": "product",
+              "sourceUrl": "https://docs.singlestore.com/cloud/create-a-database/columnstore/universal-storage/",
+              "role": "database"
+            },
+            {
+              "id": "voltdb",
+              "label": "VoltDB",
+              "kind": "product",
+              "sourceUrl": "https://docs.voltdb.com/UsingVoltDB/ChapOverview.php",
+              "role": "database"
+            }
+          ],
+          "edges": [
+            {
+              "source": "cockroachdb",
+              "target": "oltp",
+              "label": "分布式在线事务",
+              "sourceUrl": "https://www.cockroachlabs.com/glossary/distributed-db/oltp-online-transaction-processing/"
+            },
+            {
+              "source": "spanner",
+              "target": "oltp",
+              "label": "分布式事务",
+              "sourceUrl": "https://cloud.google.com/spanner"
+            },
+            {
+              "source": "yugabytedb",
+              "target": "oltp",
+              "label": "分布式 ACID 事务",
+              "sourceUrl": "https://docs.yugabyte.com/stable/explore/transactions/"
+            },
+            {
+              "source": "tidb",
+              "target": "oltp",
+              "label": "分布式 SQL 事务",
+              "sourceUrl": "https://docs.pingcap.com/tidb/stable/tidb-faq/"
+            },
+            {
+              "source": "oceanbase",
+              "target": "oltp",
+              "label": "在线事务处理",
+              "sourceUrl": "https://en.oceanbase.com/docs/common-oceanbase-database-10000000003678937"
+            },
+            {
+              "source": "singlestore",
+              "target": "oltp",
+              "label": "Universal Storage 事务",
+              "sourceUrl": "https://docs.singlestore.com/cloud/create-a-database/columnstore/universal-storage/",
+              "note": "适用性仍取决于表设计、查询形态和资源容量。"
+            },
+            {
+              "source": "voltdb",
+              "target": "oltp",
+              "label": "ACID 事务处理",
+              "sourceUrl": "https://docs.voltdb.com/UsingVoltDB/ChapOverview.php"
+            }
+          ],
+          "direction": "LR"
+        },
+        {
+          "title": "OLAP ①：数仓与 MPP 分析平台",
+          "kind": "graph",
+          "nodes": [
+            {
+              "id": "olap",
+              "label": "OLAP\n汇总 · 报表 · 大范围扫描",
+              "kind": "concept"
+            },
+            {
+              "id": "snowflake",
+              "label": "Snowflake",
+              "kind": "product",
+              "sourceUrl": "https://docs.snowflake.com/en/user-guide/intro-key-concepts",
+              "role": "database"
+            },
+            {
+              "id": "bigquery",
+              "label": "BigQuery",
+              "kind": "product",
+              "sourceUrl": "https://docs.cloud.google.com/bigquery/docs/introduction",
+              "role": "database"
+            },
+            {
+              "id": "redshift",
+              "label": "Amazon Redshift",
+              "kind": "product",
+              "sourceUrl": "https://docs.aws.amazon.com/redshift/latest/mgmt/welcome.html",
+              "role": "database"
+            },
+            {
+              "id": "teradata",
+              "label": "Teradata",
+              "kind": "product",
+              "sourceUrl": "https://www.teradata.com/platform",
+              "role": "database"
+            },
+            {
+              "id": "databricks_sql",
+              "label": "Databricks SQL",
+              "kind": "product",
+              "sourceUrl": "https://docs.databricks.com/aws/en/sql",
+              "role": "database"
+            },
+            {
+              "id": "greenplum",
+              "label": "Greenplum",
+              "kind": "product",
+              "sourceUrl": "https://github.com/greenplum-db/gpdb-archive",
+              "role": "database"
+            }
+          ],
+          "edges": [
+            {
+              "source": "snowflake",
+              "target": "olap",
+              "label": "数仓 / 分析查询",
+              "sourceUrl": "https://docs.snowflake.com/en/user-guide/intro-key-concepts",
+              "note": "并非只能分析；Hybrid Tables 另支持事务型工作负载。"
+            },
+            {
+              "source": "bigquery",
+              "target": "olap",
+              "label": "云分析 / 数据仓库",
+              "sourceUrl": "https://docs.cloud.google.com/bigquery/docs/introduction"
+            },
+            {
+              "source": "redshift",
+              "target": "olap",
+              "label": "云数据仓库",
+              "sourceUrl": "https://docs.aws.amazon.com/redshift/latest/mgmt/welcome.html"
+            },
+            {
+              "source": "teradata",
+              "target": "olap",
+              "label": "企业分析平台",
+              "sourceUrl": "https://www.teradata.com/platform"
+            },
+            {
+              "source": "databricks_sql",
+              "target": "olap",
+              "label": "湖仓 SQL 分析",
+              "sourceUrl": "https://docs.databricks.com/aws/en/sql",
+              "note": "此处指 Databricks SQL，不把整个 Databricks 平台等同于一个数据库内核。"
+            },
+            {
+              "source": "greenplum",
+              "target": "olap",
+              "label": "MPP 数据仓库",
+              "sourceUrl": "https://github.com/greenplum-db/gpdb-archive",
+              "note": "引用官方归档代码仓库的技术定位；仓库于 2024-05-24 归档，不据此推断当前商业产品支持状态。"
+            }
+          ],
+          "direction": "LR"
+        },
+        {
+          "title": "OLAP ②：实时分析与本地分析",
+          "kind": "graph",
+          "nodes": [
+            {
+              "id": "olap",
+              "label": "OLAP\n聚合 · 分组 · 交互式分析",
+              "kind": "concept"
+            },
+            {
+              "id": "clickhouse",
+              "label": "ClickHouse",
+              "kind": "product",
+              "sourceUrl": "https://clickhouse.com/docs/get-started/about/intro",
+              "role": "database"
+            },
+            {
+              "id": "duckdb",
+              "label": "DuckDB",
+              "kind": "product",
+              "sourceUrl": "https://duckdb.org/why_duckdb",
+              "role": "database"
+            },
+            {
+              "id": "doris",
+              "label": "Apache Doris",
+              "kind": "product",
+              "sourceUrl": "https://doris.apache.org/docs/3.x/gettingStarted/what-is-apache-doris/",
+              "role": "database"
+            },
+            {
+              "id": "starrocks",
+              "label": "StarRocks",
+              "kind": "product",
+              "sourceUrl": "https://docs.starrocks.io/docs/introduction/StarRocks_intro/",
+              "role": "database"
+            },
+            {
+              "id": "druid",
+              "label": "Apache Druid",
+              "kind": "product",
+              "sourceUrl": "https://druid.apache.org/docs/latest/design/",
+              "role": "database"
+            },
+            {
+              "id": "kylin",
+              "label": "Apache Kylin",
+              "kind": "product",
+              "sourceUrl": "https://kylin.apache.org/",
+              "role": "database"
+            },
+            {
+              "id": "monetdb",
+              "label": "MonetDB",
+              "kind": "product",
+              "sourceUrl": "https://www.monetdb.org/",
+              "role": "database"
+            },
+            {
+              "id": "pinot",
+              "label": "Apache Pinot",
+              "kind": "product",
+              "sourceUrl": "https://docs.pinot.apache.org/",
+              "role": "database"
+            }
+          ],
+          "edges": [
+            {
+              "source": "clickhouse",
+              "target": "olap",
+              "label": "列式分析",
+              "sourceUrl": "https://clickhouse.com/docs/get-started/about/intro"
+            },
+            {
+              "source": "duckdb",
+              "target": "olap",
+              "label": "进程内分析",
+              "sourceUrl": "https://duckdb.org/why_duckdb"
+            },
+            {
+              "source": "doris",
+              "target": "olap",
+              "label": "实时分析",
+              "sourceUrl": "https://doris.apache.org/docs/3.x/gettingStarted/what-is-apache-doris/"
+            },
+            {
+              "source": "starrocks",
+              "target": "olap",
+              "label": "实时分析",
+              "sourceUrl": "https://docs.starrocks.io/docs/introduction/StarRocks_intro/"
+            },
+            {
+              "source": "druid",
+              "target": "olap",
+              "label": "实时聚合分析",
+              "sourceUrl": "https://druid.apache.org/docs/latest/design/"
+            },
+            {
+              "source": "kylin",
+              "target": "olap",
+              "label": "分布式 OLAP",
+              "sourceUrl": "https://kylin.apache.org/"
+            },
+            {
+              "source": "monetdb",
+              "target": "olap",
+              "label": "分析型查询",
+              "sourceUrl": "https://www.monetdb.org/"
+            },
+            {
+              "source": "pinot",
+              "target": "olap",
+              "label": "实时 OLAP",
+              "sourceUrl": "https://docs.pinot.apache.org/"
+            }
+          ],
+          "direction": "LR"
+        },
+        {
+          "title": "HTAP：同一产品可以跨越 OLTP 与 OLAP",
+          "kind": "graph",
+          "nodes": [
+            {
+              "id": "oltp",
+              "label": "OLTP\n在线事务",
+              "kind": "concept"
+            },
+            {
+              "id": "htap",
+              "label": "HTAP\n混合事务与分析",
+              "kind": "concept"
+            },
+            {
+              "id": "olap",
+              "label": "OLAP\n分析查询",
+              "kind": "concept"
+            },
+            {
+              "id": "tidb",
+              "label": "TiDB",
+              "kind": "product",
+              "sourceUrl": "https://docs.pingcap.com/tidb/stable/quick-start-with-htap/"
+            },
+            {
+              "id": "oceanbase",
+              "label": "OceanBase",
+              "kind": "product",
+              "sourceUrl": "https://en.oceanbase.com/docs/common-oceanbase-database-10000000003678937"
+            },
+            {
+              "id": "singlestore",
+              "label": "SingleStore",
+              "kind": "product",
+              "sourceUrl": "https://docs.singlestore.com/cloud/create-a-database/columnstore/universal-storage/"
+            }
+          ],
+          "edges": [
+            {
+              "source": "tidb",
+              "target": "oltp",
+              "label": "TiKV 事务路径",
+              "sourceUrl": "https://docs.pingcap.com/tidb/stable/quick-start-with-htap/"
+            },
+            {
+              "source": "tidb",
+              "target": "olap",
+              "label": "TiFlash 列式副本",
+              "sourceUrl": "https://docs.pingcap.com/tidb/stable/quick-start-with-htap/",
+              "note": "经典自建 HTAP 路线需部署 TiFlash，并为目标表创建副本。"
+            },
+            {
+              "source": "tidb",
+              "target": "htap",
+              "label": "行存 + 列式副本",
+              "sourceUrl": "https://docs.pingcap.com/tidb/stable/quick-start-with-htap/",
+              "note": "这里描述文档所示架构，不泛化到所有云产品内部实现。"
+            },
+            {
+              "source": "oceanbase",
+              "target": "oltp",
+              "label": "在线事务",
+              "sourceUrl": "https://en.oceanbase.com/docs/common-oceanbase-database-10000000003678937"
+            },
+            {
+              "source": "oceanbase",
+              "target": "olap",
+              "label": "并行分析",
+              "sourceUrl": "https://en.oceanbase.com/docs/common-oceanbase-database-10000000003678937"
+            },
+            {
+              "source": "oceanbase",
+              "target": "htap",
+              "label": "事务 / 分析混合负载",
+              "sourceUrl": "https://en.oceanbase.com/docs/common-oceanbase-database-10000000003678937",
+              "note": "具体性能、隔离与副本方案取决于版本和部署配置。"
+            },
+            {
+              "source": "singlestore",
+              "target": "oltp",
+              "label": "事务读写",
+              "sourceUrl": "https://docs.singlestore.com/cloud/create-a-database/columnstore/universal-storage/"
+            },
+            {
+              "source": "singlestore",
+              "target": "olap",
+              "label": "分析查询",
+              "sourceUrl": "https://docs.singlestore.com/cloud/create-a-database/columnstore/universal-storage/"
+            },
+            {
+              "source": "singlestore",
+              "target": "htap",
+              "label": "Universal Storage",
+              "sourceUrl": "https://docs.singlestore.com/cloud/create-a-database/columnstore/universal-storage/",
+              "note": "统一存储支持混合负载，不表示混合负载之间没有资源竞争。"
+            }
+          ],
+          "direction": "LR"
+        },
+        {
+          "title": "专用工作负载：检索、向量与时序可交叉",
+          "kind": "graph",
+          "nodes": [
+            {
+              "id": "search",
+              "label": "全文检索",
+              "kind": "concept"
+            },
+            {
+              "id": "vector",
+              "label": "向量近邻检索",
+              "kind": "concept"
+            },
+            {
+              "id": "timeseries",
+              "label": "时序 / 指标分析",
+              "kind": "concept"
+            },
+            {
+              "id": "elasticsearch",
+              "label": "Elasticsearch",
+              "kind": "product",
+              "sourceUrl": "https://www.elastic.co/docs/solutions/search"
+            },
+            {
+              "id": "opensearch",
+              "label": "OpenSearch",
+              "kind": "product",
+              "sourceUrl": "https://docs.opensearch.org/latest/vector-search/"
+            },
+            {
+              "id": "milvus",
+              "label": "Milvus",
+              "kind": "product",
+              "sourceUrl": "https://milvus.io/docs/overview.md"
+            },
+            {
+              "id": "qdrant",
+              "label": "Qdrant",
+              "kind": "product",
+              "sourceUrl": "https://qdrant.tech/documentation/overview/vector-search/"
+            },
+            {
+              "id": "postgresql",
+              "label": "PostgreSQL\n需 pgvector",
+              "kind": "product",
+              "sourceUrl": "https://github.com/pgvector/pgvector"
+            },
+            {
+              "id": "mongodb",
+              "label": "MongoDB\nVector Search",
+              "kind": "product",
+              "sourceUrl": "https://www.mongodb.com/docs/vector-search/"
+            },
+            {
+              "id": "redis",
+              "label": "Redis\nSearch / 向量索引",
+              "kind": "product",
+              "sourceUrl": "https://redis.io/docs/latest/develop/ai/search-and-query/vectors/"
+            },
+            {
+              "id": "timescaledb",
+              "label": "TimescaleDB\nPostgreSQL 扩展",
+              "kind": "component",
+              "sourceUrl": "https://github.com/timescale/timescaledb"
+            },
+            {
+              "id": "influxdb",
+              "label": "InfluxDB",
+              "kind": "product",
+              "sourceUrl": "https://docs.influxdata.com/platform/"
+            },
+            {
+              "id": "prometheus",
+              "label": "Prometheus\n内含时序库",
+              "kind": "product",
+              "sourceUrl": "https://prometheus.io/docs/introduction/overview/"
+            }
+          ],
+          "edges": [
+            {
+              "source": "elasticsearch",
+              "target": "search",
+              "label": "全文 / 词项查询",
+              "sourceUrl": "https://www.elastic.co/docs/solutions/search"
+            },
+            {
+              "source": "elasticsearch",
+              "target": "vector",
+              "label": "向量 / 混合检索",
+              "sourceUrl": "https://www.elastic.co/docs/solutions/search"
+            },
+            {
+              "source": "opensearch",
+              "target": "search",
+              "label": "关键词检索",
+              "sourceUrl": "https://docs.opensearch.org/latest/search-plugins/keyword-search/"
+            },
+            {
+              "source": "opensearch",
+              "target": "vector",
+              "label": "向量检索",
+              "sourceUrl": "https://docs.opensearch.org/latest/vector-search/"
+            },
+            {
+              "source": "milvus",
+              "target": "vector",
+              "label": "向量近邻查询",
+              "sourceUrl": "https://milvus.io/docs/overview.md"
+            },
+            {
+              "source": "qdrant",
+              "target": "vector",
+              "label": "向量相似度查询",
+              "sourceUrl": "https://qdrant.tech/documentation/overview/vector-search/"
+            },
+            {
+              "source": "postgresql",
+              "target": "vector",
+              "label": "安装 pgvector 后",
+              "sourceUrl": "https://github.com/pgvector/pgvector",
+              "note": "不是 PostgreSQL 原生默认内置功能。"
+            },
+            {
+              "source": "mongodb",
+              "target": "vector",
+              "label": "需受支持部署 + 索引",
+              "sourceUrl": "https://www.mongodb.com/docs/vector-search/",
+              "note": "Atlas、自托管及本地部署的支持范围与版本不同；文档明确 Atlas Infinite 公测暂不支持本页功能。"
+            },
+            {
+              "source": "redis",
+              "target": "vector",
+              "label": "配置 Search 向量字段",
+              "sourceUrl": "https://redis.io/docs/latest/develop/ai/search-and-query/vectors/",
+              "note": "要求相应版本/发行版提供 Search 能力并创建向量索引；不等同于所有历史 Redis 版本。"
+            },
+            {
+              "source": "timescaledb",
+              "target": "timeseries",
+              "label": "时序扩展 / 分析",
+              "sourceUrl": "https://github.com/timescale/timescaledb"
+            },
+            {
+              "source": "influxdb",
+              "target": "timeseries",
+              "label": "时序与事件数据",
+              "sourceUrl": "https://docs.influxdata.com/platform/"
+            },
+            {
+              "source": "prometheus",
+              "target": "timeseries",
+              "label": "指标采集与时序存储",
+              "sourceUrl": "https://prometheus.io/docs/introduction/overview/"
+            }
+          ],
+          "direction": "LR"
+        }
+      ],
+      "notes": [
+        "图中事实是官方文档支持的工作负载或能力，不是性能排名、选型保证，也不表示未画边的产品不支持该能力。",
+        "OLTP 不是只写，OLAP 不是只读；行存和列存是常见实现选择，不是二者的定义。",
+        "全文、向量、时序是专用查询/数据工作负载，可以与 OLTP、OLAP 同时存在。",
+        "HTAP 不等于随便拿一套业务库跑报表：需要考虑分析扫描对事务的影响，以及同步、资源与一致性边界。",
+        "核验日期：2026-10-04。版本条件以每条边所附官方来源为准；SQL Server 等产品本身远不止图中的一项能力。"
+      ],
+      "sources": [
+        {
+          "title": "mysql · 官方文档 / 官方项目资料",
+          "url": "https://dev.mysql.com/doc/refman/8.4/en/innodb-introduction.html"
+        },
+        {
+          "title": "pg · 官方文档 / 官方项目资料",
+          "url": "https://www.postgresql.org/docs/current/tutorial-transactions.html"
+        },
+        {
+          "title": "oracle · 官方文档 / 官方项目资料",
+          "url": "https://docs.oracle.com/en/database/oracle/oracle-database/26/cncpt/introduction-to-oracle-database.html"
+        },
+        {
+          "title": "mssql · 官方文档 / 官方项目资料",
+          "url": "https://learn.microsoft.com/en-us/sql/relational-databases/in-memory-oltp/overview-and-usage-scenarios?view=sql-server-ver17"
+        },
+        {
+          "title": "maria · 官方文档 / 官方项目资料",
+          "url": "https://mariadb.com/docs/server/server-usage/storage-engines/innodb"
+        },
+        {
+          "title": "db2 · 官方文档 / 官方项目资料",
+          "url": "https://www.ibm.com/products/db2"
+        },
+        {
+          "title": "sqlite · 官方文档 / 官方项目资料",
+          "url": "https://sqlite.org/whentouse.html"
+        },
+        {
+          "title": "mongo · 官方文档 / 官方项目资料",
+          "url": "https://www.mongodb.com/docs/manual/core/transactions/"
+        },
+        {
+          "title": "cockroach · 官方文档 / 官方项目资料",
+          "url": "https://www.cockroachlabs.com/glossary/distributed-db/oltp-online-transaction-processing/"
+        },
+        {
+          "title": "spanner · 官方文档 / 官方项目资料",
+          "url": "https://cloud.google.com/spanner"
+        },
+        {
+          "title": "yuga · 官方文档 / 官方项目资料",
+          "url": "https://docs.yugabyte.com/stable/explore/transactions/"
+        },
+        {
+          "title": "tidb · 官方文档 / 官方项目资料",
+          "url": "https://docs.pingcap.com/tidb/stable/tidb-faq/"
+        },
+        {
+          "title": "ocean · 官方文档 / 官方项目资料",
+          "url": "https://en.oceanbase.com/docs/common-oceanbase-database-10000000003678937"
+        },
+        {
+          "title": "single · 官方文档 / 官方项目资料",
+          "url": "https://docs.singlestore.com/cloud/create-a-database/columnstore/universal-storage/"
+        },
+        {
+          "title": "volt · 官方文档 / 官方项目资料",
+          "url": "https://docs.voltdb.com/UsingVoltDB/ChapOverview.php"
+        },
+        {
+          "title": "snow · 官方文档 / 官方项目资料",
+          "url": "https://docs.snowflake.com/en/user-guide/intro-key-concepts"
+        },
+        {
+          "title": "bigquery · 官方文档 / 官方项目资料",
+          "url": "https://docs.cloud.google.com/bigquery/docs/introduction"
+        },
+        {
+          "title": "redshift · 官方文档 / 官方项目资料",
+          "url": "https://docs.aws.amazon.com/redshift/latest/mgmt/welcome.html"
+        },
+        {
+          "title": "teradata · 官方文档 / 官方项目资料",
+          "url": "https://www.teradata.com/platform"
+        },
+        {
+          "title": "databricks · 官方文档 / 官方项目资料",
+          "url": "https://docs.databricks.com/aws/en/sql"
+        },
+        {
+          "title": "greenplum · 官方文档 / 官方项目资料",
+          "url": "https://github.com/greenplum-db/gpdb-archive"
+        },
+        {
+          "title": "clickhouse · 官方文档 / 官方项目资料",
+          "url": "https://clickhouse.com/docs/get-started/about/intro"
+        },
+        {
+          "title": "duckdb · 官方文档 / 官方项目资料",
+          "url": "https://duckdb.org/why_duckdb"
+        },
+        {
+          "title": "doris · 官方文档 / 官方项目资料",
+          "url": "https://doris.apache.org/docs/3.x/gettingStarted/what-is-apache-doris/"
+        },
+        {
+          "title": "starrocks · 官方文档 / 官方项目资料",
+          "url": "https://docs.starrocks.io/docs/introduction/StarRocks_intro/"
+        },
+        {
+          "title": "druid · 官方文档 / 官方项目资料",
+          "url": "https://druid.apache.org/docs/latest/design/"
+        },
+        {
+          "title": "kylin · 官方文档 / 官方项目资料",
+          "url": "https://kylin.apache.org/"
+        },
+        {
+          "title": "monet · 官方文档 / 官方项目资料",
+          "url": "https://www.monetdb.org/"
+        },
+        {
+          "title": "pinot · 官方文档 / 官方项目资料",
+          "url": "https://docs.pinot.apache.org/"
+        },
+        {
+          "title": "tidbHtap · 官方文档 / 官方项目资料",
+          "url": "https://docs.pingcap.com/tidb/stable/quick-start-with-htap/"
+        },
+        {
+          "title": "elastic · 官方文档 / 官方项目资料",
+          "url": "https://www.elastic.co/docs/solutions/search"
+        },
+        {
+          "title": "opensearch · 官方文档 / 官方项目资料",
+          "url": "https://docs.opensearch.org/latest/search-plugins/keyword-search/"
+        },
+        {
+          "title": "osvector · 官方文档 / 官方项目资料",
+          "url": "https://docs.opensearch.org/latest/vector-search/"
+        },
+        {
+          "title": "milvus · 官方文档 / 官方项目资料",
+          "url": "https://milvus.io/docs/overview.md"
+        },
+        {
+          "title": "qdrant · 官方文档 / 官方项目资料",
+          "url": "https://qdrant.tech/documentation/overview/vector-search/"
+        },
+        {
+          "title": "pgvector · 官方文档 / 官方项目资料",
+          "url": "https://github.com/pgvector/pgvector"
+        },
+        {
+          "title": "mongovec · 官方文档 / 官方项目资料",
+          "url": "https://www.mongodb.com/docs/vector-search/"
+        },
+        {
+          "title": "redisvec · 官方文档 / 官方项目资料",
+          "url": "https://redis.io/docs/latest/develop/ai/search-and-query/vectors/"
+        },
+        {
+          "title": "timescale · 官方文档 / 官方项目资料",
+          "url": "https://github.com/timescale/timescaledb"
+        },
+        {
+          "title": "influx · 官方文档 / 官方项目资料",
+          "url": "https://docs.influxdata.com/platform/"
+        },
+        {
+          "title": "prometheus · 官方文档 / 官方项目资料",
+          "url": "https://prometheus.io/docs/introduction/overview/"
+        }
+      ]
+    },
+    {
+      "id": "02-data-lifecycle",
+      "title": "02 · 数据生命周期：数据如何流动、保留与恢复？",
+      "subtitle": "示意方案，非本机部署 · 不代表任何企业或本项目正在运行这些组合",
+      "takeaway": "业务数据库、消息系统、处理引擎和分析数据库承担不同职责；复制、缓存、保留策略都不能自动代替备份。",
+      "panels": [
+        {
+          "title": "示意 A：在线业务 → CDC → 消息 → 处理 → 分析",
+          "kind": "graph",
+          "nodes": [
+            {
+              "id": "business_app",
+              "label": "业务应用\n示意",
+              "kind": "application",
+              "role": "application"
+            },
+            {
+              "id": "pg",
+              "label": "PostgreSQL\n业务数据库",
+              "kind": "product",
+              "sourceUrl": "https://www.postgresql.org/docs/current/tutorial-transactions.html",
+              "role": "database"
+            },
+            {
+              "id": "debezium",
+              "label": "Debezium\nCDC 连接器",
+              "kind": "component",
+              "sourceUrl": "https://debezium.io/documentation/reference/stable/connectors/postgresql.html",
+              "role": "connector"
+            },
+            {
+              "id": "kafka",
+              "label": "Kafka\n消息 / 事件流",
+              "kind": "component",
+              "sourceUrl": "https://debezium.io/documentation/reference/stable/connectors/postgresql.html",
+              "role": "message-system"
+            },
+            {
+              "id": "flink",
+              "label": "Flink\n流处理引擎",
+              "kind": "component",
+              "sourceUrl": "https://nightlies.apache.org/flink/flink-docs-stable/docs/connectors/datastream/kafka/",
+              "role": "processing-engine"
+            },
+            {
+              "id": "doris",
+              "label": "Doris\n分析数据库",
+              "kind": "product",
+              "sourceUrl": "https://doris.apache.org/docs/3.x/gettingStarted/what-is-apache-doris/",
+              "role": "database"
+            },
+            {
+              "id": "analytics_app",
+              "label": "报表应用\n示意",
+              "kind": "application",
+              "role": "application"
+            }
+          ],
+          "edges": [
+            {
+              "source": "business_app",
+              "target": "pg",
+              "label": "提交业务事务（示意）",
+              "sourceUrl": "https://www.postgresql.org/docs/current/tutorial-transactions.html",
+              "note": "仅示意应用使用事务接口，不是发现到的真实部署关系。"
+            },
+            {
+              "source": "pg",
+              "target": "debezium",
+              "label": "逻辑解码 / 行级 CDC",
+              "sourceUrl": "https://debezium.io/documentation/reference/stable/connectors/postgresql.html",
+              "note": "需配置逻辑复制、publication/slot 和最小必要权限；并非读取任意数据库文件。"
+            },
+            {
+              "source": "debezium",
+              "target": "kafka",
+              "label": "发布变更事件",
+              "sourceUrl": "https://debezium.io/documentation/reference/stable/connectors/postgresql.html",
+              "note": "通常先初始快照再连续变更；需部署和配置连接器。"
+            },
+            {
+              "source": "kafka",
+              "target": "flink",
+              "label": "Kafka source 消费",
+              "sourceUrl": "https://nightlies.apache.org/flink/flink-docs-stable/docs/connectors/datastream/kafka/",
+              "note": "需匹配连接器版本；事件格式、乱序、checkpoint 和重放语义必须设计。"
+            },
+            {
+              "source": "flink",
+              "target": "doris",
+              "label": "Doris sink 写入",
+              "sourceUrl": "https://github.com/apache/doris-flink-connector",
+              "note": "需 Flink-Doris Connector、目标表和写入配置；图不保证整条链路天然 exactly-once。"
+            },
+            {
+              "source": "analytics_app",
+              "target": "doris",
+              "label": "执行报表 / 聚合查询",
+              "sourceUrl": "https://doris.apache.org/docs/3.x/gettingStarted/what-is-apache-doris/",
+              "note": "查询请求方向；不表示报表应用又把数据写回业务库。",
+              "style": "dashed"
+            }
+          ],
+          "direction": "LR"
+        },
+        {
+          "title": "示意 B：指标产生 → 采集 → 查询 → 过期清理",
+          "kind": "graph",
+          "nodes": [
+            {
+              "id": "metrics_app",
+              "label": "应用指标端点\nHTTP / metrics（示意）",
+              "kind": "application",
+              "role": "application"
+            },
+            {
+              "id": "prom",
+              "label": "Prometheus\n时序数据库",
+              "kind": "product",
+              "sourceUrl": "https://prometheus.io/docs/introduction/overview/",
+              "role": "database"
+            },
+            {
+              "id": "grafana",
+              "label": "Grafana\n可视化应用",
+              "kind": "application",
+              "sourceUrl": "https://grafana.com/docs/grafana/latest/datasources/prometheus/",
+              "role": "application"
+            },
+            {
+              "id": "expiry",
+              "label": "过期样本清理\n时间 / 容量策略",
+              "kind": "concept",
+              "role": "retention"
+            }
+          ],
+          "edges": [
+            {
+              "source": "metrics_app",
+              "target": "prom",
+              "label": "HTTP 拉取指标（数据流）",
+              "sourceUrl": "https://prometheus.io/docs/introduction/overview/",
+              "note": "箭头表示指标流向；实际抓取请求由 Prometheus 发出。"
+            },
+            {
+              "source": "grafana",
+              "target": "prom",
+              "label": "通过数据源查询指标",
+              "sourceUrl": "https://grafana.com/docs/grafana/latest/datasources/prometheus/",
+              "note": "需配置 Prometheus 数据源；Grafana 自身配置数据库是另一个角色。",
+              "style": "dashed"
+            },
+            {
+              "source": "prom",
+              "target": "expiry",
+              "label": "按 retention 设置清理",
+              "sourceUrl": "https://prometheus.io/docs/prometheus/latest/storage/",
+              "note": "本地 TSDB 以块清理；过期删除不是备份。远端存储需另行配置，图未暗示已启用。"
+            }
+          ],
+          "direction": "LR"
+        },
+        {
+          "title": "示意 C：逻辑备份 → 保存归档 → 恢复到目标库",
+          "kind": "graph",
+          "nodes": [
+            {
+              "id": "pg_source",
+              "label": "PostgreSQL\n源数据库",
+              "kind": "product",
+              "sourceUrl": "https://www.postgresql.org/docs/current/app-pgdump.html",
+              "role": "database"
+            },
+            {
+              "id": "pg_dump",
+              "label": "pg_dump\n备份工具",
+              "kind": "component",
+              "sourceUrl": "https://www.postgresql.org/docs/current/app-pgdump.html",
+              "role": "backup-tool"
+            },
+            {
+              "id": "archive",
+              "label": "自定义 / 目录归档\n备份文件，不是数据库",
+              "kind": "concept",
+              "sourceUrl": "https://www.postgresql.org/docs/current/app-pgdump.html",
+              "role": "backup-artifact"
+            },
+            {
+              "id": "pg_restore",
+              "label": "pg_restore\n恢复工具",
+              "kind": "component",
+              "sourceUrl": "https://www.postgresql.org/docs/current/app-pgrestore.html",
+              "role": "restore-tool"
+            },
+            {
+              "id": "pg_target",
+              "label": "PostgreSQL\n恢复目标库",
+              "kind": "product",
+              "sourceUrl": "https://www.postgresql.org/docs/current/app-pgrestore.html",
+              "role": "database"
+            }
+          ],
+          "edges": [
+            {
+              "source": "pg_source",
+              "target": "pg_dump",
+              "label": "导出一致逻辑备份",
+              "sourceUrl": "https://www.postgresql.org/docs/current/app-pgdump.html",
+              "note": "pg_dump 备份单个数据库；角色、表空间等全局对象需另行处理。"
+            },
+            {
+              "source": "pg_dump",
+              "target": "archive",
+              "label": "选择 custom / directory 格式",
+              "sourceUrl": "https://www.postgresql.org/docs/current/app-pgdump.html",
+              "note": "示意选择适用于 pg_restore 的归档格式；不是普通 SQL 文本脚本。"
+            },
+            {
+              "source": "archive",
+              "target": "pg_restore",
+              "label": "读取归档",
+              "sourceUrl": "https://www.postgresql.org/docs/current/app-pgrestore.html"
+            },
+            {
+              "source": "pg_restore",
+              "target": "pg_target",
+              "label": "重建对象 / 数据",
+              "sourceUrl": "https://www.postgresql.org/docs/current/app-pgrestore.html",
+              "note": "需要匹配权限、扩展和兼容版本，且应实际演练恢复；本任务没有执行备份或恢复。"
+            }
+          ],
+          "direction": "LR"
+        },
+        {
+          "title": "示意 D：Elasticsearch 索引生命周期（配置后生效）",
+          "kind": "graph",
+          "nodes": [
+            {
+              "id": "hot",
+              "label": "Hot\n活跃写入与查询",
+              "kind": "concept"
+            },
+            {
+              "id": "warm",
+              "label": "Warm\n较少更新",
+              "kind": "concept"
+            },
+            {
+              "id": "cold",
+              "label": "Cold\n较少查询",
+              "kind": "concept"
+            },
+            {
+              "id": "frozen",
+              "label": "Frozen\n极少查询",
+              "kind": "concept"
+            },
+            {
+              "id": "delete",
+              "label": "Delete\n索引删除",
+              "kind": "concept"
+            }
+          ],
+          "edges": [
+            {
+              "source": "hot",
+              "target": "warm",
+              "label": "可配置的阶段迁移",
+              "sourceUrl": "https://www.elastic.co/docs/manage-data/lifecycle/index-lifecycle-management/index-lifecycle",
+              "note": "这是包含所有阶段的示意 policy；各阶段可选，并非每个索引必经。"
+            },
+            {
+              "source": "warm",
+              "target": "cold",
+              "label": "满足阶段条件后",
+              "sourceUrl": "https://www.elastic.co/docs/manage-data/lifecycle/index-lifecycle-management/index-lifecycle",
+              "note": "由策略、最小年龄及前序动作完成情况决定，不是只看墙上时间。"
+            },
+            {
+              "source": "cold",
+              "target": "frozen",
+              "label": "可选冻结阶段",
+              "sourceUrl": "https://www.elastic.co/docs/manage-data/lifecycle/index-lifecycle-management/index-lifecycle",
+              "note": "相关动作与 searchable snapshots 需相应部署、许可及存储配置。"
+            },
+            {
+              "source": "frozen",
+              "target": "delete",
+              "label": "配置 delete 阶段后",
+              "sourceUrl": "https://www.elastic.co/docs/manage-data/lifecycle/index-lifecycle-management/index-lifecycle",
+              "note": "删除是不可替代备份的生命周期动作；图未配置或执行任何真实删除。"
+            }
+          ],
+          "direction": "LR"
+        }
+      ],
+      "notes": [
+        "醒目声明：全部是示意方案，不是本机、本工作区或任何真实公司当前部署的探测结果。",
+        "节点角色显式区分：product/database 是数据库；component/message-system 是消息系统；component/processing-engine 是处理引擎；连接器、备份工具与备份文件另标。",
+        "数据流、查询请求和阶段迁移是不同边语义，请按箭头文字阅读；虚线表示查询请求或条件化 / 可选关系，不单独代表一种数据流。",
+        "示意 A 的各相邻组件有官方连接器依据，但组合后的权限、兼容版本、数据类型、延迟、故障恢复和端到端一致性仍需单独验证。",
+        "CDC 把变更传播出去，备份保留可恢复副本；自动传播误删不等于能恢复误删。",
+        "没有读取密钥、连接配置或运行态，也没有部署、迁移、修改保留策略或执行删除。"
+      ],
+      "sources": [
+        {
+          "title": "pg · 官方文档 / 官方项目资料",
+          "url": "https://www.postgresql.org/docs/current/tutorial-transactions.html"
+        },
+        {
+          "title": "debezium · 官方文档 / 官方项目资料",
+          "url": "https://debezium.io/documentation/reference/stable/connectors/postgresql.html"
+        },
+        {
+          "title": "flinkKafka · 官方文档 / 官方项目资料",
+          "url": "https://nightlies.apache.org/flink/flink-docs-stable/docs/connectors/datastream/kafka/"
+        },
+        {
+          "title": "flinkDoris · 官方文档 / 官方项目资料",
+          "url": "https://github.com/apache/doris-flink-connector"
+        },
+        {
+          "title": "doris · 官方文档 / 官方项目资料",
+          "url": "https://doris.apache.org/docs/3.x/gettingStarted/what-is-apache-doris/"
+        },
+        {
+          "title": "prometheus · 官方文档 / 官方项目资料",
+          "url": "https://prometheus.io/docs/introduction/overview/"
+        },
+        {
+          "title": "grafanaProm · 官方文档 / 官方项目资料",
+          "url": "https://grafana.com/docs/grafana/latest/datasources/prometheus/"
+        },
+        {
+          "title": "promstorage · 官方文档 / 官方项目资料",
+          "url": "https://prometheus.io/docs/prometheus/latest/storage/"
+        },
+        {
+          "title": "pgdump · 官方文档 / 官方项目资料",
+          "url": "https://www.postgresql.org/docs/current/app-pgdump.html"
+        },
+        {
+          "title": "pgrestore · 官方文档 / 官方项目资料",
+          "url": "https://www.postgresql.org/docs/current/app-pgrestore.html"
+        },
+        {
+          "title": "ilm · 官方文档 / 官方项目资料",
+          "url": "https://www.elastic.co/docs/manage-data/lifecycle/index-lifecycle-management/index-lifecycle"
+        }
+      ]
+    },
+    {
+      "id": "03-architecture",
+      "title": "03 · 分布式架构：数据如何摆放与流动",
+      "subtitle": "6 种逻辑拓扑；不是本机或私有服务器的实机部署图",
+      "takeaway": "复制解决副本问题，分片解决数据分布问题；它们都不自动意味着跨节点强一致。",
+      "panels": [
+        {
+          "title": "A · 单机嵌入：SQLite",
+          "kind": "graph",
+          "direction": "LR",
+          "nodes": [
+            {
+              "id": "sq-app",
+              "label": "应用进程",
+              "kind": "concept"
+            },
+            {
+              "id": "sq-lib",
+              "label": "SQLite 库\n进程内",
+              "kind": "product",
+              "sourceUrl": "https://www.sqlite.org/serverless.html"
+            },
+            {
+              "id": "sq-file",
+              "label": "本机数据库文件\n日志 / 可选 WAL",
+              "kind": "component"
+            }
+          ],
+          "edges": [
+            {
+              "source": "sq-app",
+              "target": "sq-lib",
+              "label": "函数调用",
+              "sourceUrl": "https://www.sqlite.org/serverless.html"
+            },
+            {
+              "source": "sq-lib",
+              "target": "sq-file",
+              "label": "本地文件 I/O",
+              "sourceUrl": "https://www.sqlite.org/wal.html",
+              "note": "图中没有独立 SQL 服务进程。WAL 是可选日志模式，不是默认模式；原生 SQLite 不内建跨机器复制。"
+            }
+          ]
+        },
+        {
+          "title": "B · 主备复制：PostgreSQL 18",
+          "kind": "graph",
+          "direction": "LR",
+          "nodes": [
+            {
+              "id": "pg-app",
+              "label": "写入客户端",
+              "kind": "concept"
+            },
+            {
+              "id": "pg-primary",
+              "label": "PostgreSQL\nPrimary",
+              "kind": "product"
+            },
+            {
+              "id": "pg-standby",
+              "label": "Hot standby\n可只读",
+              "kind": "component"
+            },
+            {
+              "id": "pg-reader",
+              "label": "只读客户端",
+              "kind": "concept"
+            }
+          ],
+          "edges": [
+            {
+              "source": "pg-app",
+              "target": "pg-primary",
+              "label": "事务读写",
+              "sourceUrl": "https://www.postgresql.org/docs/18/warm-standby.html"
+            },
+            {
+              "source": "pg-primary",
+              "target": "pg-standby",
+              "label": "WAL 流：默认异步",
+              "sourceUrl": "https://www.postgresql.org/docs/18/warm-standby.html",
+              "note": "可配置 synchronous_standby_names 与 synchronous_commit；同步确认收到、刷盘、回放的语义不同，不能仅因存在副本就称所有读取强一致。"
+            },
+            {
+              "source": "pg-reader",
+              "target": "pg-standby",
+              "label": "读取可能滞后",
+              "sourceUrl": "https://www.postgresql.org/docs/18/warm-standby.html"
+            }
+          ]
+        },
+        {
+          "title": "C · 路由分片：MongoDB",
+          "kind": "graph",
+          "direction": "LR",
+          "nodes": [
+            {
+              "id": "mo-app",
+              "label": "应用客户端",
+              "kind": "concept"
+            },
+            {
+              "id": "mo-router",
+              "label": "mongos\n查询路由",
+              "kind": "component"
+            },
+            {
+              "id": "mo-config",
+              "label": "Config servers\n分片元数据",
+              "kind": "component"
+            },
+            {
+              "id": "mo-a",
+              "label": "Shard A\n副本集",
+              "kind": "component"
+            },
+            {
+              "id": "mo-b",
+              "label": "Shard B\n副本集",
+              "kind": "component"
+            }
+          ],
+          "edges": [
+            {
+              "source": "mo-app",
+              "target": "mo-router",
+              "label": "查询 / 写入",
+              "sourceUrl": "https://www.mongodb.com/docs/manual/sharding/"
+            },
+            {
+              "source": "mo-router",
+              "target": "mo-config",
+              "label": "获取分片元数据",
+              "sourceUrl": "https://www.mongodb.com/docs/manual/sharding/"
+            },
+            {
+              "source": "mo-router",
+              "target": "mo-a",
+              "label": "按 shard key 路由",
+              "sourceUrl": "https://www.mongodb.com/docs/manual/sharding/"
+            },
+            {
+              "source": "mo-router",
+              "target": "mo-b",
+              "label": "定向或广播查询",
+              "sourceUrl": "https://www.mongodb.com/docs/manual/sharding/",
+              "note": "分片内部通常是副本集；本图不展开选主与复制。查询路由不等于事务隔离，读取语义还由 read concern / read preference 决定。"
+            }
+          ]
+        },
+        {
+          "title": "D · 分布式 SQL：TiDB",
+          "kind": "graph",
+          "direction": "LR",
+          "nodes": [
+            {
+              "id": "ti-app",
+              "label": "MySQL 协议客户端",
+              "kind": "concept"
+            },
+            {
+              "id": "ti-sql",
+              "label": "TiDB\n无状态 SQL 层",
+              "kind": "product"
+            },
+            {
+              "id": "ti-pd",
+              "label": "PD\n时间戳 / 调度",
+              "kind": "component"
+            },
+            {
+              "id": "ti-kv",
+              "label": "TiKV Regions\n分片 + Raft 副本",
+              "kind": "component"
+            },
+            {
+              "id": "ti-flash",
+              "label": "TiFlash（可选）\n列式副本",
+              "kind": "component"
+            }
+          ],
+          "edges": [
+            {
+              "source": "ti-app",
+              "target": "ti-sql",
+              "label": "SQL",
+              "sourceUrl": "https://docs.pingcap.com/tidb/stable/tidb-architecture/"
+            },
+            {
+              "source": "ti-sql",
+              "target": "ti-pd",
+              "label": "时间戳 / 元数据",
+              "sourceUrl": "https://docs.pingcap.com/tidb/stable/tidb-architecture/"
+            },
+            {
+              "source": "ti-sql",
+              "target": "ti-kv",
+              "label": "事务 KV 读写",
+              "sourceUrl": "https://docs.pingcap.com/tidb/stable/tidb-architecture/"
+            },
+            {
+              "source": "ti-pd",
+              "target": "ti-kv",
+              "label": "副本与分片调度",
+              "sourceUrl": "https://docs.pingcap.com/tidb/stable/tidb-architecture/"
+            },
+            {
+              "source": "ti-kv",
+              "target": "ti-flash",
+              "label": "异步 learner 复制",
+              "sourceUrl": "https://docs.pingcap.com/tidb/stable/tidb-faq/",
+              "note": "TiFlash 通过读取时间戳等机制保证查询所需快照；异步复制不能简化成所有时刻副本相同。TiKV 节点可承载多个 Region，不是一节点一分片。"
+            }
+          ]
+        },
+        {
+          "title": "E · 存算分离：Snowflake 标准表",
+          "kind": "graph",
+          "direction": "LR",
+          "nodes": [
+            {
+              "id": "sn-client",
+              "label": "SQL 客户端",
+              "kind": "concept"
+            },
+            {
+              "id": "sn-service",
+              "label": "Cloud services\n认证 / 元数据 / 优化",
+              "kind": "component"
+            },
+            {
+              "id": "sn-a",
+              "label": "Warehouse A\n独立计算集群",
+              "kind": "component"
+            },
+            {
+              "id": "sn-b",
+              "label": "Warehouse B\n独立计算集群",
+              "kind": "component"
+            },
+            {
+              "id": "sn-store",
+              "label": "共享云存储\n持久化数据",
+              "kind": "component"
+            }
+          ],
+          "edges": [
+            {
+              "source": "sn-client",
+              "target": "sn-service",
+              "label": "认证 / 查询请求",
+              "sourceUrl": "https://docs.snowflake.com/en/user-guide/intro-key-concepts"
+            },
+            {
+              "source": "sn-service",
+              "target": "sn-a",
+              "label": "协调查询执行",
+              "sourceUrl": "https://docs.snowflake.com/en/user-guide/intro-key-concepts"
+            },
+            {
+              "source": "sn-service",
+              "target": "sn-b",
+              "label": "协调查询执行",
+              "sourceUrl": "https://docs.snowflake.com/en/user-guide/intro-key-concepts"
+            },
+            {
+              "source": "sn-a",
+              "target": "sn-store",
+              "label": "访问持久数据",
+              "sourceUrl": "https://docs.snowflake.com/en/user-guide/intro-key-concepts"
+            },
+            {
+              "source": "sn-b",
+              "target": "sn-store",
+              "label": "访问持久数据",
+              "sourceUrl": "https://docs.snowflake.com/en/user-guide/intro-key-concepts",
+              "note": "此为标准 Snowflake 表的三层逻辑示意，省略缓存、网络和各类特殊表路径；不是所有存算分离产品的通用实现。Snowflake 是托管服务，不能当普通服务包在本机自建。"
+            }
+          ]
+        },
+        {
+          "title": "F · 客户端路由分片：Redis OSS Cluster",
+          "kind": "graph",
+          "direction": "LR",
+          "nodes": [
+            {
+              "id": "re-client",
+              "label": "Cluster-aware 客户端",
+              "kind": "concept"
+            },
+            {
+              "id": "re-a",
+              "label": "Primary A\n一组 hash slots",
+              "kind": "component"
+            },
+            {
+              "id": "re-b",
+              "label": "Primary B\n另一组 slots",
+              "kind": "component"
+            },
+            {
+              "id": "re-ra",
+              "label": "Replica A",
+              "kind": "component"
+            },
+            {
+              "id": "re-rb",
+              "label": "Replica B",
+              "kind": "component"
+            }
+          ],
+          "edges": [
+            {
+              "source": "re-client",
+              "target": "re-a",
+              "label": "按 key / slot 路由",
+              "sourceUrl": "https://redis.io/docs/latest/operate/oss_and_stack/reference/cluster-spec/"
+            },
+            {
+              "source": "re-client",
+              "target": "re-b",
+              "label": "处理 MOVED / ASK",
+              "sourceUrl": "https://redis.io/docs/latest/operate/oss_and_stack/reference/cluster-spec/"
+            },
+            {
+              "source": "re-a",
+              "target": "re-ra",
+              "label": "异步复制",
+              "sourceUrl": "https://redis.io/docs/latest/operate/oss_and_stack/reference/cluster-spec/"
+            },
+            {
+              "source": "re-b",
+              "target": "re-rb",
+              "label": "异步复制",
+              "sourceUrl": "https://redis.io/docs/latest/operate/oss_and_stack/reference/cluster-spec/",
+              "note": "只画两个逻辑分片以说明结构，不是生产最少节点配置。Cluster 的多键命令/事务通常要求同一 hash slot；复制确认与故障切换仍可能存在已确认写丢失窗口。"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "箭头表示请求、复制或协调方向，以箭头标签为准；不是产品派生关系，也不表示单向网络连接。",
+        "复制（同一份数据的多副本）、分片（不同数据放不同位置）、事务协议、读一致性是不同维度。",
+        "节点是逻辑角色：一个物理进程可含多个角色，一个角色也可扩展到多个节点。故障域、网络分区和容量配置均未展开。",
+        "全部为官方架构的教学简化；未对本机或内网服务器做部署推断。"
+      ],
+      "sources": [
+        {
+          "title": "SQLite：进程内、无独立服务器",
+          "url": "https://www.sqlite.org/serverless.html"
+        },
+        {
+          "title": "SQLite：WAL",
+          "url": "https://www.sqlite.org/wal.html"
+        },
+        {
+          "title": "PostgreSQL 18：流复制与同步复制",
+          "url": "https://www.postgresql.org/docs/18/warm-standby.html"
+        },
+        {
+          "title": "MongoDB：分片架构",
+          "url": "https://www.mongodb.com/docs/manual/sharding/"
+        },
+        {
+          "title": "TiDB：整体架构",
+          "url": "https://docs.pingcap.com/tidb/stable/tidb-architecture/"
+        },
+        {
+          "title": "TiDB：TiFlash 异步复制与一致读取",
+          "url": "https://docs.pingcap.com/tidb/stable/tidb-faq/"
+        },
+        {
+          "title": "Snowflake：三层架构",
+          "url": "https://docs.snowflake.com/en/user-guide/intro-key-concepts"
+        },
+        {
+          "title": "Redis：Cluster 规范",
+          "url": "https://redis.io/docs/latest/operate/oss_and_stack/reference/cluster-spec/"
+        }
+      ]
+    },
+    {
+      "id": "04-transactions",
+      "title": "04 · 事务与一致性：先问保证的边界",
+      "subtitle": "11 个代表产品；事务原子性、隔离级别、副本读取语义分开看",
+      "takeaway": "支持 ACID 不等于默认可串行化；有多数派副本，也不代表任意读取立刻看到最新值。",
+      "panels": [
+        {
+          "title": "关系型与嵌入式：默认级别必须带范围",
+          "kind": "matrix",
+          "columns": [
+            "产品 / 范围",
+            "事务边界",
+            "隔离 / 默认",
+            "副本或读取语义"
+          ],
+          "rows": [
+            {
+              "cells": [
+                "SQLite 3 / 独立连接",
+                "单库多语句",
+                "串行化写入；WAL 读快照",
+                "原生无跨机副本"
+              ],
+              "sourceUrl": "https://www.sqlite.org/isolation.html",
+              "note": "排除 shared cache + read_uncommitted 特例。默认 rollback journal；WAL 下读事务看快照，一次只有一个写事务。此行仅讨论一个数据库文件，不保证 ATTACH 多库在 WAL 下整体崩溃原子性。"
+            },
+            {
+              "cells": [
+                "PostgreSQL 18",
+                "单库多表事务",
+                "默认 READ COMMITTED",
+                "异步 standby 可滞后"
+              ],
+              "sourceUrl": "https://www.postgresql.org/docs/18/sql-set-transaction.html",
+              "note": "可改为 REPEATABLE READ 或 SERIALIZABLE；事务隔离不决定副本回放进度。流复制默认异步；同步提交配置见 https://www.postgresql.org/docs/18/warm-standby.html 。"
+            },
+            {
+              "cells": [
+                "MySQL 8.4 / InnoDB",
+                "事务表多行 / 多表",
+                "默认 REPEATABLE READ",
+                "副本语义依复制配置"
+              ],
+              "sourceUrl": "https://dev.mysql.com/doc/refman/8.4/en/innodb-transaction-isolation-levels.html",
+              "note": "仅 InnoDB 范围，不将 MyISAM 纳入事务保证。普通快照 SELECT 与锁定读/更新的可见性不同；标准异步复制、半同步和 Group Replication 不可一概而论，需按配置核对。"
+            },
+            {
+              "cells": [
+                "MariaDB Server / InnoDB",
+                "事务表多行 / 多表",
+                "默认 REPEATABLE READ",
+                "复制 / Galera 另行核对"
+              ],
+              "sourceUrl": "https://mariadb.com/docs/server/reference/sql-statements/administrative-sql-statements/set-commands/set-transaction",
+              "note": "按当前 Server 文档描述 InnoDB 默认值；引擎和运行配置可改变结果。此行不把 Galera wsrep 的提交与读取规则等同标准主从复制，也不把所有 MariaDB 表视为事务表。"
+            },
+            {
+              "cells": [
+                "TiDB 7.5 / 常规事务",
+                "跨 Region 分布式事务",
+                "默认 RR 名称；实际 SI",
+                "MVCC 快照；非串行化"
+              ],
+              "sourceUrl": "https://docs.pingcap.com/tidb/v7.5/transaction-isolation-levels/",
+              "note": "RR 是兼容 MySQL 的名称；SI 允许 write skew，不能与 MySQL RR 语义画等号。默认悲观模式；READ COMMITTED 仅在悲观模式有效。FOR UPDATE 当前读有不同可见性。"
+            },
+            {
+              "cells": [
+                "CockroachDB / 当前 stable",
+                "跨行 / 跨节点事务",
+                "默认 SERIALIZABLE",
+                "历史读取须显式区分"
+              ],
+              "sourceUrl": "https://www.cockroachlabs.com/docs/stable/developer-basics.html",
+              "note": "也支持配置 READ COMMITTED；发生序列化冲突时需按驱动/API 正确重试。表格不把默认隔离延伸到显式历史读取或所有客户端会话设置。"
+            }
+          ]
+        },
+        {
+          "title": "文档、KV 与云数据库：不要硬套 SQL 一列",
+          "kind": "matrix",
+          "columns": [
+            "产品 / 范围",
+            "事务边界",
+            "隔离 / 默认",
+            "副本或读取语义"
+          ],
+          "rows": [
+            {
+              "cells": [
+                "MongoDB / 副本集或分片",
+                "支持跨文档事务",
+                "readConcern 按配置",
+                "snapshot + majority 有条件"
+              ],
+              "sourceUrl": "https://www.mongodb.com/docs/manual/core/transactions/",
+              "note": "事务可用 local、majority、snapshot 等 read concern，继承关系需按客户端/会话/事务配置核对。snapshot 且 majority 提交可保证跨分片一致的多数提交快照；majority 本身不保证跨分片同一快照。standalone 不支持多文档事务。"
+            },
+            {
+              "cells": [
+                "Redis OSS / MULTI",
+                "单节点命令组；Cluster 同槽",
+                "执行不插队；无回滚",
+                "默认异步；WAIT 非强一致"
+              ],
+              "sourceUrl": "https://redis.io/docs/latest/develop/using-commands/transactions/",
+              "note": "MULTI/EXEC 不是带任意 SQL 隔离级别的通用事务；执行期单条失败不自动回滚前面命令，WATCH 提供乐观并发检查。复制语义见 https://redis.io/docs/latest/manual/replication/ ，Cluster 同槽限制见 Cluster 规范。"
+            },
+            {
+              "cells": [
+                "Cassandra 5 / 普通与 LWT",
+                "LWT 条件更新；非任意多表",
+                "无 SQL 默认隔离级别",
+                "可调 CL；LWT 线性化 CAS"
+              ],
+              "sourceUrl": "https://cassandra.apache.org/doc/latest/cassandra/architecture/guarantees.html",
+              "note": "普通操作的读写一致性级别由请求/驱动指定，不能声称一个全局默认。LWT 使用 Paxos 实现线性化 compare-and-set；BATCH 的原子性/隔离有分区等限制，不能视为任意跨分区 SQL ACID 事务。"
+            },
+            {
+              "cells": [
+                "DynamoDB / 单 Region",
+                "事务 API 跨 item / 表",
+                "事务操作可串行化",
+                "普通读默认最终一致"
+              ],
+              "sourceUrl": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/transaction-apis.html",
+              "note": "事务对象必须位于同 AWS 账户、同 Region；具体操作两两间隔离见官方表，BatchWrite 不是一个事务。普通表/LSI 可选择强一致读，GSI/Streams 不能；全球表另分 MREC/MRSC，不将单 Region 事务保证推广到所有全球表模式。读取来源：https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.ReadConsistency.html 。"
+            },
+            {
+              "cells": [
+                "Spanner / 默认读写事务",
+                "跨分区分布式事务",
+                "默认 SERIALIZABLE",
+                "该级别有外部一致性"
+              ],
+              "sourceUrl": "https://docs.cloud.google.com/spanner/docs/isolation-levels",
+              "note": "当前服务也提供可选 REPEATABLE READ；外部一致性结论明确限于 SERIALIZABLE 事务。显式 stale reads 与最新强一致读不同；不能把所有时间戳读取描述为读最新值。补充：https://docs.cloud.google.com/spanner/docs/true-time-external-consistency 。"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "事务边界：哪些修改能一起提交/撤销；隔离：并发事务能看到什么；副本一致性：不同节点何时看到同一结果。三者不是同一条强弱刻度。",
+        "RC = READ COMMITTED；RR = REPEATABLE READ；SI = Snapshot Isolation；CL = consistency level；LWT = lightweight transaction。相同名字也可能有不同实现语义。",
+        "默认值指来源中的产品/版本默认，不是已读取用户线上实例的配置。托管参数、客户端覆盖、表引擎和请求选项均须另查。",
+        "这里不做性能/可靠性排名。持久化配置、跨机房故障模型和业务重试同样影响实际结果。"
+      ],
+      "sources": [
+        {
+          "title": "SQLite：隔离与 WAL 快照",
+          "url": "https://www.sqlite.org/isolation.html"
+        },
+        {
+          "title": "PostgreSQL 18：事务隔离设置",
+          "url": "https://www.postgresql.org/docs/18/sql-set-transaction.html"
+        },
+        {
+          "title": "PostgreSQL 18：复制",
+          "url": "https://www.postgresql.org/docs/18/warm-standby.html"
+        },
+        {
+          "title": "MySQL 8.4：InnoDB 隔离级别",
+          "url": "https://dev.mysql.com/doc/refman/8.4/en/innodb-transaction-isolation-levels.html"
+        },
+        {
+          "title": "MariaDB：SET TRANSACTION",
+          "url": "https://mariadb.com/docs/server/reference/sql-statements/administrative-sql-statements/set-commands/set-transaction"
+        },
+        {
+          "title": "TiDB 7.5：隔离级别",
+          "url": "https://docs.pingcap.com/tidb/v7.5/transaction-isolation-levels/"
+        },
+        {
+          "title": "CockroachDB：默认隔离与重试",
+          "url": "https://www.cockroachlabs.com/docs/stable/developer-basics.html"
+        },
+        {
+          "title": "MongoDB：事务 read concern",
+          "url": "https://www.mongodb.com/docs/manual/core/transactions/"
+        },
+        {
+          "title": "Redis：事务",
+          "url": "https://redis.io/docs/latest/develop/using-commands/transactions/"
+        },
+        {
+          "title": "Redis：复制与 WAIT 的限制",
+          "url": "https://redis.io/docs/latest/manual/replication/"
+        },
+        {
+          "title": "Cassandra：一致性保证",
+          "url": "https://cassandra.apache.org/doc/latest/cassandra/architecture/guarantees.html"
+        },
+        {
+          "title": "DynamoDB：事务 API 隔离边界",
+          "url": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/transaction-apis.html"
+        },
+        {
+          "title": "DynamoDB：读一致性与全球表模式",
+          "url": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.ReadConsistency.html"
+        },
+        {
+          "title": "Spanner：隔离级别",
+          "url": "https://docs.cloud.google.com/spanner/docs/isolation-levels"
+        },
+        {
+          "title": "Spanner：外部一致性",
+          "url": "https://docs.cloud.google.com/spanner/docs/true-time-external-consistency"
+        }
+      ]
+    },
+    {
+      "id": "05-execution",
+      "title": "存储与执行机制",
+      "subtitle": "同样是查询，访问路径为何截然不同？",
+      "takeaway": "区分数据组织、索引结构、执行算子与复制链路；看具体查询计划，不把一种引擎结构套到所有数据库。",
+      "panels": [
+        {
+          "title": "PostgreSQL：普通索引回 heap；index-only 有条件",
+          "kind": "graph",
+          "direction": "LR",
+          "nodes": [
+            {
+              "id": "pg",
+              "label": "PostgreSQL\n选定的访问计划",
+              "kind": "product",
+              "sourceUrl": "https://www.postgresql.org/docs/current/indexes-index-only-scans.html"
+            },
+            {
+              "id": "pg_index",
+              "label": "独立索引\n例如 B-tree",
+              "kind": "component"
+            },
+            {
+              "id": "pg_heap",
+              "label": "Heap tuple\n行版本与可见性",
+              "kind": "component"
+            },
+            {
+              "id": "pg_vm",
+              "label": "Visibility map\n页级 all-visible",
+              "kind": "component"
+            },
+            {
+              "id": "pg_out",
+              "label": "返回所需列",
+              "kind": "concept"
+            }
+          ],
+          "edges": [
+            {
+              "source": "pg",
+              "target": "pg_index",
+              "label": "普通 index scan / index-only 候选",
+              "sourceUrl": "https://www.postgresql.org/docs/current/indexes-index-only-scans.html",
+              "note": "图聚焦默认 heap 表；未画 bitmap、顺序扫描和扩展表访问方法。"
+            },
+            {
+              "source": "pg_index",
+              "target": "pg_heap",
+              "label": "普通索引扫描：取行",
+              "sourceUrl": "https://www.postgresql.org/docs/current/indexes-index-only-scans.html"
+            },
+            {
+              "source": "pg_index",
+              "target": "pg_vm",
+              "label": "覆盖所需列且索引支持 index-only",
+              "sourceUrl": "https://www.postgresql.org/docs/current/indexes-index-only-scans.html"
+            },
+            {
+              "source": "pg_vm",
+              "target": "pg_out",
+              "label": "all-visible：可直接从索引返回",
+              "sourceUrl": "https://www.postgresql.org/docs/current/indexes-index-only-scans.html"
+            },
+            {
+              "source": "pg_vm",
+              "target": "pg_heap",
+              "label": "未置位：仍需核验 heap",
+              "sourceUrl": "https://www.postgresql.org/docs/current/indexes-index-only-scans.html"
+            },
+            {
+              "source": "pg_heap",
+              "target": "pg_out",
+              "label": "按 MVCC 快照返回可见行",
+              "sourceUrl": "https://www.postgresql.org/docs/current/indexes-index-only-scans.html"
+            }
+          ]
+        },
+        {
+          "title": "MySQL / InnoDB：二级索引带主键；聚簇叶页含行",
+          "kind": "graph",
+          "direction": "LR",
+          "nodes": [
+            {
+              "id": "innodb",
+              "label": "MySQL / InnoDB",
+              "kind": "product",
+              "sourceUrl": "https://dev.mysql.com/doc/refman/8.4/en/innodb-index-types.html"
+            },
+            {
+              "id": "in_pk",
+              "label": "聚簇索引叶页\n保存行数据",
+              "kind": "component"
+            },
+            {
+              "id": "in_sec",
+              "label": "二级索引叶页\n索引列 + 主键",
+              "kind": "component"
+            },
+            {
+              "id": "in_mvcc",
+              "label": "历史版本 / undo\n必要时回溯",
+              "kind": "component"
+            },
+            {
+              "id": "in_out",
+              "label": "查询结果",
+              "kind": "concept"
+            }
+          ],
+          "edges": [
+            {
+              "source": "innodb",
+              "target": "in_pk",
+              "label": "主键访问 / 聚簇扫描",
+              "sourceUrl": "https://dev.mysql.com/doc/refman/8.4/en/innodb-index-types.html",
+              "note": "未显式主键时，依规则使用合适 UNIQUE NOT NULL 或内部行 ID；非所有 MySQL 引擎都如此。"
+            },
+            {
+              "source": "innodb",
+              "target": "in_sec",
+              "label": "选用二级索引",
+              "sourceUrl": "https://dev.mysql.com/doc/refman/8.4/en/innodb-index-types.html"
+            },
+            {
+              "source": "in_sec",
+              "target": "in_pk",
+              "label": "非覆盖或需核验：按主键回表",
+              "sourceUrl": "https://dev.mysql.com/doc/refman/8.4/en/innodb-multi-versioning.html",
+              "note": "二级索引不能独立判断所有 MVCC 可见性；覆盖不保证永不访问聚簇记录。"
+            },
+            {
+              "source": "in_sec",
+              "target": "in_out",
+              "label": "覆盖且可见性条件允许时",
+              "sourceUrl": "https://dev.mysql.com/doc/refman/8.4/en/innodb-multi-versioning.html"
+            },
+            {
+              "source": "in_pk",
+              "target": "in_mvcc",
+              "label": "快照需要旧版本时",
+              "sourceUrl": "https://dev.mysql.com/doc/refman/8.4/en/innodb-multi-versioning.html"
+            },
+            {
+              "source": "in_pk",
+              "target": "in_out",
+              "label": "当前行满足快照时",
+              "sourceUrl": "https://dev.mysql.com/doc/refman/8.4/en/innodb-index-types.html"
+            },
+            {
+              "source": "in_mvcc",
+              "target": "in_out",
+              "label": "构造所需可见版本",
+              "sourceUrl": "https://dev.mysql.com/doc/refman/8.4/en/innodb-multi-versioning.html"
+            }
+          ]
+        },
+        {
+          "title": "ClickHouse / MergeTree：先排除数据块，再按需读列",
+          "kind": "graph",
+          "direction": "LR",
+          "nodes": [
+            {
+              "id": "ch",
+              "label": "ClickHouse\nMergeTree 查询",
+              "kind": "product",
+              "sourceUrl": "https://clickhouse.com/docs/reference/engines/table-engines/mergetree-family/mergetree"
+            },
+            {
+              "id": "ch_parts",
+              "label": "候选 parts\n分区裁剪（适用时）",
+              "kind": "component"
+            },
+            {
+              "id": "ch_sparse",
+              "label": "稀疏主键索引\n不是唯一约束",
+              "kind": "component"
+            },
+            {
+              "id": "ch_granules",
+              "label": "选中的 granules\nmarks 定位列块",
+              "kind": "component"
+            },
+            {
+              "id": "ch_columns",
+              "label": "所需列的压缩数据块",
+              "kind": "component"
+            },
+            {
+              "id": "ch_result",
+              "label": "过滤 / 聚合结果",
+              "kind": "concept"
+            }
+          ],
+          "edges": [
+            {
+              "source": "ch",
+              "target": "ch_parts",
+              "label": "按分区条件缩小候选",
+              "sourceUrl": "https://clickhouse.com/docs/reference/engines/table-engines/mergetree-family/mergetree"
+            },
+            {
+              "source": "ch_parts",
+              "target": "ch_sparse",
+              "label": "条件可利用排序键 / 主键时",
+              "sourceUrl": "https://clickhouse.com/docs/reference/engines/table-engines/mergetree-family/mergetree"
+            },
+            {
+              "source": "ch_sparse",
+              "target": "ch_granules",
+              "label": "排除不可能匹配的 granules",
+              "sourceUrl": "https://clickhouse.com/docs/reference/engines/table-engines/mergetree-family/mergetree"
+            },
+            {
+              "source": "ch_granules",
+              "target": "ch_columns",
+              "label": "依 marks 读取相关列块",
+              "sourceUrl": "https://clickhouse.com/docs/reference/engines/table-engines/mergetree-family/mergetree"
+            },
+            {
+              "source": "ch_parts",
+              "target": "ch_columns",
+              "label": "裁剪无效时扫描候选范围",
+              "sourceUrl": "https://clickhouse.com/docs/reference/engines/table-engines/mergetree-family/mergetree",
+              "note": "不存在每行都经 B-tree 点查的统一路径；跳数索引、投影、PREWHERE 等未展开。"
+            },
+            {
+              "source": "ch_columns",
+              "target": "ch_result",
+              "label": "读列、解压并执行计算",
+              "sourceUrl": "https://clickhouse.com/resources/engineering/what-is-columnar-storage"
+            }
+          ]
+        },
+        {
+          "title": "TiDB：SQL 层选择 TiKV 行/KV 路径或 TiFlash 列路径",
+          "kind": "graph",
+          "direction": "LR",
+          "nodes": [
+            {
+              "id": "td",
+              "label": "TiDB Server\n解析 / 优化 / 分布式计划",
+              "kind": "product",
+              "sourceUrl": "https://docs.pingcap.com/tidb/stable/tidb-architecture/"
+            },
+            {
+              "id": "td_kv",
+              "label": "TiKV\nRegion / MVCC / 事务",
+              "kind": "component"
+            },
+            {
+              "id": "td_rocks",
+              "label": "本地 RocksDB\n常规 TiKV 存储路径",
+              "kind": "component"
+            },
+            {
+              "id": "td_flash",
+              "label": "TiFlash\n列式副本 / 分析计算",
+              "kind": "component"
+            },
+            {
+              "id": "td_pd",
+              "label": "PD\n元数据 / 时间戳",
+              "kind": "component",
+              "sourceUrl": "https://docs.pingcap.com/tidb/stable/tidb-architecture/"
+            },
+            {
+              "id": "td_out",
+              "label": "汇总查询结果",
+              "kind": "concept"
+            }
+          ],
+          "edges": [
+            {
+              "source": "td",
+              "target": "td_kv",
+              "label": "下推事务性 KV 读取 / 计算",
+              "sourceUrl": "https://docs.pingcap.com/tidb/stable/tidb-architecture/"
+            },
+            {
+              "source": "td_kv",
+              "target": "td_rocks",
+              "label": "访问本地 KV 存储",
+              "sourceUrl": "https://tikv.org/deep-dive/introduction/",
+              "note": "为常规 TiKV 架构示意；不将 Raft 日志后端一概画成 RocksDB，也不涵盖所有新型云存储模式。"
+            },
+            {
+              "source": "td_kv",
+              "target": "td_out",
+              "label": "返回部分结果",
+              "sourceUrl": "https://docs.pingcap.com/tidb/stable/tidb-architecture/"
+            },
+            {
+              "source": "td",
+              "target": "td_flash",
+              "label": "存在列副本且计划选择时",
+              "sourceUrl": "https://docs.pingcap.com/tidb/stable/tidb-architecture/",
+              "note": "TiFlash 是可选分析路径，不是每条 SQL 必经环节。"
+            },
+            {
+              "source": "td_flash",
+              "target": "td_out",
+              "label": "列扫描 / 下推或 MPP 结果",
+              "sourceUrl": "https://docs.pingcap.com/tidb/v8.1/tiflash-overview/"
+            },
+            {
+              "source": "td_kv",
+              "target": "td_flash",
+              "label": "配置副本后：异步复制",
+              "sourceUrl": "https://docs.pingcap.com/tidb/v8.1/tiflash-overview/",
+              "note": "这是复制关系，不是同步查询调用链；读取时还有一致性验证。"
+            },
+            {
+              "source": "td_pd",
+              "target": "td",
+              "label": "提供元数据与事务时间戳",
+              "sourceUrl": "https://docs.pingcap.com/tidb/stable/tidb-architecture/",
+              "note": "这是控制面依赖，不表示每个数据块均通过 PD。"
+            }
+          ]
+        },
+        {
+          "title": "SQLite：普通 rowid、覆盖索引和 WITHOUT ROWID 分路",
+          "kind": "graph",
+          "direction": "LR",
+          "nodes": [
+            {
+              "id": "sq",
+              "label": "SQLite\n编译 SQL 为 VDBE 程序",
+              "kind": "product",
+              "sourceUrl": "https://www.sqlite.org/arch.html"
+            },
+            {
+              "id": "sq_sec",
+              "label": "普通表的二级索引\n键列 + rowid",
+              "kind": "component"
+            },
+            {
+              "id": "sq_row",
+              "label": "Rowid table B-tree\n按 rowid 存行",
+              "kind": "component"
+            },
+            {
+              "id": "sq_wr",
+              "label": "WITHOUT ROWID 表\n按声明主键组织",
+              "kind": "component"
+            },
+            {
+              "id": "sq_out",
+              "label": "所需列 / 结果",
+              "kind": "concept"
+            }
+          ],
+          "edges": [
+            {
+              "source": "sq",
+              "target": "sq_row",
+              "label": "rowid 查询或表扫描",
+              "sourceUrl": "https://www.sqlite.org/queryplanner.html"
+            },
+            {
+              "source": "sq",
+              "target": "sq_sec",
+              "label": "选用二级索引",
+              "sourceUrl": "https://www.sqlite.org/queryplanner.html"
+            },
+            {
+              "source": "sq_sec",
+              "target": "sq_row",
+              "label": "缺少结果列：用 rowid 查表",
+              "sourceUrl": "https://www.sqlite.org/queryplanner.html"
+            },
+            {
+              "source": "sq_sec",
+              "target": "sq_out",
+              "label": "覆盖索引：无需再查原表",
+              "sourceUrl": "https://www.sqlite.org/queryplanner.html"
+            },
+            {
+              "source": "sq",
+              "target": "sq_wr",
+              "label": "表显式声明 WITHOUT ROWID",
+              "sourceUrl": "https://www.sqlite.org/withoutrowid.html",
+              "note": "并非所有声明 PRIMARY KEY 的 SQLite 表都会成为这种组织。"
+            },
+            {
+              "source": "sq_row",
+              "target": "sq_out",
+              "label": "读取行",
+              "sourceUrl": "https://www.sqlite.org/queryplanner.html"
+            },
+            {
+              "source": "sq_wr",
+              "target": "sq_out",
+              "label": "主键定位后读取行",
+              "sourceUrl": "https://www.sqlite.org/withoutrowid.html"
+            }
+          ]
+        },
+        {
+          "title": "Lucene：词项、数值范围、排序各自有访问结构",
+          "kind": "graph",
+          "direction": "LR",
+          "nodes": [
+            {
+              "id": "lu",
+              "label": "Lucene\n每个 segment 的检索",
+              "kind": "product",
+              "sourceUrl": "https://lucene.apache.org/core/10_3_1/core/org/apache/lucene/codecs/lucene103/package-summary.html"
+            },
+            {
+              "id": "lu_term",
+              "label": "词典 + postings\n词项 → doc IDs",
+              "kind": "component"
+            },
+            {
+              "id": "lu_bkd",
+              "label": "Point / BKD\n数值与空间过滤",
+              "kind": "component"
+            },
+            {
+              "id": "lu_dv",
+              "label": "DocValues\n每文档列值",
+              "kind": "component"
+            },
+            {
+              "id": "lu_ids",
+              "label": "候选文档 / 命中",
+              "kind": "concept"
+            },
+            {
+              "id": "lu_sort",
+              "label": "排序 / 分面 / 部分评分",
+              "kind": "concept"
+            },
+            {
+              "id": "lu_stored",
+              "label": "Stored fields\n按 doc ID 取展示字段",
+              "kind": "component"
+            }
+          ],
+          "edges": [
+            {
+              "source": "lu",
+              "target": "lu_term",
+              "label": "词项查询",
+              "sourceUrl": "https://lucene.apache.org/core/10_3_1/core/org/apache/lucene/codecs/lucene103/package-summary.html"
+            },
+            {
+              "source": "lu",
+              "target": "lu_bkd",
+              "label": "字段建立 point 索引时",
+              "sourceUrl": "https://lucene.apache.org/core/10_3_1/core/org/apache/lucene/util/bkd/package-summary.html"
+            },
+            {
+              "source": "lu",
+              "target": "lu_dv",
+              "label": "字段写入 DocValues 且算子需要",
+              "sourceUrl": "https://lucene.apache.org/core/10_3_1/core/org/apache/lucene/document/package-summary.html"
+            },
+            {
+              "source": "lu_term",
+              "target": "lu_ids",
+              "label": "生成匹配文档",
+              "sourceUrl": "https://lucene.apache.org/core/10_3_1/core/org/apache/lucene/codecs/lucene103/package-summary.html"
+            },
+            {
+              "source": "lu_bkd",
+              "target": "lu_ids",
+              "label": "范围相交筛选",
+              "sourceUrl": "https://lucene.apache.org/core/10_3_1/core/org/apache/lucene/util/bkd/package-summary.html"
+            },
+            {
+              "source": "lu_dv",
+              "target": "lu_sort",
+              "label": "支持排序 / 分面等",
+              "sourceUrl": "https://lucene.apache.org/core/10_3_1/core/org/apache/lucene/document/package-summary.html"
+            },
+            {
+              "source": "lu_ids",
+              "target": "lu_stored",
+              "label": "需展示且字段 stored 时",
+              "sourceUrl": "https://lucene.apache.org/core/10_3_1/core/org/apache/lucene/codecs/lucene103/package-summary.html",
+              "note": "Stored fields、DocValues、postings 的用途不同；不是每次查询依次走过全部结构。"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "官方来源核对日期：2026-10-04。图是有边界的机制示意，不是任何产品所有请求的完整调用栈，也不是速度排名。",
+        "六图主要解释读取；日志、刷盘、写入、缓存命中、优化器备选路径和复制确认通常未画。箭头标签里的条件不能在绘图时省略。",
+        "PostgreSQL index-only 仍可能 Heap Fetch；InnoDB 覆盖索引仍有 MVCC 条件；不能把“有索引”画成固定一次 I/O。",
+        "ClickHouse 的 PRIMARY KEY 用于稀疏裁剪，不保证唯一。granule 行数受设置与行大小影响，不一概固定为 8192。",
+        "TiDB 图把执行流、复制流和控制面明确区分；TiFlash 仅在已配置列副本且计划使用时参与。常规 TiKV/RocksDB 路径不能外推全部云模式。",
+        "SQLite 的 WITHOUT ROWID 是显式表选项，不是普通表的同义词；Lucene 不等于一个网络数据库，segment 内部也可包含多种索引。",
+        "文档版本锚点含 PostgreSQL 18、MySQL 8.4、TiDB/TiFlash v8.1、Lucene 10.3.1；展示的是这些被核实机制，不声明它们均为最新版本。"
+      ],
+      "sources": [
+        {
+          "title": "PostgreSQL 18 — Index-Only Scans and Covering Indexes",
+          "url": "https://www.postgresql.org/docs/current/indexes-index-only-scans.html"
+        },
+        {
+          "title": "MySQL 8.4 — InnoDB Clustered and Secondary Indexes",
+          "url": "https://dev.mysql.com/doc/refman/8.4/en/innodb-index-types.html"
+        },
+        {
+          "title": "MySQL 8.4 — InnoDB Multi-Versioning",
+          "url": "https://dev.mysql.com/doc/refman/8.4/en/innodb-multi-versioning.html"
+        },
+        {
+          "title": "ClickHouse — MergeTree table engine",
+          "url": "https://clickhouse.com/docs/reference/engines/table-engines/mergetree-family/mergetree"
+        },
+        {
+          "title": "ClickHouse — How columnar storage works",
+          "url": "https://clickhouse.com/resources/engineering/what-is-columnar-storage"
+        },
+        {
+          "title": "TiDB — Architecture",
+          "url": "https://docs.pingcap.com/tidb/stable/tidb-architecture/"
+        },
+        {
+          "title": "TiKV — Deep Dive introduction",
+          "url": "https://tikv.org/deep-dive/introduction/"
+        },
+        {
+          "title": "TiDB v8.1 — TiFlash Overview",
+          "url": "https://docs.pingcap.com/tidb/v8.1/tiflash-overview/"
+        },
+        {
+          "title": "SQLite — Query Planning",
+          "url": "https://www.sqlite.org/queryplanner.html"
+        },
+        {
+          "title": "SQLite — WITHOUT ROWID Optimization",
+          "url": "https://www.sqlite.org/withoutrowid.html"
+        },
+        {
+          "title": "Apache Lucene 10.3.1 — Index File Formats",
+          "url": "https://lucene.apache.org/core/10_3_1/core/org/apache/lucene/codecs/lucene103/package-summary.html"
+        },
+        {
+          "title": "Apache Lucene 10.3.1 — Document field types",
+          "url": "https://lucene.apache.org/core/10_3_1/core/org/apache/lucene/document/package-summary.html"
+        },
+        {
+          "title": "Apache Lucene 10.3.1 — Block KD-tree",
+          "url": "https://lucene.apache.org/core/10_3_1/core/org/apache/lucene/util/bkd/package-summary.html"
+        }
+      ]
+    },
+    {
+      "id": "06-compatibility",
+      "title": "兼容与迁移",
+      "subtitle": "谁实现了谁的接口？迁移究竟少改哪一层？",
+      "takeaway": "箭头统一从兼容实现指向协议/API。连得上、SQL 能跑、语义一致、数据能迁移是不同承诺；兼容关系不是源码继承关系。",
+      "panels": [
+        {
+          "title": "PostgreSQL 生态：同一连接协议，不同执行与语义",
+          "kind": "graph",
+          "direction": "LR",
+          "nodes": [
+            {
+              "id": "compat_cr",
+              "label": "CockroachDB",
+              "kind": "product",
+              "sourceUrl": "https://www.cockroachlabs.com/docs/stable/developer-basics.html"
+            },
+            {
+              "id": "compat_yb",
+              "label": "YugabyteDB / YSQL",
+              "kind": "product",
+              "sourceUrl": "https://docs.yugabyte.com/stable/faq/general/"
+            },
+            {
+              "id": "compat_rw",
+              "label": "RisingWave",
+              "kind": "product",
+              "sourceUrl": "https://risingwave.com/glossary/postgresql-compatibility/"
+            },
+            {
+              "id": "compat_qd",
+              "label": "QuestDB",
+              "kind": "product",
+              "sourceUrl": "https://questdb.com/docs/connect/overview/"
+            },
+            {
+              "id": "pg_protocol",
+              "label": "PostgreSQL\n线协议与客户端入口",
+              "kind": "concept"
+            }
+          ],
+          "edges": [
+            {
+              "source": "compat_cr",
+              "target": "pg_protocol",
+              "label": "支持 PG wire / 多数 PG 语法",
+              "sourceUrl": "https://www.cockroachlabs.com/docs/stable/developer-basics.html",
+              "note": "不是整个 PostgreSQL 的无差别替代：检查 SQL/扩展支持及事务重试；本文边只表示接口兼容，非 fork。"
+            },
+            {
+              "source": "compat_yb",
+              "target": "pg_protocol",
+              "label": "YSQL 接口兼容 PG 客户端",
+              "sourceUrl": "https://docs.yugabyte.com/stable/faq/general/",
+              "note": "仅 YSQL；不要把 YCQL 算入 PG 接口。分布式实现并非支持全部 PG 功能/扩展；复用查询层的源码关系需另图表达。"
+            },
+            {
+              "source": "compat_rw",
+              "target": "pg_protocol",
+              "label": "实现 PG wire v3.0",
+              "sourceUrl": "https://risingwave.com/glossary/postgresql-compatibility/",
+              "note": "流处理系统借用 PostgreSQL 协议/SQL 方言；不代表 PostgreSQL 的所有存储过程、系统目录和 OLTP 语义。"
+            },
+            {
+              "source": "compat_qd",
+              "target": "pg_protocol",
+              "label": "通过 PGWire 接入驱动 / BI",
+              "sourceUrl": "https://questdb.com/docs/connect/overview/",
+              "note": "PGWire 是兼容查询入口，QuestDB SQL/功能按自身文档；ILP/QWP 等是另一些接口，非 PG 全功能服务器。"
+            }
+          ]
+        },
+        {
+          "title": "MySQL 生态：连接兼容不等于复制、事务都相同",
+          "kind": "graph",
+          "direction": "LR",
+          "nodes": [
+            {
+              "id": "compat_td",
+              "label": "TiDB",
+              "kind": "product",
+              "sourceUrl": "https://docs.pingcap.com/tidb/v8.1/mysql-compatibility/"
+            },
+            {
+              "id": "compat_vt",
+              "label": "Vitess / VTGate",
+              "kind": "product",
+              "sourceUrl": "https://vitess.io/docs/23.0/reference/compatibility/mysql-compatibility/"
+            },
+            {
+              "id": "compat_do",
+              "label": "Apache Doris",
+              "kind": "product",
+              "sourceUrl": "https://doris.apache.org/docs/3.x/db-connect/database-connect/"
+            },
+            {
+              "id": "compat_ss",
+              "label": "SingleStore",
+              "kind": "product",
+              "sourceUrl": "https://docs.singlestore.com/db/v9.1/introduction/how-singlestore-works/highly-compatible/"
+            },
+            {
+              "id": "mysql_protocol",
+              "label": "MySQL\n网络协议 / 客户端入口",
+              "kind": "concept"
+            }
+          ],
+          "edges": [
+            {
+              "source": "compat_td",
+              "target": "mysql_protocol",
+              "label": "兼容协议与常用 MySQL 语法",
+              "sourceUrl": "https://docs.pingcap.com/tidb/v8.1/mysql-compatibility/",
+              "note": "这里以 v8.1 文档为边界；不支持 MySQL 原生复制协议，需 DM/TiCDC 等工具；存储过程等功能需逐项核对。"
+            },
+            {
+              "source": "compat_vt",
+              "target": "mysql_protocol",
+              "label": "VTGate 提供 MySQL server protocol",
+              "sourceUrl": "https://vitess.io/docs/23.0/reference/compatibility/mysql-compatibility/",
+              "note": "v23.0 文档范围；跨分片事务模式、隔离级别、存储过程及查询支持有限制；并非所有 MySQL 特性原样可用。"
+            },
+            {
+              "source": "compat_do",
+              "target": "mysql_protocol",
+              "label": "采用 MySQL 连接协议",
+              "sourceUrl": "https://doris.apache.org/docs/3.x/db-connect/database-connect/",
+              "note": "Doris 3.x 文档；可使用 MySQL CLI/JDBC/ODBC 等，但连接协议不证明 MySQL OLTP 语义与存储过程兼容。"
+            },
+            {
+              "source": "compat_ss",
+              "target": "mysql_protocol",
+              "label": "提供 MySQL wire 兼容入口",
+              "sourceUrl": "https://docs.singlestore.com/db/v9.1/introduction/how-singlestore-works/highly-compatible/",
+              "note": "SingleStore 9.1 文档范围；可复用驱动，不据此推断 InnoDB 物理格式、SQL 全集或 MySQL 复制协议兼容。"
+            }
+          ]
+        },
+        {
+          "title": "Redis 生态：RESP 与命令集合是两层承诺",
+          "kind": "graph",
+          "direction": "LR",
+          "nodes": [
+            {
+              "id": "compat_df",
+              "label": "Dragonfly",
+              "kind": "product",
+              "sourceUrl": "https://www.dragonflydb.io/docs/command-reference/compatibility"
+            },
+            {
+              "id": "compat_ga",
+              "label": "Microsoft Garnet",
+              "kind": "product",
+              "sourceUrl": "https://microsoft.github.io/garnet/docs/welcome/compatibility"
+            },
+            {
+              "id": "redis_api",
+              "label": "Redis 客户端使用的\nRESP / 命令接口",
+              "kind": "concept"
+            }
+          ],
+          "edges": [
+            {
+              "source": "compat_df",
+              "target": "redis_api",
+              "label": "实现受支持的命令与选项",
+              "sourceUrl": "https://www.dragonflydb.io/docs/command-reference/compatibility",
+              "note": "官方命令表衡量的是接受命令表面；即使标 fully supported，也不保证逐字节行为一致，须查每条命令的限制。"
+            },
+            {
+              "source": "compat_ga",
+              "target": "redis_api",
+              "label": "提供 RESP 与部分 Redis API",
+              "sourceUrl": "https://microsoft.github.io/garnet/docs/welcome/compatibility",
+              "note": "官方明确不是 100% drop-in；模块机制不同，持久化确认等行为受配置影响。须验证应用所用命令及语义。"
+            }
+          ]
+        },
+        {
+          "title": "MongoDB 生态：必须锁定服务模式和 API 版本",
+          "kind": "graph",
+          "direction": "LR",
+          "nodes": [
+            {
+              "id": "compat_ad",
+              "label": "Amazon DocumentDB",
+              "kind": "product",
+              "sourceUrl": "https://docs.aws.amazon.com/documentdb/latest/devguide/mongo-apis.html"
+            },
+            {
+              "id": "compat_cm",
+              "label": "Azure Cosmos DB\nfor MongoDB API 4.2",
+              "kind": "product",
+              "sourceUrl": "https://learn.microsoft.com/en-us/azure/cosmos-db/mongodb/feature-support-42"
+            },
+            {
+              "id": "mongo_api",
+              "label": "MongoDB\n驱动 / 命令 API",
+              "kind": "concept"
+            }
+          ],
+          "edges": [
+            {
+              "source": "compat_ad",
+              "target": "mongo_api",
+              "label": "实现版本表列出的 MongoDB API",
+              "sourceUrl": "https://docs.aws.amazon.com/documentdb/latest/devguide/mongo-apis.html",
+              "note": "必须区分 DocumentDB 引擎 3.6/4.0/5.0/8.0 与 Elastic cluster；一个命令在某版本支持不等于全产品都支持。"
+            },
+            {
+              "source": "compat_cm",
+              "target": "mongo_api",
+              "label": "实现 MongoDB 4.2 API 子集",
+              "sourceUrl": "https://learn.microsoft.com/en-us/azure/cosmos-db/mongodb/feature-support-42",
+              "note": "仅所引用的 Cosmos DB for MongoDB API 4.2 文档范围；不是所有 Cosmos 产品/API。该文档多文档事务限单个未分片集合。"
+            }
+          ]
+        },
+        {
+          "title": "Cassandra 生态：CQL / 协议版本与管理能力分开看",
+          "kind": "graph",
+          "direction": "LR",
+          "nodes": [
+            {
+              "id": "compat_sc",
+              "label": "ScyllaDB",
+              "kind": "product",
+              "sourceUrl": "https://docs.scylladb.com/manual/stable/using-scylla/cassandra-compatibility.html"
+            },
+            {
+              "id": "compat_ak",
+              "label": "Amazon Keyspaces",
+              "kind": "product",
+              "sourceUrl": "https://docs.aws.amazon.com/keyspaces/latest/devguide/cassandra-apis.html"
+            },
+            {
+              "id": "cql_api",
+              "label": "Cassandra\nCQL / native protocol",
+              "kind": "concept"
+            }
+          ],
+          "edges": [
+            {
+              "source": "compat_sc",
+              "target": "cql_api",
+              "label": "兼容文档所列 CQL / 原生协议",
+              "sourceUrl": "https://docs.scylladb.com/manual/stable/using-scylla/cassandra-compatibility.html",
+              "note": "核对页列 CQL 3.3.1、协议 v4，并含部分较新功能；不要推断 Cassandra 任意版本的全部特性、管理 API 或文件格式。"
+            },
+            {
+              "source": "compat_ak",
+              "target": "cql_api",
+              "label": "支持所列 Cassandra API / CQL",
+              "sourceUrl": "https://docs.aws.amazon.com/keyspaces/latest/devguide/cassandra-apis.html",
+              "note": "托管服务支持矩阵不是完整 Cassandra 实现；CREATE INDEX、TRIGGER、FUNCTION 等在所查列表里不支持。"
+            }
+          ]
+        },
+        {
+          "title": "特定互操作：可选 API 和复制协议不是全产品替代",
+          "kind": "graph",
+          "direction": "LR",
+          "nodes": [
+            {
+              "id": "compat_alt",
+              "label": "ScyllaDB / Alternator",
+              "kind": "component",
+              "sourceUrl": "https://docs.scylladb.com/manual/stable/alternator/alternator.html"
+            },
+            {
+              "id": "compat_po",
+              "label": "PouchDB",
+              "kind": "product",
+              "sourceUrl": "https://pouchdb.com/guides/replication.html"
+            },
+            {
+              "id": "dynamo_api",
+              "label": "DynamoDB\nHTTP API",
+              "kind": "concept"
+            },
+            {
+              "id": "couch_repl",
+              "label": "CouchDB\n复制协议 / 文档 API",
+              "kind": "concept"
+            }
+          ],
+          "edges": [
+            {
+              "source": "compat_alt",
+              "target": "dynamo_api",
+              "label": "启用 Alternator 后提供 API",
+              "sourceUrl": "https://docs.scylladb.com/manual/stable/alternator/alternator.html",
+              "note": "默认不监听 DynamoDB 请求；需显式配置 API 端口和写隔离。命令/事务能力以 Alternator 支持范围为准。"
+            },
+            {
+              "source": "compat_po",
+              "target": "couch_repl",
+              "label": "实现文档复制 / sync 互操作",
+              "sourceUrl": "https://pouchdb.com/guides/replication.html",
+              "note": "sync 是两个方向的复制；需处理 _rev、断线、冲突。这里不是说整个 CouchDB 管理 API 或集群架构都可互换。"
+            }
+          ]
+        },
+        {
+          "title": "迁移验证矩阵：连接成功只是第一关",
+          "kind": "matrix",
+          "columns": [
+            "验证层",
+            "必须回答的问题",
+            "代表性差异 / 验收方法"
+          ],
+          "rows": [
+            {
+              "cells": [
+                "客户端 / 协议",
+                "驱动握手、认证、预编译与连接池可用吗？",
+                "先跑实际驱动集成测试；PGWire / MySQL wire 成功不证明 SQL 与事务完全一致。"
+              ],
+              "sourceUrl": "https://www.cockroachlabs.com/docs/stable/developer-basics.html",
+              "note": "通用迁移检查清单；并非所有产品都有同一限制。"
+            },
+            {
+              "cells": [
+                "SQL / 数据类型",
+                "DDL、函数、时区、排序规则、NULL 与数值精度是否等价？",
+                "对应用真实查询、边界数据做差分测试，不以简单 SELECT 成功当验收。"
+              ],
+              "sourceUrl": "https://vitess.io/docs/23.0/reference/compatibility/mysql-compatibility/",
+              "note": "文档明确按 SQL、字符集、排序规则、类型逐层列差异。"
+            },
+            {
+              "cells": [
+                "事务 / 并发",
+                "隔离、重试、冲突处理与跨分区原子性是否满足业务？",
+                "CockroachDB 的重试责任；Vitess 的 SINGLE / MULTI / TWOPC 要与应用事务边界对齐。"
+              ],
+              "sourceUrl": "https://vitess.io/docs/23.0/reference/compatibility/mysql-compatibility/",
+              "note": "事务能力依版本、模式、分片边界；不是一个 ACID 标签就能覆盖。"
+            },
+            {
+              "cells": [
+                "文档事务",
+                "是单文档、单集合，还是能跨集合 / 分片？",
+                "Cosmos MongoDB API 4.2 文档限制在单个未分片集合；不要由 commitTransaction 存在推断无限范围。"
+              ],
+              "sourceUrl": "https://learn.microsoft.com/en-us/azure/cosmos-db/mongodb/feature-support-42"
+            },
+            {
+              "cells": [
+                "索引 / 查询计划",
+                "原索引能否建立？访问路径和延迟是否仍合适？",
+                "Keyspaces 不支持全部 Cassandra 索引/扩展命令；重放典型查询并测量，而非只导入成功。"
+              ],
+              "sourceUrl": "https://docs.aws.amazon.com/keyspaces/latest/devguide/cassandra-apis.html"
+            },
+            {
+              "cells": [
+                "扩展 / 存储过程",
+                "应用依赖的扩展、触发器、模块有目标实现吗？",
+                "YSQL 支持的 PG 扩展有限定；命令接口兼容不能移植任意服务器扩展。"
+              ],
+              "sourceUrl": "https://docs.yugabyte.com/stable/faq/general/"
+            },
+            {
+              "cells": [
+                "复制 / 备份格式",
+                "是逻辑 API 兼容，还是可复用复制流与备份？",
+                "TiDB v8.1 不支持 MySQL 原生复制协议；DM/TiCDC 是专门迁移/变更复制路径，不是交换数据目录。"
+              ],
+              "sourceUrl": "https://docs.pingcap.com/tidb/v8.1/mysql-compatibility/"
+            },
+            {
+              "cells": [
+                "持久化确认 / 命令语义",
+                "成功响应是否代表同样的耐久性与原子性？",
+                "Garnet 的 AOF 等待提交可配置；按应用故障恢复要求测试，不能只对比命令名。"
+              ],
+              "sourceUrl": "https://microsoft.github.io/garnet/docs/welcome/compatibility"
+            },
+            {
+              "cells": [
+                "版本 / 产品形态",
+                "测试的是哪一个版本、托管模式和功能开关？",
+                "DocumentDB 按引擎版本与 Elastic cluster 分表；把版本/模式写入验收记录。"
+              ],
+              "sourceUrl": "https://docs.aws.amazon.com/documentdb/latest/devguide/mongo-apis.html"
+            },
+            {
+              "cells": [
+                "切换 / 回滚 / 冲突",
+                "双写、增量追平、切换失败后如何恢复？",
+                "建立校验、追平与回滚方案；PouchDB sync 的复制冲突仍需业务处理，并非自动合并业务含义。"
+              ],
+              "sourceUrl": "https://pouchdb.com/guides/replication.html",
+              "note": "最后一列包含工程建议，不是引用来源给出的统一迁移流程。"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "官方来源核对日期：2026-10-04。共 16 条有方向的兼容/互操作边；终点为协议/API，不是宣称实现继承了那个数据库产品的源码。",
+        "同一产品可能有 fork/复用代码的历史，也可能实现别人的接口；这两个关系可同时成立，但必须分图和分别取证。",
+        "“协议兼容”不等于“SQL 全兼容”，不等于“事务、扩展与管理能力一致”，更不等于“数据文件、备份或复制流通用”。未声明任何 100% 兼容。",
+        "兼容边由官方文档证实，不是本机迁移实测。这里没有使用十问或 WIKI 的数据做测试。",
+        "版本明确处按所查版本表达：TiDB v8.1、Vitess v23.0、Doris 3.x、SingleStore 9.1、Cosmos MongoDB API 4.2；stable/latest 文档会变化，实施迁移时应固定版本再测。",
+        "ScyllaDB 的 Cassandra 接口与可选 Alternator 是不同端点；一个 Cosmos DB API 的能力也不能外推全部 Cosmos DB 产品。",
+        "迁移矩阵中的检查问题与验收步骤是基于官方差异整理的工程建议，不是把所有厂商产品都贴成同一种限制。",
+        "v2 图中已核实的 TiDB、CockroachDB、Doris、ScyllaDB、PouchDB 关系已重新检查并细化为接口层；未照搬泛化的产品→产品“兼容”箭头。"
+      ],
+      "sources": [
+        {
+          "title": "CockroachDB — Developer Basics / PostgreSQL protocol and transaction retries",
+          "url": "https://www.cockroachlabs.com/docs/stable/developer-basics.html"
+        },
+        {
+          "title": "YugabyteDB — FAQ / PostgreSQL compatibility limits",
+          "url": "https://docs.yugabyte.com/stable/faq/general/"
+        },
+        {
+          "title": "RisingWave — PostgreSQL Compatibility",
+          "url": "https://risingwave.com/glossary/postgresql-compatibility/"
+        },
+        {
+          "title": "QuestDB — Connection and compatibility protocols",
+          "url": "https://questdb.com/docs/connect/overview/"
+        },
+        {
+          "title": "TiDB v8.1 — MySQL Compatibility",
+          "url": "https://docs.pingcap.com/tidb/v8.1/mysql-compatibility/"
+        },
+        {
+          "title": "Vitess v23.0 — MySQL Compatibility",
+          "url": "https://vitess.io/docs/23.0/reference/compatibility/mysql-compatibility/"
+        },
+        {
+          "title": "Apache Doris 3.x — Connecting by MySQL Protocol",
+          "url": "https://doris.apache.org/docs/3.x/db-connect/database-connect/"
+        },
+        {
+          "title": "SingleStore 9.1 — Highly Compatible",
+          "url": "https://docs.singlestore.com/db/v9.1/introduction/how-singlestore-works/highly-compatible/"
+        },
+        {
+          "title": "Dragonfly — Command-surface API Compatibility",
+          "url": "https://www.dragonflydb.io/docs/command-reference/compatibility"
+        },
+        {
+          "title": "Microsoft Garnet — API Compatibility and semantic differences",
+          "url": "https://microsoft.github.io/garnet/docs/welcome/compatibility"
+        },
+        {
+          "title": "ScyllaDB — Apache Cassandra Compatibility",
+          "url": "https://docs.scylladb.com/manual/stable/using-scylla/cassandra-compatibility.html"
+        },
+        {
+          "title": "ScyllaDB — Alternator: DynamoDB API",
+          "url": "https://docs.scylladb.com/manual/stable/alternator/alternator.html"
+        },
+        {
+          "title": "Amazon Keyspaces — Supported Cassandra APIs",
+          "url": "https://docs.aws.amazon.com/keyspaces/latest/devguide/cassandra-apis.html"
+        },
+        {
+          "title": "Amazon DocumentDB — Supported MongoDB APIs by engine version",
+          "url": "https://docs.aws.amazon.com/documentdb/latest/devguide/mongo-apis.html"
+        },
+        {
+          "title": "Azure Cosmos DB for MongoDB — API 4.2 supported features",
+          "url": "https://learn.microsoft.com/en-us/azure/cosmos-db/mongodb/feature-support-42"
+        },
+        {
+          "title": "PouchDB — Replication and sync",
+          "url": "https://pouchdb.com/guides/replication.html"
+        }
+      ]
+    },
+    {
+      "id": "07-operations",
+      "title": "07 · 部署与运维：谁负责运行，如何真正恢复",
+      "subtitle": "13 个产品 / 引擎；嵌入式、自管服务、托管服务分开比较",
+      "takeaway": "高可用副本不是备份；持久化不是异地备份；托管也不替你决定保留期与恢复演练。",
+      "panels": [
+        {
+          "title": "进程内引擎与传统数据库服务",
+          "kind": "matrix",
+          "columns": [
+            "产品 / 范围",
+            "部署形态",
+            "备份入口",
+            "恢复要点"
+          ],
+          "rows": [
+            {
+              "cells": [
+                "SQLite 3",
+                "嵌入应用；本机文件",
+                "Online Backup API",
+                "恢复一致快照；留意 WAL"
+              ],
+              "sourceUrl": "https://www.sqlite.org/backup.html",
+              "note": "无独立服务器进程；在线数据库不宜随意只复制主文件而忽略未合并 WAL。使用官方备份 API 或在一致状态下制作文件备份。应用与宿主机仍承担权限、离机保留与验证。"
+            },
+            {
+              "cells": [
+                "DuckDB / LTS 文档",
+                "进程内分析引擎",
+                "EXPORT DATABASE",
+                "IMPORT DATABASE 重建"
+              ],
+              "sourceUrl": "https://duckdb.org/docs/lts/sql/statements/export",
+              "note": "EXPORT/IMPORT 覆盖 schema、表、视图、序列等文档范围；用户应另外保存应用配置、扩展依赖与外部数据。不是原生分布式服务的完整集群灾备。"
+            },
+            {
+              "cells": [
+                "RocksDB",
+                "嵌入式 KV 库",
+                "BackupEngine / Checkpoint",
+                "API 恢复；宿主负责集成"
+              ],
+              "sourceUrl": "https://github.com/facebook/rocksdb/wiki/How-to-backup-RocksDB",
+              "note": "RocksDB 是应用内存储引擎，不是自带网络、账户和高可用控制面的完整数据库服务。Checkpoint 可生成一致目录快照；异地保留、整个应用的事务边界和恢复流程由集成方负责。"
+            },
+            {
+              "cells": [
+                "PostgreSQL 18",
+                "独立服务；可自管",
+                "pg_dump / 基础备份 + WAL",
+                "逻辑还原 / PITR"
+              ],
+              "sourceUrl": "https://www.postgresql.org/docs/18/backup.html",
+              "note": "pg_dump 是逻辑备份，不是 WAL 连续归档的基础备份。PITR 需有效基础备份及连续 WAL；全局对象、配置、密钥应按范围另存。托管产品会另加服务级约束。"
+            },
+            {
+              "cells": [
+                "MySQL 8.4",
+                "独立服务；可自管",
+                "mysqldump / Shell dump",
+                "导入；备份 + binlog 做 PITR"
+              ],
+              "sourceUrl": "https://dev.mysql.com/doc/refman/8.4/en/using-mysqldump.html",
+              "note": "mysqldump 的一致性选项须匹配引擎与并发 DDL；全量备份后连续二进制日志支持时间点恢复，见 https://dev.mysql.com/doc/refman/8.4/en/point-in-time-recovery-binlog.html 。不要把普通复制当作误删恢复方案。"
+            },
+            {
+              "cells": [
+                "MariaDB Server",
+                "独立服务；可自管",
+                "mariadb-backup",
+                "prepare 后 copy-back"
+              ],
+              "sourceUrl": "https://mariadb.com/docs/server/server-usage/backup-and-restore/mariadb-backup/full-backup-and-restore-with-mariadb-backup",
+              "note": "物理热备得到的文件需先 prepare；恢复需停服务、合适的空目标 datadir，并检查文件属主。备份工具与服务版本须兼容；不要把 MySQL 的工具兼容性自动套到 MariaDB。"
+            }
+          ]
+        },
+        {
+          "title": "分布式 / 搜索服务与云托管数据库",
+          "kind": "matrix",
+          "columns": [
+            "产品 / 范围",
+            "部署形态",
+            "备份入口",
+            "恢复要点"
+          ],
+          "rows": [
+            {
+              "cells": [
+                "MongoDB",
+                "自管服务 / Atlas 托管",
+                "mongodump / Atlas backup",
+                "mongorestore；检查 FCV"
+              ],
+              "sourceUrl": "https://www.mongodb.com/docs/manual/tutorial/backup-and-restore-tools/",
+              "note": "大型在线或分片部署需遵循一致备份方案，不能把一次普通 mongodump 等同跨分片一致快照。mongorestore 要核对主版本或 feature compatibility version；Atlas 备份功能依集群层级与配置。"
+            },
+            {
+              "cells": [
+                "Redis OSS",
+                "独立服务 / 自管集群",
+                "RDB 快照；AOF 持久化",
+                "加载兼容 RDB / AOF 集合"
+              ],
+              "sourceUrl": "https://redis.io/docs/latest/management/persistence/",
+              "note": "可以完全关闭持久化；RDB 是时间点快照，AOF 记录写入。持久化文件需另行离机保留才构成灾备。多段 AOF 需按文档保存清单与相关文件；Cluster 各节点备份不自动成为全局同一时刻的事务快照。"
+            },
+            {
+              "cells": [
+                "Cassandra 5",
+                "多节点服务；可自管",
+                "nodetool snapshot / 增量",
+                "schema + SSTables 导入"
+              ],
+              "sourceUrl": "https://cassandra.apache.org/doc/latest/cassandra/managing/operating/backups.html",
+              "note": "快照位于各节点，必须收集相应分区数据并离机保留；恢复可用 sstableloader / nodetool import 等匹配流程。备份文件格式、schema 与目标版本需兼容，见 https://cassandra.apache.org/doc/latest/cassandra/managing/operating/bulk_loading.html 。"
+            },
+            {
+              "cells": [
+                "TiDB Self-Managed",
+                "TiDB + PD + TiKV 集群",
+                "BR 快照 + 日志备份",
+                "BR 恢复；PITR 到空集群"
+              ],
+              "sourceUrl": "https://docs.pingcap.com/tidb/stable/backup-and-restore-overview/",
+              "note": "推荐 BR 与集群相同主版本；PITR 按文档限制恢复到空集群。备份存储、带宽、密钥及恢复容量需规划。TiDB Cloud 是另外的托管边界，不应把自管 BR 所有权限与操作照搬到托管层。"
+            },
+            {
+              "cells": [
+                "Elasticsearch",
+                "自管集群 / Elastic Cloud",
+                "Snapshot API / SLM",
+                "从 snapshot repository 恢复"
+              ],
+              "sourceUrl": "https://www.elastic.co/docs/deploy-manage/tools/snapshot-and-restore",
+              "note": "官方只支持快照方式备份集群数据，不支持任意复制各节点数据目录来恢复。要检查 snapshot 与索引版本兼容、feature states、仓库权限和加密密钥；Serverless 与 Hosted 的能力不能混用。"
+            },
+            {
+              "cells": [
+                "Amazon DynamoDB",
+                "AWS 托管服务",
+                "按需备份 / 开启 PITR",
+                "恢复为新表；切换应用"
+              ],
+              "sourceUrl": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/pointintimerecovery_restores.html",
+              "note": "PITR 必须开启且受保留窗口限制。恢复创建新表，不是原地撤销；IAM、告警、Streams、TTL 等配置需根据官方清单重设。DynamoDB Local 是开发测试工具，不代表生产服务可自管。"
+            },
+            {
+              "cells": [
+                "Google Cloud Spanner",
+                "Google Cloud 托管服务",
+                "全量 / 计划增量备份",
+                "恢复为新数据库"
+              ],
+              "sourceUrl": "https://docs.cloud.google.com/spanner/docs/backup/restore-backup-overview",
+              "note": "按需与计划备份见 https://docs.cloud.google.com/spanner/docs/backup 。跨区域恢复通常先复制备份；恢复需匹配实例配置/版本层级限制，并重新核对 IAM、TTL 等。托管运维不等于无需备份策略。"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "形态不是难度打分：嵌入式省去服务进程，却把文件生命周期交给应用；自管承担补丁、容量、故障转移；托管减少基础设施工作但保留数据治理责任。",
+        "PITR = Point-in-Time Recovery，时间点恢复。RPO 是可接受数据丢失窗口，RTO 是可接受恢复耗时；二者要实测，不能从产品名字推出。",
+        "备份应覆盖数据、必要元数据、权限配置、外部依赖及解密密钥；分开保管密钥与数据，并演练新环境恢复。",
+        "副本会同步误删，单机快照可能随磁盘一起丢失；备份策略要考虑独立故障域、保留期和不可变/防误删能力。",
+        "列出的只是官方支持方法中的代表入口，不是可直接执行的灾备操作手册。具体版本、托管套餐、权限与一致性要求仍需核对。"
+      ],
+      "sources": [
+        {
+          "title": "SQLite：在线备份 API",
+          "url": "https://www.sqlite.org/backup.html"
+        },
+        {
+          "title": "SQLite：WAL 文件注意事项",
+          "url": "https://www.sqlite.org/wal.html"
+        },
+        {
+          "title": "DuckDB LTS：EXPORT / IMPORT",
+          "url": "https://duckdb.org/docs/lts/sql/statements/export"
+        },
+        {
+          "title": "RocksDB：BackupEngine",
+          "url": "https://github.com/facebook/rocksdb/wiki/How-to-backup-RocksDB"
+        },
+        {
+          "title": "RocksDB：Checkpoint",
+          "url": "https://github.com/facebook/rocksdb/wiki/Checkpoints"
+        },
+        {
+          "title": "PostgreSQL 18：备份与恢复",
+          "url": "https://www.postgresql.org/docs/18/backup.html"
+        },
+        {
+          "title": "PostgreSQL 18：连续 WAL 与 PITR",
+          "url": "https://www.postgresql.org/docs/18/continuous-archiving.html"
+        },
+        {
+          "title": "MySQL 8.4：逻辑备份",
+          "url": "https://dev.mysql.com/doc/refman/8.4/en/using-mysqldump.html"
+        },
+        {
+          "title": "MySQL 8.4：binlog 时间点恢复",
+          "url": "https://dev.mysql.com/doc/refman/8.4/en/point-in-time-recovery-binlog.html"
+        },
+        {
+          "title": "MariaDB：物理备份 prepare / restore",
+          "url": "https://mariadb.com/docs/server/server-usage/backup-and-restore/mariadb-backup/full-backup-and-restore-with-mariadb-backup"
+        },
+        {
+          "title": "MongoDB：备份恢复工具",
+          "url": "https://www.mongodb.com/docs/manual/tutorial/backup-and-restore-tools/"
+        },
+        {
+          "title": "MongoDB：mongorestore 版本条件",
+          "url": "https://www.mongodb.com/docs/database-tools/mongorestore/"
+        },
+        {
+          "title": "Redis：持久化与备份",
+          "url": "https://redis.io/docs/latest/management/persistence/"
+        },
+        {
+          "title": "Cassandra 5：快照与增量备份",
+          "url": "https://cassandra.apache.org/doc/latest/cassandra/managing/operating/backups.html"
+        },
+        {
+          "title": "Cassandra 5：导入备份 SSTables",
+          "url": "https://cassandra.apache.org/doc/latest/cassandra/managing/operating/bulk_loading.html"
+        },
+        {
+          "title": "TiDB：BR 与 PITR 限制",
+          "url": "https://docs.pingcap.com/tidb/stable/backup-and-restore-overview/"
+        },
+        {
+          "title": "Elasticsearch：快照与恢复",
+          "url": "https://www.elastic.co/docs/deploy-manage/tools/snapshot-and-restore"
+        },
+        {
+          "title": "DynamoDB：新表恢复与配置清单",
+          "url": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/pointintimerecovery_restores.html"
+        },
+        {
+          "title": "Spanner：备份方式",
+          "url": "https://docs.cloud.google.com/spanner/docs/backup"
+        },
+        {
+          "title": "Spanner：新数据库恢复",
+          "url": "https://docs.cloud.google.com/spanner/docs/backup/restore-backup-overview"
+        }
+      ]
+    },
+    {
+      "id": "08-application-ecosystem",
+      "title": "08 · 应用生态：哪些软件官方支持哪些数据库？",
+      "subtitle": "8 个应用 + Django 框架 · 官方支持关系，不是实际部署清单",
+      "takeaway": "“应用支持某数据库”“协议兼容某数据库”和“某实例正在使用某数据库”是三件事；按应用版本和支持矩阵选择。",
+      "panels": [
+        {
+          "title": "内容系统：推荐后端与可选后端",
+          "kind": "graph",
+          "nodes": [
+            {
+              "id": "wordpress",
+              "label": "WordPress",
+              "kind": "application",
+              "sourceUrl": "https://wordpress.org/about/requirements/",
+              "role": "application"
+            },
+            {
+              "id": "mediawiki",
+              "label": "MediaWiki",
+              "kind": "application",
+              "sourceUrl": "https://www.mediawiki.org/wiki/Manual:Installation_requirements",
+              "role": "application"
+            },
+            {
+              "id": "drupal",
+              "label": "Drupal",
+              "kind": "application",
+              "sourceUrl": "https://www.drupal.org/docs/getting-started/system-requirements/database-server-requirements",
+              "role": "application"
+            },
+            {
+              "id": "mysql",
+              "label": "MySQL",
+              "kind": "product",
+              "role": "database"
+            },
+            {
+              "id": "maria",
+              "label": "MariaDB",
+              "kind": "product",
+              "role": "database"
+            },
+            {
+              "id": "pg",
+              "label": "PostgreSQL",
+              "kind": "product",
+              "role": "database"
+            },
+            {
+              "id": "sqlite",
+              "label": "SQLite",
+              "kind": "product",
+              "role": "database"
+            }
+          ],
+          "edges": [
+            {
+              "source": "wordpress",
+              "target": "mysql",
+              "label": "官方推荐选项",
+              "sourceUrl": "https://wordpress.org/about/requirements/",
+              "note": "核验页建议 MySQL 8.0+；与 MariaDB 二选一，不要求同时部署。"
+            },
+            {
+              "source": "wordpress",
+              "target": "maria",
+              "label": "官方推荐选项",
+              "sourceUrl": "https://wordpress.org/about/requirements/",
+              "note": "核验页建议 MariaDB 10.11+；不表示任意 MySQL 兼容库均获官方支持。"
+            },
+            {
+              "source": "mediawiki",
+              "target": "mysql",
+              "label": "支持 / 推荐",
+              "sourceUrl": "https://www.mediawiki.org/wiki/Manual:Installation_requirements"
+            },
+            {
+              "source": "mediawiki",
+              "target": "maria",
+              "label": "支持 / 推荐",
+              "sourceUrl": "https://www.mediawiki.org/wiki/Manual:Installation_requirements"
+            },
+            {
+              "source": "mediawiki",
+              "target": "pg",
+              "label": "支持；测试较少",
+              "sourceUrl": "https://www.mediawiki.org/wiki/Manual:Installation_requirements",
+              "note": "官方提示非 MariaDB/MySQL 后端测试较少，扩展兼容性还需验证。"
+            },
+            {
+              "source": "mediawiki",
+              "target": "sqlite",
+              "label": "支持；测试较少",
+              "sourceUrl": "https://www.mediawiki.org/wiki/Manual:Installation_requirements"
+            },
+            {
+              "source": "drupal",
+              "target": "mysql",
+              "label": "核心支持；需 InnoDB",
+              "sourceUrl": "https://www.drupal.org/docs/getting-started/system-requirements/database-server-requirements",
+              "note": "最低版本随 Drupal 主版本变化，扩展模块可能有后端特定代码。"
+            },
+            {
+              "source": "drupal",
+              "target": "maria",
+              "label": "核心支持；需 InnoDB",
+              "sourceUrl": "https://www.drupal.org/docs/getting-started/system-requirements/database-server-requirements"
+            },
+            {
+              "source": "drupal",
+              "target": "pg",
+              "label": "核心支持；需 pg_trgm",
+              "sourceUrl": "https://www.drupal.org/docs/getting-started/system-requirements/database-server-requirements",
+              "note": "Drupal 10/11/12 对 PostgreSQL 的最低版本不同。"
+            },
+            {
+              "source": "drupal",
+              "target": "sqlite",
+              "label": "核心支持；版本有门槛",
+              "sourceUrl": "https://www.drupal.org/docs/getting-started/system-requirements/database-server-requirements",
+              "note": "核验具体 Drupal 版本和模块所需能力，不推断与其他后端完全等价。"
+            }
+          ],
+          "direction": "LR"
+        },
+        {
+          "title": "协作与身份：主数据库不等于缓存 / 任务存储",
+          "kind": "graph",
+          "nodes": [
+            {
+              "id": "gitlab",
+              "label": "GitLab",
+              "kind": "application",
+              "sourceUrl": "https://docs.gitlab.com/install/requirements/",
+              "role": "application"
+            },
+            {
+              "id": "nextcloud",
+              "label": "Nextcloud",
+              "kind": "application",
+              "sourceUrl": "https://docs.nextcloud.com/server/latest/admin_manual/installation/system_requirements.html",
+              "role": "application"
+            },
+            {
+              "id": "keycloak",
+              "label": "Keycloak",
+              "kind": "application",
+              "sourceUrl": "https://www.keycloak.org/server/db",
+              "role": "application"
+            },
+            {
+              "id": "pg",
+              "label": "PostgreSQL",
+              "kind": "product",
+              "role": "database"
+            },
+            {
+              "id": "mysql",
+              "label": "MySQL",
+              "kind": "product",
+              "role": "database"
+            },
+            {
+              "id": "maria",
+              "label": "MariaDB",
+              "kind": "product",
+              "role": "database"
+            },
+            {
+              "id": "oracle",
+              "label": "Oracle Database",
+              "kind": "product",
+              "role": "database"
+            },
+            {
+              "id": "sqlserver",
+              "label": "SQL Server",
+              "kind": "product",
+              "role": "database"
+            },
+            {
+              "id": "sqlite",
+              "label": "SQLite",
+              "kind": "product",
+              "role": "database"
+            },
+            {
+              "id": "redis",
+              "label": "Redis\n会话 / 后台任务",
+              "kind": "product",
+              "role": "database"
+            },
+            {
+              "id": "valkey",
+              "label": "Valkey\n会话 / 后台任务",
+              "kind": "product",
+              "role": "database"
+            }
+          ],
+          "edges": [
+            {
+              "source": "gitlab",
+              "target": "pg",
+              "label": "唯一受支持的主数据库",
+              "sourceUrl": "https://docs.gitlab.com/install/requirements/",
+              "note": "GitLab 主版本与 PostgreSQL 支持版本有对应关系；不等于其他存储组件不存在。"
+            },
+            {
+              "source": "gitlab",
+              "target": "redis",
+              "label": "辅助存储（二选一）",
+              "sourceUrl": "https://docs.gitlab.com/install/requirements/",
+              "note": "会话和后台任务；核验页要求 standalone，可带 HA，但不支持 Redis Cluster 或 Serverless Redis。"
+            },
+            {
+              "source": "gitlab",
+              "target": "valkey",
+              "label": "辅助存储（二选一）",
+              "sourceUrl": "https://docs.gitlab.com/install/requirements/",
+              "note": "与 Redis 是支持选项，不表示需要同时部署；Serverless Valkey 不支持。"
+            },
+            {
+              "source": "nextcloud",
+              "target": "pg",
+              "label": "支持 / 推荐",
+              "sourceUrl": "https://docs.nextcloud.com/server/latest/admin_manual/installation/system_requirements.html"
+            },
+            {
+              "source": "nextcloud",
+              "target": "maria",
+              "label": "支持 / 推荐；InnoDB",
+              "sourceUrl": "https://docs.nextcloud.com/server/latest/admin_manual/installation/system_requirements.html",
+              "note": "还需 READ COMMITTED 隔离级别等文档指定配置。"
+            },
+            {
+              "source": "nextcloud",
+              "target": "mysql",
+              "label": "支持；InnoDB",
+              "sourceUrl": "https://docs.nextcloud.com/server/latest/admin_manual/installation/system_requirements.html",
+              "note": "还需 READ COMMITTED 隔离级别等文档指定配置。"
+            },
+            {
+              "source": "nextcloud",
+              "target": "oracle",
+              "label": "仅企业订阅支持",
+              "sourceUrl": "https://docs.nextcloud.com/server/latest/admin_manual/installation/system_requirements.html"
+            },
+            {
+              "source": "nextcloud",
+              "target": "sqlite",
+              "label": "仅建议测试 / 极小实例",
+              "sourceUrl": "https://docs.nextcloud.com/server/latest/admin_manual/installation/system_requirements.html"
+            },
+            {
+              "source": "keycloak",
+              "target": "pg",
+              "label": "内置受支持后端",
+              "sourceUrl": "https://www.keycloak.org/server/db"
+            },
+            {
+              "source": "keycloak",
+              "target": "mysql",
+              "label": "内置受支持后端",
+              "sourceUrl": "https://www.keycloak.org/server/db"
+            },
+            {
+              "source": "keycloak",
+              "target": "maria",
+              "label": "内置受支持后端",
+              "sourceUrl": "https://www.keycloak.org/server/db"
+            },
+            {
+              "source": "keycloak",
+              "target": "oracle",
+              "label": "内置受支持后端",
+              "sourceUrl": "https://www.keycloak.org/server/db"
+            },
+            {
+              "source": "keycloak",
+              "target": "sqlserver",
+              "label": "内置受支持后端",
+              "sourceUrl": "https://www.keycloak.org/server/db"
+            }
+          ],
+          "direction": "LR"
+        },
+        {
+          "title": "数据应用：元数据库与被查询的数据源不同",
+          "kind": "graph",
+          "nodes": [
+            {
+              "id": "airflow",
+              "label": "Apache Airflow",
+              "kind": "application",
+              "sourceUrl": "https://airflow.apache.org/docs/apache-airflow/stable/howto/set-up-database.html",
+              "role": "application"
+            },
+            {
+              "id": "grafana",
+              "label": "Grafana",
+              "kind": "application",
+              "sourceUrl": "https://grafana.com/docs/grafana/latest/setup-grafana/installation/",
+              "role": "application"
+            },
+            {
+              "id": "pg",
+              "label": "PostgreSQL",
+              "kind": "product",
+              "role": "database"
+            },
+            {
+              "id": "mysql",
+              "label": "MySQL",
+              "kind": "product",
+              "role": "database"
+            },
+            {
+              "id": "sqlite",
+              "label": "SQLite",
+              "kind": "product",
+              "role": "database"
+            },
+            {
+              "id": "maria",
+              "label": "MariaDB",
+              "kind": "product",
+              "role": "database"
+            },
+            {
+              "id": "prom",
+              "label": "Prometheus\n被查询的时序数据源",
+              "kind": "product",
+              "role": "database"
+            }
+          ],
+          "edges": [
+            {
+              "source": "airflow",
+              "target": "pg",
+              "label": "受支持元数据库",
+              "sourceUrl": "https://airflow.apache.org/docs/apache-airflow/stable/howto/set-up-database.html",
+              "note": "存储 DAG/任务运行等元数据，不是把所有分析数据装入 Airflow 元数据库。"
+            },
+            {
+              "source": "airflow",
+              "target": "mysql",
+              "label": "受支持元数据库",
+              "sourceUrl": "https://airflow.apache.org/docs/apache-airflow/stable/howto/set-up-database.html"
+            },
+            {
+              "source": "airflow",
+              "target": "sqlite",
+              "label": "仅开发用途",
+              "sourceUrl": "https://airflow.apache.org/docs/apache-airflow/stable/howto/set-up-database.html",
+              "note": "官方明确不应用于生产。"
+            },
+            {
+              "source": "airflow",
+              "target": "maria",
+              "label": "明确不支持元数据库",
+              "sourceUrl": "https://airflow.apache.org/docs/apache-airflow/stable/howto/set-up-database.html",
+              "note": "MySQL 兼容不等于 Airflow 官方支持；这是一条否定支持边。",
+              "style": "dashed"
+            },
+            {
+              "source": "grafana",
+              "target": "pg",
+              "label": "配置库；生产可选",
+              "sourceUrl": "https://grafana.com/docs/grafana/latest/setup-grafana/installation/",
+              "note": "保存用户、数据源定义、仪表盘等配置，不是自动保存 Prometheus 的全部指标。"
+            },
+            {
+              "source": "grafana",
+              "target": "mysql",
+              "label": "配置库；生产可选",
+              "sourceUrl": "https://grafana.com/docs/grafana/latest/setup-grafana/installation/"
+            },
+            {
+              "source": "grafana",
+              "target": "sqlite",
+              "label": "默认配置库；开发 / 小型评估",
+              "sourceUrl": "https://grafana.com/docs/grafana/latest/setup-grafana/installation/",
+              "note": "核验页不建议生产；HA 要求 MySQL 或 PostgreSQL。"
+            },
+            {
+              "source": "grafana",
+              "target": "prom",
+              "label": "查询指标的数据源",
+              "sourceUrl": "https://grafana.com/docs/grafana/latest/datasources/prometheus/",
+              "note": "与 Grafana 自身配置库是两个角色。",
+              "style": "dashed"
+            }
+          ],
+          "direction": "LR"
+        },
+        {
+          "title": "框架不是应用实例：Django 的官方数据库后端",
+          "kind": "graph",
+          "nodes": [
+            {
+              "id": "django",
+              "label": "Django 5.2\nWeb 框架，非部署实例",
+              "kind": "component",
+              "sourceUrl": "https://docs.djangoproject.com/en/5.2/ref/databases/",
+              "role": "framework"
+            },
+            {
+              "id": "pg",
+              "label": "PostgreSQL",
+              "kind": "product",
+              "role": "database"
+            },
+            {
+              "id": "mysql",
+              "label": "MySQL",
+              "kind": "product",
+              "role": "database"
+            },
+            {
+              "id": "maria",
+              "label": "MariaDB",
+              "kind": "product",
+              "role": "database"
+            },
+            {
+              "id": "oracle",
+              "label": "Oracle Database",
+              "kind": "product",
+              "role": "database"
+            },
+            {
+              "id": "sqlite",
+              "label": "SQLite",
+              "kind": "product",
+              "role": "database"
+            }
+          ],
+          "edges": [
+            {
+              "source": "django",
+              "target": "pg",
+              "label": "官方后端",
+              "sourceUrl": "https://docs.djangoproject.com/en/5.2/ref/databases/"
+            },
+            {
+              "source": "django",
+              "target": "mysql",
+              "label": "官方后端",
+              "sourceUrl": "https://docs.djangoproject.com/en/5.2/ref/databases/"
+            },
+            {
+              "source": "django",
+              "target": "maria",
+              "label": "官方后端",
+              "sourceUrl": "https://docs.djangoproject.com/en/5.2/ref/databases/"
+            },
+            {
+              "source": "django",
+              "target": "oracle",
+              "label": "官方后端",
+              "sourceUrl": "https://docs.djangoproject.com/en/5.2/ref/databases/"
+            },
+            {
+              "source": "django",
+              "target": "sqlite",
+              "label": "官方后端；并发写有限",
+              "sourceUrl": "https://docs.djangoproject.com/en/5.2/ref/databases/",
+              "note": "是框架支持能力，不说明某个 Django 项目实际选择了它。"
+            }
+          ],
+          "direction": "LR"
+        }
+      ],
+      "notes": [
+        "这里只声明官方支持、推荐或不支持的关系；没有声称 WordPress、GitLab 等应用正在本机运行，也没有推断某家公司的实际架构。",
+        "大部分主数据库连线是可选方案，不是必须同时安装；GitLab 的主库与会话/后台任务存储是不同角色。",
+        "适配器、协议兼容、第三方插件与官方测试支持不是同一个级别；未画第三方后端不表示它们绝对不可用。",
+        "同名 latest/stable 文档会更新；核验日期为 2026-10-04，实际部署前必须匹配应用主版本、数据库版本和所需扩展。",
+        "图中没有十问项目的源码或运行态声明；没有查看连接串、密钥、环境变量或私有部署配置。",
+        "虚线含义以标签为准：既可能是查询数据源，也可能是明确不支持；否定关系不会被当成可用连接建议。"
+      ],
+      "sources": [
+        {
+          "title": "wordpress · 官方文档 / 官方项目资料",
+          "url": "https://wordpress.org/about/requirements/"
+        },
+        {
+          "title": "mediawiki · 官方文档 / 官方项目资料",
+          "url": "https://www.mediawiki.org/wiki/Manual:Installation_requirements"
+        },
+        {
+          "title": "drupal · 官方文档 / 官方项目资料",
+          "url": "https://www.drupal.org/docs/getting-started/system-requirements/database-server-requirements"
+        },
+        {
+          "title": "gitlab · 官方文档 / 官方项目资料",
+          "url": "https://docs.gitlab.com/install/requirements/"
+        },
+        {
+          "title": "nextcloud · 官方文档 / 官方项目资料",
+          "url": "https://docs.nextcloud.com/server/latest/admin_manual/installation/system_requirements.html"
+        },
+        {
+          "title": "keycloak · 官方文档 / 官方项目资料",
+          "url": "https://www.keycloak.org/server/db"
+        },
+        {
+          "title": "airflow · 官方文档 / 官方项目资料",
+          "url": "https://airflow.apache.org/docs/apache-airflow/stable/howto/set-up-database.html"
+        },
+        {
+          "title": "grafana · 官方文档 / 官方项目资料",
+          "url": "https://grafana.com/docs/grafana/latest/setup-grafana/installation/"
+        },
+        {
+          "title": "grafanaProm · 官方文档 / 官方项目资料",
+          "url": "https://grafana.com/docs/grafana/latest/datasources/prometheus/"
+        },
+        {
+          "title": "django · 官方文档 / 官方项目资料",
+          "url": "https://docs.djangoproject.com/en/5.2/ref/databases/"
+        }
+      ]
+    },
+    {
+      "id": "09-popularity",
+      "title": "普及度与变化",
+      "subtitle": "DB-Engines · 2026-10 快照；公开热度不是安装量、使用率、性能或招聘岗位数。",
+      "takeaway": "规模与变化是两件事；先看同口径，再看绝对热度与相对位置。",
+      "panels": [
+        {
+          "title": "本期前20名｜热度分数，线性坐标从0起",
+          "kind": "bars",
+          "metric": "score",
+          "rows": [
+            {
+              "name": "Oracle",
+              "sourceUrl": "https://db-engines.com/en/system/Oracle",
+              "rank": 1,
+              "previousMonthRank": 1,
+              "previousYearRank": 1,
+              "score": 1119.79,
+              "monthDelta": -2.48,
+              "yearDelta": -92.98
+            },
+            {
+              "name": "MySQL",
+              "sourceUrl": "https://db-engines.com/en/system/MySQL",
+              "rank": 2,
+              "previousMonthRank": 2,
+              "previousYearRank": 2,
+              "score": 837.96,
+              "monthDelta": -6.85,
+              "yearDelta": -41.7
+            },
+            {
+              "name": "Microsoft SQL Server",
+              "sourceUrl": "https://db-engines.com/en/system/Microsoft+SQL+Server",
+              "rank": 3,
+              "previousMonthRank": 3,
+              "previousYearRank": 3,
+              "score": 694.47,
+              "monthDelta": -4.22,
+              "yearDelta": -20.58
+            },
+            {
+              "name": "PostgreSQL",
+              "sourceUrl": "https://db-engines.com/en/system/PostgreSQL",
+              "rank": 4,
+              "previousMonthRank": 4,
+              "previousYearRank": 4,
+              "score": 688.75,
+              "monthDelta": 5.5,
+              "yearDelta": 45.56
+            },
+            {
+              "name": "MongoDB",
+              "sourceUrl": "https://db-engines.com/en/system/MongoDB",
+              "rank": 5,
+              "previousMonthRank": 5,
+              "previousYearRank": 5,
+              "score": 374.64,
+              "monthDelta": -6.66,
+              "yearDelta": 6.63
+            },
+            {
+              "name": "Snowflake",
+              "sourceUrl": "https://db-engines.com/en/system/Snowflake",
+              "rank": 6,
+              "previousMonthRank": 6,
+              "previousYearRank": 6,
+              "score": 221.3,
+              "monthDelta": 9.69,
+              "yearDelta": 22.65
+            },
+            {
+              "name": "Databricks",
+              "sourceUrl": "https://db-engines.com/en/system/Databricks",
+              "rank": 7,
+              "previousMonthRank": 7,
+              "previousYearRank": 8,
+              "score": 171.24,
+              "monthDelta": 2.9,
+              "yearDelta": 42.44
+            },
+            {
+              "name": "Redis",
+              "sourceUrl": "https://db-engines.com/en/system/Redis",
+              "rank": 8,
+              "previousMonthRank": 8,
+              "previousYearRank": 7,
+              "score": 156.09,
+              "monthDelta": -1.97,
+              "yearDelta": 13.76
+            },
+            {
+              "name": "IBM Db2",
+              "sourceUrl": "https://db-engines.com/en/system/IBM+Db2",
+              "rank": 9,
+              "previousMonthRank": 9,
+              "previousYearRank": 9,
+              "score": 106.29,
+              "monthDelta": -4.28,
+              "yearDelta": -16.08
+            },
+            {
+              "name": "Apache Cassandra",
+              "sourceUrl": "https://db-engines.com/en/system/Apache+Cassandra",
+              "rank": 10,
+              "previousMonthRank": 12,
+              "previousYearRank": 11,
+              "score": 98.86,
+              "monthDelta": 4.9,
+              "yearDelta": -6.3
+            },
+            {
+              "name": "SQLite",
+              "sourceUrl": "https://db-engines.com/en/system/SQLite",
+              "rank": 11,
+              "previousMonthRank": 10,
+              "previousYearRank": 12,
+              "score": 95.73,
+              "monthDelta": -1.32,
+              "yearDelta": -8.82
+            },
+            {
+              "name": "Elasticsearch",
+              "sourceUrl": "https://db-engines.com/en/system/Elasticsearch",
+              "rank": 12,
+              "previousMonthRank": 11,
+              "previousYearRank": 10,
+              "score": 94.11,
+              "monthDelta": -1.39,
+              "yearDelta": -22.55
+            },
+            {
+              "name": "MariaDB",
+              "sourceUrl": "https://db-engines.com/en/system/MariaDB",
+              "rank": 13,
+              "previousMonthRank": 13,
+              "previousYearRank": 13,
+              "score": 75.6,
+              "monthDelta": 1.18,
+              "yearDelta": -12.16
+            },
+            {
+              "name": "Apache Hive",
+              "sourceUrl": "https://db-engines.com/en/system/Apache+Hive",
+              "rank": 14,
+              "previousMonthRank": 16,
+              "previousYearRank": 17,
+              "score": 69.58,
+              "monthDelta": -0.53,
+              "yearDelta": -5.64
+            },
+            {
+              "name": "Splunk",
+              "sourceUrl": "https://db-engines.com/en/system/Splunk",
+              "rank": 15,
+              "previousMonthRank": 14,
+              "previousYearRank": 18,
+              "score": 69.25,
+              "monthDelta": -2.43,
+              "yearDelta": -4.62
+            },
+            {
+              "name": "Microsoft Azure SQL Database",
+              "sourceUrl": "https://db-engines.com/en/system/Microsoft+Azure+SQL+Database",
+              "rank": 16,
+              "previousMonthRank": 15,
+              "previousYearRank": 16,
+              "score": 68.55,
+              "monthDelta": -2.29,
+              "yearDelta": -6.94
+            },
+            {
+              "name": "Microsoft Access",
+              "sourceUrl": "https://db-engines.com/en/system/Microsoft+Access",
+              "rank": 17,
+              "previousMonthRank": 17,
+              "previousYearRank": 14,
+              "score": 63.32,
+              "monthDelta": 0.27,
+              "yearDelta": -17.47
+            },
+            {
+              "name": "Amazon DynamoDB",
+              "sourceUrl": "https://db-engines.com/en/system/Amazon+DynamoDB",
+              "rank": 18,
+              "previousMonthRank": 18,
+              "previousYearRank": 15,
+              "score": 53.41,
+              "monthDelta": -2.94,
+              "yearDelta": -22.49
+            },
+            {
+              "name": "Google BigQuery",
+              "sourceUrl": "https://db-engines.com/en/system/Google+BigQuery",
+              "rank": 19,
+              "previousMonthRank": 19,
+              "previousYearRank": 19,
+              "score": 49.78,
+              "monthDelta": -2.8,
+              "yearDelta": -13.43
+            },
+            {
+              "name": "Neo4j",
+              "sourceUrl": "https://db-engines.com/en/system/Neo4j",
+              "rank": 20,
+              "previousMonthRank": 20,
+              "previousYearRank": 20,
+              "score": 48.88,
+              "monthDelta": 1.72,
+              "yearDelta": -3.63
+            }
+          ],
+          "sourceUrl": "https://db-engines.com/en/ranking"
+        },
+        {
+          "title": "同一批20个产品｜相较2026-09的分数变化",
+          "kind": "deltas",
+          "metric": "monthDelta",
+          "rows": [
+            {
+              "name": "Oracle",
+              "sourceUrl": "https://db-engines.com/en/system/Oracle",
+              "rank": 1,
+              "previousMonthRank": 1,
+              "previousYearRank": 1,
+              "score": 1119.79,
+              "monthDelta": -2.48,
+              "yearDelta": -92.98
+            },
+            {
+              "name": "MySQL",
+              "sourceUrl": "https://db-engines.com/en/system/MySQL",
+              "rank": 2,
+              "previousMonthRank": 2,
+              "previousYearRank": 2,
+              "score": 837.96,
+              "monthDelta": -6.85,
+              "yearDelta": -41.7
+            },
+            {
+              "name": "Microsoft SQL Server",
+              "sourceUrl": "https://db-engines.com/en/system/Microsoft+SQL+Server",
+              "rank": 3,
+              "previousMonthRank": 3,
+              "previousYearRank": 3,
+              "score": 694.47,
+              "monthDelta": -4.22,
+              "yearDelta": -20.58
+            },
+            {
+              "name": "PostgreSQL",
+              "sourceUrl": "https://db-engines.com/en/system/PostgreSQL",
+              "rank": 4,
+              "previousMonthRank": 4,
+              "previousYearRank": 4,
+              "score": 688.75,
+              "monthDelta": 5.5,
+              "yearDelta": 45.56
+            },
+            {
+              "name": "MongoDB",
+              "sourceUrl": "https://db-engines.com/en/system/MongoDB",
+              "rank": 5,
+              "previousMonthRank": 5,
+              "previousYearRank": 5,
+              "score": 374.64,
+              "monthDelta": -6.66,
+              "yearDelta": 6.63
+            },
+            {
+              "name": "Snowflake",
+              "sourceUrl": "https://db-engines.com/en/system/Snowflake",
+              "rank": 6,
+              "previousMonthRank": 6,
+              "previousYearRank": 6,
+              "score": 221.3,
+              "monthDelta": 9.69,
+              "yearDelta": 22.65
+            },
+            {
+              "name": "Databricks",
+              "sourceUrl": "https://db-engines.com/en/system/Databricks",
+              "rank": 7,
+              "previousMonthRank": 7,
+              "previousYearRank": 8,
+              "score": 171.24,
+              "monthDelta": 2.9,
+              "yearDelta": 42.44
+            },
+            {
+              "name": "Redis",
+              "sourceUrl": "https://db-engines.com/en/system/Redis",
+              "rank": 8,
+              "previousMonthRank": 8,
+              "previousYearRank": 7,
+              "score": 156.09,
+              "monthDelta": -1.97,
+              "yearDelta": 13.76
+            },
+            {
+              "name": "IBM Db2",
+              "sourceUrl": "https://db-engines.com/en/system/IBM+Db2",
+              "rank": 9,
+              "previousMonthRank": 9,
+              "previousYearRank": 9,
+              "score": 106.29,
+              "monthDelta": -4.28,
+              "yearDelta": -16.08
+            },
+            {
+              "name": "Apache Cassandra",
+              "sourceUrl": "https://db-engines.com/en/system/Apache+Cassandra",
+              "rank": 10,
+              "previousMonthRank": 12,
+              "previousYearRank": 11,
+              "score": 98.86,
+              "monthDelta": 4.9,
+              "yearDelta": -6.3
+            },
+            {
+              "name": "SQLite",
+              "sourceUrl": "https://db-engines.com/en/system/SQLite",
+              "rank": 11,
+              "previousMonthRank": 10,
+              "previousYearRank": 12,
+              "score": 95.73,
+              "monthDelta": -1.32,
+              "yearDelta": -8.82
+            },
+            {
+              "name": "Elasticsearch",
+              "sourceUrl": "https://db-engines.com/en/system/Elasticsearch",
+              "rank": 12,
+              "previousMonthRank": 11,
+              "previousYearRank": 10,
+              "score": 94.11,
+              "monthDelta": -1.39,
+              "yearDelta": -22.55
+            },
+            {
+              "name": "MariaDB",
+              "sourceUrl": "https://db-engines.com/en/system/MariaDB",
+              "rank": 13,
+              "previousMonthRank": 13,
+              "previousYearRank": 13,
+              "score": 75.6,
+              "monthDelta": 1.18,
+              "yearDelta": -12.16
+            },
+            {
+              "name": "Apache Hive",
+              "sourceUrl": "https://db-engines.com/en/system/Apache+Hive",
+              "rank": 14,
+              "previousMonthRank": 16,
+              "previousYearRank": 17,
+              "score": 69.58,
+              "monthDelta": -0.53,
+              "yearDelta": -5.64
+            },
+            {
+              "name": "Splunk",
+              "sourceUrl": "https://db-engines.com/en/system/Splunk",
+              "rank": 15,
+              "previousMonthRank": 14,
+              "previousYearRank": 18,
+              "score": 69.25,
+              "monthDelta": -2.43,
+              "yearDelta": -4.62
+            },
+            {
+              "name": "Microsoft Azure SQL Database",
+              "sourceUrl": "https://db-engines.com/en/system/Microsoft+Azure+SQL+Database",
+              "rank": 16,
+              "previousMonthRank": 15,
+              "previousYearRank": 16,
+              "score": 68.55,
+              "monthDelta": -2.29,
+              "yearDelta": -6.94
+            },
+            {
+              "name": "Microsoft Access",
+              "sourceUrl": "https://db-engines.com/en/system/Microsoft+Access",
+              "rank": 17,
+              "previousMonthRank": 17,
+              "previousYearRank": 14,
+              "score": 63.32,
+              "monthDelta": 0.27,
+              "yearDelta": -17.47
+            },
+            {
+              "name": "Amazon DynamoDB",
+              "sourceUrl": "https://db-engines.com/en/system/Amazon+DynamoDB",
+              "rank": 18,
+              "previousMonthRank": 18,
+              "previousYearRank": 15,
+              "score": 53.41,
+              "monthDelta": -2.94,
+              "yearDelta": -22.49
+            },
+            {
+              "name": "Google BigQuery",
+              "sourceUrl": "https://db-engines.com/en/system/Google+BigQuery",
+              "rank": 19,
+              "previousMonthRank": 19,
+              "previousYearRank": 19,
+              "score": 49.78,
+              "monthDelta": -2.8,
+              "yearDelta": -13.43
+            },
+            {
+              "name": "Neo4j",
+              "sourceUrl": "https://db-engines.com/en/system/Neo4j",
+              "rank": 20,
+              "previousMonthRank": 20,
+              "previousYearRank": 20,
+              "score": 48.88,
+              "monthDelta": 1.72,
+              "yearDelta": -3.63
+            }
+          ],
+          "sourceUrl": "https://db-engines.com/en/ranking"
+        },
+        {
+          "title": "选定分布式SQL与分析产品｜三个离散时点的名次（非完整同类排名）",
+          "kind": "matrix",
+          "columns": [
+            "产品",
+            "2025-10名次",
+            "2026-09名次",
+            "2026-10名次",
+            "本期分数"
+          ],
+          "rows": [
+            {
+              "cells": [
+                "ClickHouse",
+                "30",
+                "26",
+                "25",
+                "26.18"
+              ],
+              "sourceUrl": "https://db-engines.com/en/system/ClickHouse",
+              "note": "按照本期排名排序；三期名次来自2026-10官方榜单展示，不推导中间月份趋势。"
+            },
+            {
+              "cells": [
+                "DuckDB",
+                "44",
+                "42",
+                "41",
+                "11.43"
+              ],
+              "sourceUrl": "https://db-engines.com/en/system/DuckDB",
+              "note": "按照本期排名排序；三期名次来自2026-10官方榜单展示，不推导中间月份趋势。"
+            },
+            {
+              "cells": [
+                "CockroachDB",
+                "65",
+                "72",
+                "70",
+                "4.43"
+              ],
+              "sourceUrl": "https://db-engines.com/en/system/CockroachDB",
+              "note": "按照本期排名排序；三期名次来自2026-10官方榜单展示，不推导中间月份趋势。"
+            },
+            {
+              "cells": [
+                "TiDB",
+                "83",
+                "82",
+                "80",
+                "3.33"
+              ],
+              "sourceUrl": "https://db-engines.com/en/system/TiDB",
+              "note": "按照本期排名排序；三期名次来自2026-10官方榜单展示，不推导中间月份趋势。"
+            },
+            {
+              "cells": [
+                "SingleStore",
+                "86",
+                "89",
+                "88",
+                "3.06"
+              ],
+              "sourceUrl": "https://db-engines.com/en/system/SingleStore",
+              "note": "按照本期排名排序；三期名次来自2026-10官方榜单展示，不推导中间月份趋势。"
+            },
+            {
+              "cells": [
+                "Google Cloud Spanner",
+                "92",
+                "93",
+                "94",
+                "2.92"
+              ],
+              "sourceUrl": "https://db-engines.com/en/system/Google+Cloud+Spanner",
+              "note": "按照本期排名排序；三期名次来自2026-10官方榜单展示，不推导中间月份趋势。"
+            },
+            {
+              "cells": [
+                "YugabyteDB",
+                "116",
+                "116",
+                "117",
+                "2.21"
+              ],
+              "sourceUrl": "https://db-engines.com/en/system/YugabyteDB",
+              "note": "按照本期排名排序；三期名次来自2026-10官方榜单展示，不推导中间月份趋势。"
+            },
+            {
+              "cells": [
+                "OceanBase",
+                "90",
+                "118",
+                "124",
+                "2.05"
+              ],
+              "sourceUrl": "https://db-engines.com/en/system/OceanBase",
+              "note": "按照本期排名排序；三期名次来自2026-10官方榜单展示，不推导中间月份趋势。"
+            },
+            {
+              "cells": [
+                "StarRocks",
+                "169",
+                "146",
+                "137",
+                "1.75"
+              ],
+              "sourceUrl": "https://db-engines.com/en/system/StarRocks",
+              "note": "按照本期排名排序；三期名次来自2026-10官方榜单展示，不推导中间月份趋势。"
+            },
+            {
+              "cells": [
+                "Apache Doris",
+                "241",
+                "264",
+                "259",
+                "0.42"
+              ],
+              "sourceUrl": "https://db-engines.com/en/system/Apache+Doris",
+              "note": "按照本期排名排序；三期名次来自2026-10官方榜单展示，不推导中间月份趋势。"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "榜单抓取快照共440项；图中仅展示前20及明确选定的10项对照，不是整个数据库市场。",
+        "环比柱是分数差，不是增长百分比。名次变化也不等于使用人数变化。",
+        "只有3个离散排名时点，未补造连续曲线；未取得独立招聘/开发者使用率样本，故不混入。"
+      ],
+      "sources": [
+        {
+          "title": "DB-Engines ranking, October 2026",
+          "url": "https://db-engines.com/en/ranking"
+        },
+        {
+          "title": "Ranking methodology",
+          "url": "https://db-engines.com/en/ranking_definition"
+        },
+        {
+          "title": "Public trend page; no numeric monthly series imported",
+          "url": "https://db-engines.com/en/ranking_trend"
+        }
+      ]
+    }
+  ],
+  "baseGraphReference": "../database-graphs-v2/graph.json",
+  "rankingReference": "popularity-observations.json",
+  "languageMapping": [
+    {
+      "databaseView": "01 工作负载",
+      "languageView": "01 应用领域与约束",
+      "question": "解决什么任务，运行资源、实时性、团队和交付边界是什么？",
+      "examples": [
+        "系统与嵌入式、Web 前后端、数据科学、移动端、数值计算、自动化；同一语言可跨多个领域。"
+      ],
+      "caveat": "领域适配不是语言血统，也不是“某领域只有一种最佳语言”；需要结合库、运行时和部署环境。"
+    },
+    {
+      "databaseView": "02 数据生命周期",
+      "languageView": "02 源码到运行的流水线",
+      "question": "源码怎样经过检查、转换、打包、加载，最后执行并被观测？",
+      "examples": [
+        "源码 → 解析/检查 → 中间表示或目标代码 → 链接/打包 → 加载/执行；TypeScript 可输出 JavaScript，JVM 语言可生成字节码。"
+      ],
+      "caveat": "这是编译与交付路径类比，不是数据保留周期；解释器、JIT、AOT 可混用，不能画成唯一流水线。"
+    },
+    {
+      "databaseView": "03 分布式架构",
+      "languageView": "03 并发与分布式编程模型",
+      "question": "任务怎样并行，状态如何共享，跨进程通信如何表达？",
+      "examples": [
+        "线程与共享内存、actor/message passing、goroutine/channel、async/await、RPC 与消息系统。"
+      ],
+      "caveat": "并发语法不自动提供分布式一致性；运行时调度、库、通信协议和部署拓扑必须分层。"
+    },
+    {
+      "databaseView": "04 事务与一致性",
+      "languageView": "04 类型与静态保证",
+      "question": "哪些错误在编译期被拒绝，哪些约束只能运行时检查？",
+      "examples": [
+        "静态/动态检查、结构/名义类型、泛型、空值约束、效果与错误类型；对比的是可保证的性质。"
+      ],
+      "caveat": "这是“正确性保证”的重组，不把类型安全当 ACID 或线性一致性；语言的类型系统与数据库事务没有一一对应关系。"
+    },
+    {
+      "databaseView": "05 存储与执行机制",
+      "languageView": "05 运行时与执行机制",
+      "question": "选定实现怎样执行程序，成本花在编译、分派、内存管理还是调用边界？",
+      "examples": [
+        "本机机器码、字节码解释、JIT/AOT、虚拟机、GC、值布局、SIMD；CPython 与 PyPy 应画成不同实现。"
+      ],
+      "caveat": "“Python 是解释型、Java 是编译型”过粗；语言规范、实现、编译选项、运行时必须区分，不能靠标签给性能排名。"
+    },
+    {
+      "databaseView": "06 兼容与迁移",
+      "languageView": "06 FFI、ABI 与移植",
+      "question": "能复用的是源代码、二进制、协议还是库？替换实现要验证哪些语义？",
+      "examples": [
+        "C ABI/FFI、JNI、JavaScript 互操作、WebAssembly host 接口、源码版本兼容与跨平台移植。"
+      ],
+      "caveat": "互操作箭头指向接口；能链接不等于所有权、异常、线程、内存布局和数值行为一致，也不是源码继承。"
+    },
+    {
+      "databaseView": "07 部署与运维",
+      "languageView": "07 工具链、构建与交付",
+      "question": "如何可复现构建、管理依赖、发布、调试、回滚与修补？",
+      "examples": [
+        "编译器/SDK、包管理与锁文件、构建系统、交叉编译、测试/分析器、容器或本机分发。"
+      ],
+      "caveat": "工具是工具，不把 npm、Cargo、JVM 或 LLVM 误当语言；交付安全与供应链需单独检查。"
+    },
+    {
+      "databaseView": "08 应用生态",
+      "languageView": "08 库、框架与依赖生态",
+      "question": "哪些框架、标准库、原生依赖与平台 API 形成实际生产力？",
+      "examples": [
+        "包生态、Web/科学计算/移动端框架、数据库驱动、IDE/LSP、平台 SDK；绘制“调用/依赖/生成”而非一个无类型连线。"
+      ],
+      "caveat": "包数量不是质量，也不是活跃用户；跨语言原生扩展会把多个生态连在一起。"
+    },
+    {
+      "databaseView": "09 普及度与变化",
+      "languageView": "09 采用指标与时间变化",
+      "question": "衡量的是开发者、仓库、检索关注、职位还是下载？时间窗和样本是什么？",
+      "examples": [
+        "开发者调查、代码托管活动、职位需求、包下载量、搜索型指数；先分开指标，再研究变化。"
+      ],
+      "caveat": "不合并不兼容口径，不给出未经核实排名；数据库榜单指标不能直接移植为语言使用率。"
+    },
+    {
+      "databaseView": "额外维度；不强行对应数据库九视角",
+      "languageView": "10 编程范式与表达模型",
+      "question": "程序怎样组织计算和状态：过程、对象、函数、逻辑、声明式还是数据流？",
+      "examples": [
+        "一个语言可以同时支持过程式、面向对象与函数式风格；范式使用与语法特性不是同一个层级。"
+      ],
+      "caveat": "需要单独研究范式、语言设计与实际用法；不要把“多范式”分成互斥树，也不要把范式当类型系统。"
+    },
+    {
+      "databaseView": "从 04 / 05 拆出，语言领域独有重点",
+      "languageView": "11 内存、资源与错误模型",
+      "question": "谁拥有资源，何时释放，别名与线程安全吗，错误怎样传播？",
+      "examples": [
+        "手动管理、RAII、所有权/借用、追踪 GC、引用计数，以及异常、Result/错误值与取消。"
+      ],
+      "caveat": "内存管理与错误处理是不同子轴，研究时可再拆；GC 不等于全部资源自动释放，静态类型也不等于内存安全。"
+    }
+  ]
+}

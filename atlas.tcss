@@ -1,0 +1,45 @@
+Screen { background: #fafaf7; color: #191919; }
+* { scrollbar-color: #999992; scrollbar-background: #fafaf7; scrollbar-size: 1 1; }
+#masthead { height: 2; padding: 0 1; text-style: bold; border-bottom: solid #191919; }
+#context { height: 2; padding: 0 1; }
+#body { height: 1fr; }
+#sidebar { width: 24; border-right: solid #191919; padding: 0 1; }
+.section-title { height: 2; text-style: bold; }
+#views { height: 12; padding: 0; border: none; background: #fafaf7; }
+OptionList > .option-list--option { padding: 0; }
+OptionList > .option-list--option-highlighted { background: #191919; color: #fafaf7; text-style: bold; }
+OptionList > .option-list--option-hover { background: #e3e3dd; color: #191919; }
+#inventory { height: auto; margin-top: 1; color: #575752; }
+#pins { height: auto; margin-top: 2; }
+#workspace { width: 1fr; padding: 0 1; }
+#panels { height: 3; margin-bottom: 0; }
+SelectCurrent { background: #fafaf7; border: solid #777770; }
+Select:focus SelectCurrent { border: solid #191919; }
+SelectOverlay { background: #fafaf7; color: #191919; border: solid #191919; }
+#panel-caption { height: 2; color: #575752; }
+#graph { height: 11; padding: 0 1; margin-bottom: 1; }
+DataTable { height: 1fr; min-height: 3; background: #fafaf7; color: #191919; border-top: solid #191919; }
+DataTable > .datatable--header { background: #e7e7e1; color: #191919; text-style: bold; }
+DataTable > .datatable--cursor { background: #191919; color: #fafaf7; text-style: none; }
+DataTable > .datatable--hover { background: #ddddD6; color: #191919; }
+#evidence { width: 38; border-left: solid #191919; padding: 0 1; }
+#details { height: auto; }
+#status { height: 2; border-top: solid #191919; padding: 0 1; color: #575752; }
+#keys { height: 1; background: #191919; color: #fafaf7; padding: 0 1; }
+.compact #sidebar { display: none; }
+.no-evidence #evidence { display: none; }
+.short #graph { height: 7; margin-bottom: 0; }
+.short #context { height: 1; }
+.short #panel-caption { height: 1; }
+ModalScreen { align: center middle; background: #191919 40%; }
+#document-dialog { width: 90%; max-width: 130; height: 90%; border: solid #191919; background: #fafaf7; color: #191919; padding: 1 2; }
+#dialog-title { height: 2; text-style: bold; border-bottom: solid #191919; }
+#document-scroll { height: 1fr; margin-top: 1; }
+#dialog-actions { height: 3; margin-top: 1; }
+Button { border: solid #191919; background: #fafaf7; color: #191919; min-width: 14; margin-right: 2; }
+Button:focus { background: #191919; color: #fafaf7; text-style: bold; }
+#search-dialog { width: 80%; max-width: 90; height: 80%; background: #fafaf7; color: #191919; border: solid #191919; padding: 1 2; }
+Input { background: #fafaf7; color: #191919; border: solid #777770; }
+Input:focus { border: solid #191919; }
+#search-results { height: 1fr; background: #fafaf7; color: #191919; border: none; }
+.hint { height: 1; color: #575752; }

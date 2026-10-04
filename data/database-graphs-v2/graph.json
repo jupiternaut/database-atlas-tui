@@ -1,0 +1,7085 @@
+{
+  "month": "2026-10",
+  "metric": "DB-Engines popularity; not usage count",
+  "sources": {
+    "ranking": "https://db-engines.com/en/ranking",
+    "method": "https://db-engines.com/en/ranking_definition",
+    "categories": "https://db-engines.com/en/ranking_categories"
+  },
+  "nodes": [
+    {
+      "id": "database",
+      "label": "数据库生态",
+      "type": "root",
+      "fontSize": 30
+    },
+    {
+      "id": "models",
+      "label": "数据模型",
+      "type": "axis",
+      "color": "#315d80",
+      "fontSize": 27
+    },
+    {
+      "id": "workloads",
+      "label": "专用数据与查询",
+      "type": "axis",
+      "color": "#927034",
+      "fontSize": 27
+    },
+    {
+      "id": "architecture",
+      "label": "架构与部署",
+      "type": "axis",
+      "color": "#477761",
+      "fontSize": 27
+    },
+    {
+      "id": "implementation",
+      "label": "引擎与查询组件",
+      "type": "axis",
+      "color": "#786184",
+      "fontSize": 27
+    },
+    {
+      "id": "relational",
+      "label": "关系型",
+      "type": "category",
+      "axis": "models",
+      "detail": "表、键、关系与关系运算",
+      "color": "#315d80",
+      "sourceUrl": "https://www.postgresql.org/about/",
+      "fontSize": 23
+    },
+    {
+      "id": "object_relational",
+      "label": "对象关系型",
+      "type": "category",
+      "axis": "models",
+      "detail": "在关系模型上增加可扩展类型与对象能力",
+      "color": "#315d80",
+      "sourceUrl": "https://www.postgresql.org/docs/current/intro-whatis.html",
+      "fontSize": 23
+    },
+    {
+      "id": "hierarchical",
+      "label": "层次型",
+      "type": "category",
+      "axis": "models",
+      "detail": "树状记录或全局变量树",
+      "color": "#315d80",
+      "sourceUrl": "https://www.ibm.com/docs/en/ims/15.5.0?topic=ims-comparison-hierarchical-relational-databases",
+      "fontSize": 23
+    },
+    {
+      "id": "network",
+      "label": "网状型 / CODASYL",
+      "type": "category",
+      "axis": "models",
+      "detail": "记录与集合链接；不是网络部署，也不是现代图数据库的同义词",
+      "color": "#315d80",
+      "sourceUrl": "https://www.oracle.com/database/technologies/related/rdb-doc-rlp.html",
+      "fontSize": 23
+    },
+    {
+      "id": "object",
+      "label": "面向对象",
+      "type": "category",
+      "axis": "models",
+      "detail": "持久化对象、引用与对象身份",
+      "color": "#315d80",
+      "sourceUrl": "https://www.objectdb.com/database/faq",
+      "fontSize": 23
+    },
+    {
+      "id": "multivalue",
+      "label": "多值型 / MultiValue",
+      "type": "category",
+      "axis": "models",
+      "detail": "字段可保存多值与子值",
+      "color": "#315d80",
+      "sourceUrl": "https://www.rocketsoftware.com/en-us/products/multivalue",
+      "fontSize": 23
+    },
+    {
+      "id": "document",
+      "label": "文档型",
+      "type": "category",
+      "axis": "models",
+      "detail": "嵌套文档与字段查询",
+      "color": "#315d80",
+      "sourceUrl": "https://docs.couchdb.org/en/stable/intro/overview.html",
+      "fontSize": 23
+    },
+    {
+      "id": "key_value",
+      "label": "键值型",
+      "type": "category",
+      "axis": "models",
+      "detail": "以键访问值；值可以是复杂结构",
+      "color": "#315d80",
+      "sourceUrl": "https://aws.amazon.com/documentation-overview/dynamodb/",
+      "fontSize": 23
+    },
+    {
+      "id": "wide_column",
+      "label": "宽列 / 列族",
+      "type": "category",
+      "axis": "models",
+      "detail": "稀疏行、列族；不等于分析用的列式存储",
+      "color": "#315d80",
+      "sourceUrl": "https://cloud.google.com/bigtable/docs/overview",
+      "fontSize": 23
+    },
+    {
+      "id": "property_graph",
+      "label": "属性图",
+      "type": "category",
+      "axis": "models",
+      "detail": "点和边均可带属性",
+      "color": "#315d80",
+      "sourceUrl": "https://neo4j.com/docs/getting-started/appendix/graphdb-concepts/",
+      "fontSize": 23
+    },
+    {
+      "id": "rdf",
+      "label": "RDF / 三元组",
+      "type": "category",
+      "axis": "models",
+      "detail": "主语、谓语、宾语；SPARQL 等图查询",
+      "color": "#315d80",
+      "sourceUrl": "https://docs.stardog.com/tutorials/rdf-graph-data-model",
+      "fontSize": 23
+    },
+    {
+      "id": "xml",
+      "label": "原生 XML",
+      "type": "category",
+      "axis": "models",
+      "detail": "XML 树、XPath/XQuery；也是文档路线",
+      "color": "#315d80",
+      "sourceUrl": "https://basex.org/",
+      "fontSize": 23
+    },
+    {
+      "id": "array",
+      "label": "多维数组",
+      "type": "category",
+      "axis": "models",
+      "detail": "多维网格、数组与切片计算",
+      "color": "#315d80",
+      "sourceUrl": "https://documentation.cloud.tiledb.com/academy/structure/arrays/foundation/array-data-model/",
+      "fontSize": 23
+    },
+    {
+      "id": "multimodel",
+      "label": "多模型",
+      "type": "category",
+      "axis": "models",
+      "detail": "一个系统支持多个模型，不是新的互斥模型",
+      "color": "#315d80",
+      "sourceUrl": "https://arangodb.com/multi-model/",
+      "fontSize": 23
+    },
+    {
+      "id": "search",
+      "label": "全文搜索",
+      "type": "category",
+      "axis": "workloads",
+      "detail": "倒排索引与文本检索",
+      "color": "#927034",
+      "sourceUrl": "https://lucene.apache.org/",
+      "fontSize": 23
+    },
+    {
+      "id": "timeseries",
+      "label": "时序",
+      "type": "category",
+      "axis": "workloads",
+      "detail": "带时间戳的测量、指标与时间窗口",
+      "color": "#927034",
+      "sourceUrl": "https://docs.influxdata.com/platform/",
+      "fontSize": 23
+    },
+    {
+      "id": "spatial",
+      "label": "空间 / GIS",
+      "type": "category",
+      "axis": "workloads",
+      "detail": "几何、地理坐标和空间查询",
+      "color": "#927034",
+      "sourceUrl": "https://postgis.net/",
+      "fontSize": 23
+    },
+    {
+      "id": "vector",
+      "label": "向量检索",
+      "type": "category",
+      "axis": "workloads",
+      "detail": "向量近邻、语义检索",
+      "color": "#927034",
+      "sourceUrl": "https://qdrant.tech/documentation/overview/vector-search/",
+      "fontSize": 23
+    },
+    {
+      "id": "olap",
+      "label": "分析 / OLAP",
+      "type": "category",
+      "axis": "workloads",
+      "detail": "聚合与大范围扫描；可基于关系模型",
+      "color": "#927034",
+      "sourceUrl": "https://clickhouse.com/docs/intro",
+      "fontSize": 23
+    },
+    {
+      "id": "oltp",
+      "label": "事务 / OLTP",
+      "type": "category",
+      "axis": "workloads",
+      "detail": "短事务与在线业务更新；不是独立逻辑模型",
+      "color": "#927034",
+      "sourceUrl": "https://dev.mysql.com/doc/refman/8.4/en/innodb-introduction.html",
+      "fontSize": 23
+    },
+    {
+      "id": "htap",
+      "label": "混合事务分析 / HTAP",
+      "type": "category",
+      "axis": "workloads",
+      "detail": "兼顾事务与分析，具体隔离和数据复制路径依产品而异",
+      "color": "#927034",
+      "sourceUrl": "https://docs.pingcap.com/tidb/stable/tidb-introduction/",
+      "fontSize": 23
+    },
+    {
+      "id": "cache",
+      "label": "缓存",
+      "type": "category",
+      "axis": "workloads",
+      "detail": "减少重复计算和下游访问，不等同于持久化主库",
+      "color": "#927034",
+      "sourceUrl": "https://memcached.org/",
+      "fontSize": 23
+    },
+    {
+      "id": "cube",
+      "label": "多维 OLAP / Cube",
+      "type": "category",
+      "axis": "workloads",
+      "detail": "维度、度量与立方体分析",
+      "color": "#927034",
+      "sourceUrl": "https://mondrian.pentaho.com/",
+      "fontSize": 23
+    },
+    {
+      "id": "deductive",
+      "label": "演绎 / 规则推理",
+      "type": "category",
+      "axis": "workloads",
+      "detail": "Datalog 或规则推导；区别于普通索引查询",
+      "color": "#927034",
+      "sourceUrl": "https://www.oxfordsemantic.tech/rdfox",
+      "fontSize": 23
+    },
+    {
+      "id": "stream",
+      "label": "流式 / 增量计算",
+      "type": "category",
+      "axis": "workloads",
+      "detail": "持续查询与流式物化视图",
+      "color": "#927034",
+      "sourceUrl": "https://materialize.com/docs/",
+      "fontSize": 23
+    },
+    {
+      "id": "event",
+      "label": "事件存储",
+      "type": "category",
+      "axis": "workloads",
+      "detail": "按流追加事件，支持事件溯源",
+      "color": "#927034",
+      "sourceUrl": "https://docs.kurrent.io/",
+      "fontSize": 23
+    },
+    {
+      "id": "temporal",
+      "label": "双时态 / 版本化",
+      "type": "category",
+      "axis": "workloads",
+      "detail": "有效时间、系统时间或版本历史；各产品能力不同",
+      "color": "#927034",
+      "sourceUrl": "https://docs.xtdb.com/",
+      "fontSize": 23
+    },
+    {
+      "id": "content",
+      "label": "内容仓库",
+      "type": "category",
+      "axis": "workloads",
+      "detail": "内容树、版本、权限与查询",
+      "color": "#927034",
+      "sourceUrl": "https://jackrabbit.apache.org/",
+      "fontSize": 23
+    },
+    {
+      "id": "distributed_sql",
+      "label": "分布式 SQL",
+      "type": "category",
+      "axis": "architecture",
+      "detail": "关系模型与分布式事务；NewSQL 的常见路线",
+      "color": "#477761",
+      "sourceUrl": "https://db.cs.cmu.edu/papers/2016/pavlo-newsql-sigmodrec2016.pdf",
+      "fontSize": 23
+    },
+    {
+      "id": "embedded",
+      "label": "嵌入式部署",
+      "type": "category",
+      "axis": "architecture",
+      "detail": "数据库库与应用处于同一进程",
+      "color": "#477761",
+      "sourceUrl": "https://sqlite.org/about.html",
+      "fontSize": 23
+    },
+    {
+      "id": "memory",
+      "label": "内存优先",
+      "type": "category",
+      "axis": "architecture",
+      "detail": "主要工作集放在内存；不代表不持久化",
+      "color": "#477761",
+      "sourceUrl": "https://redis.io/docs/latest/develop/",
+      "fontSize": 23
+    },
+    {
+      "id": "columnar",
+      "label": "列式存储",
+      "type": "category",
+      "axis": "architecture",
+      "detail": "按列组织分析数据；不是宽列模型",
+      "color": "#477761",
+      "sourceUrl": "https://clickhouse.com/docs/intro",
+      "fontSize": 23
+    },
+    {
+      "id": "row_store",
+      "label": "行式存储",
+      "type": "category",
+      "axis": "architecture",
+      "detail": "以行记录为主要存储单位，可与列存并存",
+      "color": "#477761",
+      "sourceUrl": "https://www.postgresql.org/docs/current/storage-page-layout.html",
+      "fontSize": 23
+    },
+    {
+      "id": "lsm",
+      "label": "LSM-tree 路线",
+      "type": "category",
+      "axis": "architecture",
+      "detail": "日志结构合并与分层压实的写入优化路线",
+      "color": "#477761",
+      "sourceUrl": "https://rocksdb.org/docs/getting-started.html",
+      "fontSize": 23
+    },
+    {
+      "id": "btree",
+      "label": "B-tree 路线",
+      "type": "category",
+      "axis": "architecture",
+      "detail": "平衡树及其变体，用于存储与索引",
+      "color": "#477761",
+      "sourceUrl": "https://dev.mysql.com/doc/refman/8.4/en/innodb-physical-structure.html",
+      "fontSize": 23
+    },
+    {
+      "id": "extension",
+      "label": "数据库扩展",
+      "type": "category",
+      "axis": "architecture",
+      "detail": "通过扩展接口增加能力",
+      "color": "#477761",
+      "sourceUrl": "https://www.postgresql.org/docs/current/extend-extensions.html",
+      "fontSize": 23
+    },
+    {
+      "id": "distributed_kv",
+      "label": "分布式 KV",
+      "type": "category",
+      "axis": "architecture",
+      "detail": "跨节点提供键值访问",
+      "color": "#477761",
+      "sourceUrl": "https://tikv.org/",
+      "fontSize": 23
+    },
+    {
+      "id": "kv_engine",
+      "label": "嵌入式 KV 引擎",
+      "type": "category",
+      "axis": "implementation",
+      "detail": "由其他系统嵌入的持久化组件",
+      "color": "#786184",
+      "sourceUrl": "https://rocksdb.org/",
+      "fontSize": 23
+    },
+    {
+      "id": "storage_engine",
+      "label": "存储引擎",
+      "type": "category",
+      "axis": "implementation",
+      "detail": "负责存储访问，可嵌入式或服务化；TiFlash 属于列存分析组件",
+      "color": "#786184",
+      "sourceUrl": "https://github.com/pingcap/tiflash",
+      "fontSize": 23
+    },
+    {
+      "id": "query_engine",
+      "label": "查询 / 联邦引擎",
+      "type": "category",
+      "axis": "implementation",
+      "detail": "执行查询，通常不独立管理全部底层数据",
+      "color": "#786184",
+      "sourceUrl": "https://trino.io/",
+      "fontSize": 23
+    },
+    {
+      "id": "search_library",
+      "label": "搜索程序库",
+      "type": "category",
+      "axis": "implementation",
+      "detail": "搜索服务可以基于这些库构建",
+      "color": "#786184",
+      "sourceUrl": "https://lucene.apache.org/",
+      "fontSize": 23
+    },
+    {
+      "id": "oracle",
+      "label": "Oracle",
+      "type": "product",
+      "primary": "relational",
+      "axis": "models",
+      "score": 1119.79,
+      "rank": 1,
+      "sourceUrl": "https://db-engines.com/en/system/Oracle",
+      "rankUrl": "https://db-engines.com/en/system/Oracle",
+      "detail": "",
+      "models": [
+        "Relational DBMS",
+        "Document store",
+        "Graph DBMS",
+        "RDF store",
+        "Spatial DBMS",
+        "Vector DBMS"
+      ],
+      "fontSize": 46
+    },
+    {
+      "id": "mysql",
+      "label": "MySQL",
+      "type": "product",
+      "primary": "relational",
+      "axis": "models",
+      "score": 837.96,
+      "rank": 2,
+      "sourceUrl": "https://db-engines.com/en/system/MySQL",
+      "rankUrl": "https://db-engines.com/en/system/MySQL",
+      "detail": "",
+      "models": [
+        "Relational DBMS",
+        "Document store",
+        "Spatial DBMS"
+      ],
+      "fontSize": 44.76
+    },
+    {
+      "id": "sql_server",
+      "label": "SQL Server",
+      "type": "product",
+      "primary": "relational",
+      "axis": "models",
+      "score": 694.47,
+      "rank": 3,
+      "sourceUrl": "https://db-engines.com/en/system/Microsoft+SQL+Server",
+      "rankUrl": "https://db-engines.com/en/system/Microsoft+SQL+Server",
+      "detail": "",
+      "models": [
+        "Relational DBMS",
+        "Document store",
+        "Graph DBMS",
+        "Spatial DBMS"
+      ],
+      "fontSize": 43.96
+    },
+    {
+      "id": "mariadb",
+      "label": "MariaDB",
+      "type": "product",
+      "primary": "relational",
+      "axis": "models",
+      "score": 75.6,
+      "rank": 13,
+      "sourceUrl": "https://db-engines.com/en/system/MariaDB",
+      "rankUrl": "https://db-engines.com/en/system/MariaDB",
+      "detail": "",
+      "models": [
+        "Relational DBMS",
+        "Document store",
+        "Graph DBMS",
+        "Spatial DBMS"
+      ],
+      "fontSize": 34.54
+    },
+    {
+      "id": "ibm_db2",
+      "label": "IBM Db2",
+      "type": "product",
+      "primary": "relational",
+      "axis": "models",
+      "score": 106.29,
+      "rank": 9,
+      "sourceUrl": "https://db-engines.com/en/system/IBM+Db2",
+      "rankUrl": "https://db-engines.com/en/system/IBM+Db2",
+      "detail": "",
+      "models": [
+        "Relational DBMS",
+        "Document store",
+        "RDF store",
+        "Spatial DBMS"
+      ],
+      "fontSize": 35.98
+    },
+    {
+      "id": "sqlite",
+      "label": "SQLite",
+      "type": "product",
+      "primary": "relational",
+      "axis": "models",
+      "score": 95.73,
+      "rank": 11,
+      "sourceUrl": "https://db-engines.com/en/system/SQLite",
+      "rankUrl": "https://db-engines.com/en/system/SQLite",
+      "detail": "",
+      "models": [
+        "Relational"
+      ],
+      "fontSize": 35.53
+    },
+    {
+      "id": "ms_access",
+      "label": "MS Access",
+      "type": "product",
+      "primary": "relational",
+      "axis": "models",
+      "score": 63.32,
+      "rank": 17,
+      "sourceUrl": "https://db-engines.com/en/system/Microsoft+Access",
+      "rankUrl": "https://db-engines.com/en/system/Microsoft+Access",
+      "detail": "",
+      "models": [
+        "Relational"
+      ],
+      "fontSize": 33.79
+    },
+    {
+      "id": "firebird",
+      "label": "Firebird",
+      "type": "product",
+      "primary": "relational",
+      "axis": "models",
+      "score": 18.36,
+      "rank": 33,
+      "sourceUrl": "https://db-engines.com/en/system/Firebird",
+      "rankUrl": "https://db-engines.com/en/system/Firebird",
+      "detail": "",
+      "models": [
+        "Relational"
+      ],
+      "fontSize": 28.66
+    },
+    {
+      "id": "interbase",
+      "label": "Interbase",
+      "type": "product",
+      "primary": "relational",
+      "axis": "models",
+      "score": 3.76,
+      "rank": 77,
+      "sourceUrl": "https://db-engines.com/en/system/Interbase",
+      "rankUrl": "https://db-engines.com/en/system/Interbase",
+      "detail": "",
+      "models": [
+        "Relational"
+      ],
+      "fontSize": 22.67
+    },
+    {
+      "id": "ingres",
+      "label": "Ingres",
+      "type": "product",
+      "primary": "relational",
+      "axis": "models",
+      "score": 3.03,
+      "rank": 91,
+      "sourceUrl": "https://db-engines.com/en/system/Ingres",
+      "rankUrl": "https://db-engines.com/en/system/Ingres",
+      "detail": "",
+      "models": [
+        "Relational"
+      ],
+      "fontSize": 21.95
+    },
+    {
+      "id": "h2",
+      "label": "H2",
+      "type": "product",
+      "primary": "relational",
+      "axis": "models",
+      "score": 9.15,
+      "rank": 47,
+      "sourceUrl": "https://db-engines.com/en/system/H2",
+      "rankUrl": "https://db-engines.com/en/system/H2",
+      "detail": "",
+      "models": [
+        "Relational DBMS",
+        "Spatial DBMS"
+      ],
+      "fontSize": 25.9
+    },
+    {
+      "id": "hypersql",
+      "label": "HyperSQL",
+      "type": "product",
+      "primary": "relational",
+      "axis": "models",
+      "score": 2.5,
+      "rank": 104,
+      "sourceUrl": "https://db-engines.com/en/system/HyperSQL",
+      "rankUrl": "https://db-engines.com/en/system/HyperSQL",
+      "detail": "",
+      "models": [
+        "Relational"
+      ],
+      "fontSize": 21.35
+    },
+    {
+      "id": "dbase",
+      "label": "dBASE",
+      "type": "product",
+      "primary": "relational",
+      "axis": "models",
+      "score": 7.04,
+      "rank": 55,
+      "sourceUrl": "https://db-engines.com/en/system/dBASE",
+      "rankUrl": "https://db-engines.com/en/system/dBASE",
+      "detail": "",
+      "models": [
+        "Relational"
+      ],
+      "fontSize": 24.91
+    },
+    {
+      "id": "filemaker",
+      "label": "FileMaker",
+      "type": "product",
+      "primary": "relational",
+      "axis": "models",
+      "score": 29.8,
+      "rank": 24,
+      "sourceUrl": "https://db-engines.com/en/system/FileMaker",
+      "rankUrl": "https://db-engines.com/en/system/FileMaker",
+      "detail": "",
+      "models": [
+        "Relational"
+      ],
+      "fontSize": 30.64
+    },
+    {
+      "id": "openedge",
+      "label": "OpenEdge",
+      "type": "product",
+      "primary": "relational",
+      "axis": "models",
+      "score": 3.45,
+      "rank": 79,
+      "sourceUrl": "https://db-engines.com/en/system/OpenEdge",
+      "rankUrl": "https://db-engines.com/en/system/OpenEdge",
+      "detail": "",
+      "models": [
+        "Relational"
+      ],
+      "fontSize": 22.38
+    },
+    {
+      "id": "percona_server",
+      "label": "Percona Server",
+      "type": "product",
+      "primary": "relational",
+      "axis": "models",
+      "score": 1.86,
+      "rank": 133,
+      "sourceUrl": "https://db-engines.com/en/system/Percona+Server+for+MySQL",
+      "rankUrl": "https://db-engines.com/en/system/Percona+Server+for+MySQL",
+      "detail": "",
+      "models": [
+        "Relational"
+      ],
+      "fontSize": 20.49
+    },
+    {
+      "id": "opengauss",
+      "label": "openGauss",
+      "type": "product",
+      "primary": "relational",
+      "axis": "models",
+      "score": 1.02,
+      "rank": 187,
+      "sourceUrl": "https://db-engines.com/en/system/openGauss",
+      "rankUrl": "https://db-engines.com/en/system/openGauss",
+      "detail": "",
+      "models": [
+        "Relational DBMS",
+        "Document store",
+        "Spatial DBMS"
+      ],
+      "fontSize": 19
+    },
+    {
+      "id": "postgresql",
+      "label": "PostgreSQL",
+      "type": "product",
+      "primary": "object_relational",
+      "axis": "models",
+      "score": 688.75,
+      "rank": 4,
+      "sourceUrl": "https://db-engines.com/en/system/PostgreSQL",
+      "rankUrl": "https://db-engines.com/en/system/PostgreSQL",
+      "detail": "",
+      "models": [
+        "Relational DBMS",
+        "Document store",
+        "Graph DBMS",
+        "Spatial DBMS",
+        "Vector DBMS"
+      ],
+      "fontSize": 43.93
+    },
+    {
+      "id": "informix",
+      "label": "Informix",
+      "type": "product",
+      "primary": "object_relational",
+      "axis": "models",
+      "score": 13.29,
+      "rank": 38,
+      "sourceUrl": "https://db-engines.com/en/system/Informix",
+      "rankUrl": "https://db-engines.com/en/system/Informix",
+      "detail": "",
+      "models": [
+        "Relational DBMS",
+        "Document store",
+        "Spatial DBMS",
+        "Time Series DBMS"
+      ],
+      "fontSize": 27.36
+    },
+    {
+      "id": "ibm_ims",
+      "label": "IBM IMS",
+      "type": "product",
+      "primary": "hierarchical",
+      "axis": "models",
+      "score": 1.73,
+      "rank": 138,
+      "sourceUrl": "https://db-engines.com/en/system/IMS",
+      "rankUrl": "https://db-engines.com/en/system/IMS",
+      "detail": "",
+      "models": [
+        "Navigational"
+      ],
+      "fontSize": 20.29
+    },
+    {
+      "id": "gt_m",
+      "label": "GT.M",
+      "type": "product",
+      "primary": "hierarchical",
+      "axis": "models",
+      "score": 0.89,
+      "rank": 197,
+      "sourceUrl": "https://db-engines.com/en/system/GT.M",
+      "rankUrl": "https://db-engines.com/en/system/GT.M",
+      "detail": "",
+      "models": [
+        "Key-value"
+      ],
+      "fontSize": 18.72
+    },
+    {
+      "id": "yottadb",
+      "label": "YottaDB",
+      "type": "product",
+      "primary": "hierarchical",
+      "axis": "models",
+      "score": 0.18,
+      "rank": 315,
+      "sourceUrl": "https://yottadb.com/",
+      "rankUrl": "https://db-engines.com/en/system/YottaDB",
+      "detail": "层次键值/全局变量树，提供多语言接口",
+      "models": [
+        "Key-value store",
+        "Relational DBMS"
+      ],
+      "fontSize": 16.71
+    },
+    {
+      "id": "idms",
+      "label": "IDMS",
+      "type": "product",
+      "primary": "network",
+      "axis": "models",
+      "score": 0.75,
+      "rank": 203,
+      "sourceUrl": "https://db-engines.com/en/system/IDMS",
+      "rankUrl": "https://db-engines.com/en/system/IDMS",
+      "detail": "",
+      "models": [
+        "Navigational"
+      ],
+      "fontSize": 18.39
+    },
+    {
+      "id": "oracle_codasyl_dbms",
+      "label": "Oracle CODASYL DBMS",
+      "type": "product",
+      "primary": "network",
+      "axis": "models",
+      "score": null,
+      "rank": null,
+      "sourceUrl": "https://www.oracle.com/database/technologies/related/rdb-doc-rlp.html",
+      "rankUrl": null,
+      "detail": "",
+      "models": [],
+      "fontSize": 16
+    },
+    {
+      "id": "objectdb",
+      "label": "ObjectDB",
+      "type": "product",
+      "primary": "object",
+      "axis": "models",
+      "score": 0.53,
+      "rank": 244,
+      "sourceUrl": "https://db-engines.com/en/system/ObjectDB",
+      "rankUrl": "https://db-engines.com/en/system/ObjectDB",
+      "detail": "",
+      "models": [
+        "Object oriented"
+      ],
+      "fontSize": 17.82
+    },
+    {
+      "id": "objectstore",
+      "label": "ObjectStore",
+      "type": "product",
+      "primary": "object",
+      "axis": "models",
+      "score": 1.07,
+      "rank": 184,
+      "sourceUrl": "https://db-engines.com/en/system/ObjectStore",
+      "rankUrl": "https://db-engines.com/en/system/ObjectStore",
+      "detail": "",
+      "models": [
+        "Object oriented"
+      ],
+      "fontSize": 19.11
+    },
+    {
+      "id": "objectbox",
+      "label": "ObjectBox",
+      "type": "product",
+      "primary": "object",
+      "axis": "models",
+      "score": 1.15,
+      "rank": 176,
+      "sourceUrl": "https://db-engines.com/en/system/ObjectBox",
+      "rankUrl": "https://db-engines.com/en/system/ObjectBox",
+      "detail": "",
+      "models": [
+        "Object oriented DBMS",
+        "Vector DBMS",
+        "Time Series DBMS"
+      ],
+      "fontSize": 19.27
+    },
+    {
+      "id": "gemstone_s",
+      "label": "GemStone/S",
+      "type": "product",
+      "primary": "object",
+      "axis": "models",
+      "score": 0.36,
+      "rank": 267,
+      "sourceUrl": "https://db-engines.com/en/system/GemStone%2FS",
+      "rankUrl": "https://db-engines.com/en/system/GemStone%2FS",
+      "detail": "",
+      "models": [
+        "Object oriented"
+      ],
+      "fontSize": 17.31
+    },
+    {
+      "id": "zodb",
+      "label": "ZODB",
+      "type": "product",
+      "primary": "object",
+      "axis": "models",
+      "score": 0.67,
+      "rank": 220,
+      "sourceUrl": "https://db-engines.com/en/system/ZODB",
+      "rankUrl": "https://db-engines.com/en/system/ZODB",
+      "detail": "",
+      "models": [
+        "Key-value"
+      ],
+      "fontSize": 18.19
+    },
+    {
+      "id": "db4o",
+      "label": "db4o",
+      "type": "product",
+      "primary": "object",
+      "axis": "models",
+      "score": 1.15,
+      "rank": 177,
+      "sourceUrl": "https://db-engines.com/en/system/Db4o",
+      "rankUrl": "https://db-engines.com/en/system/Db4o",
+      "detail": "",
+      "models": [
+        "Object oriented"
+      ],
+      "fontSize": 19.27
+    },
+    {
+      "id": "objectivity_db",
+      "label": "Objectivity/DB",
+      "type": "product",
+      "primary": "object",
+      "axis": "models",
+      "score": 0.53,
+      "rank": 245,
+      "sourceUrl": "https://db-engines.com/en/system/Objectivity%2FDB",
+      "rankUrl": "https://db-engines.com/en/system/Objectivity%2FDB",
+      "detail": "",
+      "models": [
+        "Object oriented"
+      ],
+      "fontSize": 17.82
+    },
+    {
+      "id": "unidata_universe",
+      "label": "UniData / UniVerse",
+      "type": "product",
+      "primary": "multivalue",
+      "axis": "models",
+      "score": 2.27,
+      "rank": 115,
+      "sourceUrl": "https://db-engines.com/en/system/UniData%2CUniVerse",
+      "rankUrl": "https://db-engines.com/en/system/UniData%2CUniVerse",
+      "detail": "",
+      "models": [
+        "Multivalue"
+      ],
+      "fontSize": 21.06
+    },
+    {
+      "id": "jbase",
+      "label": "jBASE",
+      "type": "product",
+      "primary": "multivalue",
+      "axis": "models",
+      "score": 1.45,
+      "rank": 157,
+      "sourceUrl": "https://db-engines.com/en/system/jBASE",
+      "rankUrl": "https://db-engines.com/en/system/jBASE",
+      "detail": "",
+      "models": [
+        "Multivalue"
+      ],
+      "fontSize": 19.83
+    },
+    {
+      "id": "d3",
+      "label": "D3",
+      "type": "product",
+      "primary": "multivalue",
+      "axis": "models",
+      "score": 1.27,
+      "rank": 167,
+      "sourceUrl": "https://db-engines.com/en/system/D3",
+      "rankUrl": "https://db-engines.com/en/system/D3",
+      "detail": "",
+      "models": [
+        "Multivalue"
+      ],
+      "fontSize": 19.5
+    },
+    {
+      "id": "openqm",
+      "label": "OpenQM",
+      "type": "product",
+      "primary": "multivalue",
+      "axis": "models",
+      "score": 0.3,
+      "rank": 283,
+      "sourceUrl": "https://db-engines.com/en/system/OpenQM",
+      "rankUrl": "https://db-engines.com/en/system/OpenQM",
+      "detail": "",
+      "models": [
+        "Multivalue"
+      ],
+      "fontSize": 17.12
+    },
+    {
+      "id": "mongodb",
+      "label": "MongoDB",
+      "type": "product",
+      "primary": "document",
+      "axis": "models",
+      "score": 374.64,
+      "rank": 5,
+      "sourceUrl": "https://db-engines.com/en/system/MongoDB",
+      "rankUrl": "https://db-engines.com/en/system/MongoDB",
+      "detail": "",
+      "models": [
+        "Document store",
+        "Key-value store",
+        "Spatial DBMS",
+        "Search engine",
+        "Time Series DBMS",
+        "Vector DBMS"
+      ],
+      "fontSize": 41.33
+    },
+    {
+      "id": "couchbase",
+      "label": "Couchbase",
+      "type": "product",
+      "primary": "document",
+      "axis": "models",
+      "score": 10.14,
+      "rank": 44,
+      "sourceUrl": "https://db-engines.com/en/system/Couchbase",
+      "rankUrl": "https://db-engines.com/en/system/Couchbase",
+      "detail": "",
+      "models": [
+        "Document store",
+        "Vector DBMS",
+        "Key-value store",
+        "Spatial DBMS",
+        "Search engine",
+        "Time Series DBMS",
+        "Vector DBMS",
+        "Wide column store"
+      ],
+      "fontSize": 26.3
+    },
+    {
+      "id": "couchdb",
+      "label": "CouchDB",
+      "type": "product",
+      "primary": "document",
+      "axis": "models",
+      "score": 6.24,
+      "rank": 60,
+      "sourceUrl": "https://db-engines.com/en/system/CouchDB",
+      "rankUrl": "https://db-engines.com/en/system/CouchDB",
+      "detail": "",
+      "models": [
+        "Document store",
+        "Spatial DBMS"
+      ],
+      "fontSize": 24.46
+    },
+    {
+      "id": "firestore",
+      "label": "Firestore",
+      "type": "product",
+      "primary": "document",
+      "axis": "models",
+      "score": 8.73,
+      "rank": 48,
+      "sourceUrl": "https://db-engines.com/en/system/Google+Cloud+Firestore",
+      "rankUrl": "https://db-engines.com/en/system/Google+Cloud+Firestore",
+      "detail": "",
+      "models": [
+        "Document"
+      ],
+      "fontSize": 25.72
+    },
+    {
+      "id": "firebase_realtime",
+      "label": "Firebase Realtime",
+      "type": "product",
+      "primary": "document",
+      "axis": "models",
+      "score": 15.55,
+      "rank": 37,
+      "sourceUrl": "https://db-engines.com/en/system/Firebase+Realtime+Database",
+      "rankUrl": "https://db-engines.com/en/system/Firebase+Realtime+Database",
+      "detail": "",
+      "models": [
+        "Document"
+      ],
+      "fontSize": 27.99
+    },
+    {
+      "id": "ravendb",
+      "label": "RavenDB",
+      "type": "product",
+      "primary": "document",
+      "axis": "models",
+      "score": 2.27,
+      "rank": 114,
+      "sourceUrl": "https://db-engines.com/en/system/RavenDB",
+      "rankUrl": "https://db-engines.com/en/system/RavenDB",
+      "detail": "",
+      "models": [
+        "Document store",
+        "Graph DBMS",
+        "Spatial DBMS",
+        "Time Series DBMS"
+      ],
+      "fontSize": 21.06
+    },
+    {
+      "id": "rethinkdb",
+      "label": "RethinkDB",
+      "type": "product",
+      "primary": "document",
+      "axis": "models",
+      "score": 2.49,
+      "rank": 106,
+      "sourceUrl": "https://db-engines.com/en/system/RethinkDB",
+      "rankUrl": "https://db-engines.com/en/system/RethinkDB",
+      "detail": "",
+      "models": [
+        "Document store",
+        "Spatial DBMS"
+      ],
+      "fontSize": 21.34
+    },
+    {
+      "id": "cloudant",
+      "label": "Cloudant",
+      "type": "product",
+      "primary": "document",
+      "axis": "models",
+      "score": 2.43,
+      "rank": 109,
+      "sourceUrl": "https://db-engines.com/en/system/IBM+Cloudant",
+      "rankUrl": "https://db-engines.com/en/system/IBM+Cloudant",
+      "detail": "",
+      "models": [
+        "Document"
+      ],
+      "fontSize": 21.27
+    },
+    {
+      "id": "litedb",
+      "label": "LiteDB",
+      "type": "product",
+      "primary": "document",
+      "axis": "models",
+      "score": 1.12,
+      "rank": 179,
+      "sourceUrl": "https://db-engines.com/en/system/LiteDB",
+      "rankUrl": "https://db-engines.com/en/system/LiteDB",
+      "detail": "",
+      "models": [
+        "Document"
+      ],
+      "fontSize": 19.21
+    },
+    {
+      "id": "pouchdb",
+      "label": "PouchDB",
+      "type": "product",
+      "primary": "document",
+      "axis": "models",
+      "score": 1.8,
+      "rank": 136,
+      "sourceUrl": "https://db-engines.com/en/system/PouchDB",
+      "rankUrl": "https://db-engines.com/en/system/PouchDB",
+      "detail": "",
+      "models": [
+        "Document"
+      ],
+      "fontSize": 20.4
+    },
+    {
+      "id": "redis",
+      "label": "Redis",
+      "type": "product",
+      "primary": "key_value",
+      "axis": "models",
+      "score": 156.09,
+      "rank": 8,
+      "sourceUrl": "https://db-engines.com/en/system/Redis",
+      "rankUrl": "https://db-engines.com/en/system/Redis",
+      "detail": "",
+      "models": [
+        "Key-value store",
+        "Document store",
+        "Graph DBMS",
+        "Spatial DBMS",
+        "Search engine",
+        "Time Series DBMS",
+        "Vector DBMS"
+      ],
+      "fontSize": 37.6
+    },
+    {
+      "id": "dynamodb",
+      "label": "DynamoDB",
+      "type": "product",
+      "primary": "key_value",
+      "axis": "models",
+      "score": 53.41,
+      "rank": 18,
+      "sourceUrl": "https://db-engines.com/en/system/Amazon+DynamoDB",
+      "rankUrl": "https://db-engines.com/en/system/Amazon+DynamoDB",
+      "detail": "",
+      "models": [
+        "Document store",
+        "Key-value store"
+      ],
+      "fontSize": 33.07
+    },
+    {
+      "id": "etcd",
+      "label": "etcd",
+      "type": "product",
+      "primary": "key_value",
+      "axis": "models",
+      "score": 7.35,
+      "rank": 52,
+      "sourceUrl": "https://db-engines.com/en/system/etcd",
+      "rankUrl": "https://db-engines.com/en/system/etcd",
+      "detail": "",
+      "models": [
+        "Key-value"
+      ],
+      "fontSize": 25.07
+    },
+    {
+      "id": "memcached",
+      "label": "Memcached",
+      "type": "product",
+      "primary": "key_value",
+      "axis": "models",
+      "score": 12.96,
+      "rank": 39,
+      "sourceUrl": "https://db-engines.com/en/system/Memcached",
+      "rankUrl": "https://db-engines.com/en/system/Memcached",
+      "detail": "",
+      "models": [
+        "Key-value"
+      ],
+      "fontSize": 27.26
+    },
+    {
+      "id": "aerospike",
+      "label": "Aerospike",
+      "type": "product",
+      "primary": "key_value",
+      "axis": "models",
+      "score": 4.3,
+      "rank": 71,
+      "sourceUrl": "https://db-engines.com/en/system/Aerospike",
+      "rankUrl": "https://db-engines.com/en/system/Aerospike",
+      "detail": "",
+      "models": [
+        "Document store",
+        "Graph DBMS",
+        "Key-value store",
+        "Spatial DBMS"
+      ],
+      "fontSize": 23.13
+    },
+    {
+      "id": "valkey",
+      "label": "Valkey",
+      "type": "product",
+      "primary": "key_value",
+      "axis": "models",
+      "score": 2.86,
+      "rank": 95,
+      "sourceUrl": "https://db-engines.com/en/system/Valkey",
+      "rankUrl": "https://db-engines.com/en/system/Valkey",
+      "detail": "",
+      "models": [
+        "Key-value"
+      ],
+      "fontSize": 21.77
+    },
+    {
+      "id": "riak_kv",
+      "label": "Riak KV",
+      "type": "product",
+      "primary": "key_value",
+      "axis": "models",
+      "score": 3.07,
+      "rank": 87,
+      "sourceUrl": "https://db-engines.com/en/system/Riak+KV",
+      "rankUrl": "https://db-engines.com/en/system/Riak+KV",
+      "detail": "",
+      "models": [
+        "Key-value"
+      ],
+      "fontSize": 22
+    },
+    {
+      "id": "foundationdb",
+      "label": "FoundationDB",
+      "type": "product",
+      "primary": "key_value",
+      "axis": "models",
+      "score": 1.31,
+      "rank": 165,
+      "sourceUrl": "https://db-engines.com/en/system/FoundationDB",
+      "rankUrl": "https://db-engines.com/en/system/FoundationDB",
+      "detail": "",
+      "models": [
+        "Document store",
+        "Key-value store",
+        "Relational DBMS"
+      ],
+      "fontSize": 19.58
+    },
+    {
+      "id": "keydb",
+      "label": "KeyDB",
+      "type": "product",
+      "primary": "key_value",
+      "axis": "models",
+      "score": 0.72,
+      "rank": 209,
+      "sourceUrl": "https://db-engines.com/en/system/KeyDB",
+      "rankUrl": "https://db-engines.com/en/system/KeyDB",
+      "detail": "",
+      "models": [
+        "Key-value"
+      ],
+      "fontSize": 18.32
+    },
+    {
+      "id": "cassandra",
+      "label": "Cassandra",
+      "type": "product",
+      "primary": "wide_column",
+      "axis": "models",
+      "score": 98.86,
+      "rank": 10,
+      "sourceUrl": "https://db-engines.com/en/system/Apache+Cassandra",
+      "rankUrl": "https://db-engines.com/en/system/Apache+Cassandra",
+      "detail": "",
+      "models": [
+        "Wide column store",
+        "Vector DBMS"
+      ],
+      "fontSize": 35.67
+    },
+    {
+      "id": "hbase",
+      "label": "HBase",
+      "type": "product",
+      "primary": "wide_column",
+      "axis": "models",
+      "score": 18.22,
+      "rank": 34,
+      "sourceUrl": "https://db-engines.com/en/system/Apache+HBase",
+      "rankUrl": "https://db-engines.com/en/system/Apache+HBase",
+      "detail": "",
+      "models": [
+        "Wide column"
+      ],
+      "fontSize": 28.63
+    },
+    {
+      "id": "bigtable",
+      "label": "Bigtable",
+      "type": "product",
+      "primary": "wide_column",
+      "axis": "models",
+      "score": 2.5,
+      "rank": 105,
+      "sourceUrl": "https://db-engines.com/en/system/Google+Cloud+Bigtable",
+      "rankUrl": "https://db-engines.com/en/system/Google+Cloud+Bigtable",
+      "detail": "",
+      "models": [
+        "Key-value store",
+        "Wide column store"
+      ],
+      "fontSize": 21.35
+    },
+    {
+      "id": "scylladb",
+      "label": "ScyllaDB",
+      "type": "product",
+      "primary": "wide_column",
+      "axis": "models",
+      "score": 4.76,
+      "rank": 66,
+      "sourceUrl": "https://db-engines.com/en/system/ScyllaDB",
+      "rankUrl": "https://db-engines.com/en/system/ScyllaDB",
+      "detail": "",
+      "models": [
+        "Wide column store",
+        "Key-value store"
+      ],
+      "fontSize": 23.48
+    },
+    {
+      "id": "accumulo",
+      "label": "Accumulo",
+      "type": "product",
+      "primary": "wide_column",
+      "axis": "models",
+      "score": 2.51,
+      "rank": 103,
+      "sourceUrl": "https://db-engines.com/en/system/Apache+Accumulo",
+      "rankUrl": "https://db-engines.com/en/system/Apache+Accumulo",
+      "detail": "",
+      "models": [
+        "Wide column"
+      ],
+      "fontSize": 21.36
+    },
+    {
+      "id": "amazon_keyspaces",
+      "label": "Amazon Keyspaces",
+      "type": "product",
+      "primary": "wide_column",
+      "axis": "models",
+      "score": 1.16,
+      "rank": 175,
+      "sourceUrl": "https://db-engines.com/en/system/Amazon+Keyspaces",
+      "rankUrl": "https://db-engines.com/en/system/Amazon+Keyspaces",
+      "detail": "",
+      "models": [
+        "Wide column"
+      ],
+      "fontSize": 19.29
+    },
+    {
+      "id": "neo4j",
+      "label": "Neo4j",
+      "type": "product",
+      "primary": "property_graph",
+      "axis": "models",
+      "score": 48.88,
+      "rank": 20,
+      "sourceUrl": "https://db-engines.com/en/system/Neo4j",
+      "rankUrl": "https://db-engines.com/en/system/Neo4j",
+      "detail": "",
+      "models": [
+        "Graph"
+      ],
+      "fontSize": 32.7
+    },
+    {
+      "id": "tigergraph",
+      "label": "TigerGraph",
+      "type": "product",
+      "primary": "property_graph",
+      "axis": "models",
+      "score": 1.95,
+      "rank": 126,
+      "sourceUrl": "https://db-engines.com/en/system/TigerGraph",
+      "rankUrl": "https://db-engines.com/en/system/TigerGraph",
+      "detail": "",
+      "models": [
+        "Graph"
+      ],
+      "fontSize": 20.62
+    },
+    {
+      "id": "janusgraph",
+      "label": "JanusGraph",
+      "type": "product",
+      "primary": "property_graph",
+      "axis": "models",
+      "score": 1.92,
+      "rank": 129,
+      "sourceUrl": "https://db-engines.com/en/system/JanusGraph",
+      "rankUrl": "https://db-engines.com/en/system/JanusGraph",
+      "detail": "",
+      "models": [
+        "Graph"
+      ],
+      "fontSize": 20.58
+    },
+    {
+      "id": "memgraph",
+      "label": "Memgraph",
+      "type": "product",
+      "primary": "property_graph",
+      "axis": "models",
+      "score": 1.89,
+      "rank": 130,
+      "sourceUrl": "https://db-engines.com/en/system/Memgraph",
+      "rankUrl": "https://db-engines.com/en/system/Memgraph",
+      "detail": "",
+      "models": [
+        "Graph"
+      ],
+      "fontSize": 20.53
+    },
+    {
+      "id": "nebulagraph",
+      "label": "NebulaGraph",
+      "type": "product",
+      "primary": "property_graph",
+      "axis": "models",
+      "score": 1.68,
+      "rank": 141,
+      "sourceUrl": "https://db-engines.com/en/system/NebulaGraph",
+      "rankUrl": "https://db-engines.com/en/system/NebulaGraph",
+      "detail": "",
+      "models": [
+        "Graph"
+      ],
+      "fontSize": 20.21
+    },
+    {
+      "id": "dgraph",
+      "label": "Dgraph",
+      "type": "product",
+      "primary": "property_graph",
+      "axis": "models",
+      "score": 1.3,
+      "rank": 166,
+      "sourceUrl": "https://db-engines.com/en/system/Dgraph",
+      "rankUrl": "https://db-engines.com/en/system/Dgraph",
+      "detail": "",
+      "models": [
+        "Graph"
+      ],
+      "fontSize": 19.56
+    },
+    {
+      "id": "graphdb",
+      "label": "GraphDB",
+      "type": "product",
+      "primary": "rdf",
+      "axis": "models",
+      "score": 2.44,
+      "rank": 108,
+      "sourceUrl": "https://db-engines.com/en/system/GraphDB",
+      "rankUrl": "https://db-engines.com/en/system/GraphDB",
+      "detail": "",
+      "models": [
+        "Graph DBMS",
+        "RDF store",
+        "yes, supports real-time synchronization and indexing with Elasticsearch and OpenSearch (including vector search capabilities), Lucene, Kafka, and GeoSPARQL geometry data indexes"
+      ],
+      "fontSize": 21.28
+    },
+    {
+      "id": "virtuoso",
+      "label": "Virtuoso",
+      "type": "product",
+      "primary": "rdf",
+      "axis": "models",
+      "score": 2.35,
+      "rank": 111,
+      "sourceUrl": "https://db-engines.com/en/system/Virtuoso",
+      "rankUrl": "https://db-engines.com/en/system/Virtuoso",
+      "detail": "",
+      "models": [
+        "Document store",
+        "Graph DBMS",
+        "Native XML DBMS",
+        "Relational DBMS",
+        "RDF store",
+        "Search engine",
+        "Spatial DBMS"
+      ],
+      "fontSize": 21.17
+    },
+    {
+      "id": "stardog",
+      "label": "Stardog",
+      "type": "product",
+      "primary": "rdf",
+      "axis": "models",
+      "score": 2.32,
+      "rank": 113,
+      "sourceUrl": "https://db-engines.com/en/system/Stardog",
+      "rankUrl": "https://db-engines.com/en/system/Stardog",
+      "detail": "",
+      "models": [
+        "Graph DBMS",
+        "RDF store"
+      ],
+      "fontSize": 21.13
+    },
+    {
+      "id": "jena_tdb",
+      "label": "Jena TDB",
+      "type": "product",
+      "primary": "rdf",
+      "axis": "models",
+      "score": 2.38,
+      "rank": 110,
+      "sourceUrl": "https://db-engines.com/en/system/Apache+Jena+-+TDB",
+      "rankUrl": "https://db-engines.com/en/system/Apache+Jena+-+TDB",
+      "detail": "",
+      "models": [
+        "RDF"
+      ],
+      "fontSize": 21.2
+    },
+    {
+      "id": "blazegraph",
+      "label": "Blazegraph",
+      "type": "product",
+      "primary": "rdf",
+      "axis": "models",
+      "score": 0.7,
+      "rank": 214,
+      "sourceUrl": "https://db-engines.com/en/system/Blazegraph",
+      "rankUrl": "https://db-engines.com/en/system/Blazegraph",
+      "detail": "",
+      "models": [
+        "Graph DBMS",
+        "RDF store"
+      ],
+      "fontSize": 18.27
+    },
+    {
+      "id": "neptune",
+      "label": "Neptune",
+      "type": "product",
+      "primary": "rdf",
+      "axis": "models",
+      "score": 2.83,
+      "rank": 97,
+      "sourceUrl": "https://db-engines.com/en/system/Amazon+Neptune",
+      "rankUrl": "https://db-engines.com/en/system/Amazon+Neptune",
+      "detail": "",
+      "models": [
+        "Graph DBMS",
+        "RDF store"
+      ],
+      "fontSize": 21.74
+    },
+    {
+      "id": "allegrograph",
+      "label": "AllegroGraph",
+      "type": "product",
+      "primary": "rdf",
+      "axis": "models",
+      "score": 0.73,
+      "rank": 208,
+      "sourceUrl": "https://db-engines.com/en/system/AllegroGraph",
+      "rankUrl": "https://db-engines.com/en/system/AllegroGraph",
+      "detail": "",
+      "models": [
+        "Document store",
+        "Graph DBMS",
+        "RDF store",
+        "Vector DBMS",
+        "Spatial DBMS"
+      ],
+      "fontSize": 18.34
+    },
+    {
+      "id": "basex",
+      "label": "BaseX",
+      "type": "product",
+      "primary": "xml",
+      "axis": "models",
+      "score": 1.48,
+      "rank": 153,
+      "sourceUrl": "https://db-engines.com/en/system/BaseX",
+      "rankUrl": "https://db-engines.com/en/system/BaseX",
+      "detail": "",
+      "models": [
+        "Native XML"
+      ],
+      "fontSize": 19.88
+    },
+    {
+      "id": "exist_db",
+      "label": "eXist-db",
+      "type": "product",
+      "primary": "xml",
+      "axis": "models",
+      "score": 0.59,
+      "rank": 228,
+      "sourceUrl": "https://db-engines.com/en/system/eXist-db",
+      "rankUrl": "https://db-engines.com/en/system/eXist-db",
+      "detail": "",
+      "models": [
+        "Native XML"
+      ],
+      "fontSize": 17.98
+    },
+    {
+      "id": "marklogic",
+      "label": "MarkLogic",
+      "type": "product",
+      "primary": "xml",
+      "axis": "models",
+      "score": 3.87,
+      "rank": 75,
+      "sourceUrl": "https://db-engines.com/en/system/MarkLogic",
+      "rankUrl": "https://db-engines.com/en/system/MarkLogic",
+      "detail": "",
+      "models": [
+        "Document store",
+        "Native XML DBMS",
+        "RDF store",
+        "Search engine",
+        "Vector DBMS"
+      ],
+      "fontSize": 22.76
+    },
+    {
+      "id": "sedna",
+      "label": "Sedna",
+      "type": "product",
+      "primary": "xml",
+      "axis": "models",
+      "score": 0.71,
+      "rank": 212,
+      "sourceUrl": "https://db-engines.com/en/system/Sedna",
+      "rankUrl": "https://db-engines.com/en/system/Sedna",
+      "detail": "",
+      "models": [
+        "Native XML"
+      ],
+      "fontSize": 18.29
+    },
+    {
+      "id": "rasdaman",
+      "label": "rasdaman",
+      "type": "product",
+      "primary": "array",
+      "axis": "models",
+      "score": 0.26,
+      "rank": 293,
+      "sourceUrl": "https://db-engines.com/en/system/Rasdaman",
+      "rankUrl": "https://db-engines.com/en/system/Rasdaman",
+      "detail": "",
+      "models": [
+        "Multivalue"
+      ],
+      "fontSize": 16.99
+    },
+    {
+      "id": "scidb",
+      "label": "SciDB",
+      "type": "product",
+      "primary": "array",
+      "axis": "models",
+      "score": 0.64,
+      "rank": 223,
+      "sourceUrl": "https://db-engines.com/en/system/SciDB",
+      "rankUrl": "https://db-engines.com/en/system/SciDB",
+      "detail": "",
+      "models": [
+        "Multivalue"
+      ],
+      "fontSize": 18.11
+    },
+    {
+      "id": "tiledb",
+      "label": "TileDB",
+      "type": "product",
+      "primary": "array",
+      "axis": "models",
+      "score": null,
+      "rank": null,
+      "sourceUrl": "https://tiledb.com/",
+      "rankUrl": null,
+      "detail": "数组数据引擎与平台，未匹配到本期热度值",
+      "models": [],
+      "fontSize": 16
+    },
+    {
+      "id": "arangodb",
+      "label": "ArangoDB",
+      "type": "product",
+      "primary": "multimodel",
+      "axis": "models",
+      "score": 3.29,
+      "rank": 83,
+      "sourceUrl": "https://db-engines.com/en/system/Arango",
+      "rankUrl": "https://db-engines.com/en/system/Arango",
+      "detail": "",
+      "models": [
+        "Document store",
+        "Graph DBMS",
+        "Key-value store",
+        "Multi-Model DBMS",
+        "Search engine",
+        "Vector DBMS"
+      ],
+      "fontSize": 22.22
+    },
+    {
+      "id": "orientdb",
+      "label": "OrientDB",
+      "type": "product",
+      "primary": "multimodel",
+      "axis": "models",
+      "score": 2.46,
+      "rank": 107,
+      "sourceUrl": "https://db-engines.com/en/system/OrientDB",
+      "rankUrl": "https://db-engines.com/en/system/OrientDB",
+      "detail": "",
+      "models": [
+        "Document store",
+        "Graph DBMS",
+        "Key-value store"
+      ],
+      "fontSize": 21.3
+    },
+    {
+      "id": "surrealdb",
+      "label": "SurrealDB",
+      "type": "product",
+      "primary": "multimodel",
+      "axis": "models",
+      "score": 1.43,
+      "rank": 158,
+      "sourceUrl": "https://db-engines.com/en/system/SurrealDB",
+      "rankUrl": "https://db-engines.com/en/system/SurrealDB",
+      "detail": "",
+      "models": [
+        "Document store",
+        "Graph DBMS"
+      ],
+      "fontSize": 19.79
+    },
+    {
+      "id": "cosmos_db",
+      "label": "Cosmos DB",
+      "type": "product",
+      "primary": "multimodel",
+      "axis": "models",
+      "score": 21.38,
+      "rank": 30,
+      "sourceUrl": "https://db-engines.com/en/system/Microsoft+Azure+Cosmos+DB",
+      "rankUrl": "https://db-engines.com/en/system/Microsoft+Azure+Cosmos+DB",
+      "detail": "",
+      "models": [
+        "Document store",
+        "Graph DBMS",
+        "Key-value store",
+        "Wide column store",
+        "Spatial DBMS"
+      ],
+      "fontSize": 29.28
+    },
+    {
+      "id": "intersystems_iris",
+      "label": "InterSystems IRIS",
+      "type": "product",
+      "primary": "multimodel",
+      "axis": "models",
+      "score": 2.07,
+      "rank": 123,
+      "sourceUrl": "https://db-engines.com/en/system/InterSystems+IRIS",
+      "rankUrl": "https://db-engines.com/en/system/InterSystems+IRIS",
+      "detail": "",
+      "models": [
+        "Document store",
+        "Key-value store",
+        "Object oriented DBMS",
+        "Relational DBMS"
+      ],
+      "fontSize": 20.79
+    },
+    {
+      "id": "elasticsearch",
+      "label": "Elasticsearch",
+      "type": "product",
+      "primary": "search",
+      "axis": "workloads",
+      "score": 94.11,
+      "rank": 12,
+      "sourceUrl": "https://db-engines.com/en/system/Elasticsearch",
+      "rankUrl": "https://db-engines.com/en/system/Elasticsearch",
+      "detail": "",
+      "models": [
+        "Search engine",
+        "Vector DBMS",
+        "Document store",
+        "Spatial DBMS"
+      ],
+      "fontSize": 35.46
+    },
+    {
+      "id": "opensearch",
+      "label": "OpenSearch",
+      "type": "product",
+      "primary": "search",
+      "axis": "workloads",
+      "score": 22.72,
+      "rank": 28,
+      "sourceUrl": "https://db-engines.com/en/system/OpenSearch",
+      "rankUrl": "https://db-engines.com/en/system/OpenSearch",
+      "detail": "",
+      "models": [
+        "Search engine",
+        "Vector DBMS",
+        "Vector DBMS"
+      ],
+      "fontSize": 29.53
+    },
+    {
+      "id": "solr",
+      "label": "Solr",
+      "type": "product",
+      "primary": "search",
+      "axis": "workloads",
+      "score": 32.41,
+      "rank": 21,
+      "sourceUrl": "https://db-engines.com/en/system/Apache+Solr",
+      "rankUrl": "https://db-engines.com/en/system/Apache+Solr",
+      "detail": "",
+      "models": [
+        "Search engine",
+        "Spatial DBMS"
+      ],
+      "fontSize": 30.99
+    },
+    {
+      "id": "splunk",
+      "label": "Splunk",
+      "type": "product",
+      "primary": "search",
+      "axis": "workloads",
+      "score": 69.25,
+      "rank": 15,
+      "sourceUrl": "https://db-engines.com/en/system/Splunk",
+      "rankUrl": "https://db-engines.com/en/system/Splunk",
+      "detail": "",
+      "models": [
+        "Search engine"
+      ],
+      "fontSize": 34.17
+    },
+    {
+      "id": "meilisearch",
+      "label": "Meilisearch",
+      "type": "product",
+      "primary": "search",
+      "axis": "workloads",
+      "score": 1.53,
+      "rank": 146,
+      "sourceUrl": "https://db-engines.com/en/system/Meilisearch",
+      "rankUrl": "https://db-engines.com/en/system/Meilisearch",
+      "detail": "",
+      "models": [
+        "Search engine",
+        "Vector DBMS"
+      ],
+      "fontSize": 19.97
+    },
+    {
+      "id": "typesense",
+      "label": "Typesense",
+      "type": "product",
+      "primary": "search",
+      "axis": "workloads",
+      "score": 1.38,
+      "rank": 160,
+      "sourceUrl": "https://db-engines.com/en/system/Typesense",
+      "rankUrl": "https://db-engines.com/en/system/Typesense",
+      "detail": "",
+      "models": [
+        "Search engine"
+      ],
+      "fontSize": 19.7
+    },
+    {
+      "id": "algolia",
+      "label": "Algolia",
+      "type": "product",
+      "primary": "search",
+      "axis": "workloads",
+      "score": 6.45,
+      "rank": 57,
+      "sourceUrl": "https://db-engines.com/en/system/Algolia",
+      "rankUrl": "https://db-engines.com/en/system/Algolia",
+      "detail": "",
+      "models": [
+        "Search engine"
+      ],
+      "fontSize": 24.58
+    },
+    {
+      "id": "influxdb",
+      "label": "InfluxDB",
+      "type": "product",
+      "primary": "timeseries",
+      "axis": "workloads",
+      "score": 21.22,
+      "rank": 31,
+      "sourceUrl": "https://db-engines.com/en/system/InfluxDB",
+      "rankUrl": "https://db-engines.com/en/system/InfluxDB",
+      "detail": "",
+      "models": [
+        "Time Series DBMS",
+        "Spatial DBMS"
+      ],
+      "fontSize": 29.25
+    },
+    {
+      "id": "prometheus",
+      "label": "Prometheus",
+      "type": "product",
+      "primary": "timeseries",
+      "axis": "workloads",
+      "score": 9.72,
+      "rank": 45,
+      "sourceUrl": "https://db-engines.com/en/system/Prometheus",
+      "rankUrl": "https://db-engines.com/en/system/Prometheus",
+      "detail": "",
+      "models": [
+        "Time Series"
+      ],
+      "fontSize": 26.13
+    },
+    {
+      "id": "tdengine",
+      "label": "TDengine",
+      "type": "product",
+      "primary": "timeseries",
+      "axis": "workloads",
+      "score": 3.04,
+      "rank": 90,
+      "sourceUrl": "https://db-engines.com/en/system/TDengine",
+      "rankUrl": "https://db-engines.com/en/system/TDengine",
+      "detail": "",
+      "models": [
+        "Time Series DBMS",
+        "Relational DBMS"
+      ],
+      "fontSize": 21.97
+    },
+    {
+      "id": "questdb",
+      "label": "QuestDB",
+      "type": "product",
+      "primary": "timeseries",
+      "axis": "workloads",
+      "score": 3.05,
+      "rank": 89,
+      "sourceUrl": "https://db-engines.com/en/system/QuestDB",
+      "rankUrl": "https://db-engines.com/en/system/QuestDB",
+      "detail": "",
+      "models": [
+        "Time Series DBMS",
+        "Relational DBMS"
+      ],
+      "fontSize": 21.98
+    },
+    {
+      "id": "victoriametrics",
+      "label": "VictoriaMetrics",
+      "type": "product",
+      "primary": "timeseries",
+      "axis": "workloads",
+      "score": 1.49,
+      "rank": 152,
+      "sourceUrl": "https://db-engines.com/en/system/VictoriaMetrics",
+      "rankUrl": "https://db-engines.com/en/system/VictoriaMetrics",
+      "detail": "",
+      "models": [
+        "Time Series"
+      ],
+      "fontSize": 19.9
+    },
+    {
+      "id": "iotdb",
+      "label": "IoTDB",
+      "type": "product",
+      "primary": "timeseries",
+      "axis": "workloads",
+      "score": 2.85,
+      "rank": 96,
+      "sourceUrl": "https://db-engines.com/en/system/Apache+IoTDB",
+      "rankUrl": "https://db-engines.com/en/system/Apache+IoTDB",
+      "detail": "",
+      "models": [
+        "Time Series"
+      ],
+      "fontSize": 21.76
+    },
+    {
+      "id": "opentsdb",
+      "label": "OpenTSDB",
+      "type": "product",
+      "primary": "timeseries",
+      "axis": "workloads",
+      "score": 1.38,
+      "rank": 161,
+      "sourceUrl": "https://db-engines.com/en/system/OpenTSDB",
+      "rankUrl": "https://db-engines.com/en/system/OpenTSDB",
+      "detail": "",
+      "models": [
+        "Time Series"
+      ],
+      "fontSize": 19.7
+    },
+    {
+      "id": "graphite",
+      "label": "Graphite",
+      "type": "product",
+      "primary": "timeseries",
+      "axis": "workloads",
+      "score": 4.2,
+      "rank": 74,
+      "sourceUrl": "https://db-engines.com/en/system/Graphite",
+      "rankUrl": "https://db-engines.com/en/system/Graphite",
+      "detail": "",
+      "models": [
+        "Time Series"
+      ],
+      "fontSize": 23.04
+    },
+    {
+      "id": "kdb",
+      "label": "kdb+",
+      "type": "product",
+      "primary": "timeseries",
+      "axis": "workloads",
+      "score": 7.84,
+      "rank": 51,
+      "sourceUrl": "https://db-engines.com/en/system/Kdb",
+      "rankUrl": "https://db-engines.com/en/system/Kdb",
+      "detail": "",
+      "models": [
+        "Time Series DBMS",
+        "Vector DBMS",
+        "Relational DBMS"
+      ],
+      "fontSize": 25.31
+    },
+    {
+      "id": "postgis",
+      "label": "PostGIS",
+      "type": "extension",
+      "primary": "spatial",
+      "axis": "workloads",
+      "score": 23.96,
+      "rank": 27,
+      "sourceUrl": "https://postgis.net/",
+      "rankUrl": "https://db-engines.com/en/system/PostGIS",
+      "detail": "",
+      "models": [
+        "Spatial DBMS",
+        "Relational DBMS"
+      ],
+      "fontSize": 29.75
+    },
+    {
+      "id": "spatialite",
+      "label": "SpatiaLite",
+      "type": "extension",
+      "primary": "spatial",
+      "axis": "workloads",
+      "score": 1.64,
+      "rank": 142,
+      "sourceUrl": "https://www.gaia-gis.it/fossil/libspatialite/index",
+      "rankUrl": "https://db-engines.com/en/system/SpatiaLite",
+      "detail": "",
+      "models": [
+        "Spatial DBMS",
+        "Relational DBMS"
+      ],
+      "fontSize": 20.15
+    },
+    {
+      "id": "geomesa",
+      "label": "GeoMesa",
+      "type": "component",
+      "primary": "spatial",
+      "axis": "workloads",
+      "score": 0.69,
+      "rank": 216,
+      "sourceUrl": "https://www.geomesa.org/",
+      "rankUrl": "https://db-engines.com/en/system/GeoMesa",
+      "detail": "建立于其他后端的空间索引与查询工具套件",
+      "models": [
+        "Spatial"
+      ],
+      "fontSize": 18.24
+    },
+    {
+      "id": "milvus",
+      "label": "Milvus",
+      "type": "product",
+      "primary": "vector",
+      "axis": "workloads",
+      "score": 7.09,
+      "rank": 53,
+      "sourceUrl": "https://db-engines.com/en/system/Milvus",
+      "rankUrl": "https://db-engines.com/en/system/Milvus",
+      "detail": "",
+      "models": [
+        "Vector"
+      ],
+      "fontSize": 24.93
+    },
+    {
+      "id": "qdrant",
+      "label": "Qdrant",
+      "type": "product",
+      "primary": "vector",
+      "axis": "workloads",
+      "score": 7.06,
+      "rank": 54,
+      "sourceUrl": "https://db-engines.com/en/system/Qdrant",
+      "rankUrl": "https://db-engines.com/en/system/Qdrant",
+      "detail": "",
+      "models": [
+        "Vector"
+      ],
+      "fontSize": 24.92
+    },
+    {
+      "id": "pinecone",
+      "label": "Pinecone",
+      "type": "product",
+      "primary": "vector",
+      "axis": "workloads",
+      "score": 9.63,
+      "rank": 46,
+      "sourceUrl": "https://db-engines.com/en/system/Pinecone",
+      "rankUrl": "https://db-engines.com/en/system/Pinecone",
+      "detail": "",
+      "models": [
+        "Vector"
+      ],
+      "fontSize": 26.1
+    },
+    {
+      "id": "weaviate",
+      "label": "Weaviate",
+      "type": "product",
+      "primary": "vector",
+      "axis": "workloads",
+      "score": 5.14,
+      "rank": 65,
+      "sourceUrl": "https://db-engines.com/en/system/Weaviate",
+      "rankUrl": "https://db-engines.com/en/system/Weaviate",
+      "detail": "",
+      "models": [
+        "Vector"
+      ],
+      "fontSize": 23.75
+    },
+    {
+      "id": "chroma",
+      "label": "Chroma",
+      "type": "product",
+      "primary": "vector",
+      "axis": "workloads",
+      "score": 3.03,
+      "rank": 92,
+      "sourceUrl": "https://db-engines.com/en/system/Chroma",
+      "rankUrl": "https://db-engines.com/en/system/Chroma",
+      "detail": "",
+      "models": [
+        "Vector"
+      ],
+      "fontSize": 21.95
+    },
+    {
+      "id": "vespa",
+      "label": "Vespa",
+      "type": "product",
+      "primary": "vector",
+      "axis": "workloads",
+      "score": 0.95,
+      "rank": 194,
+      "sourceUrl": "https://db-engines.com/en/system/Vespa",
+      "rankUrl": "https://db-engines.com/en/system/Vespa",
+      "detail": "",
+      "models": [
+        "Search engine",
+        "Vector DBMS"
+      ],
+      "fontSize": 18.85
+    },
+    {
+      "id": "lancedb",
+      "label": "LanceDB",
+      "type": "product",
+      "primary": "vector",
+      "axis": "workloads",
+      "score": null,
+      "rank": null,
+      "sourceUrl": "https://lancedb.com/docs/",
+      "rankUrl": null,
+      "detail": "",
+      "models": [],
+      "fontSize": 16
+    },
+    {
+      "id": "snowflake",
+      "label": "Snowflake",
+      "type": "product",
+      "primary": "olap",
+      "axis": "workloads",
+      "score": 221.3,
+      "rank": 6,
+      "sourceUrl": "https://db-engines.com/en/system/Snowflake",
+      "rankUrl": "https://db-engines.com/en/system/Snowflake",
+      "detail": "",
+      "models": [
+        "Relational"
+      ],
+      "fontSize": 39.09
+    },
+    {
+      "id": "bigquery",
+      "label": "BigQuery",
+      "type": "product",
+      "primary": "olap",
+      "axis": "workloads",
+      "score": 49.78,
+      "rank": 19,
+      "sourceUrl": "https://db-engines.com/en/system/Google+BigQuery",
+      "rankUrl": "https://db-engines.com/en/system/Google+BigQuery",
+      "detail": "",
+      "models": [
+        "Relational"
+      ],
+      "fontSize": 32.78
+    },
+    {
+      "id": "redshift",
+      "label": "Redshift",
+      "type": "product",
+      "primary": "olap",
+      "axis": "workloads",
+      "score": 17.08,
+      "rank": 35,
+      "sourceUrl": "https://db-engines.com/en/system/Amazon+Redshift",
+      "rankUrl": "https://db-engines.com/en/system/Amazon+Redshift",
+      "detail": "",
+      "models": [
+        "Relational"
+      ],
+      "fontSize": 28.37
+    },
+    {
+      "id": "clickhouse",
+      "label": "ClickHouse",
+      "type": "product",
+      "primary": "olap",
+      "axis": "workloads",
+      "score": 26.18,
+      "rank": 25,
+      "sourceUrl": "https://db-engines.com/en/system/ClickHouse",
+      "rankUrl": "https://db-engines.com/en/system/ClickHouse",
+      "detail": "",
+      "models": [
+        "Relational DBMS",
+        "Document Stores",
+        "Spatial DBMS",
+        "Time Series DBMS",
+        "Vector DBMS"
+      ],
+      "fontSize": 30.11
+    },
+    {
+      "id": "duckdb",
+      "label": "DuckDB",
+      "type": "product",
+      "primary": "olap",
+      "axis": "workloads",
+      "score": 11.43,
+      "rank": 41,
+      "sourceUrl": "https://db-engines.com/en/system/DuckDB",
+      "rankUrl": "https://db-engines.com/en/system/DuckDB",
+      "detail": "",
+      "models": [
+        "Relational"
+      ],
+      "fontSize": 26.77
+    },
+    {
+      "id": "teradata",
+      "label": "Teradata",
+      "type": "product",
+      "primary": "olap",
+      "axis": "workloads",
+      "score": 31.23,
+      "rank": 23,
+      "sourceUrl": "https://db-engines.com/en/system/Teradata",
+      "rankUrl": "https://db-engines.com/en/system/Teradata",
+      "detail": "",
+      "models": [
+        "Relational DBMS",
+        "Document store",
+        "Graph DBMS",
+        "Spatial DBMS",
+        "Time Series DBMS"
+      ],
+      "fontSize": 30.84
+    },
+    {
+      "id": "databricks",
+      "label": "Databricks",
+      "type": "product",
+      "primary": "olap",
+      "axis": "workloads",
+      "score": 171.24,
+      "rank": 7,
+      "sourceUrl": "https://db-engines.com/en/system/Databricks",
+      "rankUrl": "https://db-engines.com/en/system/Databricks",
+      "detail": "",
+      "models": [
+        "Document store",
+        "Relational DBMS"
+      ],
+      "fontSize": 38
+    },
+    {
+      "id": "vertica",
+      "label": "Vertica",
+      "type": "product",
+      "primary": "olap",
+      "axis": "workloads",
+      "score": 7.91,
+      "rank": 50,
+      "sourceUrl": "https://db-engines.com/en/system/Vertica",
+      "rankUrl": "https://db-engines.com/en/system/Vertica",
+      "detail": "",
+      "models": [
+        "Relational DBMS",
+        "Spatial DBMS",
+        "Time Series DBMS"
+      ],
+      "fontSize": 25.34
+    },
+    {
+      "id": "monetdb",
+      "label": "MonetDB",
+      "type": "product",
+      "primary": "olap",
+      "axis": "workloads",
+      "score": 1.49,
+      "rank": 151,
+      "sourceUrl": "https://db-engines.com/en/system/MonetDB",
+      "rankUrl": "https://db-engines.com/en/system/MonetDB",
+      "detail": "",
+      "models": [
+        "Relational DBMS",
+        "Document store",
+        "Spatial DBMS"
+      ],
+      "fontSize": 19.9
+    },
+    {
+      "id": "doris",
+      "label": "Doris",
+      "type": "product",
+      "primary": "olap",
+      "axis": "workloads",
+      "score": 0.42,
+      "rank": 259,
+      "sourceUrl": "https://db-engines.com/en/system/Apache+Doris",
+      "rankUrl": "https://db-engines.com/en/system/Apache+Doris",
+      "detail": "",
+      "models": [
+        "Relational"
+      ],
+      "fontSize": 17.5
+    },
+    {
+      "id": "starrocks",
+      "label": "StarRocks",
+      "type": "product",
+      "primary": "olap",
+      "axis": "workloads",
+      "score": 1.75,
+      "rank": 137,
+      "sourceUrl": "https://db-engines.com/en/system/StarRocks",
+      "rankUrl": "https://db-engines.com/en/system/StarRocks",
+      "detail": "",
+      "models": [
+        "Relational"
+      ],
+      "fontSize": 20.32
+    },
+    {
+      "id": "druid",
+      "label": "Druid",
+      "type": "product",
+      "primary": "olap",
+      "axis": "workloads",
+      "score": 4.67,
+      "rank": 67,
+      "sourceUrl": "https://db-engines.com/en/system/Apache+Druid",
+      "rankUrl": "https://db-engines.com/en/system/Apache+Druid",
+      "detail": "",
+      "models": [
+        "Relational DBMS",
+        "Time Series DBMS"
+      ],
+      "fontSize": 23.41
+    },
+    {
+      "id": "kylin",
+      "label": "Kylin",
+      "type": "product",
+      "primary": "olap",
+      "axis": "workloads",
+      "score": 1.17,
+      "rank": 174,
+      "sourceUrl": "https://db-engines.com/en/system/Apache+Kylin",
+      "rankUrl": "https://db-engines.com/en/system/Apache+Kylin",
+      "detail": "",
+      "models": [
+        "Relational"
+      ],
+      "fontSize": 19.31
+    },
+    {
+      "id": "essbase",
+      "label": "Essbase",
+      "type": "product",
+      "primary": "cube",
+      "axis": "workloads",
+      "score": 4.29,
+      "rank": 72,
+      "sourceUrl": "https://db-engines.com/en/system/Oracle+Essbase",
+      "rankUrl": "https://db-engines.com/en/system/Oracle+Essbase",
+      "detail": "",
+      "models": [
+        "Relational"
+      ],
+      "fontSize": 23.12
+    },
+    {
+      "id": "mondrian",
+      "label": "Mondrian",
+      "type": "product",
+      "primary": "cube",
+      "axis": "workloads",
+      "score": null,
+      "rank": null,
+      "sourceUrl": "https://mondrian.pentaho.com/",
+      "rankUrl": null,
+      "detail": "",
+      "models": [],
+      "fontSize": 16
+    },
+    {
+      "id": "datomic",
+      "label": "Datomic",
+      "type": "product",
+      "primary": "deductive",
+      "axis": "workloads",
+      "score": 1.52,
+      "rank": 147,
+      "sourceUrl": "https://db-engines.com/en/system/Datomic",
+      "rankUrl": "https://db-engines.com/en/system/Datomic",
+      "detail": "",
+      "models": [
+        "Relational"
+      ],
+      "fontSize": 19.95
+    },
+    {
+      "id": "rdfox",
+      "label": "RDFox",
+      "type": "product",
+      "primary": "deductive",
+      "axis": "workloads",
+      "score": 0.21,
+      "rank": 308,
+      "sourceUrl": "https://www.oxfordsemantic.tech/rdfox",
+      "rankUrl": "https://db-engines.com/en/system/RDFox",
+      "detail": "",
+      "models": [
+        "Graph DBMS",
+        "RDF store",
+        "Relational DBMS"
+      ],
+      "fontSize": 16.81
+    },
+    {
+      "id": "risingwave",
+      "label": "RisingWave",
+      "type": "product",
+      "primary": "stream",
+      "axis": "workloads",
+      "score": 0.71,
+      "rank": 210,
+      "sourceUrl": "https://db-engines.com/en/system/RisingWave",
+      "rankUrl": "https://db-engines.com/en/system/RisingWave",
+      "detail": "",
+      "models": [
+        "Relational"
+      ],
+      "fontSize": 18.29
+    },
+    {
+      "id": "materialize",
+      "label": "Materialize",
+      "type": "product",
+      "primary": "stream",
+      "axis": "workloads",
+      "score": null,
+      "rank": null,
+      "sourceUrl": "https://materialize.com/docs/",
+      "rankUrl": null,
+      "detail": "",
+      "models": [],
+      "fontSize": 16
+    },
+    {
+      "id": "flink",
+      "label": "Flink",
+      "type": "component",
+      "primary": "stream",
+      "axis": "workloads",
+      "score": 11.57,
+      "rank": 40,
+      "sourceUrl": "https://flink.apache.org/",
+      "rankUrl": "https://db-engines.com/en/system/Apache+Flink",
+      "detail": "",
+      "models": [
+        "Relational"
+      ],
+      "fontSize": 26.81
+    },
+    {
+      "id": "ksqldb",
+      "label": "ksqlDB",
+      "type": "component",
+      "primary": "stream",
+      "axis": "workloads",
+      "score": null,
+      "rank": null,
+      "sourceUrl": "https://ksqldb.io/",
+      "rankUrl": null,
+      "detail": "",
+      "models": [],
+      "fontSize": 16
+    },
+    {
+      "id": "kurrentdb",
+      "label": "KurrentDB",
+      "type": "product",
+      "primary": "event",
+      "axis": "workloads",
+      "score": 0.98,
+      "rank": 190,
+      "sourceUrl": "https://docs.kurrent.io/",
+      "rankUrl": "https://db-engines.com/en/system/KurrentDB+%28aka+EventStoreDB%29",
+      "detail": "原 EventStoreDB，事件流存储",
+      "models": [
+        "Event Store",
+        "Document store",
+        "Time Series DBMS"
+      ],
+      "fontSize": 18.92
+    },
+    {
+      "id": "xtdb",
+      "label": "XTDB",
+      "type": "product",
+      "primary": "temporal",
+      "axis": "workloads",
+      "score": 0.22,
+      "rank": 303,
+      "sourceUrl": "https://docs.xtdb.com/",
+      "rankUrl": "https://db-engines.com/en/system/XTDB",
+      "detail": "",
+      "models": [
+        "Document"
+      ],
+      "fontSize": 16.85
+    },
+    {
+      "id": "dolt",
+      "label": "Dolt",
+      "type": "product",
+      "primary": "temporal",
+      "axis": "workloads",
+      "score": 0.98,
+      "rank": 191,
+      "sourceUrl": "https://docs.dolthub.com/",
+      "rankUrl": "https://db-engines.com/en/system/Dolt",
+      "detail": "版本化 SQL 数据库；这里是版本历史，不等于双时态",
+      "models": [
+        "Relational DBMS",
+        "Document store"
+      ],
+      "fontSize": 18.92
+    },
+    {
+      "id": "jackrabbit",
+      "label": "Jackrabbit",
+      "type": "product",
+      "primary": "content",
+      "axis": "workloads",
+      "score": 3.77,
+      "rank": 76,
+      "sourceUrl": "https://jackrabbit.apache.org/",
+      "rankUrl": "https://db-engines.com/en/system/Apache+Jackrabbit",
+      "detail": "",
+      "models": [
+        "Content"
+      ],
+      "fontSize": 22.67
+    },
+    {
+      "id": "modeshape",
+      "label": "ModeShape",
+      "type": "product",
+      "primary": "content",
+      "axis": "workloads",
+      "score": 0.22,
+      "rank": 306,
+      "sourceUrl": "https://db-engines.com/en/system/ModeShape",
+      "rankUrl": "https://db-engines.com/en/system/ModeShape",
+      "detail": "",
+      "models": [
+        "Content"
+      ],
+      "fontSize": 16.85
+    },
+    {
+      "id": "tidb",
+      "label": "TiDB",
+      "type": "product",
+      "primary": "distributed_sql",
+      "axis": "architecture",
+      "score": 3.33,
+      "rank": 80,
+      "sourceUrl": "https://db-engines.com/en/system/TiDB",
+      "rankUrl": "https://db-engines.com/en/system/TiDB",
+      "detail": "",
+      "models": [
+        "Relational DBMS",
+        "Vector DBMS"
+      ],
+      "fontSize": 22.26
+    },
+    {
+      "id": "cockroachdb",
+      "label": "CockroachDB",
+      "type": "product",
+      "primary": "distributed_sql",
+      "axis": "architecture",
+      "score": 4.43,
+      "rank": 70,
+      "sourceUrl": "https://db-engines.com/en/system/CockroachDB",
+      "rankUrl": "https://db-engines.com/en/system/CockroachDB",
+      "detail": "",
+      "models": [
+        "Multi-Model DBMS",
+        "Relational DBMS",
+        "CockroachDB supports relational, semi-structured JSON/document, vector/embedding, geospatial, and typed categorical/enumeration data, all exposed via SQL, on the same strongly consistent, globally distributed data platform."
+      ],
+      "fontSize": 23.23
+    },
+    {
+      "id": "oceanbase",
+      "label": "OceanBase",
+      "type": "product",
+      "primary": "distributed_sql",
+      "axis": "architecture",
+      "score": 2.05,
+      "rank": 124,
+      "sourceUrl": "https://db-engines.com/en/system/OceanBase",
+      "rankUrl": "https://db-engines.com/en/system/OceanBase",
+      "detail": "",
+      "models": [
+        "Relational DBMS",
+        "Vector DBMS",
+        "Document store",
+        "Wide column store"
+      ],
+      "fontSize": 20.76
+    },
+    {
+      "id": "spanner",
+      "label": "Spanner",
+      "type": "product",
+      "primary": "distributed_sql",
+      "axis": "architecture",
+      "score": 2.92,
+      "rank": 94,
+      "sourceUrl": "https://db-engines.com/en/system/Google+Cloud+Spanner",
+      "rankUrl": "https://db-engines.com/en/system/Google+Cloud+Spanner",
+      "detail": "",
+      "models": [
+        "Relational"
+      ],
+      "fontSize": 21.84
+    },
+    {
+      "id": "yugabytedb",
+      "label": "YugabyteDB",
+      "type": "product",
+      "primary": "distributed_sql",
+      "axis": "architecture",
+      "score": 2.21,
+      "rank": 117,
+      "sourceUrl": "https://db-engines.com/en/system/YugabyteDB",
+      "rankUrl": "https://db-engines.com/en/system/YugabyteDB",
+      "detail": "",
+      "models": [
+        "Relational DBMS",
+        "Document store",
+        "Wide column store"
+      ],
+      "fontSize": 20.98
+    },
+    {
+      "id": "voltdb",
+      "label": "VoltDB",
+      "type": "product",
+      "primary": "distributed_sql",
+      "axis": "architecture",
+      "score": 1.19,
+      "rank": 172,
+      "sourceUrl": "https://db-engines.com/en/system/VoltDB",
+      "rankUrl": "https://db-engines.com/en/system/VoltDB",
+      "detail": "",
+      "models": [
+        "Relational"
+      ],
+      "fontSize": 19.35
+    },
+    {
+      "id": "nuodb",
+      "label": "NuoDB",
+      "type": "product",
+      "primary": "distributed_sql",
+      "axis": "architecture",
+      "score": 0.71,
+      "rank": 211,
+      "sourceUrl": "https://db-engines.com/en/system/NuoDB",
+      "rankUrl": "https://db-engines.com/en/system/NuoDB",
+      "detail": "",
+      "models": [
+        "Relational"
+      ],
+      "fontSize": 18.29
+    },
+    {
+      "id": "singlestore",
+      "label": "SingleStore",
+      "type": "product",
+      "primary": "distributed_sql",
+      "axis": "architecture",
+      "score": 3.06,
+      "rank": 88,
+      "sourceUrl": "https://db-engines.com/en/system/SingleStore",
+      "rankUrl": "https://db-engines.com/en/system/SingleStore",
+      "detail": "",
+      "models": [
+        "Relational DBMS",
+        "Document store",
+        "Spatial DBMS",
+        "Time Series DBMS",
+        "Vector DBMS"
+      ],
+      "fontSize": 21.99
+    },
+    {
+      "id": "libsql",
+      "label": "libSQL",
+      "type": "product",
+      "primary": "embedded",
+      "axis": "architecture",
+      "score": null,
+      "rank": null,
+      "sourceUrl": "https://github.com/tursodatabase/libsql",
+      "rankUrl": null,
+      "detail": "",
+      "models": [],
+      "fontSize": 16
+    },
+    {
+      "id": "turso_database",
+      "label": "Turso Database",
+      "type": "product",
+      "primary": "embedded",
+      "axis": "architecture",
+      "score": null,
+      "rank": null,
+      "sourceUrl": "https://github.com/tursodatabase/turso",
+      "rankUrl": null,
+      "detail": "",
+      "models": [],
+      "fontSize": 16
+    },
+    {
+      "id": "ignite",
+      "label": "Ignite",
+      "type": "product",
+      "primary": "memory",
+      "axis": "architecture",
+      "score": 2.76,
+      "rank": 99,
+      "sourceUrl": "https://db-engines.com/en/system/Apache+Ignite",
+      "rankUrl": "https://db-engines.com/en/system/Apache+Ignite",
+      "detail": "",
+      "models": [
+        "Key-value store",
+        "Relational DBMS"
+      ],
+      "fontSize": 21.66
+    },
+    {
+      "id": "hazelcast",
+      "label": "Hazelcast",
+      "type": "product",
+      "primary": "memory",
+      "axis": "architecture",
+      "score": 4.58,
+      "rank": 68,
+      "sourceUrl": "https://db-engines.com/en/system/Hazelcast",
+      "rankUrl": "https://db-engines.com/en/system/Hazelcast",
+      "detail": "",
+      "models": [
+        "Key-value store",
+        "Document store"
+      ],
+      "fontSize": 23.35
+    },
+    {
+      "id": "tarantool",
+      "label": "Tarantool",
+      "type": "product",
+      "primary": "memory",
+      "axis": "architecture",
+      "score": 1.25,
+      "rank": 169,
+      "sourceUrl": "https://db-engines.com/en/system/Tarantool",
+      "rankUrl": "https://db-engines.com/en/system/Tarantool",
+      "detail": "",
+      "models": [
+        "Document store",
+        "Key-value store",
+        "Relational DBMS",
+        "Spatial DBMS"
+      ],
+      "fontSize": 19.46
+    },
+    {
+      "id": "timesten",
+      "label": "TimesTen",
+      "type": "product",
+      "primary": "memory",
+      "axis": "architecture",
+      "score": 1.04,
+      "rank": 186,
+      "sourceUrl": "https://db-engines.com/en/system/TimesTen",
+      "rankUrl": "https://db-engines.com/en/system/TimesTen",
+      "detail": "",
+      "models": [
+        "Relational"
+      ],
+      "fontSize": 19.05
+    },
+    {
+      "id": "timescaledb",
+      "label": "TimescaleDB",
+      "type": "extension",
+      "primary": "extension",
+      "axis": "architecture",
+      "score": 6.32,
+      "rank": 59,
+      "sourceUrl": "https://docs.timescale.com/",
+      "rankUrl": "https://db-engines.com/en/system/TimescaleDB",
+      "detail": "",
+      "models": [
+        "Time Series DBMS",
+        "Relational DBMS"
+      ],
+      "fontSize": 24.5
+    },
+    {
+      "id": "citus",
+      "label": "Citus",
+      "type": "extension",
+      "primary": "extension",
+      "axis": "architecture",
+      "score": 2.08,
+      "rank": 122,
+      "sourceUrl": "https://github.com/citusdata/citus",
+      "rankUrl": "https://db-engines.com/en/system/Citus",
+      "detail": "",
+      "models": [
+        "Relational DBMS",
+        "Document store"
+      ],
+      "fontSize": 20.81
+    },
+    {
+      "id": "pgvector",
+      "label": "pgvector",
+      "type": "extension",
+      "primary": "extension",
+      "axis": "architecture",
+      "score": null,
+      "rank": null,
+      "sourceUrl": "https://github.com/pgvector/pgvector",
+      "rankUrl": null,
+      "detail": "",
+      "models": [],
+      "fontSize": 16
+    },
+    {
+      "id": "sqlcipher",
+      "label": "SQLCipher",
+      "type": "extension",
+      "primary": "extension",
+      "axis": "architecture",
+      "score": null,
+      "rank": null,
+      "sourceUrl": "https://www.zetetic.net/sqlcipher/",
+      "rankUrl": null,
+      "detail": "",
+      "models": [],
+      "fontSize": 16
+    },
+    {
+      "id": "tikv",
+      "label": "TiKV",
+      "type": "component",
+      "primary": "distributed_kv",
+      "axis": "architecture",
+      "score": null,
+      "rank": null,
+      "sourceUrl": "https://tikv.org/",
+      "rankUrl": null,
+      "detail": "",
+      "models": [],
+      "fontSize": 16
+    },
+    {
+      "id": "rocksdb",
+      "label": "RocksDB",
+      "type": "component",
+      "primary": "kv_engine",
+      "axis": "implementation",
+      "score": 4.25,
+      "rank": 73,
+      "sourceUrl": "https://rocksdb.org/",
+      "rankUrl": "https://db-engines.com/en/system/RocksDB",
+      "detail": "",
+      "models": [
+        "Key-value"
+      ],
+      "fontSize": 23.08
+    },
+    {
+      "id": "leveldb",
+      "label": "LevelDB",
+      "type": "component",
+      "primary": "kv_engine",
+      "axis": "implementation",
+      "score": 1.8,
+      "rank": 135,
+      "sourceUrl": "https://github.com/google/leveldb",
+      "rankUrl": "https://db-engines.com/en/system/LevelDB",
+      "detail": "",
+      "models": [
+        "Key-value"
+      ],
+      "fontSize": 20.4
+    },
+    {
+      "id": "lmdb",
+      "label": "LMDB",
+      "type": "component",
+      "primary": "kv_engine",
+      "axis": "implementation",
+      "score": 1.93,
+      "rank": 127,
+      "sourceUrl": "https://www.symas.com/lmdb",
+      "rankUrl": "https://db-engines.com/en/system/LMDB",
+      "detail": "",
+      "models": [
+        "Key-value"
+      ],
+      "fontSize": 20.59
+    },
+    {
+      "id": "berkeley_db",
+      "label": "Berkeley DB",
+      "type": "component",
+      "primary": "kv_engine",
+      "axis": "implementation",
+      "score": 1.5,
+      "rank": 150,
+      "sourceUrl": "https://www.oracle.com/database/technologies/related/berkeleydb.html",
+      "rankUrl": "https://db-engines.com/en/system/Oracle+Berkeley+DB",
+      "detail": "",
+      "models": [
+        "Key-value store",
+        "Native XML DBMS"
+      ],
+      "fontSize": 19.91
+    },
+    {
+      "id": "pebble",
+      "label": "Pebble",
+      "type": "component",
+      "primary": "kv_engine",
+      "axis": "implementation",
+      "score": null,
+      "rank": null,
+      "sourceUrl": "https://github.com/cockroachdb/pebble",
+      "rankUrl": null,
+      "detail": "",
+      "models": [],
+      "fontSize": 16
+    },
+    {
+      "id": "innodb",
+      "label": "InnoDB",
+      "type": "component",
+      "primary": "storage_engine",
+      "axis": "implementation",
+      "score": null,
+      "rank": null,
+      "sourceUrl": "https://dev.mysql.com/doc/refman/8.4/en/innodb-introduction.html",
+      "rankUrl": null,
+      "detail": "",
+      "models": [],
+      "fontSize": 16
+    },
+    {
+      "id": "wiredtiger",
+      "label": "WiredTiger",
+      "type": "component",
+      "primary": "storage_engine",
+      "axis": "implementation",
+      "score": null,
+      "rank": null,
+      "sourceUrl": "https://www.mongodb.com/docs/manual/core/wiredtiger/",
+      "rankUrl": null,
+      "detail": "",
+      "models": [],
+      "fontSize": 16
+    },
+    {
+      "id": "tiflash",
+      "label": "TiFlash",
+      "type": "component",
+      "primary": "storage_engine",
+      "axis": "implementation",
+      "score": null,
+      "rank": null,
+      "sourceUrl": "https://docs.pingcap.com/tidb/stable/tiflash-overview/",
+      "rankUrl": null,
+      "detail": "",
+      "models": [],
+      "fontSize": 16
+    },
+    {
+      "id": "trino",
+      "label": "Trino",
+      "type": "component",
+      "primary": "query_engine",
+      "axis": "implementation",
+      "score": 8,
+      "rank": 49,
+      "sourceUrl": "https://trino.io/",
+      "rankUrl": "https://db-engines.com/en/system/Trino",
+      "detail": "",
+      "models": [
+        "Relational DBMS",
+        "Document store",
+        "Key-value store",
+        "Spatial DBMS",
+        "Search engine",
+        "Time Series DBMS",
+        "Wide column store"
+      ],
+      "fontSize": 25.39
+    },
+    {
+      "id": "presto",
+      "label": "Presto",
+      "type": "component",
+      "primary": "query_engine",
+      "axis": "implementation",
+      "score": 6.23,
+      "rank": 61,
+      "sourceUrl": "https://prestodb.io/",
+      "rankUrl": "https://db-engines.com/en/system/Presto",
+      "detail": "",
+      "models": [
+        "Relational"
+      ],
+      "fontSize": 24.45
+    },
+    {
+      "id": "drill",
+      "label": "Drill",
+      "type": "component",
+      "primary": "query_engine",
+      "axis": "implementation",
+      "score": 1.71,
+      "rank": 139,
+      "sourceUrl": "https://drill.apache.org/",
+      "rankUrl": "https://db-engines.com/en/system/Apache+Drill",
+      "detail": "",
+      "models": [
+        "Document store",
+        "Relational DBMS"
+      ],
+      "fontSize": 20.26
+    },
+    {
+      "id": "spark_sql",
+      "label": "Spark SQL",
+      "type": "component",
+      "primary": "query_engine",
+      "axis": "implementation",
+      "score": 22.37,
+      "rank": 29,
+      "sourceUrl": "https://spark.apache.org/sql/",
+      "rankUrl": "https://db-engines.com/en/system/Apache+Spark+%28SQL%29",
+      "detail": "",
+      "models": [
+        "Relational"
+      ],
+      "fontSize": 29.46
+    },
+    {
+      "id": "hive",
+      "label": "Hive",
+      "type": "component",
+      "primary": "query_engine",
+      "axis": "implementation",
+      "score": 69.58,
+      "rank": 14,
+      "sourceUrl": "https://hive.apache.org/",
+      "rankUrl": "https://db-engines.com/en/system/Apache+Hive",
+      "detail": "",
+      "models": [
+        "Relational"
+      ],
+      "fontSize": 34.19
+    },
+    {
+      "id": "lucene",
+      "label": "Lucene",
+      "type": "component",
+      "primary": "search_library",
+      "axis": "implementation",
+      "score": null,
+      "rank": null,
+      "sourceUrl": "https://lucene.apache.org/",
+      "rankUrl": null,
+      "detail": "",
+      "models": [],
+      "fontSize": 16
+    },
+    {
+      "id": "xapian",
+      "label": "Xapian",
+      "type": "component",
+      "primary": "search_library",
+      "axis": "implementation",
+      "score": 0.87,
+      "rank": 198,
+      "sourceUrl": "https://xapian.org/",
+      "rankUrl": "https://db-engines.com/en/system/Xapian",
+      "detail": "",
+      "models": [
+        "Search engine"
+      ],
+      "fontSize": 18.67
+    },
+    {
+      "id": "greenplum",
+      "label": "Greenplum",
+      "type": "product",
+      "primary": "olap",
+      "axis": "workloads",
+      "score": 5.75,
+      "rank": 64,
+      "sourceUrl": "https://db-engines.com/en/system/Greenplum",
+      "rankUrl": "https://db-engines.com/en/system/Greenplum",
+      "detail": "",
+      "models": [
+        "Relational DBMS",
+        "Document store",
+        "Spatial DBMS"
+      ],
+      "fontSize": 24.16
+    },
+    {
+      "id": "postgres",
+      "label": "Berkeley POSTGRES",
+      "type": "historical",
+      "primary": "object_relational",
+      "score": null,
+      "sourceUrl": "https://www.postgresql.org/docs/17/history.html",
+      "fontSize": 30
+    },
+    {
+      "id": "postgres95",
+      "label": "Postgres95",
+      "type": "historical",
+      "primary": "object_relational",
+      "score": null,
+      "sourceUrl": "https://www.postgresql.org/docs/17/history.html",
+      "fontSize": 30
+    },
+    {
+      "id": "nosql",
+      "label": "NoSQL",
+      "type": "concept",
+      "color": "#626775",
+      "detail": "常见非关系路线的集合称呼，不等于没有 SQL 或事务",
+      "fontSize": 30
+    },
+    {
+      "id": "newsql",
+      "label": "NewSQL",
+      "type": "concept",
+      "color": "#626775",
+      "detail": "兼顾关系/事务与扩展能力的一类系统，分布式 SQL 是常见路线",
+      "fontSize": 30
+    },
+    {
+      "id": "sql",
+      "label": "SQL 查询语言",
+      "type": "concept",
+      "color": "#626775",
+      "detail": "语言维度，不应与数据模型、物理存储混同",
+      "fontSize": 30
+    }
+  ],
+  "edges": [
+    {
+      "id": "e0",
+      "source": "database",
+      "target": "models",
+      "relation": "观察维度",
+      "sourceUrl": "https://db-engines.com/en/ranking_categories",
+      "detail": ""
+    },
+    {
+      "id": "e1",
+      "source": "database",
+      "target": "workloads",
+      "relation": "观察维度",
+      "sourceUrl": "https://db-engines.com/en/ranking_categories",
+      "detail": ""
+    },
+    {
+      "id": "e2",
+      "source": "database",
+      "target": "architecture",
+      "relation": "观察维度",
+      "sourceUrl": "https://db-engines.com/en/ranking_categories",
+      "detail": ""
+    },
+    {
+      "id": "e3",
+      "source": "database",
+      "target": "implementation",
+      "relation": "观察维度",
+      "sourceUrl": "https://db-engines.com/en/ranking_categories",
+      "detail": ""
+    },
+    {
+      "id": "e4",
+      "source": "models",
+      "target": "relational",
+      "relation": "包含视角",
+      "sourceUrl": "https://www.postgresql.org/about/",
+      "detail": "表、键、关系与关系运算"
+    },
+    {
+      "id": "e5",
+      "source": "models",
+      "target": "object_relational",
+      "relation": "包含视角",
+      "sourceUrl": "https://www.postgresql.org/docs/current/intro-whatis.html",
+      "detail": "在关系模型上增加可扩展类型与对象能力"
+    },
+    {
+      "id": "e6",
+      "source": "models",
+      "target": "hierarchical",
+      "relation": "包含视角",
+      "sourceUrl": "https://www.ibm.com/docs/en/ims/15.5.0?topic=ims-comparison-hierarchical-relational-databases",
+      "detail": "树状记录或全局变量树"
+    },
+    {
+      "id": "e7",
+      "source": "models",
+      "target": "network",
+      "relation": "包含视角",
+      "sourceUrl": "https://www.oracle.com/database/technologies/related/rdb-doc-rlp.html",
+      "detail": "记录与集合链接；不是网络部署，也不是现代图数据库的同义词"
+    },
+    {
+      "id": "e8",
+      "source": "models",
+      "target": "object",
+      "relation": "包含视角",
+      "sourceUrl": "https://www.objectdb.com/database/faq",
+      "detail": "持久化对象、引用与对象身份"
+    },
+    {
+      "id": "e9",
+      "source": "models",
+      "target": "multivalue",
+      "relation": "包含视角",
+      "sourceUrl": "https://www.rocketsoftware.com/en-us/products/multivalue",
+      "detail": "字段可保存多值与子值"
+    },
+    {
+      "id": "e10",
+      "source": "models",
+      "target": "document",
+      "relation": "包含视角",
+      "sourceUrl": "https://docs.couchdb.org/en/stable/intro/overview.html",
+      "detail": "嵌套文档与字段查询"
+    },
+    {
+      "id": "e11",
+      "source": "models",
+      "target": "key_value",
+      "relation": "包含视角",
+      "sourceUrl": "https://aws.amazon.com/documentation-overview/dynamodb/",
+      "detail": "以键访问值；值可以是复杂结构"
+    },
+    {
+      "id": "e12",
+      "source": "models",
+      "target": "wide_column",
+      "relation": "包含视角",
+      "sourceUrl": "https://cloud.google.com/bigtable/docs/overview",
+      "detail": "稀疏行、列族；不等于分析用的列式存储"
+    },
+    {
+      "id": "e13",
+      "source": "models",
+      "target": "property_graph",
+      "relation": "包含视角",
+      "sourceUrl": "https://neo4j.com/docs/getting-started/appendix/graphdb-concepts/",
+      "detail": "点和边均可带属性"
+    },
+    {
+      "id": "e14",
+      "source": "models",
+      "target": "rdf",
+      "relation": "包含视角",
+      "sourceUrl": "https://docs.stardog.com/tutorials/rdf-graph-data-model",
+      "detail": "主语、谓语、宾语；SPARQL 等图查询"
+    },
+    {
+      "id": "e15",
+      "source": "models",
+      "target": "xml",
+      "relation": "包含视角",
+      "sourceUrl": "https://basex.org/",
+      "detail": "XML 树、XPath/XQuery；也是文档路线"
+    },
+    {
+      "id": "e16",
+      "source": "models",
+      "target": "array",
+      "relation": "包含视角",
+      "sourceUrl": "https://documentation.cloud.tiledb.com/academy/structure/arrays/foundation/array-data-model/",
+      "detail": "多维网格、数组与切片计算"
+    },
+    {
+      "id": "e17",
+      "source": "models",
+      "target": "multimodel",
+      "relation": "包含视角",
+      "sourceUrl": "https://arangodb.com/multi-model/",
+      "detail": "一个系统支持多个模型，不是新的互斥模型"
+    },
+    {
+      "id": "e18",
+      "source": "workloads",
+      "target": "search",
+      "relation": "包含视角",
+      "sourceUrl": "https://lucene.apache.org/",
+      "detail": "倒排索引与文本检索"
+    },
+    {
+      "id": "e19",
+      "source": "workloads",
+      "target": "timeseries",
+      "relation": "包含视角",
+      "sourceUrl": "https://docs.influxdata.com/platform/",
+      "detail": "带时间戳的测量、指标与时间窗口"
+    },
+    {
+      "id": "e20",
+      "source": "workloads",
+      "target": "spatial",
+      "relation": "包含视角",
+      "sourceUrl": "https://postgis.net/",
+      "detail": "几何、地理坐标和空间查询"
+    },
+    {
+      "id": "e21",
+      "source": "workloads",
+      "target": "vector",
+      "relation": "包含视角",
+      "sourceUrl": "https://qdrant.tech/documentation/overview/vector-search/",
+      "detail": "向量近邻、语义检索"
+    },
+    {
+      "id": "e22",
+      "source": "workloads",
+      "target": "olap",
+      "relation": "包含视角",
+      "sourceUrl": "https://clickhouse.com/docs/intro",
+      "detail": "聚合与大范围扫描；可基于关系模型"
+    },
+    {
+      "id": "e23",
+      "source": "workloads",
+      "target": "oltp",
+      "relation": "包含视角",
+      "sourceUrl": "https://dev.mysql.com/doc/refman/8.4/en/innodb-introduction.html",
+      "detail": "短事务与在线业务更新；不是独立逻辑模型"
+    },
+    {
+      "id": "e24",
+      "source": "workloads",
+      "target": "htap",
+      "relation": "包含视角",
+      "sourceUrl": "https://docs.pingcap.com/tidb/stable/tidb-introduction/",
+      "detail": "兼顾事务与分析，具体隔离和数据复制路径依产品而异"
+    },
+    {
+      "id": "e25",
+      "source": "workloads",
+      "target": "cache",
+      "relation": "包含视角",
+      "sourceUrl": "https://memcached.org/",
+      "detail": "减少重复计算和下游访问，不等同于持久化主库"
+    },
+    {
+      "id": "e26",
+      "source": "workloads",
+      "target": "cube",
+      "relation": "包含视角",
+      "sourceUrl": "https://mondrian.pentaho.com/",
+      "detail": "维度、度量与立方体分析"
+    },
+    {
+      "id": "e27",
+      "source": "workloads",
+      "target": "deductive",
+      "relation": "包含视角",
+      "sourceUrl": "https://www.oxfordsemantic.tech/rdfox",
+      "detail": "Datalog 或规则推导；区别于普通索引查询"
+    },
+    {
+      "id": "e28",
+      "source": "workloads",
+      "target": "stream",
+      "relation": "包含视角",
+      "sourceUrl": "https://materialize.com/docs/",
+      "detail": "持续查询与流式物化视图"
+    },
+    {
+      "id": "e29",
+      "source": "workloads",
+      "target": "event",
+      "relation": "包含视角",
+      "sourceUrl": "https://docs.kurrent.io/",
+      "detail": "按流追加事件，支持事件溯源"
+    },
+    {
+      "id": "e30",
+      "source": "workloads",
+      "target": "temporal",
+      "relation": "包含视角",
+      "sourceUrl": "https://docs.xtdb.com/",
+      "detail": "有效时间、系统时间或版本历史；各产品能力不同"
+    },
+    {
+      "id": "e31",
+      "source": "workloads",
+      "target": "content",
+      "relation": "包含视角",
+      "sourceUrl": "https://jackrabbit.apache.org/",
+      "detail": "内容树、版本、权限与查询"
+    },
+    {
+      "id": "e32",
+      "source": "architecture",
+      "target": "distributed_sql",
+      "relation": "包含视角",
+      "sourceUrl": "https://db.cs.cmu.edu/papers/2016/pavlo-newsql-sigmodrec2016.pdf",
+      "detail": "关系模型与分布式事务；NewSQL 的常见路线"
+    },
+    {
+      "id": "e33",
+      "source": "architecture",
+      "target": "embedded",
+      "relation": "包含视角",
+      "sourceUrl": "https://sqlite.org/about.html",
+      "detail": "数据库库与应用处于同一进程"
+    },
+    {
+      "id": "e34",
+      "source": "architecture",
+      "target": "memory",
+      "relation": "包含视角",
+      "sourceUrl": "https://redis.io/docs/latest/develop/",
+      "detail": "主要工作集放在内存；不代表不持久化"
+    },
+    {
+      "id": "e35",
+      "source": "architecture",
+      "target": "columnar",
+      "relation": "包含视角",
+      "sourceUrl": "https://clickhouse.com/docs/intro",
+      "detail": "按列组织分析数据；不是宽列模型"
+    },
+    {
+      "id": "e36",
+      "source": "architecture",
+      "target": "row_store",
+      "relation": "包含视角",
+      "sourceUrl": "https://www.postgresql.org/docs/current/storage-page-layout.html",
+      "detail": "以行记录为主要存储单位，可与列存并存"
+    },
+    {
+      "id": "e37",
+      "source": "architecture",
+      "target": "lsm",
+      "relation": "包含视角",
+      "sourceUrl": "https://rocksdb.org/docs/getting-started.html",
+      "detail": "日志结构合并与分层压实的写入优化路线"
+    },
+    {
+      "id": "e38",
+      "source": "architecture",
+      "target": "btree",
+      "relation": "包含视角",
+      "sourceUrl": "https://dev.mysql.com/doc/refman/8.4/en/innodb-physical-structure.html",
+      "detail": "平衡树及其变体，用于存储与索引"
+    },
+    {
+      "id": "e39",
+      "source": "architecture",
+      "target": "extension",
+      "relation": "包含视角",
+      "sourceUrl": "https://www.postgresql.org/docs/current/extend-extensions.html",
+      "detail": "通过扩展接口增加能力"
+    },
+    {
+      "id": "e40",
+      "source": "architecture",
+      "target": "distributed_kv",
+      "relation": "包含视角",
+      "sourceUrl": "https://tikv.org/",
+      "detail": "跨节点提供键值访问"
+    },
+    {
+      "id": "e41",
+      "source": "implementation",
+      "target": "kv_engine",
+      "relation": "包含视角",
+      "sourceUrl": "https://rocksdb.org/",
+      "detail": "由其他系统嵌入的持久化组件"
+    },
+    {
+      "id": "e42",
+      "source": "implementation",
+      "target": "storage_engine",
+      "relation": "包含视角",
+      "sourceUrl": "https://github.com/pingcap/tiflash",
+      "detail": "负责存储访问，可嵌入式或服务化；TiFlash 属于列存分析组件"
+    },
+    {
+      "id": "e43",
+      "source": "implementation",
+      "target": "query_engine",
+      "relation": "包含视角",
+      "sourceUrl": "https://trino.io/",
+      "detail": "执行查询，通常不独立管理全部底层数据"
+    },
+    {
+      "id": "e44",
+      "source": "implementation",
+      "target": "search_library",
+      "relation": "包含视角",
+      "sourceUrl": "https://lucene.apache.org/",
+      "detail": "搜索服务可以基于这些库构建"
+    },
+    {
+      "id": "e45",
+      "source": "relational",
+      "target": "oracle",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/Oracle",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e46",
+      "source": "relational",
+      "target": "mysql",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/MySQL",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e47",
+      "source": "relational",
+      "target": "sql_server",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/Microsoft+SQL+Server",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e48",
+      "source": "relational",
+      "target": "mariadb",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/MariaDB",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e49",
+      "source": "relational",
+      "target": "ibm_db2",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/IBM+Db2",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e50",
+      "source": "relational",
+      "target": "sqlite",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/SQLite",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e51",
+      "source": "relational",
+      "target": "ms_access",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/Microsoft+Access",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e52",
+      "source": "relational",
+      "target": "firebird",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/Firebird",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e53",
+      "source": "relational",
+      "target": "interbase",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/Interbase",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e54",
+      "source": "relational",
+      "target": "ingres",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/Ingres",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e55",
+      "source": "relational",
+      "target": "h2",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/H2",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e56",
+      "source": "relational",
+      "target": "hypersql",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/HyperSQL",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e57",
+      "source": "relational",
+      "target": "dbase",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/dBASE",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e58",
+      "source": "relational",
+      "target": "filemaker",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/FileMaker",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e59",
+      "source": "relational",
+      "target": "openedge",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/OpenEdge",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e60",
+      "source": "relational",
+      "target": "percona_server",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/Percona+Server+for+MySQL",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e61",
+      "source": "relational",
+      "target": "opengauss",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/openGauss",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e62",
+      "source": "object_relational",
+      "target": "postgresql",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/PostgreSQL",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e63",
+      "source": "object_relational",
+      "target": "informix",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/Informix",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e64",
+      "source": "hierarchical",
+      "target": "ibm_ims",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/IMS",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e65",
+      "source": "hierarchical",
+      "target": "gt_m",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/GT.M",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e66",
+      "source": "hierarchical",
+      "target": "yottadb",
+      "relation": "代表实现",
+      "sourceUrl": "https://yottadb.com/",
+      "detail": "层次键值/全局变量树，提供多语言接口",
+      "primary": true
+    },
+    {
+      "id": "e67",
+      "source": "network",
+      "target": "idms",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/IDMS",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e68",
+      "source": "network",
+      "target": "oracle_codasyl_dbms",
+      "relation": "代表实现",
+      "sourceUrl": "https://www.oracle.com/database/technologies/related/rdb-doc-rlp.html",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e69",
+      "source": "object",
+      "target": "objectdb",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/ObjectDB",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e70",
+      "source": "object",
+      "target": "objectstore",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/ObjectStore",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e71",
+      "source": "object",
+      "target": "objectbox",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/ObjectBox",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e72",
+      "source": "object",
+      "target": "gemstone_s",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/GemStone%2FS",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e73",
+      "source": "object",
+      "target": "zodb",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/ZODB",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e74",
+      "source": "object",
+      "target": "db4o",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/Db4o",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e75",
+      "source": "object",
+      "target": "objectivity_db",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/Objectivity%2FDB",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e76",
+      "source": "multivalue",
+      "target": "unidata_universe",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/UniData%2CUniVerse",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e77",
+      "source": "multivalue",
+      "target": "jbase",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/jBASE",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e78",
+      "source": "multivalue",
+      "target": "d3",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/D3",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e79",
+      "source": "multivalue",
+      "target": "openqm",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/OpenQM",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e80",
+      "source": "document",
+      "target": "mongodb",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/MongoDB",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e81",
+      "source": "document",
+      "target": "couchbase",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/Couchbase",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e82",
+      "source": "document",
+      "target": "couchdb",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/CouchDB",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e83",
+      "source": "document",
+      "target": "firestore",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/Google+Cloud+Firestore",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e84",
+      "source": "document",
+      "target": "firebase_realtime",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/Firebase+Realtime+Database",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e85",
+      "source": "document",
+      "target": "ravendb",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/RavenDB",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e86",
+      "source": "document",
+      "target": "rethinkdb",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/RethinkDB",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e87",
+      "source": "document",
+      "target": "cloudant",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/IBM+Cloudant",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e88",
+      "source": "document",
+      "target": "litedb",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/LiteDB",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e89",
+      "source": "document",
+      "target": "pouchdb",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/PouchDB",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e90",
+      "source": "key_value",
+      "target": "redis",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/Redis",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e91",
+      "source": "key_value",
+      "target": "dynamodb",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/Amazon+DynamoDB",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e92",
+      "source": "key_value",
+      "target": "etcd",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/etcd",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e93",
+      "source": "key_value",
+      "target": "memcached",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/Memcached",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e94",
+      "source": "key_value",
+      "target": "aerospike",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/Aerospike",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e95",
+      "source": "key_value",
+      "target": "valkey",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/Valkey",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e96",
+      "source": "key_value",
+      "target": "riak_kv",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/Riak+KV",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e97",
+      "source": "key_value",
+      "target": "foundationdb",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/FoundationDB",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e98",
+      "source": "key_value",
+      "target": "keydb",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/KeyDB",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e99",
+      "source": "wide_column",
+      "target": "cassandra",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/Apache+Cassandra",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e100",
+      "source": "wide_column",
+      "target": "hbase",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/Apache+HBase",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e101",
+      "source": "wide_column",
+      "target": "bigtable",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/Google+Cloud+Bigtable",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e102",
+      "source": "wide_column",
+      "target": "scylladb",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/ScyllaDB",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e103",
+      "source": "wide_column",
+      "target": "accumulo",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/Apache+Accumulo",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e104",
+      "source": "wide_column",
+      "target": "amazon_keyspaces",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/Amazon+Keyspaces",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e105",
+      "source": "property_graph",
+      "target": "neo4j",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/Neo4j",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e106",
+      "source": "property_graph",
+      "target": "tigergraph",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/TigerGraph",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e107",
+      "source": "property_graph",
+      "target": "janusgraph",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/JanusGraph",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e108",
+      "source": "property_graph",
+      "target": "memgraph",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/Memgraph",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e109",
+      "source": "property_graph",
+      "target": "nebulagraph",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/NebulaGraph",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e110",
+      "source": "property_graph",
+      "target": "dgraph",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/Dgraph",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e111",
+      "source": "rdf",
+      "target": "graphdb",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/GraphDB",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e112",
+      "source": "rdf",
+      "target": "virtuoso",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/Virtuoso",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e113",
+      "source": "rdf",
+      "target": "stardog",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/Stardog",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e114",
+      "source": "rdf",
+      "target": "jena_tdb",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/Apache+Jena+-+TDB",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e115",
+      "source": "rdf",
+      "target": "blazegraph",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/Blazegraph",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e116",
+      "source": "rdf",
+      "target": "neptune",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/Amazon+Neptune",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e117",
+      "source": "rdf",
+      "target": "allegrograph",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/AllegroGraph",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e118",
+      "source": "xml",
+      "target": "basex",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/BaseX",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e119",
+      "source": "xml",
+      "target": "exist_db",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/eXist-db",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e120",
+      "source": "xml",
+      "target": "marklogic",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/MarkLogic",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e121",
+      "source": "xml",
+      "target": "sedna",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/Sedna",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e122",
+      "source": "array",
+      "target": "rasdaman",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/Rasdaman",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e123",
+      "source": "array",
+      "target": "scidb",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/SciDB",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e124",
+      "source": "array",
+      "target": "tiledb",
+      "relation": "代表实现",
+      "sourceUrl": "https://tiledb.com/",
+      "detail": "数组数据引擎与平台，未匹配到本期热度值",
+      "primary": true
+    },
+    {
+      "id": "e125",
+      "source": "multimodel",
+      "target": "arangodb",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/Arango",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e126",
+      "source": "multimodel",
+      "target": "orientdb",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/OrientDB",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e127",
+      "source": "multimodel",
+      "target": "surrealdb",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/SurrealDB",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e128",
+      "source": "multimodel",
+      "target": "cosmos_db",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/Microsoft+Azure+Cosmos+DB",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e129",
+      "source": "multimodel",
+      "target": "intersystems_iris",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/InterSystems+IRIS",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e130",
+      "source": "search",
+      "target": "elasticsearch",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/Elasticsearch",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e131",
+      "source": "search",
+      "target": "opensearch",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/OpenSearch",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e132",
+      "source": "search",
+      "target": "solr",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/Apache+Solr",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e133",
+      "source": "search",
+      "target": "splunk",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/Splunk",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e134",
+      "source": "search",
+      "target": "meilisearch",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/Meilisearch",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e135",
+      "source": "search",
+      "target": "typesense",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/Typesense",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e136",
+      "source": "search",
+      "target": "algolia",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/Algolia",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e137",
+      "source": "timeseries",
+      "target": "influxdb",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/InfluxDB",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e138",
+      "source": "timeseries",
+      "target": "prometheus",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/Prometheus",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e139",
+      "source": "timeseries",
+      "target": "tdengine",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/TDengine",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e140",
+      "source": "timeseries",
+      "target": "questdb",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/QuestDB",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e141",
+      "source": "timeseries",
+      "target": "victoriametrics",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/VictoriaMetrics",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e142",
+      "source": "timeseries",
+      "target": "iotdb",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/Apache+IoTDB",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e143",
+      "source": "timeseries",
+      "target": "opentsdb",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/OpenTSDB",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e144",
+      "source": "timeseries",
+      "target": "graphite",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/Graphite",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e145",
+      "source": "timeseries",
+      "target": "kdb",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/Kdb",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e146",
+      "source": "spatial",
+      "target": "postgis",
+      "relation": "代表扩展",
+      "sourceUrl": "https://postgis.net/",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e147",
+      "source": "spatial",
+      "target": "spatialite",
+      "relation": "代表扩展",
+      "sourceUrl": "https://www.gaia-gis.it/fossil/libspatialite/index",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e148",
+      "source": "spatial",
+      "target": "geomesa",
+      "relation": "代表组件",
+      "sourceUrl": "https://www.geomesa.org/",
+      "detail": "建立于其他后端的空间索引与查询工具套件",
+      "primary": true
+    },
+    {
+      "id": "e149",
+      "source": "vector",
+      "target": "milvus",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/Milvus",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e150",
+      "source": "vector",
+      "target": "qdrant",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/Qdrant",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e151",
+      "source": "vector",
+      "target": "pinecone",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/Pinecone",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e152",
+      "source": "vector",
+      "target": "weaviate",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/Weaviate",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e153",
+      "source": "vector",
+      "target": "chroma",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/Chroma",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e154",
+      "source": "vector",
+      "target": "vespa",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/Vespa",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e155",
+      "source": "vector",
+      "target": "lancedb",
+      "relation": "代表实现",
+      "sourceUrl": "https://lancedb.com/docs/",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e156",
+      "source": "olap",
+      "target": "snowflake",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/Snowflake",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e157",
+      "source": "olap",
+      "target": "bigquery",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/Google+BigQuery",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e158",
+      "source": "olap",
+      "target": "redshift",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/Amazon+Redshift",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e159",
+      "source": "olap",
+      "target": "clickhouse",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/ClickHouse",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e160",
+      "source": "olap",
+      "target": "duckdb",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/DuckDB",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e161",
+      "source": "olap",
+      "target": "teradata",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/Teradata",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e162",
+      "source": "olap",
+      "target": "databricks",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/Databricks",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e163",
+      "source": "olap",
+      "target": "vertica",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/Vertica",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e164",
+      "source": "olap",
+      "target": "monetdb",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/MonetDB",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e165",
+      "source": "olap",
+      "target": "doris",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/Apache+Doris",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e166",
+      "source": "olap",
+      "target": "starrocks",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/StarRocks",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e167",
+      "source": "olap",
+      "target": "druid",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/Apache+Druid",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e168",
+      "source": "olap",
+      "target": "kylin",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/Apache+Kylin",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e169",
+      "source": "cube",
+      "target": "essbase",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/Oracle+Essbase",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e170",
+      "source": "cube",
+      "target": "mondrian",
+      "relation": "代表实现",
+      "sourceUrl": "https://mondrian.pentaho.com/",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e171",
+      "source": "deductive",
+      "target": "datomic",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/Datomic",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e172",
+      "source": "deductive",
+      "target": "rdfox",
+      "relation": "代表实现",
+      "sourceUrl": "https://www.oxfordsemantic.tech/rdfox",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e173",
+      "source": "stream",
+      "target": "risingwave",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/RisingWave",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e174",
+      "source": "stream",
+      "target": "materialize",
+      "relation": "代表实现",
+      "sourceUrl": "https://materialize.com/docs/",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e175",
+      "source": "stream",
+      "target": "flink",
+      "relation": "代表组件",
+      "sourceUrl": "https://flink.apache.org/",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e176",
+      "source": "stream",
+      "target": "ksqldb",
+      "relation": "代表组件",
+      "sourceUrl": "https://ksqldb.io/",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e177",
+      "source": "event",
+      "target": "kurrentdb",
+      "relation": "代表实现",
+      "sourceUrl": "https://docs.kurrent.io/",
+      "detail": "原 EventStoreDB，事件流存储",
+      "primary": true
+    },
+    {
+      "id": "e178",
+      "source": "temporal",
+      "target": "xtdb",
+      "relation": "代表实现",
+      "sourceUrl": "https://docs.xtdb.com/",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e179",
+      "source": "temporal",
+      "target": "dolt",
+      "relation": "代表实现",
+      "sourceUrl": "https://docs.dolthub.com/",
+      "detail": "版本化 SQL 数据库；这里是版本历史，不等于双时态",
+      "primary": true
+    },
+    {
+      "id": "e180",
+      "source": "content",
+      "target": "jackrabbit",
+      "relation": "代表实现",
+      "sourceUrl": "https://jackrabbit.apache.org/",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e181",
+      "source": "content",
+      "target": "modeshape",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/ModeShape",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e182",
+      "source": "distributed_sql",
+      "target": "tidb",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/TiDB",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e183",
+      "source": "distributed_sql",
+      "target": "cockroachdb",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/CockroachDB",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e184",
+      "source": "distributed_sql",
+      "target": "oceanbase",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/OceanBase",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e185",
+      "source": "distributed_sql",
+      "target": "spanner",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/Google+Cloud+Spanner",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e186",
+      "source": "distributed_sql",
+      "target": "yugabytedb",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/YugabyteDB",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e187",
+      "source": "distributed_sql",
+      "target": "voltdb",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/VoltDB",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e188",
+      "source": "distributed_sql",
+      "target": "nuodb",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/NuoDB",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e189",
+      "source": "distributed_sql",
+      "target": "singlestore",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/SingleStore",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e190",
+      "source": "embedded",
+      "target": "libsql",
+      "relation": "代表实现",
+      "sourceUrl": "https://github.com/tursodatabase/libsql",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e191",
+      "source": "embedded",
+      "target": "turso_database",
+      "relation": "代表实现",
+      "sourceUrl": "https://github.com/tursodatabase/turso",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e192",
+      "source": "memory",
+      "target": "ignite",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/Apache+Ignite",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e193",
+      "source": "memory",
+      "target": "hazelcast",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/Hazelcast",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e194",
+      "source": "memory",
+      "target": "tarantool",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/Tarantool",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e195",
+      "source": "memory",
+      "target": "timesten",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/TimesTen",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e196",
+      "source": "extension",
+      "target": "timescaledb",
+      "relation": "代表扩展",
+      "sourceUrl": "https://docs.timescale.com/",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e197",
+      "source": "extension",
+      "target": "citus",
+      "relation": "代表扩展",
+      "sourceUrl": "https://github.com/citusdata/citus",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e198",
+      "source": "extension",
+      "target": "pgvector",
+      "relation": "代表扩展",
+      "sourceUrl": "https://github.com/pgvector/pgvector",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e199",
+      "source": "extension",
+      "target": "sqlcipher",
+      "relation": "代表扩展",
+      "sourceUrl": "https://www.zetetic.net/sqlcipher/",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e200",
+      "source": "distributed_kv",
+      "target": "tikv",
+      "relation": "代表组件",
+      "sourceUrl": "https://tikv.org/",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e201",
+      "source": "kv_engine",
+      "target": "rocksdb",
+      "relation": "代表组件",
+      "sourceUrl": "https://rocksdb.org/",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e202",
+      "source": "kv_engine",
+      "target": "leveldb",
+      "relation": "代表组件",
+      "sourceUrl": "https://github.com/google/leveldb",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e203",
+      "source": "kv_engine",
+      "target": "lmdb",
+      "relation": "代表组件",
+      "sourceUrl": "https://www.symas.com/lmdb",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e204",
+      "source": "kv_engine",
+      "target": "berkeley_db",
+      "relation": "代表组件",
+      "sourceUrl": "https://www.oracle.com/database/technologies/related/berkeleydb.html",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e205",
+      "source": "kv_engine",
+      "target": "pebble",
+      "relation": "代表组件",
+      "sourceUrl": "https://github.com/cockroachdb/pebble",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e206",
+      "source": "storage_engine",
+      "target": "innodb",
+      "relation": "代表组件",
+      "sourceUrl": "https://dev.mysql.com/doc/refman/8.4/en/innodb-introduction.html",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e207",
+      "source": "storage_engine",
+      "target": "wiredtiger",
+      "relation": "代表组件",
+      "sourceUrl": "https://www.mongodb.com/docs/manual/core/wiredtiger/",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e208",
+      "source": "storage_engine",
+      "target": "tiflash",
+      "relation": "代表组件",
+      "sourceUrl": "https://docs.pingcap.com/tidb/stable/tiflash-overview/",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e209",
+      "source": "query_engine",
+      "target": "trino",
+      "relation": "代表组件",
+      "sourceUrl": "https://trino.io/",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e210",
+      "source": "query_engine",
+      "target": "presto",
+      "relation": "代表组件",
+      "sourceUrl": "https://prestodb.io/",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e211",
+      "source": "query_engine",
+      "target": "drill",
+      "relation": "代表组件",
+      "sourceUrl": "https://drill.apache.org/",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e212",
+      "source": "query_engine",
+      "target": "spark_sql",
+      "relation": "代表组件",
+      "sourceUrl": "https://spark.apache.org/sql/",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e213",
+      "source": "query_engine",
+      "target": "hive",
+      "relation": "代表组件",
+      "sourceUrl": "https://hive.apache.org/",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e214",
+      "source": "search_library",
+      "target": "lucene",
+      "relation": "代表组件",
+      "sourceUrl": "https://lucene.apache.org/",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e215",
+      "source": "search_library",
+      "target": "xapian",
+      "relation": "代表组件",
+      "sourceUrl": "https://xapian.org/",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e216",
+      "source": "olap",
+      "target": "greenplum",
+      "relation": "代表实现",
+      "sourceUrl": "https://db-engines.com/en/system/Greenplum",
+      "detail": "",
+      "primary": true
+    },
+    {
+      "id": "e217",
+      "source": "mysql",
+      "target": "mariadb",
+      "relation": "派生",
+      "sourceUrl": "https://mariadb.org/is-mariadb-part-of-the-mysql-ecosystem/",
+      "detail": "历史 fork，此后独立演进",
+      "technical": true
+    },
+    {
+      "id": "e218",
+      "source": "mysql",
+      "target": "percona_server",
+      "relation": "增强发行版",
+      "sourceUrl": "https://docs.percona.com/percona-server/9.7/index.html",
+      "detail": "随上游重新 rebase；区别于长期独立分叉",
+      "technical": true
+    },
+    {
+      "id": "e219",
+      "source": "postgresql",
+      "target": "greenplum",
+      "relation": "派生",
+      "sourceUrl": "https://arxiv.org/html/2103.11080v1",
+      "detail": "PostgreSQL 基础上的 MPP 改造",
+      "technical": true
+    },
+    {
+      "id": "e220",
+      "source": "redis",
+      "target": "valkey",
+      "relation": "派生",
+      "sourceUrl": "https://github.com/valkey-io/valkey-doc/blob/main/topics/migration.md",
+      "detail": "Redis OSS 7.2.4 分叉点",
+      "technical": true
+    },
+    {
+      "id": "e221",
+      "source": "redis",
+      "target": "keydb",
+      "relation": "派生",
+      "sourceUrl": "https://docs.keydb.dev/docs/faq/",
+      "detail": "源码分叉",
+      "technical": true
+    },
+    {
+      "id": "e222",
+      "source": "elasticsearch",
+      "target": "opensearch",
+      "relation": "派生",
+      "sourceUrl": "https://opensearch.org/faq/",
+      "detail": "Elasticsearch 7.10.2 分叉点",
+      "technical": true
+    },
+    {
+      "id": "e223",
+      "source": "leveldb",
+      "target": "rocksdb",
+      "relation": "派生",
+      "sourceUrl": "https://rocksdb.org/docs/support/faq.html",
+      "detail": "基于 LevelDB 的代码基础",
+      "technical": true
+    },
+    {
+      "id": "e224",
+      "source": "sqlite",
+      "target": "libsql",
+      "relation": "派生",
+      "sourceUrl": "https://github.com/tursodatabase/libsql",
+      "detail": "fork；不要与新版 Rust Turso Database 混淆",
+      "technical": true
+    },
+    {
+      "id": "e225",
+      "source": "interbase",
+      "target": "firebird",
+      "relation": "派生",
+      "sourceUrl": "https://www.firebirdsql.org/en/firebird-foundation-retrospective",
+      "detail": "基于 2000 年开源的 InterBase 6",
+      "technical": true
+    },
+    {
+      "id": "e226",
+      "source": "postgres",
+      "target": "postgres95",
+      "relation": "演进",
+      "sourceUrl": "https://www.postgresql.org/docs/17/history.html",
+      "detail": "加入 SQL 接口",
+      "technical": true
+    },
+    {
+      "id": "e227",
+      "source": "postgres95",
+      "target": "postgresql",
+      "relation": "演进",
+      "sourceUrl": "https://www.postgresql.org/docs/17/history.html",
+      "detail": "项目更名",
+      "technical": true
+    },
+    {
+      "id": "e228",
+      "source": "postgresql",
+      "target": "timescaledb",
+      "relation": "扩展",
+      "sourceUrl": "https://docs.timescale.com/self-hosted/latest/install/installation-linux/",
+      "detail": "",
+      "technical": true
+    },
+    {
+      "id": "e229",
+      "source": "postgresql",
+      "target": "citus",
+      "relation": "扩展",
+      "sourceUrl": "https://github.com/citusdata/citus",
+      "detail": "",
+      "technical": true
+    },
+    {
+      "id": "e230",
+      "source": "postgresql",
+      "target": "postgis",
+      "relation": "扩展",
+      "sourceUrl": "https://postgis.net/documentation/getting_started/",
+      "detail": "",
+      "technical": true
+    },
+    {
+      "id": "e231",
+      "source": "postgresql",
+      "target": "pgvector",
+      "relation": "扩展",
+      "sourceUrl": "https://github.com/pgvector/pgvector",
+      "detail": "",
+      "technical": true
+    },
+    {
+      "id": "e232",
+      "source": "sqlite",
+      "target": "sqlcipher",
+      "relation": "扩展",
+      "sourceUrl": "https://www.zetetic.net/sqlcipher/about/",
+      "detail": "透明加密定制库",
+      "technical": true
+    },
+    {
+      "id": "e233",
+      "source": "sqlite",
+      "target": "spatialite",
+      "relation": "扩展",
+      "sourceUrl": "https://www.gaia-gis.it/fossil/libspatialite/index",
+      "detail": "空间扩展",
+      "technical": true
+    },
+    {
+      "id": "e234",
+      "source": "tidb",
+      "target": "tikv",
+      "relation": "依赖",
+      "sourceUrl": "https://docs.pingcap.com/tidb/stable/tidb-architecture/",
+      "detail": "经典行存路径",
+      "technical": true
+    },
+    {
+      "id": "e235",
+      "source": "tidb",
+      "target": "tiflash",
+      "relation": "可选组件",
+      "sourceUrl": "https://docs.pingcap.com/tidb/stable/tidb-architecture/",
+      "detail": "分析列式副本",
+      "technical": true
+    },
+    {
+      "id": "e236",
+      "source": "tikv",
+      "target": "rocksdb",
+      "relation": "依赖",
+      "sourceUrl": "https://tikv.org/docs/5.1/reference/architecture/storage/",
+      "detail": "所述传统架构；不泛化到 TiDB X",
+      "technical": true
+    },
+    {
+      "id": "e237",
+      "source": "mysql",
+      "target": "innodb",
+      "relation": "默认引擎",
+      "sourceUrl": "https://dev.mysql.com/doc/refman/8.4/en/innodb-introduction.html",
+      "detail": "",
+      "technical": true
+    },
+    {
+      "id": "e238",
+      "source": "mongodb",
+      "target": "wiredtiger",
+      "relation": "默认引擎",
+      "sourceUrl": "https://www.mongodb.com/docs/manual/core/wiredtiger/",
+      "detail": "",
+      "technical": true
+    },
+    {
+      "id": "e239",
+      "source": "elasticsearch",
+      "target": "lucene",
+      "relation": "依赖",
+      "sourceUrl": "https://www.elastic.co/guide/en/elasticsearch/reference/8.19/elasticsearch-intro-what-is-es.html",
+      "detail": "构建于 Lucene，不是其 fork",
+      "technical": true
+    },
+    {
+      "id": "e240",
+      "source": "solr",
+      "target": "lucene",
+      "relation": "依赖",
+      "sourceUrl": "https://solr.apache.org/guide/solr/latest/getting-started/introduction.html",
+      "detail": "",
+      "technical": true
+    },
+    {
+      "id": "e241",
+      "source": "tidb",
+      "target": "mysql",
+      "relation": "兼容",
+      "sourceUrl": "https://docs.pingcap.com/tidb/stable/tidb-faq/",
+      "detail": "SQL / 线协议兼容；非源码分支，存在差异",
+      "technical": true
+    },
+    {
+      "id": "e242",
+      "source": "cockroachdb",
+      "target": "postgresql",
+      "relation": "兼容",
+      "sourceUrl": "https://www.cockroachlabs.com/docs/stable/developer-basics.html",
+      "detail": "PG 线协议及部分 SQL 兼容，不表示全部扩展兼容",
+      "technical": true
+    },
+    {
+      "id": "e243",
+      "source": "doris",
+      "target": "mysql",
+      "relation": "兼容",
+      "sourceUrl": "https://doris.apache.org/docs/3.x/db-connect/database-connect/",
+      "detail": "MySQL 网络协议",
+      "technical": true
+    },
+    {
+      "id": "e244",
+      "source": "scylladb",
+      "target": "cassandra",
+      "relation": "兼容",
+      "sourceUrl": "https://docs.scylladb.com/manual/stable/using-scylla/cassandra-compatibility.html",
+      "detail": "CQL/API 兼容，有版本边界",
+      "technical": true
+    },
+    {
+      "id": "e245",
+      "source": "scylladb",
+      "target": "dynamodb",
+      "relation": "可选兼容",
+      "sourceUrl": "https://docs.scylladb.com/manual/stable/alternator/alternator.html",
+      "detail": "Alternator 提供部分 API 兼容，需启用",
+      "technical": true
+    },
+    {
+      "id": "e246",
+      "source": "turso_database",
+      "target": "sqlite",
+      "relation": "兼容",
+      "sourceUrl": "https://github.com/tursodatabase/turso",
+      "detail": "Rust 重写的格式/API/SQL 兼容，不是 fork",
+      "technical": true
+    },
+    {
+      "id": "e247",
+      "source": "rocksdb",
+      "target": "pebble",
+      "relation": "设计启发",
+      "sourceUrl": "https://github.com/cockroachdb/pebble",
+      "detail": "Go 实现，非直接 C++ 源码分叉",
+      "technical": true
+    },
+    {
+      "id": "e248",
+      "source": "leveldb",
+      "target": "pebble",
+      "relation": "设计启发",
+      "sourceUrl": "https://github.com/cockroachdb/pebble",
+      "detail": "",
+      "technical": true
+    },
+    {
+      "id": "e249",
+      "source": "pouchdb",
+      "target": "couchdb",
+      "relation": "互操作",
+      "sourceUrl": "https://pouchdb.com/faq.html",
+      "detail": "复制协议互操作",
+      "technical": true
+    },
+    {
+      "id": "e250",
+      "source": "postgresql",
+      "target": "relational",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://www.postgresql.org/about/",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e251",
+      "source": "postgresql",
+      "target": "document",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://www.postgresql.org/about/",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e252",
+      "source": "postgresql",
+      "target": "spatial",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://postgis.net/",
+      "detail": "通过 PostGIS 扩展提供，不是默认内置",
+      "cross": true
+    },
+    {
+      "id": "e253",
+      "source": "postgresql",
+      "target": "vector",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://github.com/pgvector/pgvector",
+      "detail": "通过 pgvector 扩展提供，不是默认内置",
+      "cross": true
+    },
+    {
+      "id": "e254",
+      "source": "mysql",
+      "target": "document",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/MySQL",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e255",
+      "source": "mysql",
+      "target": "spatial",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/MySQL",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e256",
+      "source": "oracle",
+      "target": "document",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/Oracle",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e257",
+      "source": "oracle",
+      "target": "property_graph",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/Oracle",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e258",
+      "source": "oracle",
+      "target": "rdf",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/Oracle",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e259",
+      "source": "oracle",
+      "target": "spatial",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/Oracle",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e260",
+      "source": "oracle",
+      "target": "vector",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/Oracle",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e261",
+      "source": "sql_server",
+      "target": "document",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/Microsoft+SQL+Server",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e262",
+      "source": "sql_server",
+      "target": "property_graph",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/Microsoft+SQL+Server",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e263",
+      "source": "sql_server",
+      "target": "spatial",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/Microsoft+SQL+Server",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e264",
+      "source": "ibm_db2",
+      "target": "document",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/IBM+Db2",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e265",
+      "source": "ibm_db2",
+      "target": "rdf",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/IBM+Db2",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e266",
+      "source": "ibm_db2",
+      "target": "spatial",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/IBM+Db2",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e267",
+      "source": "mariadb",
+      "target": "relational",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/MariaDB",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e268",
+      "source": "mariadb",
+      "target": "document",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/MariaDB",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e269",
+      "source": "mariadb",
+      "target": "spatial",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/MariaDB",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e270",
+      "source": "mongodb",
+      "target": "document",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/MongoDB",
+      "detail": "部分功能依赖版本、部署或 Atlas 服务",
+      "cross": true
+    },
+    {
+      "id": "e271",
+      "source": "mongodb",
+      "target": "timeseries",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/MongoDB",
+      "detail": "部分功能依赖版本、部署或 Atlas 服务",
+      "cross": true
+    },
+    {
+      "id": "e272",
+      "source": "mongodb",
+      "target": "spatial",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/MongoDB",
+      "detail": "部分功能依赖版本、部署或 Atlas 服务",
+      "cross": true
+    },
+    {
+      "id": "e273",
+      "source": "mongodb",
+      "target": "vector",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/MongoDB",
+      "detail": "部分功能依赖版本、部署或 Atlas 服务",
+      "cross": true
+    },
+    {
+      "id": "e274",
+      "source": "mongodb",
+      "target": "search",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/MongoDB",
+      "detail": "部分功能依赖版本、部署或 Atlas 服务",
+      "cross": true
+    },
+    {
+      "id": "e275",
+      "source": "couchbase",
+      "target": "key_value",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/Couchbase",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e276",
+      "source": "couchbase",
+      "target": "document",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/Couchbase",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e277",
+      "source": "couchbase",
+      "target": "search",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/Couchbase",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e278",
+      "source": "couchbase",
+      "target": "vector",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/Couchbase",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e279",
+      "source": "dynamodb",
+      "target": "document",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/Amazon+DynamoDB",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e280",
+      "source": "dynamodb",
+      "target": "distributed_kv",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/Amazon+DynamoDB",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e281",
+      "source": "redis",
+      "target": "memory",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/Redis",
+      "detail": "部分能力依赖版本或模块；不表示所有 Redis 发行版都有",
+      "cross": true
+    },
+    {
+      "id": "e282",
+      "source": "redis",
+      "target": "key_value",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/Redis",
+      "detail": "部分能力依赖版本或模块；不表示所有 Redis 发行版都有",
+      "cross": true
+    },
+    {
+      "id": "e283",
+      "source": "redis",
+      "target": "document",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/Redis",
+      "detail": "部分能力依赖版本或模块；不表示所有 Redis 发行版都有",
+      "cross": true
+    },
+    {
+      "id": "e284",
+      "source": "redis",
+      "target": "search",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/Redis",
+      "detail": "部分能力依赖版本或模块；不表示所有 Redis 发行版都有",
+      "cross": true
+    },
+    {
+      "id": "e285",
+      "source": "redis",
+      "target": "timeseries",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/Redis",
+      "detail": "部分能力依赖版本或模块；不表示所有 Redis 发行版都有",
+      "cross": true
+    },
+    {
+      "id": "e286",
+      "source": "redis",
+      "target": "vector",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/Redis",
+      "detail": "部分能力依赖版本或模块；不表示所有 Redis 发行版都有",
+      "cross": true
+    },
+    {
+      "id": "e287",
+      "source": "valkey",
+      "target": "key_value",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://valkey.io/",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e288",
+      "source": "valkey",
+      "target": "memory",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://valkey.io/",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e289",
+      "source": "etcd",
+      "target": "distributed_kv",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://etcd.io/docs/",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e290",
+      "source": "foundationdb",
+      "target": "distributed_kv",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://apple.github.io/foundationdb/",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e291",
+      "source": "bigtable",
+      "target": "key_value",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://cloud.google.com/bigtable/docs/overview",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e292",
+      "source": "bigtable",
+      "target": "wide_column",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://cloud.google.com/bigtable/docs/overview",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e293",
+      "source": "arangodb",
+      "target": "document",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/Arango",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e294",
+      "source": "arangodb",
+      "target": "key_value",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/Arango",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e295",
+      "source": "arangodb",
+      "target": "property_graph",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/Arango",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e296",
+      "source": "arangodb",
+      "target": "search",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/Arango",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e297",
+      "source": "arangodb",
+      "target": "vector",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/Arango",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e298",
+      "source": "orientdb",
+      "target": "document",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/OrientDB",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e299",
+      "source": "orientdb",
+      "target": "key_value",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/OrientDB",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e300",
+      "source": "orientdb",
+      "target": "property_graph",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/OrientDB",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e301",
+      "source": "cosmos_db",
+      "target": "document",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/Microsoft+Azure+Cosmos+DB",
+      "detail": "不同 API/产品模式，不是一个容器同时支持全部协议",
+      "cross": true
+    },
+    {
+      "id": "e302",
+      "source": "cosmos_db",
+      "target": "key_value",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/Microsoft+Azure+Cosmos+DB",
+      "detail": "不同 API/产品模式，不是一个容器同时支持全部协议",
+      "cross": true
+    },
+    {
+      "id": "e303",
+      "source": "cosmos_db",
+      "target": "property_graph",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/Microsoft+Azure+Cosmos+DB",
+      "detail": "不同 API/产品模式，不是一个容器同时支持全部协议",
+      "cross": true
+    },
+    {
+      "id": "e304",
+      "source": "cosmos_db",
+      "target": "wide_column",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/Microsoft+Azure+Cosmos+DB",
+      "detail": "不同 API/产品模式，不是一个容器同时支持全部协议",
+      "cross": true
+    },
+    {
+      "id": "e305",
+      "source": "cosmos_db",
+      "target": "spatial",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/Microsoft+Azure+Cosmos+DB",
+      "detail": "不同 API/产品模式，不是一个容器同时支持全部协议",
+      "cross": true
+    },
+    {
+      "id": "e306",
+      "source": "intersystems_iris",
+      "target": "relational",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/InterSystems+IRIS",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e307",
+      "source": "intersystems_iris",
+      "target": "object",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/InterSystems+IRIS",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e308",
+      "source": "intersystems_iris",
+      "target": "document",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/InterSystems+IRIS",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e309",
+      "source": "intersystems_iris",
+      "target": "key_value",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/InterSystems+IRIS",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e310",
+      "source": "marklogic",
+      "target": "document",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/MarkLogic",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e311",
+      "source": "marklogic",
+      "target": "rdf",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/MarkLogic",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e312",
+      "source": "marklogic",
+      "target": "xml",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/MarkLogic",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e313",
+      "source": "marklogic",
+      "target": "search",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/MarkLogic",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e314",
+      "source": "marklogic",
+      "target": "vector",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/MarkLogic",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e315",
+      "source": "neptune",
+      "target": "property_graph",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://docs.aws.amazon.com/neptune/latest/userguide/intro.html",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e316",
+      "source": "neptune",
+      "target": "rdf",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://docs.aws.amazon.com/neptune/latest/userguide/intro.html",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e317",
+      "source": "rdfox",
+      "target": "rdf",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://www.oxfordsemantic.tech/rdfox",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e318",
+      "source": "rdfox",
+      "target": "deductive",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://www.oxfordsemantic.tech/rdfox",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e319",
+      "source": "datomic",
+      "target": "temporal",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://docs.datomic.com/",
+      "detail": "Datalog 查询与历史数据库；不能等同于任意规则引擎",
+      "cross": true
+    },
+    {
+      "id": "e320",
+      "source": "datomic",
+      "target": "deductive",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://docs.datomic.com/",
+      "detail": "Datalog 查询与历史数据库；不能等同于任意规则引擎",
+      "cross": true
+    },
+    {
+      "id": "e321",
+      "source": "timescaledb",
+      "target": "relational",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://docs.timescale.com/",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e322",
+      "source": "timescaledb",
+      "target": "timeseries",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://docs.timescale.com/",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e323",
+      "source": "timescaledb",
+      "target": "extension",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://docs.timescale.com/",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e324",
+      "source": "postgis",
+      "target": "relational",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://postgis.net/",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e325",
+      "source": "postgis",
+      "target": "spatial",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://postgis.net/",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e326",
+      "source": "postgis",
+      "target": "extension",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://postgis.net/",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e327",
+      "source": "pgvector",
+      "target": "vector",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://github.com/pgvector/pgvector",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e328",
+      "source": "pgvector",
+      "target": "extension",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://github.com/pgvector/pgvector",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e329",
+      "source": "citus",
+      "target": "relational",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://github.com/citusdata/citus",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e330",
+      "source": "citus",
+      "target": "distributed_sql",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://github.com/citusdata/citus",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e331",
+      "source": "citus",
+      "target": "extension",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://github.com/citusdata/citus",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e332",
+      "source": "spatialite",
+      "target": "relational",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://www.gaia-gis.it/fossil/libspatialite/index",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e333",
+      "source": "spatialite",
+      "target": "spatial",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://www.gaia-gis.it/fossil/libspatialite/index",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e334",
+      "source": "spatialite",
+      "target": "embedded",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://www.gaia-gis.it/fossil/libspatialite/index",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e335",
+      "source": "spatialite",
+      "target": "extension",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://www.gaia-gis.it/fossil/libspatialite/index",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e336",
+      "source": "sqlite",
+      "target": "relational",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://sqlite.org/about.html",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e337",
+      "source": "sqlite",
+      "target": "embedded",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://sqlite.org/about.html",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e338",
+      "source": "duckdb",
+      "target": "relational",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://duckdb.org/",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e339",
+      "source": "duckdb",
+      "target": "embedded",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://duckdb.org/",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e340",
+      "source": "duckdb",
+      "target": "olap",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://duckdb.org/",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e341",
+      "source": "duckdb",
+      "target": "columnar",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://duckdb.org/",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e342",
+      "source": "clickhouse",
+      "target": "relational",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/ClickHouse",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e343",
+      "source": "clickhouse",
+      "target": "olap",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/ClickHouse",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e344",
+      "source": "clickhouse",
+      "target": "columnar",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/ClickHouse",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e345",
+      "source": "clickhouse",
+      "target": "timeseries",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/ClickHouse",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e346",
+      "source": "elasticsearch",
+      "target": "document",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/Elasticsearch",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e347",
+      "source": "elasticsearch",
+      "target": "search",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/Elasticsearch",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e348",
+      "source": "elasticsearch",
+      "target": "vector",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/Elasticsearch",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e349",
+      "source": "elasticsearch",
+      "target": "spatial",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/Elasticsearch",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e350",
+      "source": "doris",
+      "target": "relational",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://doris.apache.org/",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e351",
+      "source": "doris",
+      "target": "olap",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://doris.apache.org/",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e352",
+      "source": "doris",
+      "target": "columnar",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://doris.apache.org/",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e353",
+      "source": "starrocks",
+      "target": "relational",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://www.starrocks.io/",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e354",
+      "source": "starrocks",
+      "target": "olap",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://www.starrocks.io/",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e355",
+      "source": "starrocks",
+      "target": "columnar",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://www.starrocks.io/",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e356",
+      "source": "tidb",
+      "target": "relational",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://docs.pingcap.com/tidb/stable/tidb-introduction/",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e357",
+      "source": "tidb",
+      "target": "distributed_sql",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://docs.pingcap.com/tidb/stable/tidb-introduction/",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e358",
+      "source": "cockroachdb",
+      "target": "relational",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/CockroachDB",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e359",
+      "source": "cockroachdb",
+      "target": "distributed_sql",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/CockroachDB",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e360",
+      "source": "cockroachdb",
+      "target": "document",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/CockroachDB",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e361",
+      "source": "cockroachdb",
+      "target": "spatial",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/CockroachDB",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e362",
+      "source": "cockroachdb",
+      "target": "vector",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/CockroachDB",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e363",
+      "source": "oceanbase",
+      "target": "relational",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://en.oceanbase.com/docs",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e364",
+      "source": "oceanbase",
+      "target": "distributed_sql",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://en.oceanbase.com/docs",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e365",
+      "source": "spanner",
+      "target": "relational",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://cloud.google.com/spanner/docs/overview",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e366",
+      "source": "spanner",
+      "target": "distributed_sql",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://cloud.google.com/spanner/docs/overview",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e367",
+      "source": "yugabytedb",
+      "target": "relational",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://docs.yugabyte.com/",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e368",
+      "source": "yugabytedb",
+      "target": "distributed_sql",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://docs.yugabyte.com/",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e369",
+      "source": "singlestore",
+      "target": "relational",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/SingleStore",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e370",
+      "source": "singlestore",
+      "target": "distributed_sql",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/SingleStore",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e371",
+      "source": "singlestore",
+      "target": "olap",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/SingleStore",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e372",
+      "source": "singlestore",
+      "target": "columnar",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/SingleStore",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e373",
+      "source": "ignite",
+      "target": "memory",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/Apache+Ignite",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e374",
+      "source": "ignite",
+      "target": "distributed_kv",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/Apache+Ignite",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e375",
+      "source": "ignite",
+      "target": "relational",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://db-engines.com/en/system/Apache+Ignite",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e376",
+      "source": "risingwave",
+      "target": "relational",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://docs.risingwave.com/",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e377",
+      "source": "risingwave",
+      "target": "stream",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://docs.risingwave.com/",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e378",
+      "source": "materialize",
+      "target": "relational",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://materialize.com/docs/",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e379",
+      "source": "materialize",
+      "target": "stream",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://materialize.com/docs/",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e380",
+      "source": "xtdb",
+      "target": "relational",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://docs.xtdb.com/",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e381",
+      "source": "xtdb",
+      "target": "temporal",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://docs.xtdb.com/",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e382",
+      "source": "tiledb",
+      "target": "array",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://tiledb.com/",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e383",
+      "source": "tiledb",
+      "target": "embedded",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://tiledb.com/",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e384",
+      "source": "rocksdb",
+      "target": "key_value",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://rocksdb.org/",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e385",
+      "source": "rocksdb",
+      "target": "embedded",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://rocksdb.org/",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e386",
+      "source": "rocksdb",
+      "target": "kv_engine",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://rocksdb.org/",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e387",
+      "source": "lmdb",
+      "target": "key_value",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://www.symas.com/lmdb",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e388",
+      "source": "lmdb",
+      "target": "embedded",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://www.symas.com/lmdb",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e389",
+      "source": "lmdb",
+      "target": "kv_engine",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://www.symas.com/lmdb",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e390",
+      "source": "innodb",
+      "target": "storage_engine",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://dev.mysql.com/doc/refman/8.4/en/innodb-introduction.html",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e391",
+      "source": "tiflash",
+      "target": "columnar",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://docs.pingcap.com/tidb/stable/tiflash-overview/",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e392",
+      "source": "mysql",
+      "target": "oltp",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://dev.mysql.com/doc/refman/8.4/en/innodb-introduction.html",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e393",
+      "source": "mysql",
+      "target": "row_store",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://dev.mysql.com/doc/refman/8.4/en/innodb-introduction.html",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e394",
+      "source": "postgresql",
+      "target": "oltp",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://www.postgresql.org/docs/current/storage-page-layout.html",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e395",
+      "source": "postgresql",
+      "target": "row_store",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://www.postgresql.org/docs/current/storage-page-layout.html",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e396",
+      "source": "tidb",
+      "target": "htap",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://docs.pingcap.com/tidb/stable/tidb-introduction/",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e397",
+      "source": "redis",
+      "target": "cache",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://redis.io/docs/latest/develop/",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e398",
+      "source": "memcached",
+      "target": "cache",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://memcached.org/",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e399",
+      "source": "memcached",
+      "target": "memory",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://memcached.org/",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e400",
+      "source": "rocksdb",
+      "target": "lsm",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://rocksdb.org/docs/getting-started.html",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e401",
+      "source": "leveldb",
+      "target": "lsm",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://github.com/google/leveldb",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e402",
+      "source": "innodb",
+      "target": "btree",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://dev.mysql.com/doc/refman/8.4/en/innodb-physical-structure.html",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e403",
+      "source": "innodb",
+      "target": "row_store",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://dev.mysql.com/doc/refman/8.4/en/innodb-physical-structure.html",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e404",
+      "source": "yottadb",
+      "target": "key_value",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://github.com/yottadb/ydb",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e405",
+      "source": "idms",
+      "target": "relational",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://knowledge.broadcom.com/external/article?articleId=210835",
+      "detail": "同时提供 SQL schema",
+      "cross": true
+    },
+    {
+      "id": "e406",
+      "source": "oracle",
+      "target": "object_relational",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://docs.oracle.com/en/database/oracle/oracle-database/21/adobj/index.html",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e407",
+      "source": "stardog",
+      "target": "deductive",
+      "relation": "支持 / 属于",
+      "sourceUrl": "https://docs.stardog.com/inference-engine/",
+      "detail": "",
+      "cross": true
+    },
+    {
+      "id": "e408",
+      "source": "nosql",
+      "target": "key_value",
+      "relation": "常见路线",
+      "sourceUrl": "https://db-engines.com/en/ranking_categories",
+      "detail": "非严格排他定义",
+      "conceptual": true
+    },
+    {
+      "id": "e409",
+      "source": "nosql",
+      "target": "document",
+      "relation": "常见路线",
+      "sourceUrl": "https://db-engines.com/en/ranking_categories",
+      "detail": "非严格排他定义",
+      "conceptual": true
+    },
+    {
+      "id": "e410",
+      "source": "nosql",
+      "target": "wide_column",
+      "relation": "常见路线",
+      "sourceUrl": "https://db-engines.com/en/ranking_categories",
+      "detail": "非严格排他定义",
+      "conceptual": true
+    },
+    {
+      "id": "e411",
+      "source": "nosql",
+      "target": "property_graph",
+      "relation": "常见路线",
+      "sourceUrl": "https://db-engines.com/en/ranking_categories",
+      "detail": "非严格排他定义",
+      "conceptual": true
+    },
+    {
+      "id": "e412",
+      "source": "newsql",
+      "target": "distributed_sql",
+      "relation": "常见架构",
+      "sourceUrl": "https://db.cs.cmu.edu/papers/2016/pavlo-newsql-sigmodrec2016.pdf",
+      "detail": "并非一切 NewSQL 都必须采用同一种分布式架构",
+      "conceptual": true
+    },
+    {
+      "id": "e413",
+      "source": "sql",
+      "target": "relational",
+      "relation": "常用语言",
+      "sourceUrl": "https://www.postgresql.org/docs/current/tutorial-sql.html",
+      "detail": "SQL 与关系模型不是同一层概念",
+      "conceptual": true
+    },
+    {
+      "id": "e414",
+      "source": "sql",
+      "target": "bigtable",
+      "relation": "也支持",
+      "sourceUrl": "https://cloud.google.com/bigtable/docs/overview",
+      "detail": "支持 SQL 查询不把宽列模型变成关系模型",
+      "conceptual": true
+    },
+    {
+      "id": "e415",
+      "source": "object_relational",
+      "target": "relational",
+      "relation": "扩展路线",
+      "sourceUrl": "https://www.postgresql.org/docs/current/intro-whatis.html",
+      "detail": "不是与关系型互斥的类别",
+      "conceptual": true
+    },
+    {
+      "id": "e416",
+      "source": "xml",
+      "target": "document",
+      "relation": "特定文档模型",
+      "sourceUrl": "https://www.exist-db.org/exist/apps/homepage/index.html",
+      "detail": "原生 XML 与普通文档产品有区别",
+      "conceptual": true
+    }
+  ]
+}

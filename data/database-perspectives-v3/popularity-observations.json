@@ -1,0 +1,4407 @@
+{
+  "month": "2026-10",
+  "sourceUrl": "https://db-engines.com/en/ranking",
+  "scope": "Full 440-row snapshot; deltas and prior ranks are reported in current table, not reconstructed monthly series.",
+  "rows": [
+    {
+      "name": "Oracle",
+      "sourceUrl": "https://db-engines.com/en/system/Oracle",
+      "rank": 1,
+      "previousMonthRank": 1,
+      "previousYearRank": 1,
+      "score": 1119.79,
+      "monthDelta": -2.48,
+      "yearDelta": -92.98
+    },
+    {
+      "name": "MySQL",
+      "sourceUrl": "https://db-engines.com/en/system/MySQL",
+      "rank": 2,
+      "previousMonthRank": 2,
+      "previousYearRank": 2,
+      "score": 837.96,
+      "monthDelta": -6.85,
+      "yearDelta": -41.7
+    },
+    {
+      "name": "Microsoft SQL Server",
+      "sourceUrl": "https://db-engines.com/en/system/Microsoft+SQL+Server",
+      "rank": 3,
+      "previousMonthRank": 3,
+      "previousYearRank": 3,
+      "score": 694.47,
+      "monthDelta": -4.22,
+      "yearDelta": -20.58
+    },
+    {
+      "name": "PostgreSQL",
+      "sourceUrl": "https://db-engines.com/en/system/PostgreSQL",
+      "rank": 4,
+      "previousMonthRank": 4,
+      "previousYearRank": 4,
+      "score": 688.75,
+      "monthDelta": 5.5,
+      "yearDelta": 45.56
+    },
+    {
+      "name": "MongoDB",
+      "sourceUrl": "https://db-engines.com/en/system/MongoDB",
+      "rank": 5,
+      "previousMonthRank": 5,
+      "previousYearRank": 5,
+      "score": 374.64,
+      "monthDelta": -6.66,
+      "yearDelta": 6.63
+    },
+    {
+      "name": "Snowflake",
+      "sourceUrl": "https://db-engines.com/en/system/Snowflake",
+      "rank": 6,
+      "previousMonthRank": 6,
+      "previousYearRank": 6,
+      "score": 221.3,
+      "monthDelta": 9.69,
+      "yearDelta": 22.65
+    },
+    {
+      "name": "Databricks",
+      "sourceUrl": "https://db-engines.com/en/system/Databricks",
+      "rank": 7,
+      "previousMonthRank": 7,
+      "previousYearRank": 8,
+      "score": 171.24,
+      "monthDelta": 2.9,
+      "yearDelta": 42.44
+    },
+    {
+      "name": "Redis",
+      "sourceUrl": "https://db-engines.com/en/system/Redis",
+      "rank": 8,
+      "previousMonthRank": 8,
+      "previousYearRank": 7,
+      "score": 156.09,
+      "monthDelta": -1.97,
+      "yearDelta": 13.76
+    },
+    {
+      "name": "IBM Db2",
+      "sourceUrl": "https://db-engines.com/en/system/IBM+Db2",
+      "rank": 9,
+      "previousMonthRank": 9,
+      "previousYearRank": 9,
+      "score": 106.29,
+      "monthDelta": -4.28,
+      "yearDelta": -16.08
+    },
+    {
+      "name": "Apache Cassandra",
+      "sourceUrl": "https://db-engines.com/en/system/Apache+Cassandra",
+      "rank": 10,
+      "previousMonthRank": 12,
+      "previousYearRank": 11,
+      "score": 98.86,
+      "monthDelta": 4.9,
+      "yearDelta": -6.3
+    },
+    {
+      "name": "SQLite",
+      "sourceUrl": "https://db-engines.com/en/system/SQLite",
+      "rank": 11,
+      "previousMonthRank": 10,
+      "previousYearRank": 12,
+      "score": 95.73,
+      "monthDelta": -1.32,
+      "yearDelta": -8.82
+    },
+    {
+      "name": "Elasticsearch",
+      "sourceUrl": "https://db-engines.com/en/system/Elasticsearch",
+      "rank": 12,
+      "previousMonthRank": 11,
+      "previousYearRank": 10,
+      "score": 94.11,
+      "monthDelta": -1.39,
+      "yearDelta": -22.55
+    },
+    {
+      "name": "MariaDB",
+      "sourceUrl": "https://db-engines.com/en/system/MariaDB",
+      "rank": 13,
+      "previousMonthRank": 13,
+      "previousYearRank": 13,
+      "score": 75.6,
+      "monthDelta": 1.18,
+      "yearDelta": -12.16
+    },
+    {
+      "name": "Apache Hive",
+      "sourceUrl": "https://db-engines.com/en/system/Apache+Hive",
+      "rank": 14,
+      "previousMonthRank": 16,
+      "previousYearRank": 17,
+      "score": 69.58,
+      "monthDelta": -0.53,
+      "yearDelta": -5.64
+    },
+    {
+      "name": "Splunk",
+      "sourceUrl": "https://db-engines.com/en/system/Splunk",
+      "rank": 15,
+      "previousMonthRank": 14,
+      "previousYearRank": 18,
+      "score": 69.25,
+      "monthDelta": -2.43,
+      "yearDelta": -4.62
+    },
+    {
+      "name": "Microsoft Azure SQL Database",
+      "sourceUrl": "https://db-engines.com/en/system/Microsoft+Azure+SQL+Database",
+      "rank": 16,
+      "previousMonthRank": 15,
+      "previousYearRank": 16,
+      "score": 68.55,
+      "monthDelta": -2.29,
+      "yearDelta": -6.94
+    },
+    {
+      "name": "Microsoft Access",
+      "sourceUrl": "https://db-engines.com/en/system/Microsoft+Access",
+      "rank": 17,
+      "previousMonthRank": 17,
+      "previousYearRank": 14,
+      "score": 63.32,
+      "monthDelta": 0.27,
+      "yearDelta": -17.47
+    },
+    {
+      "name": "Amazon DynamoDB",
+      "sourceUrl": "https://db-engines.com/en/system/Amazon+DynamoDB",
+      "rank": 18,
+      "previousMonthRank": 18,
+      "previousYearRank": 15,
+      "score": 53.41,
+      "monthDelta": -2.94,
+      "yearDelta": -22.49
+    },
+    {
+      "name": "Google BigQuery",
+      "sourceUrl": "https://db-engines.com/en/system/Google+BigQuery",
+      "rank": 19,
+      "previousMonthRank": 19,
+      "previousYearRank": 19,
+      "score": 49.78,
+      "monthDelta": -2.8,
+      "yearDelta": -13.43
+    },
+    {
+      "name": "Neo4j",
+      "sourceUrl": "https://db-engines.com/en/system/Neo4j",
+      "rank": 20,
+      "previousMonthRank": 20,
+      "previousYearRank": 20,
+      "score": 48.88,
+      "monthDelta": 1.72,
+      "yearDelta": -3.63
+    },
+    {
+      "name": "Apache Solr",
+      "sourceUrl": "https://db-engines.com/en/system/Apache+Solr",
+      "rank": 21,
+      "previousMonthRank": 21,
+      "previousYearRank": 21,
+      "score": 32.41,
+      "monthDelta": -1.62,
+      "yearDelta": -2.9
+    },
+    {
+      "name": "SAP HANA",
+      "sourceUrl": "https://db-engines.com/en/system/SAP+HANA",
+      "rank": 22,
+      "previousMonthRank": 22,
+      "previousYearRank": 24,
+      "score": 32.4,
+      "monthDelta": -0.79,
+      "yearDelta": 0.75
+    },
+    {
+      "name": "Teradata",
+      "sourceUrl": "https://db-engines.com/en/system/Teradata",
+      "rank": 23,
+      "previousMonthRank": 23,
+      "previousYearRank": 22,
+      "score": 31.23,
+      "monthDelta": 0.05,
+      "yearDelta": -1.88
+    },
+    {
+      "name": "FileMaker",
+      "sourceUrl": "https://db-engines.com/en/system/FileMaker",
+      "rank": 24,
+      "previousMonthRank": 24,
+      "previousYearRank": 23,
+      "score": 29.8,
+      "monthDelta": -0.35,
+      "yearDelta": -3.03
+    },
+    {
+      "name": "ClickHouse",
+      "sourceUrl": "https://db-engines.com/en/system/ClickHouse",
+      "rank": 25,
+      "previousMonthRank": 26,
+      "previousYearRank": 30,
+      "score": 26.18,
+      "monthDelta": 0.35,
+      "yearDelta": 6
+    },
+    {
+      "name": "SAP Adaptive Server",
+      "sourceUrl": "https://db-engines.com/en/system/SAP+Adaptive+Server",
+      "rank": 26,
+      "previousMonthRank": 25,
+      "previousYearRank": 25,
+      "score": 24.87,
+      "monthDelta": -1.19,
+      "yearDelta": -2.28
+    },
+    {
+      "name": "PostGIS",
+      "sourceUrl": "https://db-engines.com/en/system/PostGIS",
+      "rank": 27,
+      "previousMonthRank": 27,
+      "previousYearRank": 29,
+      "score": 23.96,
+      "monthDelta": 0.1,
+      "yearDelta": 2.91
+    },
+    {
+      "name": "OpenSearch",
+      "sourceUrl": "https://db-engines.com/en/system/OpenSearch",
+      "rank": 28,
+      "previousMonthRank": 30,
+      "previousYearRank": 32,
+      "score": 22.72,
+      "monthDelta": 0.61,
+      "yearDelta": 3.42
+    },
+    {
+      "name": "Apache Spark (SQL)",
+      "sourceUrl": "https://db-engines.com/en/system/Apache+Spark+%28SQL%29",
+      "rank": 29,
+      "previousMonthRank": 28,
+      "previousYearRank": 26,
+      "score": 22.37,
+      "monthDelta": -0.95,
+      "yearDelta": -1.41
+    },
+    {
+      "name": "Microsoft Azure Cosmos DB",
+      "sourceUrl": "https://db-engines.com/en/system/Microsoft+Azure+Cosmos+DB",
+      "rank": 30,
+      "previousMonthRank": 31,
+      "previousYearRank": 27,
+      "score": 21.38,
+      "monthDelta": 1.03,
+      "yearDelta": -1.33
+    },
+    {
+      "name": "InfluxDB",
+      "sourceUrl": "https://db-engines.com/en/system/InfluxDB",
+      "rank": 31,
+      "previousMonthRank": 29,
+      "previousYearRank": 28,
+      "score": 21.22,
+      "monthDelta": -1.08,
+      "yearDelta": -0.69
+    },
+    {
+      "name": "Microsoft Fabric",
+      "sourceUrl": "https://db-engines.com/en/system/Microsoft+Fabric",
+      "rank": 32,
+      "previousMonthRank": 32,
+      "previousYearRank": null,
+      "score": 18.99,
+      "monthDelta": -0.42,
+      "yearDelta": null
+    },
+    {
+      "name": "Firebird",
+      "sourceUrl": "https://db-engines.com/en/system/Firebird",
+      "rank": 33,
+      "previousMonthRank": 34,
+      "previousYearRank": 33,
+      "score": 18.36,
+      "monthDelta": 0.93,
+      "yearDelta": 0.94
+    },
+    {
+      "name": "Apache HBase",
+      "sourceUrl": "https://db-engines.com/en/system/Apache+HBase",
+      "rank": 34,
+      "previousMonthRank": 33,
+      "previousYearRank": 31,
+      "score": 18.22,
+      "monthDelta": -0.34,
+      "yearDelta": -1.95
+    },
+    {
+      "name": "Amazon Redshift",
+      "sourceUrl": "https://db-engines.com/en/system/Amazon+Redshift",
+      "rank": 35,
+      "previousMonthRank": 35,
+      "previousYearRank": 37,
+      "score": 17.08,
+      "monthDelta": 0.62,
+      "yearDelta": 2.49
+    },
+    {
+      "name": "Microsoft Azure Synapse Analytics",
+      "sourceUrl": "https://db-engines.com/en/system/Microsoft+Azure+Synapse+Analytics",
+      "rank": 36,
+      "previousMonthRank": 36,
+      "previousYearRank": 38,
+      "score": 15.9,
+      "monthDelta": -0.29,
+      "yearDelta": 2.09
+    },
+    {
+      "name": "Firebase Realtime Database",
+      "sourceUrl": "https://db-engines.com/en/system/Firebase+Realtime+Database",
+      "rank": 37,
+      "previousMonthRank": 37,
+      "previousYearRank": 35,
+      "score": 15.55,
+      "monthDelta": 0.59,
+      "yearDelta": 0.28
+    },
+    {
+      "name": "Informix",
+      "sourceUrl": "https://db-engines.com/en/system/Informix",
+      "rank": 38,
+      "previousMonthRank": 39,
+      "previousYearRank": 36,
+      "score": 13.29,
+      "monthDelta": 0.41,
+      "yearDelta": -1.63
+    },
+    {
+      "name": "Memcached",
+      "sourceUrl": "https://db-engines.com/en/system/Memcached",
+      "rank": 39,
+      "previousMonthRank": 38,
+      "previousYearRank": 34,
+      "score": 12.96,
+      "monthDelta": -0.1,
+      "yearDelta": -2.52
+    },
+    {
+      "name": "Apache Flink",
+      "sourceUrl": "https://db-engines.com/en/system/Apache+Flink",
+      "rank": 40,
+      "previousMonthRank": 40,
+      "previousYearRank": 41,
+      "score": 11.57,
+      "monthDelta": 0.06,
+      "yearDelta": -0.07
+    },
+    {
+      "name": "DuckDB",
+      "sourceUrl": "https://db-engines.com/en/system/DuckDB",
+      "rank": 41,
+      "previousMonthRank": 42,
+      "previousYearRank": 44,
+      "score": 11.43,
+      "monthDelta": 0.83,
+      "yearDelta": 2.5
+    },
+    {
+      "name": "Apache Impala",
+      "sourceUrl": "https://db-engines.com/en/system/Apache+Impala",
+      "rank": 42,
+      "previousMonthRank": 41,
+      "previousYearRank": 39,
+      "score": 11.04,
+      "monthDelta": -0.06,
+      "yearDelta": -2.25
+    },
+    {
+      "name": "Amazon Aurora",
+      "sourceUrl": "https://db-engines.com/en/system/Amazon+Aurora",
+      "rank": 43,
+      "previousMonthRank": 44,
+      "previousYearRank": 45,
+      "score": 10.15,
+      "monthDelta": 0.58,
+      "yearDelta": 2.1
+    },
+    {
+      "name": "Couchbase",
+      "sourceUrl": "https://db-engines.com/en/system/Couchbase",
+      "rank": 44,
+      "previousMonthRank": 45,
+      "previousYearRank": 40,
+      "score": 10.14,
+      "monthDelta": 0.71,
+      "yearDelta": -1.82
+    },
+    {
+      "name": "Prometheus",
+      "sourceUrl": "https://db-engines.com/en/system/Prometheus",
+      "rank": 45,
+      "previousMonthRank": 47,
+      "previousYearRank": 48,
+      "score": 9.72,
+      "monthDelta": 0.73,
+      "yearDelta": 2.24
+    },
+    {
+      "name": "Pinecone",
+      "sourceUrl": "https://db-engines.com/en/system/Pinecone",
+      "rank": 46,
+      "previousMonthRank": 46,
+      "previousYearRank": 54,
+      "score": 9.63,
+      "monthDelta": 0.56,
+      "yearDelta": 2.95
+    },
+    {
+      "name": "H2",
+      "sourceUrl": "https://db-engines.com/en/system/H2",
+      "rank": 47,
+      "previousMonthRank": 43,
+      "previousYearRank": 46,
+      "score": 9.15,
+      "monthDelta": -0.49,
+      "yearDelta": 1.63
+    },
+    {
+      "name": "Google Cloud Firestore",
+      "sourceUrl": "https://db-engines.com/en/system/Google+Cloud+Firestore",
+      "rank": 48,
+      "previousMonthRank": 48,
+      "previousYearRank": 42,
+      "score": 8.73,
+      "monthDelta": -0.14,
+      "yearDelta": -0.69
+    },
+    {
+      "name": "Trino",
+      "sourceUrl": "https://db-engines.com/en/system/Trino",
+      "rank": 49,
+      "previousMonthRank": 50,
+      "previousYearRank": 56,
+      "score": 8,
+      "monthDelta": 0.21,
+      "yearDelta": 1.65
+    },
+    {
+      "name": "Vertica",
+      "sourceUrl": "https://db-engines.com/en/system/Vertica",
+      "rank": 50,
+      "previousMonthRank": 51,
+      "previousYearRank": 43,
+      "score": 7.91,
+      "monthDelta": 0.17,
+      "yearDelta": -1.43
+    },
+    {
+      "name": "Kdb",
+      "sourceUrl": "https://db-engines.com/en/system/Kdb",
+      "rank": 51,
+      "previousMonthRank": 49,
+      "previousYearRank": 47,
+      "score": 7.84,
+      "monthDelta": -0.58,
+      "yearDelta": 0.33
+    },
+    {
+      "name": "etcd",
+      "sourceUrl": "https://db-engines.com/en/system/etcd",
+      "rank": 52,
+      "previousMonthRank": 52,
+      "previousYearRank": 50,
+      "score": 7.35,
+      "monthDelta": -0.01,
+      "yearDelta": 0.01
+    },
+    {
+      "name": "Milvus",
+      "sourceUrl": "https://db-engines.com/en/system/Milvus",
+      "rank": 53,
+      "previousMonthRank": 53,
+      "previousYearRank": 66,
+      "score": 7.09,
+      "monthDelta": 0.24,
+      "yearDelta": 2.55
+    },
+    {
+      "name": "Qdrant",
+      "sourceUrl": "https://db-engines.com/en/system/Qdrant",
+      "rank": 54,
+      "previousMonthRank": 54,
+      "previousYearRank": 71,
+      "score": 7.06,
+      "monthDelta": 0.25,
+      "yearDelta": 3.33
+    },
+    {
+      "name": "dBASE",
+      "sourceUrl": "https://db-engines.com/en/system/dBASE",
+      "rank": 55,
+      "previousMonthRank": 55,
+      "previousYearRank": 49,
+      "score": 7.04,
+      "monthDelta": 0.27,
+      "yearDelta": -0.32
+    },
+    {
+      "name": "Realm",
+      "sourceUrl": "https://db-engines.com/en/system/Realm",
+      "rank": 56,
+      "previousMonthRank": 58,
+      "previousYearRank": 52,
+      "score": 6.73,
+      "monthDelta": 0.31,
+      "yearDelta": -0.15
+    },
+    {
+      "name": "Algolia",
+      "sourceUrl": "https://db-engines.com/en/system/Algolia",
+      "rank": 57,
+      "previousMonthRank": 56,
+      "previousYearRank": 53,
+      "score": 6.45,
+      "monthDelta": -0.16,
+      "yearDelta": -0.34
+    },
+    {
+      "name": "Microsoft Azure AI Search",
+      "sourceUrl": "https://db-engines.com/en/system/Microsoft+Azure+AI+Search",
+      "rank": 58,
+      "previousMonthRank": 57,
+      "previousYearRank": 59,
+      "score": 6.33,
+      "monthDelta": -0.23,
+      "yearDelta": 0.33
+    },
+    {
+      "name": "TimescaleDB",
+      "sourceUrl": "https://db-engines.com/en/system/TimescaleDB",
+      "rank": 59,
+      "previousMonthRank": 63,
+      "previousYearRank": 64,
+      "score": 6.32,
+      "monthDelta": 0.4,
+      "yearDelta": 1.73
+    },
+    {
+      "name": "CouchDB",
+      "sourceUrl": "https://db-engines.com/en/system/CouchDB",
+      "rank": 60,
+      "previousMonthRank": 61,
+      "previousYearRank": 55,
+      "score": 6.24,
+      "monthDelta": 0.29,
+      "yearDelta": -0.3
+    },
+    {
+      "name": "Presto",
+      "sourceUrl": "https://db-engines.com/en/system/Presto",
+      "rank": 61,
+      "previousMonthRank": 59,
+      "previousYearRank": 58,
+      "score": 6.23,
+      "monthDelta": 0.05,
+      "yearDelta": 0.01
+    },
+    {
+      "name": "Netezza",
+      "sourceUrl": "https://db-engines.com/en/system/Netezza",
+      "rank": 62,
+      "previousMonthRank": 60,
+      "previousYearRank": 57,
+      "score": 5.87,
+      "monthDelta": -0.07,
+      "yearDelta": -0.4
+    },
+    {
+      "name": "Sphinx",
+      "sourceUrl": "https://db-engines.com/en/system/Sphinx",
+      "rank": 63,
+      "previousMonthRank": 62,
+      "previousYearRank": 60,
+      "score": 5.84,
+      "monthDelta": -0.09,
+      "yearDelta": -0.1
+    },
+    {
+      "name": "Greenplum",
+      "sourceUrl": "https://db-engines.com/en/system/Greenplum",
+      "rank": 64,
+      "previousMonthRank": 64,
+      "previousYearRank": 51,
+      "score": 5.75,
+      "monthDelta": 0.17,
+      "yearDelta": -1.38
+    },
+    {
+      "name": "Weaviate",
+      "sourceUrl": "https://db-engines.com/en/system/Weaviate",
+      "rank": 65,
+      "previousMonthRank": 67,
+      "previousYearRank": 81,
+      "score": 5.14,
+      "monthDelta": 0.4,
+      "yearDelta": 1.83
+    },
+    {
+      "name": "ScyllaDB",
+      "sourceUrl": "https://db-engines.com/en/system/ScyllaDB",
+      "rank": 66,
+      "previousMonthRank": 65,
+      "previousYearRank": 69,
+      "score": 4.76,
+      "monthDelta": -0.12,
+      "yearDelta": 0.91
+    },
+    {
+      "name": "Apache Druid",
+      "sourceUrl": "https://db-engines.com/en/system/Apache+Druid",
+      "rank": 67,
+      "previousMonthRank": 69,
+      "previousYearRank": 74,
+      "score": 4.67,
+      "monthDelta": 0.3,
+      "yearDelta": 1.03
+    },
+    {
+      "name": "Hazelcast",
+      "sourceUrl": "https://db-engines.com/en/system/Hazelcast",
+      "rank": 68,
+      "previousMonthRank": 68,
+      "previousYearRank": 61,
+      "score": 4.58,
+      "monthDelta": 0.06,
+      "yearDelta": -0.71
+    },
+    {
+      "name": "DolphinDB",
+      "sourceUrl": "https://db-engines.com/en/system/DolphinDB",
+      "rank": 69,
+      "previousMonthRank": 66,
+      "previousYearRank": 118,
+      "score": 4.55,
+      "monthDelta": -0.28,
+      "yearDelta": 2.49
+    },
+    {
+      "name": "CockroachDB",
+      "sourceUrl": "https://db-engines.com/en/system/CockroachDB",
+      "rank": 70,
+      "previousMonthRank": 72,
+      "previousYearRank": 65,
+      "score": 4.43,
+      "monthDelta": 0.21,
+      "yearDelta": -0.14
+    },
+    {
+      "name": "Aerospike",
+      "sourceUrl": "https://db-engines.com/en/system/Aerospike",
+      "rank": 71,
+      "previousMonthRank": 73,
+      "previousYearRank": 67,
+      "score": 4.3,
+      "monthDelta": 0.18,
+      "yearDelta": -0.23
+    },
+    {
+      "name": "Oracle Essbase",
+      "sourceUrl": "https://db-engines.com/en/system/Oracle+Essbase",
+      "rank": 72,
+      "previousMonthRank": 70,
+      "previousYearRank": 62,
+      "score": 4.29,
+      "monthDelta": -0.06,
+      "yearDelta": -0.63
+    },
+    {
+      "name": "RocksDB",
+      "sourceUrl": "https://db-engines.com/en/system/RocksDB",
+      "rank": 73,
+      "previousMonthRank": 76,
+      "previousYearRank": 91,
+      "score": 4.25,
+      "monthDelta": 0.46,
+      "yearDelta": 1.41
+    },
+    {
+      "name": "Graphite",
+      "sourceUrl": "https://db-engines.com/en/system/Graphite",
+      "rank": 74,
+      "previousMonthRank": 71,
+      "previousYearRank": 63,
+      "score": 4.2,
+      "monthDelta": -0.05,
+      "yearDelta": -0.71
+    },
+    {
+      "name": "MarkLogic",
+      "sourceUrl": "https://db-engines.com/en/system/MarkLogic",
+      "rank": 75,
+      "previousMonthRank": 75,
+      "previousYearRank": 68,
+      "score": 3.87,
+      "monthDelta": 0.07,
+      "yearDelta": -0.27
+    },
+    {
+      "name": "Apache Jackrabbit",
+      "sourceUrl": "https://db-engines.com/en/system/Apache+Jackrabbit",
+      "rank": 76,
+      "previousMonthRank": 74,
+      "previousYearRank": 73,
+      "score": 3.77,
+      "monthDelta": -0.05,
+      "yearDelta": 0.12
+    },
+    {
+      "name": "Interbase",
+      "sourceUrl": "https://db-engines.com/en/system/Interbase",
+      "rank": 77,
+      "previousMonthRank": 79,
+      "previousYearRank": 76,
+      "score": 3.76,
+      "monthDelta": 0.37,
+      "yearDelta": 0.18
+    },
+    {
+      "name": "Oracle NoSQL",
+      "sourceUrl": "https://db-engines.com/en/system/Oracle+NoSQL",
+      "rank": 78,
+      "previousMonthRank": 77,
+      "previousYearRank": 79,
+      "score": 3.54,
+      "monthDelta": -0.03,
+      "yearDelta": 0.19
+    },
+    {
+      "name": "OpenEdge",
+      "sourceUrl": "https://db-engines.com/en/system/OpenEdge",
+      "rank": 79,
+      "previousMonthRank": 84,
+      "previousYearRank": 70,
+      "score": 3.45,
+      "monthDelta": 0.28,
+      "yearDelta": -0.33
+    },
+    {
+      "name": "TiDB",
+      "sourceUrl": "https://db-engines.com/en/system/TiDB",
+      "rank": 80,
+      "previousMonthRank": 82,
+      "previousYearRank": 83,
+      "score": 3.33,
+      "monthDelta": 0.03,
+      "yearDelta": 0.14
+    },
+    {
+      "name": "SAP SQL Anywhere",
+      "sourceUrl": "https://db-engines.com/en/system/SAP+SQL+Anywhere",
+      "rank": 81,
+      "previousMonthRank": 94,
+      "previousYearRank": 82,
+      "score": 3.32,
+      "monthDelta": 0.38,
+      "yearDelta": 0.05
+    },
+    {
+      "name": "Google Cloud Datastore",
+      "sourceUrl": "https://db-engines.com/en/system/Google+Cloud+Datastore",
+      "rank": 82,
+      "previousMonthRank": 81,
+      "previousYearRank": 77,
+      "score": 3.32,
+      "monthDelta": -0.01,
+      "yearDelta": -0.23
+    },
+    {
+      "name": "Arango",
+      "sourceUrl": "https://db-engines.com/en/system/Arango",
+      "rank": 83,
+      "previousMonthRank": 80,
+      "previousYearRank": 89,
+      "score": 3.29,
+      "monthDelta": -0.1,
+      "yearDelta": 0.37
+    },
+    {
+      "name": "Datastax Enterprise",
+      "sourceUrl": "https://db-engines.com/en/system/Datastax+Enterprise",
+      "rank": 84,
+      "previousMonthRank": 83,
+      "previousYearRank": 78,
+      "score": 3.17,
+      "monthDelta": -0.01,
+      "yearDelta": -0.24
+    },
+    {
+      "name": "Alibaba Cloud PolarDB",
+      "sourceUrl": "https://db-engines.com/en/system/Alibaba+Cloud+PolarDB",
+      "rank": 85,
+      "previousMonthRank": 78,
+      "previousYearRank": 124,
+      "score": 3.16,
+      "monthDelta": -0.24,
+      "yearDelta": 1.23
+    },
+    {
+      "name": "Microsoft Azure Data Explorer",
+      "sourceUrl": "https://db-engines.com/en/system/Microsoft+Azure+Data+Explorer",
+      "rank": 86,
+      "previousMonthRank": 87,
+      "previousYearRank": 85,
+      "score": 3.13,
+      "monthDelta": 0.04,
+      "yearDelta": -0.01
+    },
+    {
+      "name": "Riak KV",
+      "sourceUrl": "https://db-engines.com/en/system/Riak+KV",
+      "rank": 87,
+      "previousMonthRank": 86,
+      "previousYearRank": 80,
+      "score": 3.07,
+      "monthDelta": -0.06,
+      "yearDelta": -0.25
+    },
+    {
+      "name": "SingleStore",
+      "sourceUrl": "https://db-engines.com/en/system/SingleStore",
+      "rank": 88,
+      "previousMonthRank": 89,
+      "previousYearRank": 86,
+      "score": 3.06,
+      "monthDelta": 0.01,
+      "yearDelta": 0.01
+    },
+    {
+      "name": "QuestDB",
+      "sourceUrl": "https://db-engines.com/en/system/QuestDB",
+      "rank": 89,
+      "previousMonthRank": 85,
+      "previousYearRank": 75,
+      "score": 3.05,
+      "monthDelta": -0.08,
+      "yearDelta": -0.54
+    },
+    {
+      "name": "TDengine",
+      "sourceUrl": "https://db-engines.com/en/system/TDengine",
+      "rank": 90,
+      "previousMonthRank": 90,
+      "previousYearRank": 137,
+      "score": 3.04,
+      "monthDelta": 0.03,
+      "yearDelta": 1.31
+    },
+    {
+      "name": "Ingres",
+      "sourceUrl": "https://db-engines.com/en/system/Ingres",
+      "rank": 91,
+      "previousMonthRank": 88,
+      "previousYearRank": 72,
+      "score": 3.03,
+      "monthDelta": -0.05,
+      "yearDelta": -0.7
+    },
+    {
+      "name": "Chroma",
+      "sourceUrl": "https://db-engines.com/en/system/Chroma",
+      "rank": 92,
+      "previousMonthRank": 92,
+      "previousYearRank": 106,
+      "score": 3.03,
+      "monthDelta": 0.04,
+      "yearDelta": 0.6
+    },
+    {
+      "name": "Apache Derby",
+      "sourceUrl": "https://db-engines.com/en/system/Apache+Derby",
+      "rank": 93,
+      "previousMonthRank": 91,
+      "previousYearRank": 84,
+      "score": 2.98,
+      "monthDelta": -0.02,
+      "yearDelta": -0.18
+    },
+    {
+      "name": "Google Cloud Spanner",
+      "sourceUrl": "https://db-engines.com/en/system/Google+Cloud+Spanner",
+      "rank": 94,
+      "previousMonthRank": 93,
+      "previousYearRank": 92,
+      "score": 2.92,
+      "monthDelta": -0.05,
+      "yearDelta": 0.12
+    },
+    {
+      "name": "Valkey",
+      "sourceUrl": "https://db-engines.com/en/system/Valkey",
+      "rank": 95,
+      "previousMonthRank": 102,
+      "previousYearRank": 131,
+      "score": 2.86,
+      "monthDelta": 0.27,
+      "yearDelta": 1.06
+    },
+    {
+      "name": "Apache IoTDB",
+      "sourceUrl": "https://db-engines.com/en/system/Apache+IoTDB",
+      "rank": 96,
+      "previousMonthRank": 96,
+      "previousYearRank": 141,
+      "score": 2.85,
+      "monthDelta": 0.09,
+      "yearDelta": 1.21
+    },
+    {
+      "name": "Amazon Neptune",
+      "sourceUrl": "https://db-engines.com/en/system/Amazon+Neptune",
+      "rank": 97,
+      "previousMonthRank": 98,
+      "previousYearRank": 110,
+      "score": 2.83,
+      "monthDelta": 0.09,
+      "yearDelta": 0.57
+    },
+    {
+      "name": "Adabas",
+      "sourceUrl": "https://db-engines.com/en/system/Adabas",
+      "rank": 98,
+      "previousMonthRank": 95,
+      "previousYearRank": 93,
+      "score": 2.83,
+      "monthDelta": 0.02,
+      "yearDelta": 0.03
+    },
+    {
+      "name": "Apache Ignite",
+      "sourceUrl": "https://db-engines.com/en/system/Apache+Ignite",
+      "rank": 99,
+      "previousMonthRank": 97,
+      "previousYearRank": 87,
+      "score": 2.76,
+      "monthDelta": 0.01,
+      "yearDelta": -0.24
+    },
+    {
+      "name": "Ehcache",
+      "sourceUrl": "https://db-engines.com/en/system/Ehcache",
+      "rank": 100,
+      "previousMonthRank": 99,
+      "previousYearRank": 88,
+      "score": 2.74,
+      "monthDelta": 0.01,
+      "yearDelta": -0.24
+    },
+    {
+      "name": "Microsoft Azure Table Storage",
+      "sourceUrl": "https://db-engines.com/en/system/Microsoft+Azure+Table+Storage",
+      "rank": 101,
+      "previousMonthRank": 100,
+      "previousYearRank": 94,
+      "score": 2.65,
+      "monthDelta": 0.02,
+      "yearDelta": -0.14
+    },
+    {
+      "name": "GemFire",
+      "sourceUrl": "https://db-engines.com/en/system/GemFire",
+      "rank": 102,
+      "previousMonthRank": 103,
+      "previousYearRank": 95,
+      "score": 2.54,
+      "monthDelta": -0.01,
+      "yearDelta": -0.25
+    },
+    {
+      "name": "Apache Accumulo",
+      "sourceUrl": "https://db-engines.com/en/system/Apache+Accumulo",
+      "rank": 103,
+      "previousMonthRank": 104,
+      "previousYearRank": 108,
+      "score": 2.51,
+      "monthDelta": -0.03,
+      "yearDelta": 0.17
+    },
+    {
+      "name": "HyperSQL",
+      "sourceUrl": "https://db-engines.com/en/system/HyperSQL",
+      "rank": 104,
+      "previousMonthRank": 101,
+      "previousYearRank": 96,
+      "score": 2.5,
+      "monthDelta": -0.09,
+      "yearDelta": -0.26
+    },
+    {
+      "name": "Google Cloud Bigtable",
+      "sourceUrl": "https://db-engines.com/en/system/Google+Cloud+Bigtable",
+      "rank": 105,
+      "previousMonthRank": 105,
+      "previousYearRank": 99,
+      "score": 2.5,
+      "monthDelta": -0.02,
+      "yearDelta": -0.15
+    },
+    {
+      "name": "RethinkDB",
+      "sourceUrl": "https://db-engines.com/en/system/RethinkDB",
+      "rank": 106,
+      "previousMonthRank": 115,
+      "previousYearRank": 107,
+      "score": 2.49,
+      "monthDelta": 0.29,
+      "yearDelta": 0.14
+    },
+    {
+      "name": "OrientDB",
+      "sourceUrl": "https://db-engines.com/en/system/OrientDB",
+      "rank": 107,
+      "previousMonthRank": 106,
+      "previousYearRank": 100,
+      "score": 2.46,
+      "monthDelta": -0.04,
+      "yearDelta": -0.16
+    },
+    {
+      "name": "GraphDB",
+      "sourceUrl": "https://db-engines.com/en/system/GraphDB",
+      "rank": 108,
+      "previousMonthRank": 108,
+      "previousYearRank": 109,
+      "score": 2.44,
+      "monthDelta": 0.06,
+      "yearDelta": 0.14
+    },
+    {
+      "name": "IBM Cloudant",
+      "sourceUrl": "https://db-engines.com/en/system/IBM+Cloudant",
+      "rank": 109,
+      "previousMonthRank": 110,
+      "previousYearRank": 98,
+      "score": 2.43,
+      "monthDelta": 0.1,
+      "yearDelta": -0.24
+    },
+    {
+      "name": "Apache Jena - TDB",
+      "sourceUrl": "https://db-engines.com/en/system/Apache+Jena+-+TDB",
+      "rank": 110,
+      "previousMonthRank": 107,
+      "previousYearRank": 102,
+      "score": 2.38,
+      "monthDelta": -0.02,
+      "yearDelta": -0.15
+    },
+    {
+      "name": "Virtuoso",
+      "sourceUrl": "https://db-engines.com/en/system/Virtuoso",
+      "rank": 111,
+      "previousMonthRank": 109,
+      "previousYearRank": 97,
+      "score": 2.35,
+      "monthDelta": -0.01,
+      "yearDelta": -0.39
+    },
+    {
+      "name": "Rockset",
+      "sourceUrl": "https://db-engines.com/en/system/Rockset",
+      "rank": 112,
+      "previousMonthRank": 112,
+      "previousYearRank": 210,
+      "score": 2.34,
+      "monthDelta": 0.1,
+      "yearDelta": 1.58
+    },
+    {
+      "name": "Stardog",
+      "sourceUrl": "https://db-engines.com/en/system/Stardog",
+      "rank": 113,
+      "previousMonthRank": 117,
+      "previousYearRank": 136,
+      "score": 2.32,
+      "monthDelta": 0.18,
+      "yearDelta": 0.59
+    },
+    {
+      "name": "RavenDB",
+      "sourceUrl": "https://db-engines.com/en/system/RavenDB",
+      "rank": 114,
+      "previousMonthRank": 111,
+      "previousYearRank": 104,
+      "score": 2.27,
+      "monthDelta": 0.01,
+      "yearDelta": -0.22
+    },
+    {
+      "name": "UniData,UniVerse",
+      "sourceUrl": "https://db-engines.com/en/system/UniData%2CUniVerse",
+      "rank": 115,
+      "previousMonthRank": 130,
+      "previousYearRank": 114,
+      "score": 2.27,
+      "monthDelta": 0.39,
+      "yearDelta": 0.13
+    },
+    {
+      "name": "SAP IQ",
+      "sourceUrl": "https://db-engines.com/en/system/SAP+IQ",
+      "rank": 116,
+      "previousMonthRank": 113,
+      "previousYearRank": 103,
+      "score": 2.24,
+      "monthDelta": 0.01,
+      "yearDelta": -0.26
+    },
+    {
+      "name": "YugabyteDB",
+      "sourceUrl": "https://db-engines.com/en/system/YugabyteDB",
+      "rank": 117,
+      "previousMonthRank": 116,
+      "previousYearRank": 116,
+      "score": 2.21,
+      "monthDelta": 0.05,
+      "yearDelta": 0.08
+    },
+    {
+      "name": "CloudKit",
+      "sourceUrl": "https://db-engines.com/en/system/CloudKit",
+      "rank": 118,
+      "previousMonthRank": 119,
+      "previousYearRank": 127,
+      "score": 2.17,
+      "monthDelta": 0.05,
+      "yearDelta": 0.28
+    },
+    {
+      "name": "Coveo",
+      "sourceUrl": "https://db-engines.com/en/system/Coveo",
+      "rank": 119,
+      "previousMonthRank": 114,
+      "previousYearRank": 101,
+      "score": 2.15,
+      "monthDelta": -0.08,
+      "yearDelta": -0.4
+    },
+    {
+      "name": "4D",
+      "sourceUrl": "https://db-engines.com/en/system/4D",
+      "rank": 120,
+      "previousMonthRank": 124,
+      "previousYearRank": 119,
+      "score": 2.09,
+      "monthDelta": 0.12,
+      "yearDelta": 0.06
+    },
+    {
+      "name": "Amazon CloudSearch",
+      "sourceUrl": "https://db-engines.com/en/system/Amazon+CloudSearch",
+      "rank": 121,
+      "previousMonthRank": 123,
+      "previousYearRank": 128,
+      "score": 2.09,
+      "monthDelta": 0.08,
+      "yearDelta": 0.22
+    },
+    {
+      "name": "Citus",
+      "sourceUrl": "https://db-engines.com/en/system/Citus",
+      "rank": 122,
+      "previousMonthRank": 121,
+      "previousYearRank": 113,
+      "score": 2.08,
+      "monthDelta": 0.03,
+      "yearDelta": -0.12
+    },
+    {
+      "name": "InterSystems IRIS",
+      "sourceUrl": "https://db-engines.com/en/system/InterSystems+IRIS",
+      "rank": 123,
+      "previousMonthRank": 120,
+      "previousYearRank": 112,
+      "score": 2.07,
+      "monthDelta": 0.02,
+      "yearDelta": -0.13
+    },
+    {
+      "name": "OceanBase",
+      "sourceUrl": "https://db-engines.com/en/system/OceanBase",
+      "rank": 124,
+      "previousMonthRank": 118,
+      "previousYearRank": 90,
+      "score": 2.05,
+      "monthDelta": -0.09,
+      "yearDelta": -0.84
+    },
+    {
+      "name": "Apache Phoenix",
+      "sourceUrl": "https://db-engines.com/en/system/Apache+Phoenix",
+      "rank": 125,
+      "previousMonthRank": 122,
+      "previousYearRank": 115,
+      "score": 2.02,
+      "monthDelta": -0.01,
+      "yearDelta": -0.11
+    },
+    {
+      "name": "TigerGraph",
+      "sourceUrl": "https://db-engines.com/en/system/TigerGraph",
+      "rank": 126,
+      "previousMonthRank": 127,
+      "previousYearRank": 133,
+      "score": 1.95,
+      "monthDelta": 0,
+      "yearDelta": 0.18
+    },
+    {
+      "name": "LMDB",
+      "sourceUrl": "https://db-engines.com/en/system/LMDB",
+      "rank": 127,
+      "previousMonthRank": 128,
+      "previousYearRank": 122,
+      "score": 1.93,
+      "monthDelta": 0,
+      "yearDelta": -0.02
+    },
+    {
+      "name": "Amazon DocumentDB",
+      "sourceUrl": "https://db-engines.com/en/system/Amazon+DocumentDB",
+      "rank": 128,
+      "previousMonthRank": 129,
+      "previousYearRank": 125,
+      "score": 1.93,
+      "monthDelta": 0,
+      "yearDelta": 0.02
+    },
+    {
+      "name": "JanusGraph",
+      "sourceUrl": "https://db-engines.com/en/system/JanusGraph",
+      "rank": 129,
+      "previousMonthRank": 126,
+      "previousYearRank": 130,
+      "score": 1.92,
+      "monthDelta": -0.03,
+      "yearDelta": 0.11
+    },
+    {
+      "name": "Memgraph",
+      "sourceUrl": "https://db-engines.com/en/system/Memgraph",
+      "rank": 130,
+      "previousMonthRank": 136,
+      "previousYearRank": 111,
+      "score": 1.89,
+      "monthDelta": 0.1,
+      "yearDelta": -0.37
+    },
+    {
+      "name": "GBase",
+      "sourceUrl": "https://db-engines.com/en/system/GBase",
+      "rank": 131,
+      "previousMonthRank": 125,
+      "previousYearRank": 140,
+      "score": 1.87,
+      "monthDelta": -0.08,
+      "yearDelta": 0.19
+    },
+    {
+      "name": "MaxDB",
+      "sourceUrl": "https://db-engines.com/en/system/MaxDB",
+      "rank": 132,
+      "previousMonthRank": 132,
+      "previousYearRank": 129,
+      "score": 1.87,
+      "monthDelta": 0.02,
+      "yearDelta": 0.01
+    },
+    {
+      "name": "Percona Server for MySQL",
+      "sourceUrl": "https://db-engines.com/en/system/Percona+Server+for+MySQL",
+      "rank": 133,
+      "previousMonthRank": 131,
+      "previousYearRank": 117,
+      "score": 1.86,
+      "monthDelta": -0.01,
+      "yearDelta": -0.21
+    },
+    {
+      "name": "Infinispan",
+      "sourceUrl": "https://db-engines.com/en/system/Infinispan",
+      "rank": 134,
+      "previousMonthRank": 135,
+      "previousYearRank": 123,
+      "score": 1.8,
+      "monthDelta": 0,
+      "yearDelta": -0.14
+    },
+    {
+      "name": "LevelDB",
+      "sourceUrl": "https://db-engines.com/en/system/LevelDB",
+      "rank": 135,
+      "previousMonthRank": 133,
+      "previousYearRank": 121,
+      "score": 1.8,
+      "monthDelta": -0.02,
+      "yearDelta": -0.2
+    },
+    {
+      "name": "PouchDB",
+      "sourceUrl": "https://db-engines.com/en/system/PouchDB",
+      "rank": 136,
+      "previousMonthRank": 134,
+      "previousYearRank": 126,
+      "score": 1.8,
+      "monthDelta": 0,
+      "yearDelta": -0.1
+    },
+    {
+      "name": "StarRocks",
+      "sourceUrl": "https://db-engines.com/en/system/StarRocks",
+      "rank": 137,
+      "previousMonthRank": 146,
+      "previousYearRank": 169,
+      "score": 1.75,
+      "monthDelta": 0.19,
+      "yearDelta": 0.51
+    },
+    {
+      "name": "IMS",
+      "sourceUrl": "https://db-engines.com/en/system/IMS",
+      "rank": 138,
+      "previousMonthRank": 138,
+      "previousYearRank": 154,
+      "score": 1.73,
+      "monthDelta": 0.04,
+      "yearDelta": 0.35
+    },
+    {
+      "name": "Apache Drill",
+      "sourceUrl": "https://db-engines.com/en/system/Apache+Drill",
+      "rank": 139,
+      "previousMonthRank": 137,
+      "previousYearRank": 132,
+      "score": 1.71,
+      "monthDelta": 0.01,
+      "yearDelta": -0.08
+    },
+    {
+      "name": "PlanetScale",
+      "sourceUrl": "https://db-engines.com/en/system/PlanetScale",
+      "rank": 140,
+      "previousMonthRank": 141,
+      "previousYearRank": 150,
+      "score": 1.71,
+      "monthDelta": 0.08,
+      "yearDelta": 0.21
+    },
+    {
+      "name": "NebulaGraph",
+      "sourceUrl": "https://db-engines.com/en/system/NebulaGraph",
+      "rank": 141,
+      "previousMonthRank": 139,
+      "previousYearRank": 105,
+      "score": 1.68,
+      "monthDelta": -0.01,
+      "yearDelta": -0.76
+    },
+    {
+      "name": "SpatiaLite",
+      "sourceUrl": "https://db-engines.com/en/system/SpatiaLite",
+      "rank": 142,
+      "previousMonthRank": 142,
+      "previousYearRank": 138,
+      "score": 1.64,
+      "monthDelta": 0.01,
+      "yearDelta": -0.09
+    },
+    {
+      "name": "EDB Postgres",
+      "sourceUrl": "https://db-engines.com/en/system/EDB+Postgres",
+      "rank": 143,
+      "previousMonthRank": 140,
+      "previousYearRank": 134,
+      "score": 1.59,
+      "monthDelta": -0.07,
+      "yearDelta": -0.16
+    },
+    {
+      "name": "Amazon SimpleDB",
+      "sourceUrl": "https://db-engines.com/en/system/Amazon+SimpleDB",
+      "rank": 144,
+      "previousMonthRank": 145,
+      "previousYearRank": 139,
+      "score": 1.58,
+      "monthDelta": 0.01,
+      "yearDelta": -0.12
+    },
+    {
+      "name": "Oracle Coherence",
+      "sourceUrl": "https://db-engines.com/en/system/Oracle+Coherence",
+      "rank": 145,
+      "previousMonthRank": 143,
+      "previousYearRank": 135,
+      "score": 1.58,
+      "monthDelta": 0,
+      "yearDelta": -0.17
+    },
+    {
+      "name": "Meilisearch",
+      "sourceUrl": "https://db-engines.com/en/system/Meilisearch",
+      "rank": 146,
+      "previousMonthRank": 154,
+      "previousYearRank": 153,
+      "score": 1.53,
+      "monthDelta": 0.08,
+      "yearDelta": 0.11
+    },
+    {
+      "name": "Datomic",
+      "sourceUrl": "https://db-engines.com/en/system/Datomic",
+      "rank": 147,
+      "previousMonthRank": 150,
+      "previousYearRank": 147,
+      "score": 1.52,
+      "monthDelta": 0.02,
+      "yearDelta": -0.02
+    },
+    {
+      "name": "Fauna",
+      "sourceUrl": "https://db-engines.com/en/system/Fauna",
+      "rank": 148,
+      "previousMonthRank": 144,
+      "previousYearRank": 151,
+      "score": 1.51,
+      "monthDelta": -0.06,
+      "yearDelta": 0.02
+    },
+    {
+      "name": "EXASOL",
+      "sourceUrl": "https://db-engines.com/en/system/EXASOL",
+      "rank": 149,
+      "previousMonthRank": 149,
+      "previousYearRank": 145,
+      "score": 1.51,
+      "monthDelta": 0.01,
+      "yearDelta": -0.08
+    },
+    {
+      "name": "Oracle Berkeley DB",
+      "sourceUrl": "https://db-engines.com/en/system/Oracle+Berkeley+DB",
+      "rank": 150,
+      "previousMonthRank": 148,
+      "previousYearRank": 142,
+      "score": 1.5,
+      "monthDelta": -0.02,
+      "yearDelta": -0.15
+    },
+    {
+      "name": "MonetDB",
+      "sourceUrl": "https://db-engines.com/en/system/MonetDB",
+      "rank": 151,
+      "previousMonthRank": 147,
+      "previousYearRank": 149,
+      "score": 1.49,
+      "monthDelta": -0.05,
+      "yearDelta": -0.02
+    },
+    {
+      "name": "VictoriaMetrics",
+      "sourceUrl": "https://db-engines.com/en/system/VictoriaMetrics",
+      "rank": 152,
+      "previousMonthRank": 151,
+      "previousYearRank": 146,
+      "score": 1.49,
+      "monthDelta": -0.01,
+      "yearDelta": -0.08
+    },
+    {
+      "name": "BaseX",
+      "sourceUrl": "https://db-engines.com/en/system/BaseX",
+      "rank": 153,
+      "previousMonthRank": 157,
+      "previousYearRank": 152,
+      "score": 1.48,
+      "monthDelta": 0.08,
+      "yearDelta": 0.01
+    },
+    {
+      "name": "Vitess",
+      "sourceUrl": "https://db-engines.com/en/system/Vitess",
+      "rank": 154,
+      "previousMonthRank": 152,
+      "previousYearRank": 160,
+      "score": 1.48,
+      "monthDelta": -0.01,
+      "yearDelta": 0.16
+    },
+    {
+      "name": "HFSQL",
+      "sourceUrl": "https://db-engines.com/en/system/HFSQL",
+      "rank": 155,
+      "previousMonthRank": 158,
+      "previousYearRank": 144,
+      "score": 1.47,
+      "monthDelta": 0.07,
+      "yearDelta": -0.15
+    },
+    {
+      "name": "RRDtool",
+      "sourceUrl": "https://db-engines.com/en/system/RRDtool",
+      "rank": 156,
+      "previousMonthRank": 153,
+      "previousYearRank": 143,
+      "score": 1.46,
+      "monthDelta": -0.01,
+      "yearDelta": -0.18
+    },
+    {
+      "name": "jBASE",
+      "sourceUrl": "https://db-engines.com/en/system/jBASE",
+      "rank": 157,
+      "previousMonthRank": 159,
+      "previousYearRank": 157,
+      "score": 1.45,
+      "monthDelta": 0.06,
+      "yearDelta": 0.09
+    },
+    {
+      "name": "SurrealDB",
+      "sourceUrl": "https://db-engines.com/en/system/SurrealDB",
+      "rank": 158,
+      "previousMonthRank": 156,
+      "previousYearRank": 165,
+      "score": 1.43,
+      "monthDelta": 0.01,
+      "yearDelta": 0.17
+    },
+    {
+      "name": "TDSQL for MySQL",
+      "sourceUrl": "https://db-engines.com/en/system/TDSQL+for+MySQL",
+      "rank": 159,
+      "previousMonthRank": 160,
+      "previousYearRank": 156,
+      "score": 1.41,
+      "monthDelta": 0.03,
+      "yearDelta": 0.04
+    },
+    {
+      "name": "Typesense",
+      "sourceUrl": "https://db-engines.com/en/system/Typesense",
+      "rank": 160,
+      "previousMonthRank": 175,
+      "previousYearRank": 181,
+      "score": 1.38,
+      "monthDelta": 0.22,
+      "yearDelta": 0.25
+    },
+    {
+      "name": "OpenTSDB",
+      "sourceUrl": "https://db-engines.com/en/system/OpenTSDB",
+      "rank": 161,
+      "previousMonthRank": 155,
+      "previousYearRank": 148,
+      "score": 1.38,
+      "monthDelta": -0.05,
+      "yearDelta": -0.15
+    },
+    {
+      "name": "Arc",
+      "sourceUrl": "https://db-engines.com/en/system/Arc",
+      "rank": 162,
+      "previousMonthRank": 165,
+      "previousYearRank": null,
+      "score": 1.34,
+      "monthDelta": 0.06,
+      "yearDelta": null
+    },
+    {
+      "name": "GridGain",
+      "sourceUrl": "https://db-engines.com/en/system/GridGain",
+      "rank": 163,
+      "previousMonthRank": 162,
+      "previousYearRank": 158,
+      "score": 1.33,
+      "monthDelta": 0.01,
+      "yearDelta": -0.03
+    },
+    {
+      "name": "Amazon Timestream",
+      "sourceUrl": "https://db-engines.com/en/system/Amazon+Timestream",
+      "rank": 164,
+      "previousMonthRank": 163,
+      "previousYearRank": 163,
+      "score": 1.31,
+      "monthDelta": -0.01,
+      "yearDelta": 0.03
+    },
+    {
+      "name": "FoundationDB",
+      "sourceUrl": "https://db-engines.com/en/system/FoundationDB",
+      "rank": 165,
+      "previousMonthRank": 182,
+      "previousYearRank": 193,
+      "score": 1.31,
+      "monthDelta": 0.21,
+      "yearDelta": 0.37
+    },
+    {
+      "name": "Dgraph",
+      "sourceUrl": "https://db-engines.com/en/system/Dgraph",
+      "rank": 166,
+      "previousMonthRank": 164,
+      "previousYearRank": 161,
+      "score": 1.3,
+      "monthDelta": 0.01,
+      "yearDelta": -0.01
+    },
+    {
+      "name": "D3",
+      "sourceUrl": "https://db-engines.com/en/system/D3",
+      "rank": 167,
+      "previousMonthRank": 161,
+      "previousYearRank": 167,
+      "score": 1.27,
+      "monthDelta": -0.07,
+      "yearDelta": 0.01
+    },
+    {
+      "name": "Geode",
+      "sourceUrl": "https://db-engines.com/en/system/Geode",
+      "rank": 168,
+      "previousMonthRank": 166,
+      "previousYearRank": 155,
+      "score": 1.25,
+      "monthDelta": -0.02,
+      "yearDelta": -0.12
+    },
+    {
+      "name": "Tarantool",
+      "sourceUrl": "https://db-engines.com/en/system/Tarantool",
+      "rank": 169,
+      "previousMonthRank": 167,
+      "previousYearRank": 159,
+      "score": 1.25,
+      "monthDelta": 0.01,
+      "yearDelta": -0.06
+    },
+    {
+      "name": "Actian NoSQL Database",
+      "sourceUrl": "https://db-engines.com/en/system/Actian+NoSQL+Database",
+      "rank": 170,
+      "previousMonthRank": 173,
+      "previousYearRank": 171,
+      "score": 1.19,
+      "monthDelta": 0.01,
+      "yearDelta": -0.02
+    },
+    {
+      "name": "Empress",
+      "sourceUrl": "https://db-engines.com/en/system/Empress",
+      "rank": 171,
+      "previousMonthRank": 168,
+      "previousYearRank": 162,
+      "score": 1.19,
+      "monthDelta": -0.03,
+      "yearDelta": -0.11
+    },
+    {
+      "name": "VoltDB",
+      "sourceUrl": "https://db-engines.com/en/system/VoltDB",
+      "rank": 172,
+      "previousMonthRank": 171,
+      "previousYearRank": 168,
+      "score": 1.19,
+      "monthDelta": 0,
+      "yearDelta": -0.07
+    },
+    {
+      "name": "HEAVY.AI",
+      "sourceUrl": "https://db-engines.com/en/system/HEAVY.AI",
+      "rank": 173,
+      "previousMonthRank": 180,
+      "previousYearRank": 177,
+      "score": 1.19,
+      "monthDelta": 0.07,
+      "yearDelta": 0.03
+    },
+    {
+      "name": "Apache Kylin",
+      "sourceUrl": "https://db-engines.com/en/system/Apache+Kylin",
+      "rank": 174,
+      "previousMonthRank": 169,
+      "previousYearRank": 174,
+      "score": 1.17,
+      "monthDelta": -0.04,
+      "yearDelta": -0.01
+    },
+    {
+      "name": "Amazon Keyspaces",
+      "sourceUrl": "https://db-engines.com/en/system/Amazon+Keyspaces",
+      "rank": 175,
+      "previousMonthRank": 174,
+      "previousYearRank": 178,
+      "score": 1.16,
+      "monthDelta": 0,
+      "yearDelta": 0.01
+    },
+    {
+      "name": "ObjectBox",
+      "sourceUrl": "https://db-engines.com/en/system/ObjectBox",
+      "rank": 176,
+      "previousMonthRank": 176,
+      "previousYearRank": 176,
+      "score": 1.15,
+      "monthDelta": 0,
+      "yearDelta": -0.01
+    },
+    {
+      "name": "Db4o",
+      "sourceUrl": "https://db-engines.com/en/system/Db4o",
+      "rank": 177,
+      "previousMonthRank": 177,
+      "previousYearRank": 173,
+      "score": 1.15,
+      "monthDelta": 0.01,
+      "yearDelta": -0.04
+    },
+    {
+      "name": "IBM Db2 warehouse",
+      "sourceUrl": "https://db-engines.com/en/system/IBM+Db2+warehouse",
+      "rank": 178,
+      "previousMonthRank": 172,
+      "previousYearRank": 170,
+      "score": 1.13,
+      "monthDelta": -0.06,
+      "yearDelta": -0.1
+    },
+    {
+      "name": "LiteDB",
+      "sourceUrl": "https://db-engines.com/en/system/LiteDB",
+      "rank": 179,
+      "previousMonthRank": 179,
+      "previousYearRank": 180,
+      "score": 1.12,
+      "monthDelta": 0,
+      "yearDelta": -0.01
+    },
+    {
+      "name": "Mnesia",
+      "sourceUrl": "https://db-engines.com/en/system/Mnesia",
+      "rank": 181,
+      "previousMonthRank": 178,
+      "previousYearRank": 172,
+      "score": 1.1,
+      "monthDelta": -0.03,
+      "yearDelta": -0.11
+    },
+    {
+      "name": "GridDB",
+      "sourceUrl": "https://db-engines.com/en/system/GridDB",
+      "rank": 182,
+      "previousMonthRank": 170,
+      "previousYearRank": 120,
+      "score": 1.07,
+      "monthDelta": -0.12,
+      "yearDelta": -0.93
+    },
+    {
+      "name": "Tibero",
+      "sourceUrl": "https://db-engines.com/en/system/Tibero",
+      "rank": 183,
+      "previousMonthRank": 184,
+      "previousYearRank": 179,
+      "score": 1.07,
+      "monthDelta": 0,
+      "yearDelta": -0.07
+    },
+    {
+      "name": "ObjectStore",
+      "sourceUrl": "https://db-engines.com/en/system/ObjectStore",
+      "rank": 184,
+      "previousMonthRank": 183,
+      "previousYearRank": 175,
+      "score": 1.07,
+      "monthDelta": -0.01,
+      "yearDelta": -0.1
+    },
+    {
+      "name": "Alibaba Cloud MaxCompute",
+      "sourceUrl": "https://db-engines.com/en/system/Alibaba+Cloud+MaxCompute",
+      "rank": 185,
+      "previousMonthRank": 181,
+      "previousYearRank": 183,
+      "score": 1.06,
+      "monthDelta": -0.05,
+      "yearDelta": -0.05
+    },
+    {
+      "name": "TimesTen",
+      "sourceUrl": "https://db-engines.com/en/system/TimesTen",
+      "rank": 186,
+      "previousMonthRank": 187,
+      "previousYearRank": 184,
+      "score": 1.04,
+      "monthDelta": 0.01,
+      "yearDelta": -0.06
+    },
+    {
+      "name": "openGauss",
+      "sourceUrl": "https://db-engines.com/en/system/openGauss",
+      "rank": 187,
+      "previousMonthRank": 186,
+      "previousYearRank": 164,
+      "score": 1.02,
+      "monthDelta": -0.03,
+      "yearDelta": -0.25
+    },
+    {
+      "name": "Datameer",
+      "sourceUrl": "https://db-engines.com/en/system/Datameer",
+      "rank": 188,
+      "previousMonthRank": 188,
+      "previousYearRank": 182,
+      "score": 1.01,
+      "monthDelta": -0.01,
+      "yearDelta": -0.11
+    },
+    {
+      "name": "SQLBase",
+      "sourceUrl": "https://db-engines.com/en/system/SQLBase",
+      "rank": 189,
+      "previousMonthRank": 191,
+      "previousYearRank": 166,
+      "score": 1,
+      "monthDelta": 0.02,
+      "yearDelta": -0.27
+    },
+    {
+      "name": "KurrentDB (aka EventStoreDB)",
+      "sourceUrl": "https://db-engines.com/en/system/KurrentDB+%28aka+EventStoreDB%29",
+      "rank": 190,
+      "previousMonthRank": 189,
+      "previousYearRank": 185,
+      "score": 0.98,
+      "monthDelta": -0.02,
+      "yearDelta": -0.1
+    },
+    {
+      "name": "Dolt",
+      "sourceUrl": "https://db-engines.com/en/system/Dolt",
+      "rank": 191,
+      "previousMonthRank": 190,
+      "previousYearRank": 220,
+      "score": 0.98,
+      "monthDelta": -0.01,
+      "yearDelta": 0.29
+    },
+    {
+      "name": "NonStop SQL",
+      "sourceUrl": "https://db-engines.com/en/system/NonStop+SQL",
+      "rank": 192,
+      "previousMonthRank": 193,
+      "previousYearRank": 189,
+      "score": 0.96,
+      "monthDelta": 0.02,
+      "yearDelta": -0.06
+    },
+    {
+      "name": "Giraph",
+      "sourceUrl": "https://db-engines.com/en/system/Giraph",
+      "rank": 193,
+      "previousMonthRank": 192,
+      "previousYearRank": 186,
+      "score": 0.95,
+      "monthDelta": -0.02,
+      "yearDelta": -0.12
+    },
+    {
+      "name": "Vespa",
+      "sourceUrl": "https://db-engines.com/en/system/Vespa",
+      "rank": 194,
+      "previousMonthRank": 194,
+      "previousYearRank": 191,
+      "score": 0.95,
+      "monthDelta": 0.02,
+      "yearDelta": -0.03
+    },
+    {
+      "name": "DataEase",
+      "sourceUrl": "https://db-engines.com/en/system/DataEase",
+      "rank": 195,
+      "previousMonthRank": 198,
+      "previousYearRank": 197,
+      "score": 0.93,
+      "monthDelta": 0.04,
+      "yearDelta": 0.04
+    },
+    {
+      "name": "M3DB",
+      "sourceUrl": "https://db-engines.com/en/system/M3DB",
+      "rank": 196,
+      "previousMonthRank": 196,
+      "previousYearRank": 199,
+      "score": 0.91,
+      "monthDelta": 0.01,
+      "yearDelta": 0.04
+    },
+    {
+      "name": "GT.M",
+      "sourceUrl": "https://db-engines.com/en/system/GT.M",
+      "rank": 197,
+      "previousMonthRank": 195,
+      "previousYearRank": 195,
+      "score": 0.89,
+      "monthDelta": -0.02,
+      "yearDelta": -0.03
+    },
+    {
+      "name": "Xapian",
+      "sourceUrl": "https://db-engines.com/en/system/Xapian",
+      "rank": 198,
+      "previousMonthRank": 197,
+      "previousYearRank": 207,
+      "score": 0.87,
+      "monthDelta": -0.02,
+      "yearDelta": 0.08
+    },
+    {
+      "name": "Oracle Rdb",
+      "sourceUrl": "https://db-engines.com/en/system/Oracle+Rdb",
+      "rank": 199,
+      "previousMonthRank": 200,
+      "previousYearRank": 188,
+      "score": 0.83,
+      "monthDelta": 0,
+      "yearDelta": -0.19
+    },
+    {
+      "name": "Apache HAWQ",
+      "sourceUrl": "https://db-engines.com/en/system/Apache+HAWQ",
+      "rank": 200,
+      "previousMonthRank": 199,
+      "previousYearRank": 192,
+      "score": 0.82,
+      "monthDelta": -0.02,
+      "yearDelta": -0.13
+    },
+    {
+      "name": "GigaSpaces",
+      "sourceUrl": "https://db-engines.com/en/system/GigaSpaces",
+      "rank": 201,
+      "previousMonthRank": 202,
+      "previousYearRank": 190,
+      "score": 0.8,
+      "monthDelta": 0.01,
+      "yearDelta": -0.21
+    },
+    {
+      "name": "Alibaba Cloud AnalyticDB for MySQL",
+      "sourceUrl": "https://db-engines.com/en/system/Alibaba+Cloud+AnalyticDB+for+MySQL",
+      "rank": 202,
+      "previousMonthRank": 201,
+      "previousYearRank": 196,
+      "score": 0.8,
+      "monthDelta": -0.01,
+      "yearDelta": -0.1
+    },
+    {
+      "name": "IDMS",
+      "sourceUrl": "https://db-engines.com/en/system/IDMS",
+      "rank": 203,
+      "previousMonthRank": 210,
+      "previousYearRank": 212,
+      "score": 0.75,
+      "monthDelta": 0.02,
+      "yearDelta": 0
+    },
+    {
+      "name": "Cubrid",
+      "sourceUrl": "https://db-engines.com/en/system/Cubrid",
+      "rank": 204,
+      "previousMonthRank": 203,
+      "previousYearRank": 194,
+      "score": 0.74,
+      "monthDelta": -0.02,
+      "yearDelta": -0.19
+    },
+    {
+      "name": "Altibase",
+      "sourceUrl": "https://db-engines.com/en/system/Altibase",
+      "rank": 205,
+      "previousMonthRank": 205,
+      "previousYearRank": 198,
+      "score": 0.74,
+      "monthDelta": -0.01,
+      "yearDelta": -0.13
+    },
+    {
+      "name": "NCache",
+      "sourceUrl": "https://db-engines.com/en/system/NCache",
+      "rank": 206,
+      "previousMonthRank": 206,
+      "previousYearRank": 201,
+      "score": 0.74,
+      "monthDelta": -0.01,
+      "yearDelta": -0.09
+    },
+    {
+      "name": "HPE Ezmeral Data Fabric",
+      "sourceUrl": "https://db-engines.com/en/system/HPE+Ezmeral+Data+Fabric",
+      "rank": 207,
+      "previousMonthRank": 207,
+      "previousYearRank": 202,
+      "score": 0.73,
+      "monthDelta": -0.01,
+      "yearDelta": -0.09
+    },
+    {
+      "name": "AllegroGraph",
+      "sourceUrl": "https://db-engines.com/en/system/AllegroGraph",
+      "rank": 208,
+      "previousMonthRank": 208,
+      "previousYearRank": 214,
+      "score": 0.73,
+      "monthDelta": 0,
+      "yearDelta": -0.01
+    },
+    {
+      "name": "KeyDB",
+      "sourceUrl": "https://db-engines.com/en/system/KeyDB",
+      "rank": 209,
+      "previousMonthRank": 209,
+      "previousYearRank": 217,
+      "score": 0.72,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "RisingWave",
+      "sourceUrl": "https://db-engines.com/en/system/RisingWave",
+      "rank": 210,
+      "previousMonthRank": 204,
+      "previousYearRank": 225,
+      "score": 0.71,
+      "monthDelta": -0.04,
+      "yearDelta": 0.06
+    },
+    {
+      "name": "NuoDB",
+      "sourceUrl": "https://db-engines.com/en/system/NuoDB",
+      "rank": 211,
+      "previousMonthRank": 212,
+      "previousYearRank": 206,
+      "score": 0.71,
+      "monthDelta": -0.01,
+      "yearDelta": -0.08
+    },
+    {
+      "name": "Sedna",
+      "sourceUrl": "https://db-engines.com/en/system/Sedna",
+      "rank": 212,
+      "previousMonthRank": 211,
+      "previousYearRank": 228,
+      "score": 0.71,
+      "monthDelta": -0.01,
+      "yearDelta": 0.07
+    },
+    {
+      "name": "mSQL",
+      "sourceUrl": "https://db-engines.com/en/system/mSQL",
+      "rank": 213,
+      "previousMonthRank": 220,
+      "previousYearRank": 187,
+      "score": 0.7,
+      "monthDelta": 0.04,
+      "yearDelta": -0.33
+    },
+    {
+      "name": "Blazegraph",
+      "sourceUrl": "https://db-engines.com/en/system/Blazegraph",
+      "rank": 214,
+      "previousMonthRank": 213,
+      "previousYearRank": 208,
+      "score": 0.7,
+      "monthDelta": -0.01,
+      "yearDelta": -0.07
+    },
+    {
+      "name": "Yellowbrick",
+      "sourceUrl": "https://db-engines.com/en/system/Yellowbrick",
+      "rank": 215,
+      "previousMonthRank": 215,
+      "previousYearRank": 213,
+      "score": 0.7,
+      "monthDelta": -0.01,
+      "yearDelta": -0.04
+    },
+    {
+      "name": "GeoMesa",
+      "sourceUrl": "https://db-engines.com/en/system/GeoMesa",
+      "rank": 216,
+      "previousMonthRank": 214,
+      "previousYearRank": 204,
+      "score": 0.69,
+      "monthDelta": -0.01,
+      "yearDelta": -0.11
+    },
+    {
+      "name": "Infobright",
+      "sourceUrl": "https://db-engines.com/en/system/Infobright",
+      "rank": 217,
+      "previousMonthRank": 217,
+      "previousYearRank": 211,
+      "score": 0.69,
+      "monthDelta": 0.01,
+      "yearDelta": -0.06
+    },
+    {
+      "name": "MatrixOne",
+      "sourceUrl": "https://db-engines.com/en/system/MatrixOne",
+      "rank": 218,
+      "previousMonthRank": 219,
+      "previousYearRank": 218,
+      "score": 0.68,
+      "monthDelta": 0.02,
+      "yearDelta": -0.03
+    },
+    {
+      "name": "BigchainDB",
+      "sourceUrl": "https://db-engines.com/en/system/BigchainDB",
+      "rank": 219,
+      "previousMonthRank": 218,
+      "previousYearRank": 216,
+      "score": 0.68,
+      "monthDelta": 0,
+      "yearDelta": -0.05
+    },
+    {
+      "name": "ZODB",
+      "sourceUrl": "https://db-engines.com/en/system/ZODB",
+      "rank": 220,
+      "previousMonthRank": 216,
+      "previousYearRank": 205,
+      "score": 0.67,
+      "monthDelta": -0.03,
+      "yearDelta": -0.12
+    },
+    {
+      "name": "Model 204",
+      "sourceUrl": "https://db-engines.com/en/system/Model+204",
+      "rank": 221,
+      "previousMonthRank": 221,
+      "previousYearRank": 219,
+      "score": 0.65,
+      "monthDelta": 0,
+      "yearDelta": -0.06
+    },
+    {
+      "name": "TypeDB",
+      "sourceUrl": "https://db-engines.com/en/system/TypeDB",
+      "rank": 222,
+      "previousMonthRank": 223,
+      "previousYearRank": 226,
+      "score": 0.65,
+      "monthDelta": 0.01,
+      "yearDelta": 0
+    },
+    {
+      "name": "SciDB",
+      "sourceUrl": "https://db-engines.com/en/system/SciDB",
+      "rank": 223,
+      "previousMonthRank": 224,
+      "previousYearRank": 200,
+      "score": 0.64,
+      "monthDelta": 0.01,
+      "yearDelta": -0.21
+    },
+    {
+      "name": "Graph Engine",
+      "sourceUrl": "https://db-engines.com/en/system/Graph+Engine",
+      "rank": 224,
+      "previousMonthRank": 222,
+      "previousYearRank": 244,
+      "score": 0.64,
+      "monthDelta": 0,
+      "yearDelta": 0.11
+    },
+    {
+      "name": "Apache Sedona",
+      "sourceUrl": "https://db-engines.com/en/system/Apache+Sedona",
+      "rank": 225,
+      "previousMonthRank": 227,
+      "previousYearRank": 231,
+      "score": 0.64,
+      "monthDelta": 0.02,
+      "yearDelta": 0.02
+    },
+    {
+      "name": "Kinetica",
+      "sourceUrl": "https://db-engines.com/en/system/Kinetica",
+      "rank": 226,
+      "previousMonthRank": 225,
+      "previousYearRank": 249,
+      "score": 0.64,
+      "monthDelta": 0.02,
+      "yearDelta": 0.14
+    },
+    {
+      "name": "RDF4J",
+      "sourceUrl": "https://db-engines.com/en/system/RDF4J",
+      "rank": 227,
+      "previousMonthRank": 226,
+      "previousYearRank": 222,
+      "score": 0.63,
+      "monthDelta": 0.01,
+      "yearDelta": -0.04
+    },
+    {
+      "name": "eXist-db",
+      "sourceUrl": "https://db-engines.com/en/system/eXist-db",
+      "rank": 228,
+      "previousMonthRank": 229,
+      "previousYearRank": 223,
+      "score": 0.59,
+      "monthDelta": -0.01,
+      "yearDelta": -0.07
+    },
+    {
+      "name": "Firebolt",
+      "sourceUrl": "https://db-engines.com/en/system/Firebolt",
+      "rank": 229,
+      "previousMonthRank": 237,
+      "previousYearRank": 203,
+      "score": 0.59,
+      "monthDelta": 0.04,
+      "yearDelta": -0.22
+    },
+    {
+      "name": "Datacom/DB",
+      "sourceUrl": "https://db-engines.com/en/system/Datacom%2FDB",
+      "rank": 230,
+      "previousMonthRank": 232,
+      "previousYearRank": 227,
+      "score": 0.59,
+      "monthDelta": 0.02,
+      "yearDelta": -0.05
+    },
+    {
+      "name": "Apache Pinot",
+      "sourceUrl": "https://db-engines.com/en/system/Apache+Pinot",
+      "rank": 231,
+      "previousMonthRank": 238,
+      "previousYearRank": 230,
+      "score": 0.58,
+      "monthDelta": 0.04,
+      "yearDelta": -0.05
+    },
+    {
+      "name": "Dragonfly",
+      "sourceUrl": "https://db-engines.com/en/system/Dragonfly",
+      "rank": 232,
+      "previousMonthRank": 236,
+      "previousYearRank": 239,
+      "score": 0.58,
+      "monthDelta": 0.03,
+      "yearDelta": 0.03
+    },
+    {
+      "name": "Alibaba Cloud AnalyticDB for PostgreSQL",
+      "sourceUrl": "https://db-engines.com/en/system/Alibaba+Cloud+AnalyticDB+for+PostgreSQL",
+      "rank": 233,
+      "previousMonthRank": 230,
+      "previousYearRank": 209,
+      "score": 0.58,
+      "monthDelta": -0.02,
+      "yearDelta": -0.19
+    },
+    {
+      "name": "Alibaba Cloud Log Service",
+      "sourceUrl": "https://db-engines.com/en/system/Alibaba+Cloud+Log+Service",
+      "rank": 234,
+      "previousMonthRank": 228,
+      "previousYearRank": 221,
+      "score": 0.58,
+      "monthDelta": -0.04,
+      "yearDelta": -0.11
+    },
+    {
+      "name": "SQream DB",
+      "sourceUrl": "https://db-engines.com/en/system/SQream+DB",
+      "rank": 235,
+      "previousMonthRank": 234,
+      "previousYearRank": 236,
+      "score": 0.57,
+      "monthDelta": 0.01,
+      "yearDelta": 0
+    },
+    {
+      "name": "CrateDB",
+      "sourceUrl": "https://db-engines.com/en/system/CrateDB",
+      "rank": 236,
+      "previousMonthRank": 231,
+      "previousYearRank": 224,
+      "score": 0.57,
+      "monthDelta": 0,
+      "yearDelta": -0.09
+    },
+    {
+      "name": "R:BASE",
+      "sourceUrl": "https://db-engines.com/en/system/R%3ABASE",
+      "rank": 237,
+      "previousMonthRank": 233,
+      "previousYearRank": 237,
+      "score": 0.56,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "1010data",
+      "sourceUrl": "https://db-engines.com/en/system/1010data",
+      "rank": 238,
+      "previousMonthRank": 242,
+      "previousYearRank": 234,
+      "score": 0.56,
+      "monthDelta": 0.03,
+      "yearDelta": -0.02
+    },
+    {
+      "name": "Perst",
+      "sourceUrl": "https://db-engines.com/en/system/Perst",
+      "rank": 239,
+      "previousMonthRank": 240,
+      "previousYearRank": 259,
+      "score": 0.56,
+      "monthDelta": 0.02,
+      "yearDelta": 0.12
+    },
+    {
+      "name": "Actian Vector",
+      "sourceUrl": "https://db-engines.com/en/system/Actian+Vector",
+      "rank": 240,
+      "previousMonthRank": 235,
+      "previousYearRank": 229,
+      "score": 0.56,
+      "monthDelta": 0,
+      "yearDelta": -0.08
+    },
+    {
+      "name": "BoltDB",
+      "sourceUrl": "https://db-engines.com/en/system/BoltDB",
+      "rank": 241,
+      "previousMonthRank": 239,
+      "previousYearRank": 235,
+      "score": 0.55,
+      "monthDelta": 0,
+      "yearDelta": -0.03
+    },
+    {
+      "name": "DBISAM",
+      "sourceUrl": "https://db-engines.com/en/system/DBISAM",
+      "rank": 242,
+      "previousMonthRank": 247,
+      "previousYearRank": 233,
+      "score": 0.54,
+      "monthDelta": 0.03,
+      "yearDelta": -0.05
+    },
+    {
+      "name": "Splice Machine",
+      "sourceUrl": "https://db-engines.com/en/system/Splice+Machine",
+      "rank": 243,
+      "previousMonthRank": 241,
+      "previousYearRank": 242,
+      "score": 0.54,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "ObjectDB",
+      "sourceUrl": "https://db-engines.com/en/system/ObjectDB",
+      "rank": 244,
+      "previousMonthRank": 243,
+      "previousYearRank": 248,
+      "score": 0.53,
+      "monthDelta": 0.01,
+      "yearDelta": 0.02
+    },
+    {
+      "name": "Objectivity/DB",
+      "sourceUrl": "https://db-engines.com/en/system/Objectivity%2FDB",
+      "rank": 245,
+      "previousMonthRank": 245,
+      "previousYearRank": 232,
+      "score": 0.53,
+      "monthDelta": 0.02,
+      "yearDelta": -0.07
+    },
+    {
+      "name": "Percona Server for MongoDB",
+      "sourceUrl": "https://db-engines.com/en/system/Percona+Server+for+MongoDB",
+      "rank": 246,
+      "previousMonthRank": 248,
+      "previousYearRank": 247,
+      "score": 0.52,
+      "monthDelta": 0.02,
+      "yearDelta": 0.01
+    },
+    {
+      "name": "KairosDB",
+      "sourceUrl": "https://db-engines.com/en/system/KairosDB",
+      "rank": 247,
+      "previousMonthRank": 244,
+      "previousYearRank": 243,
+      "score": 0.52,
+      "monthDelta": 0,
+      "yearDelta": -0.02
+    },
+    {
+      "name": "solidDB",
+      "sourceUrl": "https://db-engines.com/en/system/solidDB",
+      "rank": 248,
+      "previousMonthRank": 246,
+      "previousYearRank": 238,
+      "score": 0.51,
+      "monthDelta": 0,
+      "yearDelta": -0.04
+    },
+    {
+      "name": "NexusDB",
+      "sourceUrl": "https://db-engines.com/en/system/NexusDB",
+      "rank": 249,
+      "previousMonthRank": 252,
+      "previousYearRank": 246,
+      "score": 0.49,
+      "monthDelta": 0.03,
+      "yearDelta": -0.02
+    },
+    {
+      "name": "FrontBase",
+      "sourceUrl": "https://db-engines.com/en/system/FrontBase",
+      "rank": 250,
+      "previousMonthRank": 249,
+      "previousYearRank": 240,
+      "score": 0.47,
+      "monthDelta": -0.01,
+      "yearDelta": -0.08
+    },
+    {
+      "name": "Kyligence Enterprise",
+      "sourceUrl": "https://db-engines.com/en/system/Kyligence+Enterprise",
+      "rank": 251,
+      "previousMonthRank": 255,
+      "previousYearRank": 268,
+      "score": 0.47,
+      "monthDelta": 0.02,
+      "yearDelta": 0.07
+    },
+    {
+      "name": "atoti",
+      "sourceUrl": "https://db-engines.com/en/system/atoti",
+      "rank": 252,
+      "previousMonthRank": 251,
+      "previousYearRank": 256,
+      "score": 0.45,
+      "monthDelta": -0.03,
+      "yearDelta": -0.01
+    },
+    {
+      "name": "ITTIA",
+      "sourceUrl": "https://db-engines.com/en/system/ITTIA",
+      "rank": 253,
+      "previousMonthRank": 254,
+      "previousYearRank": 250,
+      "score": 0.45,
+      "monthDelta": 0,
+      "yearDelta": -0.05
+    },
+    {
+      "name": "Kingbase",
+      "sourceUrl": "https://db-engines.com/en/system/Kingbase",
+      "rank": 254,
+      "previousMonthRank": 256,
+      "previousYearRank": 262,
+      "score": 0.43,
+      "monthDelta": 0,
+      "yearDelta": 0.02
+    },
+    {
+      "name": "Northgate Reality",
+      "sourceUrl": "https://db-engines.com/en/system/Northgate+Reality",
+      "rank": 255,
+      "previousMonthRank": 250,
+      "previousYearRank": 282,
+      "score": 0.43,
+      "monthDelta": -0.04,
+      "yearDelta": 0.14
+    },
+    {
+      "name": "Scalaris",
+      "sourceUrl": "https://db-engines.com/en/system/Scalaris",
+      "rank": 256,
+      "previousMonthRank": 253,
+      "previousYearRank": 260,
+      "score": 0.43,
+      "monthDelta": -0.02,
+      "yearDelta": 0.02
+    },
+    {
+      "name": "Cloudflare Workers KV",
+      "sourceUrl": "https://db-engines.com/en/system/Cloudflare+Workers+KV",
+      "rank": 257,
+      "previousMonthRank": 261,
+      "previousYearRank": 265,
+      "score": 0.43,
+      "monthDelta": 0.02,
+      "yearDelta": 0.03
+    },
+    {
+      "name": "Deep Lake",
+      "sourceUrl": "https://db-engines.com/en/system/Deep+Lake",
+      "rank": 258,
+      "previousMonthRank": 257,
+      "previousYearRank": 252,
+      "score": 0.43,
+      "monthDelta": -0.01,
+      "yearDelta": -0.05
+    },
+    {
+      "name": "Apache Doris",
+      "sourceUrl": "https://db-engines.com/en/system/Apache+Doris",
+      "rank": 259,
+      "previousMonthRank": 264,
+      "previousYearRank": 241,
+      "score": 0.42,
+      "monthDelta": 0.03,
+      "yearDelta": -0.12
+    },
+    {
+      "name": "eXtremeDB",
+      "sourceUrl": "https://db-engines.com/en/system/eXtremeDB",
+      "rank": 260,
+      "previousMonthRank": 258,
+      "previousYearRank": 215,
+      "score": 0.42,
+      "monthDelta": -0.01,
+      "yearDelta": -0.32
+    },
+    {
+      "name": "WebSphere eXtreme Scale",
+      "sourceUrl": "https://db-engines.com/en/system/WebSphere+eXtreme+Scale",
+      "rank": 261,
+      "previousMonthRank": 259,
+      "previousYearRank": 254,
+      "score": 0.42,
+      "monthDelta": 0,
+      "yearDelta": -0.05
+    },
+    {
+      "name": "MapDB",
+      "sourceUrl": "https://db-engines.com/en/system/MapDB",
+      "rank": 262,
+      "previousMonthRank": 262,
+      "previousYearRank": 255,
+      "score": 0.42,
+      "monthDelta": 0.01,
+      "yearDelta": -0.05
+    },
+    {
+      "name": "YDB",
+      "sourceUrl": "https://db-engines.com/en/system/YDB",
+      "rank": 263,
+      "previousMonthRank": 260,
+      "previousYearRank": 261,
+      "score": 0.42,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "ScaleArc",
+      "sourceUrl": "https://db-engines.com/en/system/ScaleArc",
+      "rank": 264,
+      "previousMonthRank": 263,
+      "previousYearRank": 266,
+      "score": 0.39,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "OpenInsight",
+      "sourceUrl": "https://db-engines.com/en/system/OpenInsight",
+      "rank": 265,
+      "previousMonthRank": 265,
+      "previousYearRank": 269,
+      "score": 0.39,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "CnosDB",
+      "sourceUrl": "https://db-engines.com/en/system/CnosDB",
+      "rank": 266,
+      "previousMonthRank": 269,
+      "previousYearRank": 251,
+      "score": 0.38,
+      "monthDelta": 0.02,
+      "yearDelta": -0.1
+    },
+    {
+      "name": "GemStone/S",
+      "sourceUrl": "https://db-engines.com/en/system/GemStone%2FS",
+      "rank": 267,
+      "previousMonthRank": 267,
+      "previousYearRank": 263,
+      "score": 0.36,
+      "monthDelta": -0.01,
+      "yearDelta": -0.05
+    },
+    {
+      "name": "SQL.JS",
+      "sourceUrl": "https://db-engines.com/en/system/SQL.JS",
+      "rank": 268,
+      "previousMonthRank": 270,
+      "previousYearRank": 271,
+      "score": 0.36,
+      "monthDelta": 0.01,
+      "yearDelta": -0.01
+    },
+    {
+      "name": "Elassandra",
+      "sourceUrl": "https://db-engines.com/en/system/Elassandra",
+      "rank": 269,
+      "previousMonthRank": 268,
+      "previousYearRank": 264,
+      "score": 0.36,
+      "monthDelta": 0,
+      "yearDelta": -0.04
+    },
+    {
+      "name": "Hibari",
+      "sourceUrl": "https://db-engines.com/en/system/Hibari",
+      "rank": 270,
+      "previousMonthRank": 266,
+      "previousYearRank": 258,
+      "score": 0.35,
+      "monthDelta": -0.03,
+      "yearDelta": -0.1
+    },
+    {
+      "name": "FalkorDB",
+      "sourceUrl": "https://db-engines.com/en/system/FalkorDB",
+      "rank": 271,
+      "previousMonthRank": 282,
+      "previousYearRank": 290,
+      "score": 0.35,
+      "monthDelta": 0.04,
+      "yearDelta": 0.09
+    },
+    {
+      "name": "Comdb2",
+      "sourceUrl": "https://db-engines.com/en/system/Comdb2",
+      "rank": 272,
+      "previousMonthRank": 271,
+      "previousYearRank": 273,
+      "score": 0.35,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "Harper",
+      "sourceUrl": "https://db-engines.com/en/system/Harper",
+      "rank": 273,
+      "previousMonthRank": 272,
+      "previousYearRank": 245,
+      "score": 0.34,
+      "monthDelta": 0,
+      "yearDelta": -0.18
+    },
+    {
+      "name": "LokiJS",
+      "sourceUrl": "https://db-engines.com/en/system/LokiJS",
+      "rank": 274,
+      "previousMonthRank": 274,
+      "previousYearRank": 272,
+      "score": 0.33,
+      "monthDelta": 0,
+      "yearDelta": -0.04
+    },
+    {
+      "name": "VistaDB",
+      "sourceUrl": "https://db-engines.com/en/system/VistaDB",
+      "rank": 275,
+      "previousMonthRank": 276,
+      "previousYearRank": 257,
+      "score": 0.33,
+      "monthDelta": 0,
+      "yearDelta": -0.13
+    },
+    {
+      "name": "Mimer SQL",
+      "sourceUrl": "https://db-engines.com/en/system/Mimer+SQL",
+      "rank": 276,
+      "previousMonthRank": 281,
+      "previousYearRank": 306,
+      "score": 0.32,
+      "monthDelta": 0.01,
+      "yearDelta": 0.11
+    },
+    {
+      "name": "AlaSQL",
+      "sourceUrl": "https://db-engines.com/en/system/AlaSQL",
+      "rank": 277,
+      "previousMonthRank": 277,
+      "previousYearRank": 270,
+      "score": 0.32,
+      "monthDelta": 0,
+      "yearDelta": -0.06
+    },
+    {
+      "name": "Actian PSQL",
+      "sourceUrl": "https://db-engines.com/en/system/Actian+PSQL",
+      "rank": 278,
+      "previousMonthRank": 278,
+      "previousYearRank": 300,
+      "score": 0.32,
+      "monthDelta": 0,
+      "yearDelta": 0.09
+    },
+    {
+      "name": "RaptorDB",
+      "sourceUrl": "https://db-engines.com/en/system/RaptorDB",
+      "rank": 279,
+      "previousMonthRank": 284,
+      "previousYearRank": 253,
+      "score": 0.32,
+      "monthDelta": 0.01,
+      "yearDelta": -0.16
+    },
+    {
+      "name": "Fluree",
+      "sourceUrl": "https://db-engines.com/en/system/Fluree",
+      "rank": 280,
+      "previousMonthRank": 279,
+      "previousYearRank": 275,
+      "score": 0.32,
+      "monthDelta": 0,
+      "yearDelta": -0.02
+    },
+    {
+      "name": "Marqo",
+      "sourceUrl": "https://db-engines.com/en/system/Marqo",
+      "rank": 281,
+      "previousMonthRank": 273,
+      "previousYearRank": 267,
+      "score": 0.31,
+      "monthDelta": -0.02,
+      "yearDelta": -0.08
+    },
+    {
+      "name": "Alibaba Cloud TSDB",
+      "sourceUrl": "https://db-engines.com/en/system/Alibaba+Cloud+TSDB",
+      "rank": 282,
+      "previousMonthRank": 275,
+      "previousYearRank": 277,
+      "score": 0.31,
+      "monthDelta": -0.02,
+      "yearDelta": -0.01
+    },
+    {
+      "name": "OpenQM",
+      "sourceUrl": "https://db-engines.com/en/system/OpenQM",
+      "rank": 283,
+      "previousMonthRank": 306,
+      "previousYearRank": 302,
+      "score": 0.3,
+      "monthDelta": 0.08,
+      "yearDelta": 0.08
+    },
+    {
+      "name": "SearchBlox",
+      "sourceUrl": "https://db-engines.com/en/system/SearchBlox",
+      "rank": 284,
+      "previousMonthRank": 280,
+      "previousYearRank": 276,
+      "score": 0.3,
+      "monthDelta": -0.02,
+      "yearDelta": -0.04
+    },
+    {
+      "name": "Databend",
+      "sourceUrl": "https://db-engines.com/en/system/Databend",
+      "rank": 285,
+      "previousMonthRank": 290,
+      "previousYearRank": 280,
+      "score": 0.29,
+      "monthDelta": 0.03,
+      "yearDelta": -0.01
+    },
+    {
+      "name": "ArcadeDB",
+      "sourceUrl": "https://db-engines.com/en/system/ArcadeDB",
+      "rank": 286,
+      "previousMonthRank": 286,
+      "previousYearRank": 320,
+      "score": 0.29,
+      "monthDelta": 0,
+      "yearDelta": 0.11
+    },
+    {
+      "name": "Starcounter",
+      "sourceUrl": "https://db-engines.com/en/system/Starcounter",
+      "rank": 287,
+      "previousMonthRank": 285,
+      "previousYearRank": 284,
+      "score": 0.29,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "Sequoiadb",
+      "sourceUrl": "https://db-engines.com/en/system/Sequoiadb",
+      "rank": 288,
+      "previousMonthRank": 287,
+      "previousYearRank": 278,
+      "score": 0.29,
+      "monthDelta": 0.01,
+      "yearDelta": -0.03
+    },
+    {
+      "name": "Mulgara",
+      "sourceUrl": "https://db-engines.com/en/system/Mulgara",
+      "rank": 289,
+      "previousMonthRank": 283,
+      "previousYearRank": 333,
+      "score": 0.28,
+      "monthDelta": -0.03,
+      "yearDelta": 0.16
+    },
+    {
+      "name": "Postgres-XL",
+      "sourceUrl": "https://db-engines.com/en/system/Postgres-XL",
+      "rank": 290,
+      "previousMonthRank": 288,
+      "previousYearRank": 281,
+      "score": 0.27,
+      "monthDelta": 0,
+      "yearDelta": -0.02
+    },
+    {
+      "name": "Kyoto Tycoon",
+      "sourceUrl": "https://db-engines.com/en/system/Kyoto+Tycoon",
+      "rank": 291,
+      "previousMonthRank": 293,
+      "previousYearRank": 329,
+      "score": 0.27,
+      "monthDelta": 0.01,
+      "yearDelta": 0.13
+    },
+    {
+      "name": "FeatureBase",
+      "sourceUrl": "https://db-engines.com/en/system/FeatureBase",
+      "rank": 292,
+      "previousMonthRank": 292,
+      "previousYearRank": 304,
+      "score": 0.26,
+      "monthDelta": 0.01,
+      "yearDelta": 0.04
+    },
+    {
+      "name": "Rasdaman",
+      "sourceUrl": "https://db-engines.com/en/system/Rasdaman",
+      "rank": 293,
+      "previousMonthRank": 289,
+      "previousYearRank": 274,
+      "score": 0.26,
+      "monthDelta": -0.01,
+      "yearDelta": -0.08
+    },
+    {
+      "name": "InfiniteGraph",
+      "sourceUrl": "https://db-engines.com/en/system/InfiniteGraph",
+      "rank": 294,
+      "previousMonthRank": 291,
+      "previousYearRank": 288,
+      "score": 0.25,
+      "monthDelta": -0.01,
+      "yearDelta": -0.01
+    },
+    {
+      "name": "Brytlyt",
+      "sourceUrl": "https://db-engines.com/en/system/Brytlyt",
+      "rank": 295,
+      "previousMonthRank": 294,
+      "previousYearRank": 293,
+      "score": 0.25,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "Manticore Search",
+      "sourceUrl": "https://db-engines.com/en/system/Manticore+Search",
+      "rank": 296,
+      "previousMonthRank": 296,
+      "previousYearRank": 292,
+      "score": 0.24,
+      "monthDelta": 0,
+      "yearDelta": -0.02
+    },
+    {
+      "name": "Fujitsu Enterprise Postgres",
+      "sourceUrl": "https://db-engines.com/en/system/Fujitsu+Enterprise+Postgres",
+      "rank": 297,
+      "previousMonthRank": 304,
+      "previousYearRank": 283,
+      "score": 0.24,
+      "monthDelta": 0.02,
+      "yearDelta": -0.05
+    },
+    {
+      "name": "Strabon",
+      "sourceUrl": "https://db-engines.com/en/system/Strabon",
+      "rank": 298,
+      "previousMonthRank": 295,
+      "previousYearRank": 285,
+      "score": 0.23,
+      "monthDelta": -0.01,
+      "yearDelta": -0.04
+    },
+    {
+      "name": "RedStore",
+      "sourceUrl": "https://db-engines.com/en/system/RedStore",
+      "rank": 299,
+      "previousMonthRank": 297,
+      "previousYearRank": 297,
+      "score": 0.23,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "YTsaurus",
+      "sourceUrl": "https://db-engines.com/en/system/YTsaurus",
+      "rank": 300,
+      "previousMonthRank": 305,
+      "previousYearRank": 301,
+      "score": 0.23,
+      "monthDelta": 0.01,
+      "yearDelta": 0
+    },
+    {
+      "name": "Project Voldemort",
+      "sourceUrl": "https://db-engines.com/en/system/Project+Voldemort",
+      "rank": 301,
+      "previousMonthRank": 299,
+      "previousYearRank": 291,
+      "score": 0.23,
+      "monthDelta": 0,
+      "yearDelta": -0.03
+    },
+    {
+      "name": "Tokyo Tyrant",
+      "sourceUrl": "https://db-engines.com/en/system/Tokyo+Tyrant",
+      "rank": 302,
+      "previousMonthRank": 300,
+      "previousYearRank": 336,
+      "score": 0.22,
+      "monthDelta": 0,
+      "yearDelta": 0.12
+    },
+    {
+      "name": "XTDB",
+      "sourceUrl": "https://db-engines.com/en/system/XTDB",
+      "rank": 303,
+      "previousMonthRank": 302,
+      "previousYearRank": 310,
+      "score": 0.22,
+      "monthDelta": 0,
+      "yearDelta": 0.01
+    },
+    {
+      "name": "PieCloudDB",
+      "sourceUrl": "https://db-engines.com/en/system/PieCloudDB",
+      "rank": 304,
+      "previousMonthRank": 301,
+      "previousYearRank": 296,
+      "score": 0.22,
+      "monthDelta": 0,
+      "yearDelta": -0.02
+    },
+    {
+      "name": "LeanXcale",
+      "sourceUrl": "https://db-engines.com/en/system/LeanXcale",
+      "rank": 305,
+      "previousMonthRank": 309,
+      "previousYearRank": 309,
+      "score": 0.22,
+      "monthDelta": 0.01,
+      "yearDelta": 0.01
+    },
+    {
+      "name": "ModeShape",
+      "sourceUrl": "https://db-engines.com/en/system/ModeShape",
+      "rank": 306,
+      "previousMonthRank": 303,
+      "previousYearRank": 287,
+      "score": 0.22,
+      "monthDelta": 0,
+      "yearDelta": -0.06
+    },
+    {
+      "name": "Actian FastObjects",
+      "sourceUrl": "https://db-engines.com/en/system/Actian+FastObjects",
+      "rank": 307,
+      "previousMonthRank": 307,
+      "previousYearRank": 308,
+      "score": 0.22,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "RDFox",
+      "sourceUrl": "https://db-engines.com/en/system/RDFox",
+      "rank": 308,
+      "previousMonthRank": 298,
+      "previousYearRank": 286,
+      "score": 0.21,
+      "monthDelta": -0.01,
+      "yearDelta": -0.06
+    },
+    {
+      "name": "Immudb",
+      "sourceUrl": "https://db-engines.com/en/system/Immudb",
+      "rank": 309,
+      "previousMonthRank": 312,
+      "previousYearRank": 312,
+      "score": 0.21,
+      "monthDelta": 0.02,
+      "yearDelta": 0.01
+    },
+    {
+      "name": "4store",
+      "sourceUrl": "https://db-engines.com/en/system/4store",
+      "rank": 310,
+      "previousMonthRank": 311,
+      "previousYearRank": 305,
+      "score": 0.21,
+      "monthDelta": 0.01,
+      "yearDelta": -0.02
+    },
+    {
+      "name": "PipelineDB",
+      "sourceUrl": "https://db-engines.com/en/system/PipelineDB",
+      "rank": 311,
+      "previousMonthRank": 310,
+      "previousYearRank": 315,
+      "score": 0.2,
+      "monthDelta": 0,
+      "yearDelta": 0.02
+    },
+    {
+      "name": "Vald",
+      "sourceUrl": "https://db-engines.com/en/system/Vald",
+      "rank": 312,
+      "previousMonthRank": 308,
+      "previousYearRank": 295,
+      "score": 0.19,
+      "monthDelta": -0.02,
+      "yearDelta": -0.04
+    },
+    {
+      "name": "NEventStore",
+      "sourceUrl": "https://db-engines.com/en/system/NEventStore",
+      "rank": 313,
+      "previousMonthRank": 313,
+      "previousYearRank": 311,
+      "score": 0.19,
+      "monthDelta": 0,
+      "yearDelta": -0.02
+    },
+    {
+      "name": "Axibase",
+      "sourceUrl": "https://db-engines.com/en/system/Axibase",
+      "rank": 314,
+      "previousMonthRank": 314,
+      "previousYearRank": 317,
+      "score": 0.18,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "YottaDB",
+      "sourceUrl": "https://db-engines.com/en/system/YottaDB",
+      "rank": 315,
+      "previousMonthRank": 315,
+      "previousYearRank": 316,
+      "score": 0.18,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "OrigoDB",
+      "sourceUrl": "https://db-engines.com/en/system/OrigoDB",
+      "rank": 316,
+      "previousMonthRank": 319,
+      "previousYearRank": 383,
+      "score": 0.18,
+      "monthDelta": 0.01,
+      "yearDelta": 0.18
+    },
+    {
+      "name": "TransLattice",
+      "sourceUrl": "https://db-engines.com/en/system/TransLattice",
+      "rank": 317,
+      "previousMonthRank": 316,
+      "previousYearRank": 319,
+      "score": 0.18,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "Warp 10",
+      "sourceUrl": "https://db-engines.com/en/system/Warp+10",
+      "rank": 318,
+      "previousMonthRank": 317,
+      "previousYearRank": 321,
+      "score": 0.17,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "GreptimeDB",
+      "sourceUrl": "https://db-engines.com/en/system/GreptimeDB",
+      "rank": 319,
+      "previousMonthRank": 328,
+      "previousYearRank": 334,
+      "score": 0.16,
+      "monthDelta": 0.02,
+      "yearDelta": 0.05
+    },
+    {
+      "name": "MyScale",
+      "sourceUrl": "https://db-engines.com/en/system/MyScale",
+      "rank": 320,
+      "previousMonthRank": 318,
+      "previousYearRank": 294,
+      "score": 0.16,
+      "monthDelta": -0.01,
+      "yearDelta": -0.08
+    },
+    {
+      "name": "AnzoGraph DB",
+      "sourceUrl": "https://db-engines.com/en/system/AnzoGraph+DB",
+      "rank": 321,
+      "previousMonthRank": 321,
+      "previousYearRank": 298,
+      "score": 0.15,
+      "monthDelta": 0,
+      "yearDelta": -0.08
+    },
+    {
+      "name": "BigObject",
+      "sourceUrl": "https://db-engines.com/en/system/BigObject",
+      "rank": 322,
+      "previousMonthRank": 323,
+      "previousYearRank": 324,
+      "score": 0.15,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "Raima Database Manager",
+      "sourceUrl": "https://db-engines.com/en/system/Raima+Database+Manager",
+      "rank": 323,
+      "previousMonthRank": 322,
+      "previousYearRank": 299,
+      "score": 0.15,
+      "monthDelta": -0.01,
+      "yearDelta": -0.08
+    },
+    {
+      "name": "XtremeData",
+      "sourceUrl": "https://db-engines.com/en/system/XtremeData",
+      "rank": 324,
+      "previousMonthRank": 324,
+      "previousYearRank": 326,
+      "score": 0.15,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "Apache HugeGraph",
+      "sourceUrl": "https://db-engines.com/en/system/Apache+HugeGraph",
+      "rank": 325,
+      "previousMonthRank": 325,
+      "previousYearRank": 323,
+      "score": 0.15,
+      "monthDelta": 0,
+      "yearDelta": -0.01
+    },
+    {
+      "name": "EsgynDB",
+      "sourceUrl": "https://db-engines.com/en/system/EsgynDB",
+      "rank": 326,
+      "previousMonthRank": 326,
+      "previousYearRank": 327,
+      "score": 0.14,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "ElevateDB",
+      "sourceUrl": "https://db-engines.com/en/system/ElevateDB",
+      "rank": 327,
+      "previousMonthRank": 327,
+      "previousYearRank": 328,
+      "score": 0.14,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "chDB",
+      "sourceUrl": "https://db-engines.com/en/system/chDB",
+      "rank": 328,
+      "previousMonthRank": 320,
+      "previousYearRank": 342,
+      "score": 0.13,
+      "monthDelta": -0.03,
+      "yearDelta": 0.04
+    },
+    {
+      "name": "Tibco ComputeDB",
+      "sourceUrl": "https://db-engines.com/en/system/Tibco+ComputeDB",
+      "rank": 329,
+      "previousMonthRank": 330,
+      "previousYearRank": 313,
+      "score": 0.13,
+      "monthDelta": -0.01,
+      "yearDelta": -0.07
+    },
+    {
+      "name": "AgensGraph",
+      "sourceUrl": "https://db-engines.com/en/system/AgensGraph",
+      "rank": 330,
+      "previousMonthRank": 331,
+      "previousYearRank": 330,
+      "score": 0.12,
+      "monthDelta": -0.01,
+      "yearDelta": 0
+    },
+    {
+      "name": "Redland",
+      "sourceUrl": "https://db-engines.com/en/system/Redland",
+      "rank": 331,
+      "previousMonthRank": 332,
+      "previousYearRank": 318,
+      "score": 0.12,
+      "monthDelta": 0,
+      "yearDelta": -0.05
+    },
+    {
+      "name": "Faircom DB",
+      "sourceUrl": "https://db-engines.com/en/system/Faircom+DB",
+      "rank": 332,
+      "previousMonthRank": 329,
+      "previousYearRank": 307,
+      "score": 0.12,
+      "monthDelta": -0.01,
+      "yearDelta": -0.1
+    },
+    {
+      "name": "Ultipa",
+      "sourceUrl": "https://db-engines.com/en/system/Ultipa",
+      "rank": 333,
+      "previousMonthRank": 333,
+      "previousYearRank": 314,
+      "score": 0.12,
+      "monthDelta": 0,
+      "yearDelta": -0.06
+    },
+    {
+      "name": "Quasardb",
+      "sourceUrl": "https://db-engines.com/en/system/Quasardb",
+      "rank": 334,
+      "previousMonthRank": 334,
+      "previousYearRank": 303,
+      "score": 0.12,
+      "monthDelta": 0,
+      "yearDelta": -0.1
+    },
+    {
+      "name": "Tajo",
+      "sourceUrl": "https://db-engines.com/en/system/Tajo",
+      "rank": 335,
+      "previousMonthRank": 335,
+      "previousYearRank": 289,
+      "score": 0.12,
+      "monthDelta": 0,
+      "yearDelta": -0.15
+    },
+    {
+      "name": "Linter",
+      "sourceUrl": "https://db-engines.com/en/system/Linter",
+      "rank": 336,
+      "previousMonthRank": 338,
+      "previousYearRank": 373,
+      "score": 0.11,
+      "monthDelta": 0,
+      "yearDelta": 0.09
+    },
+    {
+      "name": "IBM Db2 Event Store",
+      "sourceUrl": "https://db-engines.com/en/system/IBM+Db2+Event+Store",
+      "rank": 337,
+      "previousMonthRank": 337,
+      "previousYearRank": 322,
+      "score": 0.11,
+      "monthDelta": -0.01,
+      "yearDelta": -0.07
+    },
+    {
+      "name": "Riak TS",
+      "sourceUrl": "https://db-engines.com/en/system/Riak+TS",
+      "rank": 338,
+      "previousMonthRank": 340,
+      "previousYearRank": 325,
+      "score": 0.1,
+      "monthDelta": 0,
+      "yearDelta": -0.05
+    },
+    {
+      "name": "Sparksee",
+      "sourceUrl": "https://db-engines.com/en/system/Sparksee",
+      "rank": 339,
+      "previousMonthRank": 341,
+      "previousYearRank": 340,
+      "score": 0.1,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "Badger",
+      "sourceUrl": "https://db-engines.com/en/system/Badger",
+      "rank": 340,
+      "previousMonthRank": 344,
+      "previousYearRank": 337,
+      "score": 0.1,
+      "monthDelta": 0.01,
+      "yearDelta": -0.01
+    },
+    {
+      "name": "HyperGraphDB",
+      "sourceUrl": "https://db-engines.com/en/system/HyperGraphDB",
+      "rank": 341,
+      "previousMonthRank": 339,
+      "previousYearRank": 331,
+      "score": 0.1,
+      "monthDelta": -0.01,
+      "yearDelta": -0.02
+    },
+    {
+      "name": "Lovefield",
+      "sourceUrl": "https://db-engines.com/en/system/Lovefield",
+      "rank": 342,
+      "previousMonthRank": 336,
+      "previousYearRank": 344,
+      "score": 0.1,
+      "monthDelta": -0.02,
+      "yearDelta": 0.02
+    },
+    {
+      "name": "Speedb",
+      "sourceUrl": "https://db-engines.com/en/system/Speedb",
+      "rank": 343,
+      "previousMonthRank": 342,
+      "previousYearRank": 343,
+      "score": 0.09,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "TerminusDB",
+      "sourceUrl": "https://db-engines.com/en/system/TerminusDB",
+      "rank": 344,
+      "previousMonthRank": 346,
+      "previousYearRank": 339,
+      "score": 0.09,
+      "monthDelta": 0.01,
+      "yearDelta": -0.01
+    },
+    {
+      "name": "Bangdb",
+      "sourceUrl": "https://db-engines.com/en/system/Bangdb",
+      "rank": 345,
+      "previousMonthRank": 343,
+      "previousYearRank": 345,
+      "score": 0.08,
+      "monthDelta": -0.01,
+      "yearDelta": 0
+    },
+    {
+      "name": "Exorbyte",
+      "sourceUrl": "https://db-engines.com/en/system/Exorbyte",
+      "rank": 346,
+      "previousMonthRank": 347,
+      "previousYearRank": 346,
+      "score": 0.08,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "FlockDB",
+      "sourceUrl": "https://db-engines.com/en/system/FlockDB",
+      "rank": 347,
+      "previousMonthRank": 345,
+      "previousYearRank": 332,
+      "score": 0.07,
+      "monthDelta": -0.01,
+      "yearDelta": -0.05
+    },
+    {
+      "name": "SiteWhere",
+      "sourceUrl": "https://db-engines.com/en/system/SiteWhere",
+      "rank": 348,
+      "previousMonthRank": 350,
+      "previousYearRank": 347,
+      "score": 0.07,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "ScaleOut StateServer",
+      "sourceUrl": "https://db-engines.com/en/system/ScaleOut+StateServer",
+      "rank": 349,
+      "previousMonthRank": 351,
+      "previousYearRank": 348,
+      "score": 0.07,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "Valentina Server",
+      "sourceUrl": "https://db-engines.com/en/system/Valentina+Server",
+      "rank": 350,
+      "previousMonthRank": 349,
+      "previousYearRank": 279,
+      "score": 0.07,
+      "monthDelta": -0.01,
+      "yearDelta": -0.24
+    },
+    {
+      "name": "CubicWeb",
+      "sourceUrl": "https://db-engines.com/en/system/CubicWeb",
+      "rank": 351,
+      "previousMonthRank": 352,
+      "previousYearRank": 349,
+      "score": 0.06,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "EJDB",
+      "sourceUrl": "https://db-engines.com/en/system/EJDB",
+      "rank": 352,
+      "previousMonthRank": 348,
+      "previousYearRank": 351,
+      "score": 0.06,
+      "monthDelta": -0.02,
+      "yearDelta": 0
+    },
+    {
+      "name": "Blueflood",
+      "sourceUrl": "https://db-engines.com/en/system/Blueflood",
+      "rank": 353,
+      "previousMonthRank": 353,
+      "previousYearRank": 352,
+      "score": 0.06,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "Elliptics",
+      "sourceUrl": "https://db-engines.com/en/system/Elliptics",
+      "rank": 353,
+      "previousMonthRank": 353,
+      "previousYearRank": 352,
+      "score": 0.06,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "Kuzu",
+      "sourceUrl": "https://db-engines.com/en/system/Kuzu",
+      "rank": 355,
+      "previousMonthRank": 356,
+      "previousYearRank": 355,
+      "score": 0.06,
+      "monthDelta": 0,
+      "yearDelta": 0.01
+    },
+    {
+      "name": "GraphBase",
+      "sourceUrl": "https://db-engines.com/en/system/GraphBase",
+      "rank": 356,
+      "previousMonthRank": 355,
+      "previousYearRank": 335,
+      "score": 0.05,
+      "monthDelta": 0,
+      "yearDelta": -0.06
+    },
+    {
+      "name": "SenseiDB",
+      "sourceUrl": "https://db-engines.com/en/system/SenseiDB",
+      "rank": 357,
+      "previousMonthRank": 357,
+      "previousYearRank": 354,
+      "score": 0.05,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "Alibaba Cloud Table Store",
+      "sourceUrl": "https://db-engines.com/en/system/Alibaba+Cloud+Table+Store",
+      "rank": 358,
+      "previousMonthRank": 363,
+      "previousYearRank": 341,
+      "score": 0.05,
+      "monthDelta": 0.01,
+      "yearDelta": -0.05
+    },
+    {
+      "name": "Indica",
+      "sourceUrl": "https://db-engines.com/en/system/Indica",
+      "rank": 359,
+      "previousMonthRank": 358,
+      "previousYearRank": 376,
+      "score": 0.04,
+      "monthDelta": 0,
+      "yearDelta": 0.03
+    },
+    {
+      "name": "Forge (IRONdb)",
+      "sourceUrl": "https://db-engines.com/en/system/Forge+%28IRONdb%29",
+      "rank": 360,
+      "previousMonthRank": 359,
+      "previousYearRank": null,
+      "score": 0.04,
+      "monthDelta": 0,
+      "yearDelta": null
+    },
+    {
+      "name": "Machbase Neo",
+      "sourceUrl": "https://db-engines.com/en/system/Machbase+Neo",
+      "rank": 360,
+      "previousMonthRank": 359,
+      "previousYearRank": 357,
+      "score": 0.04,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "NosDB",
+      "sourceUrl": "https://db-engines.com/en/system/NosDB",
+      "rank": 360,
+      "previousMonthRank": 359,
+      "previousYearRank": 357,
+      "score": 0.04,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "STSdb",
+      "sourceUrl": "https://db-engines.com/en/system/STSdb",
+      "rank": 360,
+      "previousMonthRank": 359,
+      "previousYearRank": 357,
+      "score": 0.04,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "WakandaDB",
+      "sourceUrl": "https://db-engines.com/en/system/WakandaDB",
+      "rank": 364,
+      "previousMonthRank": 364,
+      "previousYearRank": 360,
+      "score": 0.03,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "Sadas Engine",
+      "sourceUrl": "https://db-engines.com/en/system/Sadas+Engine",
+      "rank": 365,
+      "previousMonthRank": 365,
+      "previousYearRank": 371,
+      "score": 0.03,
+      "monthDelta": 0,
+      "yearDelta": 0.02
+    },
+    {
+      "name": "Jade",
+      "sourceUrl": "https://db-engines.com/en/system/Jade",
+      "rank": 366,
+      "previousMonthRank": 366,
+      "previousYearRank": 350,
+      "score": 0.03,
+      "monthDelta": 0,
+      "yearDelta": -0.03
+    },
+    {
+      "name": "TinkerGraph",
+      "sourceUrl": "https://db-engines.com/en/system/TinkerGraph",
+      "rank": 367,
+      "previousMonthRank": 370,
+      "previousYearRank": 362,
+      "score": 0.03,
+      "monthDelta": 0.01,
+      "yearDelta": 0
+    },
+    {
+      "name": "JethroData",
+      "sourceUrl": "https://db-engines.com/en/system/JethroData",
+      "rank": 368,
+      "previousMonthRank": 368,
+      "previousYearRank": 361,
+      "score": 0.03,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "Heroic",
+      "sourceUrl": "https://db-engines.com/en/system/Heroic",
+      "rank": 369,
+      "previousMonthRank": 369,
+      "previousYearRank": 363,
+      "score": 0.02,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "Hawkular Metrics",
+      "sourceUrl": "https://db-engines.com/en/system/Hawkular+Metrics",
+      "rank": 370,
+      "previousMonthRank": 371,
+      "previousYearRank": 364,
+      "score": 0.02,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "VictoriaLogs",
+      "sourceUrl": "https://db-engines.com/en/system/VictoriaLogs",
+      "rank": 371,
+      "previousMonthRank": 367,
+      "previousYearRank": 338,
+      "score": 0.02,
+      "monthDelta": -0.01,
+      "yearDelta": -0.08
+    },
+    {
+      "name": "OpenMLDB",
+      "sourceUrl": "https://db-engines.com/en/system/OpenMLDB",
+      "rank": 372,
+      "previousMonthRank": 372,
+      "previousYearRank": 366,
+      "score": 0.02,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "Dydra",
+      "sourceUrl": "https://db-engines.com/en/system/Dydra",
+      "rank": 373,
+      "previousMonthRank": 373,
+      "previousYearRank": 367,
+      "score": 0.02,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "SmallSQL",
+      "sourceUrl": "https://db-engines.com/en/system/SmallSQL",
+      "rank": 374,
+      "previousMonthRank": 374,
+      "previousYearRank": 368,
+      "score": 0.02,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "SparkleDB",
+      "sourceUrl": "https://db-engines.com/en/system/SparkleDB",
+      "rank": 375,
+      "previousMonthRank": 376,
+      "previousYearRank": 370,
+      "score": 0.02,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "gStore",
+      "sourceUrl": "https://db-engines.com/en/system/gStore",
+      "rank": 376,
+      "previousMonthRank": 377,
+      "previousYearRank": 374,
+      "score": 0.01,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "Acebase",
+      "sourceUrl": "https://db-engines.com/en/system/Acebase",
+      "rank": 377,
+      "previousMonthRank": 378,
+      "previousYearRank": 372,
+      "score": 0.01,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "Resin Cache",
+      "sourceUrl": "https://db-engines.com/en/system/Resin+Cache",
+      "rank": 378,
+      "previousMonthRank": 379,
+      "previousYearRank": 365,
+      "score": 0.01,
+      "monthDelta": 0,
+      "yearDelta": -0.01
+    },
+    {
+      "name": "SWC-DB",
+      "sourceUrl": "https://db-engines.com/en/system/SWC-DB",
+      "rank": 379,
+      "previousMonthRank": 380,
+      "previousYearRank": 375,
+      "score": 0.01,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "Eloquera",
+      "sourceUrl": "https://db-engines.com/en/system/Eloquera",
+      "rank": 380,
+      "previousMonthRank": 381,
+      "previousYearRank": 377,
+      "score": 0.01,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "Faircom EDGE",
+      "sourceUrl": "https://db-engines.com/en/system/Faircom+EDGE",
+      "rank": 381,
+      "previousMonthRank": 375,
+      "previousYearRank": 369,
+      "score": 0,
+      "monthDelta": -0.01,
+      "yearDelta": -0.01
+    },
+    {
+      "name": "OushuDB",
+      "sourceUrl": "https://db-engines.com/en/system/OushuDB",
+      "rank": 382,
+      "previousMonthRank": 382,
+      "previousYearRank": 378,
+      "score": 0,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "Siaqodb",
+      "sourceUrl": "https://db-engines.com/en/system/Siaqodb",
+      "rank": 383,
+      "previousMonthRank": 383,
+      "previousYearRank": 379,
+      "score": 0,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "LedisDB",
+      "sourceUrl": "https://db-engines.com/en/system/LedisDB",
+      "rank": 384,
+      "previousMonthRank": 384,
+      "previousYearRank": 380,
+      "score": 0,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "SwayDB",
+      "sourceUrl": "https://db-engines.com/en/system/SwayDB",
+      "rank": 385,
+      "previousMonthRank": 385,
+      "previousYearRank": 382,
+      "score": 0,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "ActorDB",
+      "sourceUrl": "https://db-engines.com/en/system/ActorDB",
+      "rank": 386,
+      "previousMonthRank": 386,
+      "previousYearRank": 383,
+      "score": 0,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "AntDB",
+      "sourceUrl": "https://db-engines.com/en/system/AntDB",
+      "rank": 386,
+      "previousMonthRank": 386,
+      "previousYearRank": 381,
+      "score": 0,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "BergDB",
+      "sourceUrl": "https://db-engines.com/en/system/BergDB",
+      "rank": 386,
+      "previousMonthRank": 386,
+      "previousYearRank": 383,
+      "score": 0,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "BrightstarDB",
+      "sourceUrl": "https://db-engines.com/en/system/BrightstarDB",
+      "rank": 386,
+      "previousMonthRank": 386,
+      "previousYearRank": 383,
+      "score": 0,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "Cachelot.io",
+      "sourceUrl": "https://db-engines.com/en/system/Cachelot.io",
+      "rank": 386,
+      "previousMonthRank": 386,
+      "previousYearRank": 383,
+      "score": 0,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "CortexDB",
+      "sourceUrl": "https://db-engines.com/en/system/CortexDB",
+      "rank": 386,
+      "previousMonthRank": 386,
+      "previousYearRank": 383,
+      "score": 0,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "CovenantSQL",
+      "sourceUrl": "https://db-engines.com/en/system/CovenantSQL",
+      "rank": 386,
+      "previousMonthRank": 386,
+      "previousYearRank": 383,
+      "score": 0,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "DaggerDB",
+      "sourceUrl": "https://db-engines.com/en/system/DaggerDB",
+      "rank": 386,
+      "previousMonthRank": 386,
+      "previousYearRank": 383,
+      "score": 0,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "DataFS",
+      "sourceUrl": "https://db-engines.com/en/system/DataFS",
+      "rank": 386,
+      "previousMonthRank": 386,
+      "previousYearRank": 383,
+      "score": 0,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "Diana DB",
+      "sourceUrl": "https://db-engines.com/en/system/Diana+DB",
+      "rank": 386,
+      "previousMonthRank": 386,
+      "previousYearRank": null,
+      "score": 0,
+      "monthDelta": 0,
+      "yearDelta": null
+    },
+    {
+      "name": "Easysearch",
+      "sourceUrl": "https://db-engines.com/en/system/Easysearch",
+      "rank": 386,
+      "previousMonthRank": 386,
+      "previousYearRank": null,
+      "score": 0,
+      "monthDelta": 0,
+      "yearDelta": null
+    },
+    {
+      "name": "Edge Intelligence",
+      "sourceUrl": "https://db-engines.com/en/system/Edge+Intelligence",
+      "rank": 386,
+      "previousMonthRank": 386,
+      "previousYearRank": 383,
+      "score": 0,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "EdgelessDB",
+      "sourceUrl": "https://db-engines.com/en/system/EdgelessDB",
+      "rank": 386,
+      "previousMonthRank": 386,
+      "previousYearRank": 383,
+      "score": 0,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "Galaxybase",
+      "sourceUrl": "https://db-engines.com/en/system/Galaxybase",
+      "rank": 386,
+      "previousMonthRank": 386,
+      "previousYearRank": 383,
+      "score": 0,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "H2GIS",
+      "sourceUrl": "https://db-engines.com/en/system/H2GIS",
+      "rank": 386,
+      "previousMonthRank": 386,
+      "previousYearRank": 383,
+      "score": 0,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "Helium",
+      "sourceUrl": "https://db-engines.com/en/system/Helium",
+      "rank": 386,
+      "previousMonthRank": 386,
+      "previousYearRank": 383,
+      "score": 0,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "HGraphDB",
+      "sourceUrl": "https://db-engines.com/en/system/HGraphDB",
+      "rank": 386,
+      "previousMonthRank": 386,
+      "previousYearRank": 383,
+      "score": 0,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "Huawei Cloud TaurusDB",
+      "sourceUrl": "https://db-engines.com/en/system/Huawei+Cloud+TaurusDB",
+      "rank": 386,
+      "previousMonthRank": 386,
+      "previousYearRank": null,
+      "score": 0,
+      "monthDelta": 0,
+      "yearDelta": null
+    },
+    {
+      "name": "HyperbyteDB",
+      "sourceUrl": "https://db-engines.com/en/system/HyperbyteDB",
+      "rank": 386,
+      "previousMonthRank": null,
+      "previousYearRank": null,
+      "score": 0,
+      "monthDelta": null,
+      "yearDelta": null
+    },
+    {
+      "name": "HyperLevelDB",
+      "sourceUrl": "https://db-engines.com/en/system/HyperLevelDB",
+      "rank": 386,
+      "previousMonthRank": 386,
+      "previousYearRank": 383,
+      "score": 0,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "iBoxDB",
+      "sourceUrl": "https://db-engines.com/en/system/iBoxDB",
+      "rank": 386,
+      "previousMonthRank": 386,
+      "previousYearRank": 383,
+      "score": 0,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "InfinityDB",
+      "sourceUrl": "https://db-engines.com/en/system/InfinityDB",
+      "rank": 386,
+      "previousMonthRank": 386,
+      "previousYearRank": 383,
+      "score": 0,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "Infino AI",
+      "sourceUrl": "https://db-engines.com/en/system/Infino+AI",
+      "rank": 386,
+      "previousMonthRank": 386,
+      "previousYearRank": null,
+      "score": 0,
+      "monthDelta": 0,
+      "yearDelta": null
+    },
+    {
+      "name": "JaguarDB",
+      "sourceUrl": "https://db-engines.com/en/system/JaguarDB",
+      "rank": 386,
+      "previousMonthRank": 386,
+      "previousYearRank": 383,
+      "score": 0,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "JasDB",
+      "sourceUrl": "https://db-engines.com/en/system/JasDB",
+      "rank": 386,
+      "previousMonthRank": 386,
+      "previousYearRank": 383,
+      "score": 0,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "K-DB",
+      "sourceUrl": "https://db-engines.com/en/system/K-DB",
+      "rank": 386,
+      "previousMonthRank": 386,
+      "previousYearRank": 383,
+      "score": 0,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "Newts",
+      "sourceUrl": "https://db-engines.com/en/system/Newts",
+      "rank": 386,
+      "previousMonthRank": 386,
+      "previousYearRank": 383,
+      "score": 0,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "NSDb",
+      "sourceUrl": "https://db-engines.com/en/system/NSDb",
+      "rank": 386,
+      "previousMonthRank": 386,
+      "previousYearRank": 383,
+      "score": 0,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "openGemini",
+      "sourceUrl": "https://db-engines.com/en/system/openGemini",
+      "rank": 386,
+      "previousMonthRank": 386,
+      "previousYearRank": 383,
+      "score": 0,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "OpenTenBase",
+      "sourceUrl": "https://db-engines.com/en/system/OpenTenBase",
+      "rank": 386,
+      "previousMonthRank": 386,
+      "previousYearRank": 383,
+      "score": 0,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "OriginChain",
+      "sourceUrl": "https://db-engines.com/en/system/OriginChain",
+      "rank": 386,
+      "previousMonthRank": 386,
+      "previousYearRank": null,
+      "score": 0,
+      "monthDelta": 0,
+      "yearDelta": null
+    },
+    {
+      "name": "PuppyGraph",
+      "sourceUrl": "https://db-engines.com/en/system/PuppyGraph",
+      "rank": 386,
+      "previousMonthRank": 386,
+      "previousYearRank": null,
+      "score": 0,
+      "monthDelta": 0,
+      "yearDelta": null
+    },
+    {
+      "name": "RayforceDB",
+      "sourceUrl": "https://db-engines.com/en/system/RayforceDB",
+      "rank": 386,
+      "previousMonthRank": 386,
+      "previousYearRank": null,
+      "score": 0,
+      "monthDelta": 0,
+      "yearDelta": null
+    },
+    {
+      "name": "ReductStore",
+      "sourceUrl": "https://db-engines.com/en/system/ReductStore",
+      "rank": 386,
+      "previousMonthRank": 386,
+      "previousYearRank": 383,
+      "score": 0,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "Rizhiyi",
+      "sourceUrl": "https://db-engines.com/en/system/Rizhiyi",
+      "rank": 386,
+      "previousMonthRank": 386,
+      "previousYearRank": 383,
+      "score": 0,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "searchxml",
+      "sourceUrl": "https://db-engines.com/en/system/searchxml",
+      "rank": 386,
+      "previousMonthRank": 386,
+      "previousYearRank": 383,
+      "score": 0,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "SiriDB",
+      "sourceUrl": "https://db-engines.com/en/system/SiriDB",
+      "rank": 386,
+      "previousMonthRank": 386,
+      "previousYearRank": 383,
+      "score": 0,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "Skytable",
+      "sourceUrl": "https://db-engines.com/en/system/Skytable",
+      "rank": 386,
+      "previousMonthRank": 386,
+      "previousYearRank": 383,
+      "score": 0,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "SpaceTime",
+      "sourceUrl": "https://db-engines.com/en/system/SpaceTime",
+      "rank": 386,
+      "previousMonthRank": 386,
+      "previousYearRank": 383,
+      "score": 0,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "SpacetimeDB",
+      "sourceUrl": "https://db-engines.com/en/system/SpacetimeDB",
+      "rank": 386,
+      "previousMonthRank": 386,
+      "previousYearRank": null,
+      "score": 0,
+      "monthDelta": 0,
+      "yearDelta": null
+    },
+    {
+      "name": "SvectorDB",
+      "sourceUrl": "https://db-engines.com/en/system/SvectorDB",
+      "rank": 386,
+      "previousMonthRank": 386,
+      "previousYearRank": 383,
+      "score": 0,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "TerarkDB",
+      "sourceUrl": "https://db-engines.com/en/system/TerarkDB",
+      "rank": 386,
+      "previousMonthRank": 386,
+      "previousYearRank": 383,
+      "score": 0,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "TidesDB",
+      "sourceUrl": "https://db-engines.com/en/system/TidesDB",
+      "rank": 386,
+      "previousMonthRank": 386,
+      "previousYearRank": null,
+      "score": 0,
+      "monthDelta": 0,
+      "yearDelta": null
+    },
+    {
+      "name": "Tigris",
+      "sourceUrl": "https://db-engines.com/en/system/Tigris",
+      "rank": 386,
+      "previousMonthRank": 386,
+      "previousYearRank": 356,
+      "score": 0,
+      "monthDelta": 0,
+      "yearDelta": -0.04
+    },
+    {
+      "name": "Tkrzw",
+      "sourceUrl": "https://db-engines.com/en/system/Tkrzw",
+      "rank": 386,
+      "previousMonthRank": 386,
+      "previousYearRank": 383,
+      "score": 0,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "TomP2P",
+      "sourceUrl": "https://db-engines.com/en/system/TomP2P",
+      "rank": 386,
+      "previousMonthRank": 386,
+      "previousYearRank": 383,
+      "score": 0,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "TopK",
+      "sourceUrl": "https://db-engines.com/en/system/TopK",
+      "rank": 386,
+      "previousMonthRank": null,
+      "previousYearRank": null,
+      "score": 0,
+      "monthDelta": null,
+      "yearDelta": null
+    },
+    {
+      "name": "Transbase",
+      "sourceUrl": "https://db-engines.com/en/system/Transbase",
+      "rank": 386,
+      "previousMonthRank": 386,
+      "previousYearRank": 383,
+      "score": 0,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "Transwarp ArgoDB",
+      "sourceUrl": "https://db-engines.com/en/system/Transwarp+ArgoDB",
+      "rank": 386,
+      "previousMonthRank": 386,
+      "previousYearRank": 383,
+      "score": 0,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "Transwarp Hippo",
+      "sourceUrl": "https://db-engines.com/en/system/Transwarp+Hippo",
+      "rank": 386,
+      "previousMonthRank": 386,
+      "previousYearRank": 383,
+      "score": 0,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "Transwarp KunDB",
+      "sourceUrl": "https://db-engines.com/en/system/Transwarp+KunDB",
+      "rank": 386,
+      "previousMonthRank": 386,
+      "previousYearRank": 383,
+      "score": 0,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "Transwarp StellarDB",
+      "sourceUrl": "https://db-engines.com/en/system/Transwarp+StellarDB",
+      "rank": 386,
+      "previousMonthRank": 386,
+      "previousYearRank": 383,
+      "score": 0,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "Upscaledb",
+      "sourceUrl": "https://db-engines.com/en/system/Upscaledb",
+      "rank": 386,
+      "previousMonthRank": 386,
+      "previousYearRank": 383,
+      "score": 0,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "VelocityDB",
+      "sourceUrl": "https://db-engines.com/en/system/VelocityDB",
+      "rank": 386,
+      "previousMonthRank": 386,
+      "previousYearRank": 383,
+      "score": 0,
+      "monthDelta": 0,
+      "yearDelta": 0
+    },
+    {
+      "name": "VillageSQL",
+      "sourceUrl": "https://db-engines.com/en/system/VillageSQL",
+      "rank": 386,
+      "previousMonthRank": 386,
+      "previousYearRank": null,
+      "score": 0,
+      "monthDelta": 0,
+      "yearDelta": null
+    },
+    {
+      "name": "WhiteDB",
+      "sourceUrl": "https://db-engines.com/en/system/WhiteDB",
+      "rank": 386,
+      "previousMonthRank": 386,
+      "previousYearRank": 383,
+      "score": 0,
+      "monthDelta": 0,
+      "yearDelta": 0
+    }
+  ]
+}
